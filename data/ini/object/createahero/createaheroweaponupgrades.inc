@@ -269,7 +269,7 @@ End
 //-------------------------------------------------------------
 WeaponSet
 	Conditions		  =	WEAPONSET_CREATE_A_HERO_WS_38 WEAPONSET_TOGGLE_1	   // CLOSE_RANGE	CONTESTING_BUILDING
-	Weapon			  =	PRIMARY CreateAHeroBasicRangedWeapon
+	Weapon			  =	PRIMARY CreateAHeroSuperRangedWeapon
 	AutoChooseSources =	PRIMARY	FROM_PLAYER	FROM_SCRIPT	FROM_AI
 End
 WeaponSet

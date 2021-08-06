@@ -6,15 +6,15 @@
 	ThreatLevel				 = 4.0
 	ThingClass				 = CHARACTER_UNIT
 	BuildCost				 = CREATE_A_HERO_BUILDCOST ;;,;; CAH_BUILDCOST			   
-	BuildTime				 = HERO_BUILDTIME_TIER_2 ;;,;; CAH_BUILDTIME	
+	BuildTime				 = 25 ;;,;; CAH_BUILDTIME	
 	ShockwaveResistance 			 = SHOCKWAVE_RESISTANCE_STRONG		   
 	TransportSlotCount		 = TRANSPORTSLOTCOUNT_HERO
 
-;//	DisplayMeleeDamage		 = FARAMIR_DAMAGE
-;//	DisplayRangedDamage		 = FARAMIR_BOW_DAMAGE
+	DisplayMeleeDamage		 = FARAMIR_DAMAGE
+	DisplayRangedDamage		 = CREATE_A_HERO_BOW_DAMAGE
 	
-	VisionRange				 = 450
-	ShroudClearingRange		 = 500
+	VisionRange				 = 150
+	ShroudClearingRange		 = 200
 
 	BountyValue				 = 300 ;;,;; GONDOR_FARAMIR_BOUNTY_VALUE
 	DisplayName				 = OBJECT:CreateAHero
