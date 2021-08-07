@@ -57618,6 +57618,13 @@ OBJECT:HordeNoldorArchers
 "Noldor Archers"
 END
 
+CONTROLBAR:LW_Unit_ElvenNoldorArcherHorde
+"Noldor Archer Battalion"
+END
+CONTROLBAR:LW_Unit_ElvenNoldorArcherHordePlural
+"Noldor Archer Battalions"
+END
+
 CONTROLBAR:ConstructNoldorArcherHorde
 "&Noldor Archers"
 END
@@ -57626,4 +57633,12 @@ CONTROLBAR:ToolTipBuildNoldorArcherHorde
 //"Strong vs. All Normal Troops \n Requires Level 3 Barracks \n Only 3 Units of Noldor Warriors are allowed at any time."
 //"Strong vs. All Normal Troops\nRequires Level 3 Barracks\nCan stealth near trees\nOnly 2 units of Noldor Warriors are allowed at any time."
 "Strong vs. All Normal Troops\nRequires Level 3 Barracks\nCan stealth near trees\nOnly 8 battalions of Noldor Archers are allowed at any time"
+END
+
+CAH:RangeMenuLabel
+"Range"
+END
+
+CAH:RangeMenuDesc
+"Increse Range of Attack"
 END
