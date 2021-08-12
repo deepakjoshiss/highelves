@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="uri:ea.com:eala:asset" xmlns:at="uri:ea.com:eala:asset:type" xmlns:xas="uri:ea.com:eala:asset:schema" targetNamespace="uri:ea.com:eala:asset" elementFormDefault="qualified" xmlns:XmlEdit="http://tempuri.org/XmlEdit.xsd">
+	<xs:simpleType name="DamageFXType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DEFAULT" />
+			<xs:enumeration value="SWORD_SLASH" />
+			<xs:enumeration value="WITCH_KING_MORGUL_BLADE" />
+			<xs:enumeration value="GOOD_ARROW_PIERCE" />
+			<xs:enumeration value="EVIL_ARROW_PIERCE" />
+			<xs:enumeration value="SMALL_ROCK" />
+			<xs:enumeration value="BIG_ROCK" />
+			<xs:enumeration value="CLUBBING" />
+			<xs:enumeration value="BALROG_SWORD" />
+			<xs:enumeration value="BALROG_WHIP" />
+			<xs:enumeration value="ELECTRIC" />
+			<xs:enumeration value="GIMLI_LEAP" />
+			<xs:enumeration value="FLOOD_HORSE" />
+			<xs:enumeration value="BOLT" />
+			<xs:enumeration value="BOLT2" />
+			<xs:enumeration value="MAGIC2" />
+			<xs:enumeration value="MAGIC3" />
+			<xs:enumeration value="FIRE1" />
+			<xs:enumeration value="FIRE2" />
+			<xs:enumeration value="FIRE3" />
+			<xs:enumeration value="SPARKS1" />
+			<xs:enumeration value="SPARKS2" />
+			<xs:enumeration value="EARTH1" />
+			<xs:enumeration value="EARTH2" />
+			<xs:enumeration value="TORNADO" />
+			<xs:enumeration value="NECRO1" />
+			<xs:enumeration value="NECRO2" />
+			<xs:enumeration value="NECRO3" />
+			<xs:enumeration value="NECRO4" />
+			<xs:enumeration value="NECRO5" />
+			<xs:enumeration value="NECRO6" />
+			<xs:enumeration value="REFLECTED" />
+			<xs:enumeration value="MAGIC" />
+			<xs:enumeration value="POISON" />
+			<xs:enumeration value="FLAME" />
+			<xs:enumeration value="STRUCTURAL" />
+			<xs:enumeration value="UNDEFINED" />
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:schema>
