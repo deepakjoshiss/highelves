@@ -35,5 +35,5 @@
 	CrushZFactor			 = 1.0
 
 	CommandSet				 = CreateAHeroCommandSet
-	CommandPoints			 = HERO_COMMAND_POINTS_TIER_4 ;;,;; CREATE_A_HERO_COMMAND_POINT_COST
+	CommandPoints			 = H_HERO_COMMAND_POINTS_TIER_4 ;;,;; CREATE_A_HERO_COMMAND_POINT_COST
 	
