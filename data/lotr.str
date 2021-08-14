@@ -1516,7 +1516,7 @@ END
 
 GUI:EACopyright
 // context: Copyright notice. Please check with legal department for its correct translation.
-"© 2004 ELECTRONIC ARTS INC.  ALL RIGHTS RESERVED."
+"ï¿½ 2004 ELECTRONIC ARTS INC.  ALL RIGHTS RESERVED."
 END
 
 GUI:DeleteBeacon
@@ -5906,7 +5906,7 @@ LAN:HostCanceledGame
 END
 
 LAN:NoMapSelected
-// context: User does not have a map selected and presses play game…
+// context: User does not have a map selected and presses play gameï¿½
 "Unable to start game. No map selected."
 END
 
@@ -19218,7 +19218,7 @@ APT:OpenPlayJoinGameTitle
 END
 
 APT:JoinPassword
-// Context – Title on enter a password when user joins a custom online game
+// Context ï¿½ Title on enter a password when user joins a custom online game
 // that has a password
 "Game Password"
 END
@@ -20897,7 +20897,7 @@ LWA:OathbreakersArmy
 "Oathbreakers Army"
 END
 LWA:EasterlingsArmy
-"Soldiers of Rhûn Army"
+"Soldiers of Rhï¿½n Army"
 END
 LWA:HaradrimArmy
 "Haradrim Army"
@@ -21024,7 +21024,7 @@ WOTRTutorial:LW_InstructionText10
 End
 
 WOTRTutorial:LW_InstructionText11
-"In the Battle Phase, all conflicts between opposing players are fought. A battle occurs when at least one of your armies and one of your enemy’s armies end up in the same territory after the planned moves are executed from the tactical phase."
+"In the Battle Phase, all conflicts between opposing players are fought. A battle occurs when at least one of your armies and one of your enemyï¿½s armies end up in the same territory after the planned moves are executed from the tactical phase."
 End
 
 WOTRTutorial:LW_InstructionText12
@@ -21052,7 +21052,7 @@ WOTRTutorial:LW_InstructionText17
 End
 
 WOTRTutorial:LW_InstructionText18
-"All armies are allowed to move to only 1 adjacent territory from their current location per turn. However, the choice of an army’s destination depends on the type of army that is being moved."
+"All armies are allowed to move to only 1 adjacent territory from their current location per turn. However, the choice of an armyï¿½s destination depends on the type of army that is being moved."
 End
 
 WOTRTutorial:LW_InstructionText19
@@ -34013,11 +34013,11 @@ DIALOGEVENT:MGEtten_OffE004subtitle
 END
 
 DIALOGEVENT:MGEtten_GobK001subtitle
-"*I smell the flesh of the Eldar…"
+"*I smell the flesh of the Eldarï¿½"
 END
 
 DIALOGEVENT:MGEtten_GobK002subtitle
-"*let us feast, my pets, my children…"
+"*let us feast, my pets, my childrenï¿½"
 END
 
 DIALOGEVENT:MGEtten_GobK003subtitle
@@ -34045,11 +34045,11 @@ DIALOGEVENT:MGBlueM_Gloi002subtitle
 END
 
 DIALOGEVENT:MGBlueM_OffD003subtitle
-"*…and you bring elves? Well…I suppose we'll need whatever help we can afford. This isn't for the faint of heart you know."
+"*ï¿½and you bring elves? Wellï¿½I suppose we'll need whatever help we can afford. This isn't for the faint of heart you know."
 END
 
 DIALOGEVENT:MGBlueM_OffD004subtitle
-"*er…and you bring elves? This is a \"Dwarven mine\". No place for wood folk."
+"*erï¿½and you bring elves? This is a \"Dwarven mine\". No place for wood folk."
 END
 
 DIALOGEVENT:MGBlueM_OffD005subtitle
@@ -34117,7 +34117,7 @@ DIALOGEVENT:MGBlueM_Dwar002subtitle
 END
 
 DIALOGEVENT:MGBlueM_Dwar003subtitle
-"*It’s the dragon! He's attacking our structures out here!"
+"*Itï¿½s the dragon! He's attacking our structures out here!"
 END
 
 DIALOGEVENT:MGBlueM_Dwar004subtitle
@@ -34133,7 +34133,7 @@ DIALOGEVENT:MGBlueM_OffD014subtitle
 END
 
 DIALOGEVENT:MGBlueM_OffD015subtitle
-"*We'll need more resources… use Dwarven Riches!"
+"*We'll need more resourcesï¿½ use Dwarven Riches!"
 END
 
 DIALOGEVENT:MGBlueM_OffD016subtitle
@@ -34153,7 +34153,7 @@ DIALOGEVENT:MGBlueM_Dwar008subtitle
 END
 
 DIALOGEVENT:MGBlueM_Gloi007subtitle
-"*Ah… the ancient halls of my ancestors…"
+"*Ahï¿½ the ancient halls of my ancestorsï¿½"
 END
 
 DIALOGEVENT:MGBlueM_Gloi008subtitle
@@ -34269,7 +34269,7 @@ DIALOGEVENT:MGGreyH_Glor002subtitle
 END
 
 DIALOGEVENT:MGGreyH_Gloi002subtitle
-"*It’s a traaap!"
+"*Itï¿½s a traaap!"
 END
 
 DIALOGEVENT:MGGreyH_Glor003subtitle
@@ -34285,7 +34285,7 @@ DIALOGEVENT:MGGreyH_Gloi003subtitle
 END
 
 DIALOGEVENT:MGGreyH_OffD001subtitle
-"*Ay! We couldn’t let our friends have ALL the fun now!"
+"*Ay! We couldnï¿½t let our friends have ALL the fun now!"
 END
 
 DIALOGEVENT:MGGreyH_OffD002subtitle
@@ -34417,11 +34417,11 @@ DIALOGEVENT:MGCeldu_Dain004subtitle
 END
 
 DIALOGEVENT:MGCeldu_Dwar015subtitle
-"*We’ve set up a base here. Not much, but it’ll have to do."
+"*Weï¿½ve set up a base here. Not much, but itï¿½ll have to do."
 END
 
 DIALOGEVENT:MGCeldu_Dwar016subtitle
-"*I don’t trust these waters..."
+"*I donï¿½t trust these waters..."
 END
 
 DIALOGEVENT:MGCeldu_Dwar017subtitle
@@ -34477,7 +34477,7 @@ DIALOGEVENT:MGErebo_Dwar002subtitle
 END
 
 DIALOGEVENT:MGErebo_Mout001subtitle
-"*Now my dear King…you will die!"
+"*Now my dear Kingï¿½you will die!"
 END
 
 DIALOGEVENT:MGErebo_Dwar003subtitle
@@ -34489,7 +34489,7 @@ DIALOGEVENT:MGErebo_Dwar004subtitle
 END
 
 DIALOGEVENT:MGErebo_Dwar005subtitle
-"*It’s the Elves!"
+"*Itï¿½s the Elves!"
 END
 
 DIALOGEVENT:MGErebo_Thra001subtitle
@@ -34861,7 +34861,7 @@ DIALOGEVENT:MEGreyH_Cors010subtitle
 END
 
 DIALOGEVENT:MEShire_GobK001subtitle
-"*Ahh….the Shire. This day has finally come!! Haehaha!!"
+"*Ahhï¿½.the Shire. This day has finally come!! Haehaha!!"
 END
 
 DIALOGEVENT:MEShire_Hobb001subtitle
@@ -34873,11 +34873,11 @@ DIALOGEVENT:MEShire_Hobb002subtitle
 END
 
 DIALOGEVENT:MEShire_Hobb003subtitle
-"*No…no no no. Make it go away!"
+"*Noï¿½no no no. Make it go away!"
 END
 
 DIALOGEVENT:MEShire_OffG001subtitle
-"*The hobbits cower in fear. Show them their new homes… in the pits!"
+"*The hobbits cower in fear. Show them their new homesï¿½ in the pits!"
 END
 
 DIALOGEVENT:MEShire_GobK002subtitle
@@ -35001,7 +35001,7 @@ DIALOGEVENT:MEShire_Hobb008subtitle
 END
 
 DIALOGEVENT:MEShire_Hobb009subtitle
-"*Perhaps they won't notice us…perhaps."
+"*Perhaps they won't notice usï¿½perhaps."
 END
 
 DIALOGEVENT:MEShire_Hobb010subtitle
@@ -35013,7 +35013,7 @@ DIALOGEVENT:MEShire_Hobb011subtitle
 END
 
 DIALOGEVENT:MEShire_Hobb012subtitle
-"*We shall be saved yet…you shall see."
+"*We shall be saved yetï¿½you shall see."
 END
 
 DIALOGEVENT:MEShire_Hobb013subtitle
@@ -35089,7 +35089,7 @@ DIALOGEVENT:MEForno_Gobl002subtitle
 END
 
 DIALOGEVENT:MEForno_Gobl003subtitle
-"*Wha…what is that thing?!"
+"*Whaï¿½what is that thing?!"
 END
 
 DIALOGEVENT:MEForno_Gobl004subtitle
@@ -35437,7 +35437,7 @@ DIALOGEVENT:MEWithe_Orc006subtitle
 END
 
 DIALOGEVENT:MEWithe_Orc007subtitle
-"*We'll need more reinforcements, quick… Call the Horde!"
+"*We'll need more reinforcements, quickï¿½ Call the Horde!"
 END
 
 DIALOGEVENT:MEWithe_OffM010subtitle
@@ -35473,7 +35473,7 @@ DIALOGEVENT:MEWithe_OffM013subtitle
 END
 
 DIALOGEVENT:MEWithe_Mout010subtitle
-"*The Dragon Lord at last! We have come to offer you Dwarven riches…"
+"*The Dragon Lord at last! We have come to offer you Dwarven richesï¿½"
 END
 
 DIALOGEVENT:MEErebo_Mout001subtitle
@@ -36233,7 +36233,7 @@ DIALOGEVENT:MGBlueM_OffD019subtitle
 END
 
 DIALOGEVENT:MGBlueM_OffD020subtitle
-"*Our Fortress must be built inside the cave….only then shall we be safe from the dragon."
+"*Our Fortress must be built inside the caveï¿½.only then shall we be safe from the dragon."
 END
 
 DIALOGEVENT:MGBlueM_OffD021subtitle
@@ -36657,11 +36657,11 @@ DIALOGEVENT:MELorie_OffG008subtitle
 END
 
 DIALOGEVENT:MELorie_OffG009subtitle
-"*Our tunnels will provide resources. With more of them, our riches will grow…."
+"*Our tunnels will provide resources. With more of them, our riches will growï¿½."
 END
 
 DIALOGEVENT:MELorie_OffG010subtitle
-"*Build us a second tunnel so that we may conquer this land…"
+"*Build us a second tunnel so that we may conquer this landï¿½"
 END
 
 DIALOGEVENT:MELorie_OffG011subtitle
@@ -36677,7 +36677,7 @@ DIALOGEVENT:MELorie_OffG013subtitle
 END
 
 DIALOGEVENT:MELorie_OffG014subtitle
-"*First, move our forces into the tunnel, then choose another tunnel from which they will emerge…"
+"*First, move our forces into the tunnel, then choose another tunnel from which they will emergeï¿½"
 END
 
 DIALOGEVENT:MELorie_OffG015subtitle
@@ -36761,7 +36761,7 @@ DIALOGEVENT:MELorie_OffG034subtitle
 END
 
 DIALOGEVENT:MELorie_OffG035subtitle
-"*Where is our Lair? We need the Spider Riders to trample the Elves and their city…."
+"*Where is our Lair? We need the Spider Riders to trample the Elves and their cityï¿½."
 END
 
 DIALOGEVENT:MELorie_OffG036subtitle
@@ -36797,7 +36797,7 @@ DIALOGEVENT:MELorie_OffG043subtitle
 END
 
 DIALOGEVENT:MELorie_OffG044subtitle
-"*Excellent. Cross the river and the end of Lorien will begin…"
+"*Excellent. Cross the river and the end of Lorien will beginï¿½"
 END
 
 DIALOGEVENT:MELorie_OffG045subtitle
@@ -36805,7 +36805,7 @@ DIALOGEVENT:MELorie_OffG045subtitle
 END
 
 DIALOGEVENT:MELorie_Mout010subtitle
-"*Excellent…"
+"*Excellentï¿½"
 END
 
 DIALOGEVENT:MELorie_Mout011subtitle
@@ -36857,7 +36857,7 @@ DIALOGEVENT:MELorie_OffG056subtitle
 END
 
 DIALOGEVENT:MELorie_OffG057subtitle
-"*There must be more Giants still held captive….keep searching!"
+"*There must be more Giants still held captiveï¿½.keep searching!"
 END
 
 DIALOGEVENT:MELorie_OffG059subtitle
@@ -36913,7 +36913,7 @@ DIALOGEVENT:MELorie_OffG066subtitle
 END
 
 DIALOGEVENT:MELorie_Mout013subtitle
-"*Ahhhhh….the Elf-Witch graces us with her presence...her death will be most exquisite…."
+"*Ahhhhhï¿½.the Elf-Witch graces us with her presence...her death will be most exquisiteï¿½."
 END
 
 DIALOGEVENT:MELorie_Gala004subtitle
@@ -36929,7 +36929,7 @@ DIALOGEVENT:MELorie_Mout014subtitle
 END
 
 DIALOGEVENT:MELorie_Gala005subtitle
-"*So….the long defeat comes to this...bitterest of ends. Galadhrim - flee!"
+"*Soï¿½.the long defeat comes to this...bitterest of ends. Galadhrim - flee!"
 END
 
 DIALOGEVENT:MELorie_Gala006subtitle
@@ -36941,7 +36941,7 @@ DIALOGEVENT:MELorie_Gala007subtitle
 END
 
 DIALOGEVENT:MELorie_Mout015subtitle
-"*<haughty laughter…..>….how tragic!"
+"*<haughty laughterï¿½..>ï¿½.how tragic!"
 END
 
 DIALOGEVENT:MELorie_Mout016subtitle
@@ -37101,7 +37101,7 @@ DIALOGEVENT:MEShire_OffG018subtitle
 END
 
 DIALOGEVENT:MEShire_OffG019subtitle
-"*That was the final seat of power…now the Hobbits will crumble before us."
+"*That was the final seat of powerï¿½now the Hobbits will crumble before us."
 END
 
 DIALOGEVENT:MEShire_OffG020subtitle
@@ -37117,7 +37117,7 @@ DIALOGEVENT:MEShire_OffG022subtitle
 END
 
 DIALOGEVENT:MEShire_OffG023subtitle
-"*Dunedain tents…watch your backs."
+"*Dunedain tentsï¿½watch your backs."
 END
 
 DIALOGEVENT:MEShire_OffG024subtitle
@@ -37125,7 +37125,7 @@ DIALOGEVENT:MEShire_OffG024subtitle
 END
 
 DIALOGEVENT:MEShire_OffG025subtitle
-"*Hmmm…Longbottom Farm. Their Pipeweed is of value. Save a space in your gunny sack."
+"*Hmmmï¿½Longbottom Farm. Their Pipeweed is of value. Save a space in your gunny sack."
 END
 
 DIALOGEVENT:MEShire_Dune010subtitle
@@ -37321,7 +37321,7 @@ DIALOGEVENT:MEErebo_OffM033subtitle
 END
 
 DIALOGEVENT:MEErebo_OffM034subtitle
-"*Gloin has rallied the Blue Mountain dwarves…the genocide will be complete!"
+"*Gloin has rallied the Blue Mountain dwarvesï¿½the genocide will be complete!"
 END
 
 DIALOGEVENT:MEErebo_OffM035subtitle
@@ -37357,11 +37357,11 @@ DIALOGEVENT:MERiven_OffG019subtitle
 END
 
 DIALOGEVENT:MERiven_OffG020subtitle
-"*Aragorn will pay for his attacks against Sauron, murder his true love…Arwen."
+"*Aragorn will pay for his attacks against Sauron, murder his true loveï¿½Arwen."
 END
 
 DIALOGEVENT:MERiven_OffG021subtitle
-"*These Heroes bring hope to the people of Middle-earth…Annihilate them."
+"*These Heroes bring hope to the people of Middle-earthï¿½Annihilate them."
 END
 
 DIALOGEVENT:MERiven_OffG022subtitle
@@ -37381,15 +37381,15 @@ DIALOGEVENT:MERiven_Elf1004subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT001subtitle
-"*Welcome m’lord to the White Mountains. We’ve long awaited your arrival."
+"*Welcome mï¿½lord to the White Mountains. Weï¿½ve long awaited your arrival."
 END
 
 DIALOGEVENT:MTrBas_OffT002subtitle
-"*This pass has long been forgotten and as a result Goblins from the Misty Mountains have ventured all the way south and infested this area. If we don’t do something about them quickly they may spread all the way to Minas Tirith"
+"*This pass has long been forgotten and as a result Goblins from the Misty Mountains have ventured all the way south and infested this area. If we donï¿½t do something about them quickly they may spread all the way to Minas Tirith"
 END
 
 DIALOGEVENT:MTrBas_OffT003subtitle
-"*But first, we’ll have to get you battle worthy for the task ahead"
+"*But first, weï¿½ll have to get you battle worthy for the task ahead"
 END
 
 DIALOGEVENT:MTrBas_OffT004subtitle
@@ -37405,7 +37405,7 @@ DIALOGEVENT:MTrBas_OffT006subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT007subtitle
-"*Excellent! I see you’ve brought some soldiers with you. Left click on them with your cursor."
+"*Excellent! I see youï¿½ve brought some soldiers with you. Left click on them with your cursor."
 END
 
 DIALOGEVENT:MTrBas_OffT008subtitle
@@ -37421,7 +37421,7 @@ DIALOGEVENT:MTrBas_OffT010subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT011subtitle
-"*Currently you know how to select one battalion of units, but you’ll need to know how to select an army."
+"*Currently you know how to select one battalion of units, but youï¿½ll need to know how to select an army."
 END
 
 DIALOGEVENT:MTrBas_OffT012subtitle
@@ -37445,15 +37445,15 @@ DIALOGEVENT:MTrBas_OffT016subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT017subtitle
-"*Now issue them an attack command by right clicking on those Goblins down there. You’ll notice that as you move your cursor over the Goblins, it changes to a Red Attack Cursor. This Red Attack cursor will indicate what is an enemy to you."
+"*Now issue them an attack command by right clicking on those Goblins down there. Youï¿½ll notice that as you move your cursor over the Goblins, it changes to a Red Attack Cursor. This Red Attack cursor will indicate what is an enemy to you."
 END
 
 DIALOGEVENT:MTrBas_OffT018subtitle
-"*Hurry, they’ve almost destroyed the camp down there! Issue your attack order by selecting your units and right clicking on those enemy Goblins!"
+"*Hurry, theyï¿½ve almost destroyed the camp down there! Issue your attack order by selecting your units and right clicking on those enemy Goblins!"
 END
 
 DIALOGEVENT:MTrBas_OffT019subtitle
-"*Congratulations, you’ve just won your first battle. Unfortunately, our celebration will have to wait. More reports are coming in that other camps are being attacked and need support."
+"*Congratulations, youï¿½ve just won your first battle. Unfortunately, our celebration will have to wait. More reports are coming in that other camps are being attacked and need support."
 END
 
 DIALOGEVENT:MTrBas_OffT020subtitle
@@ -37481,11 +37481,11 @@ DIALOGEVENT:MTrBas_OffT025subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT026subtitle
-"*Bonus Objectives appear in green text. You may choose to complete them, but they won’t count against you if you don’t."
+"*Bonus Objectives appear in green text. You may choose to complete them, but they wonï¿½t count against you if you donï¿½t."
 END
 
 DIALOGEVENT:MTrBas_OffT027subtitle
-"*And finally, any Objective with a check mark in its box is one that you’ve completed."
+"*And finally, any Objective with a check mark in its box is one that youï¿½ve completed."
 END
 
 DIALOGEVENT:MTrBas_OffT028subtitle
@@ -37505,7 +37505,7 @@ DIALOGEVENT:MTrBas_Sold002subtitle
 END
 
 DIALOGEVENT:MTrBas_Sold003subtitle
-"*You came just in time. We weren’t sure how much longer we could have held them off."
+"*You came just in time. We werenï¿½t sure how much longer we could have held them off."
 END
 
 DIALOGEVENT:MTrBas_OffT030subtitle
@@ -37513,11 +37513,11 @@ DIALOGEVENT:MTrBas_OffT030subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT031subtitle
-"*While our camps up here are sufficient to hold this road, it’s not strong enough to hold this mountain. We need to setup a larger camp, but we’ll need a great deal of land with which to do so."
+"*While our camps up here are sufficient to hold this road, itï¿½s not strong enough to hold this mountain. We need to setup a larger camp, but weï¿½ll need a great deal of land with which to do so."
 END
 
 DIALOGEVENT:MTrBas_OffT032subtitle
-"*Up ahead is just such an expanse of land, but it is held by Spider Lairs. These lairs are infested with creatures that have no allegiance to anyone save their own. Fortunately the creatures won’t stray far from their lairs, so they only pose a threat in their immediate area."
+"*Up ahead is just such an expanse of land, but it is held by Spider Lairs. These lairs are infested with creatures that have no allegiance to anyone save their own. Fortunately the creatures wonï¿½t stray far from their lairs, so they only pose a threat in their immediate area."
 END
 
 DIALOGEVENT:MTrBas_OffT033subtitle
@@ -37529,7 +37529,7 @@ DIALOGEVENT:MTrBas_OffT034subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT035subtitle
-"*After you destroy a lair, it will leave some money behind. That’s the treasure that they’ve hoarded from killing wanderers who’ve ventured too close to them."
+"*After you destroy a lair, it will leave some money behind. Thatï¿½s the treasure that theyï¿½ve hoarded from killing wanderers whoï¿½ve ventured too close to them."
 END
 
 DIALOGEVENT:MTrBas_OffT036subtitle
@@ -37553,11 +37553,11 @@ DIALOGEVENT:MTrBas_OffT040subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT041subtitle
-"*We sent a builder your way for constructing our new camp. Builders are what you use to construct all the buildings we’ll need in order to establish a camp."
+"*We sent a builder your way for constructing our new camp. Builders are what you use to construct all the buildings weï¿½ll need in order to establish a camp."
 END
 
 DIALOGEVENT:MTrBas_OffT042subtitle
-"*First and foremost we’ll need a Fortress."
+"*First and foremost weï¿½ll need a Fortress."
 END
 
 DIALOGEVENT:MTrBas_OffT043subtitle
@@ -37565,7 +37565,7 @@ DIALOGEVENT:MTrBas_OffT043subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT044subtitle
-"*In order to place down a building, left click anywhere on the land. For this base however, we’ll need you to place your fortress within the spotlighted area."
+"*In order to place down a building, left click anywhere on the land. For this base however, weï¿½ll need you to place your fortress within the spotlighted area."
 END
 
 DIALOGEVENT:MTrBas_OffT045subtitle
@@ -37573,11 +37573,11 @@ DIALOGEVENT:MTrBas_OffT045subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT046subtitle
-"*They also have many upgrades available to them, but we’ll get to that another time."
+"*They also have many upgrades available to them, but weï¿½ll get to that another time."
 END
 
 DIALOGEVENT:MTrBas_OffT047subtitle
-"*Now that we have a fortress built, we’ll need an economy to fund our defenses."
+"*Now that we have a fortress built, weï¿½ll need an economy to fund our defenses."
 END
 
 DIALOGEVENT:MTrBas_OffT048subtitle
@@ -37609,7 +37609,7 @@ DIALOGEVENT:MTrBas_OffT054subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT055subtitle
-"*The last thing we’ll need is an Archery Range. Build one of those on the other spotlight."
+"*The last thing weï¿½ll need is an Archery Range. Build one of those on the other spotlight."
 END
 
 DIALOGEVENT:MTrBas_OffT056subtitle
@@ -37621,7 +37621,7 @@ DIALOGEVENT:MTrBas_OffT057subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT058subtitle
-"*In order to fortify our base, we’ll need to setup wall spans. Wall spans begin with wall hubs, which can be built from either our fortress or from our Builders."
+"*In order to fortify our base, weï¿½ll need to setup wall spans. Wall spans begin with wall hubs, which can be built from either our fortress or from our Builders."
 END
 
 DIALOGEVENT:MTrBas_OffT059subtitle
@@ -37641,7 +37641,7 @@ DIALOGEVENT:MTrBas_OffT062subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT063subtitle
-"*Click that button and move your cursor to the Spotlight to the right. As you move your mouse you’ll see a see-through wall; this is how your wall will look when you’ve finished building it."
+"*Click that button and move your cursor to the Spotlight to the right. As you move your mouse youï¿½ll see a see-through wall; this is how your wall will look when youï¿½ve finished building it."
 END
 
 DIALOGEVENT:MTrBas_OffT064subtitle
@@ -37669,7 +37669,7 @@ DIALOGEVENT:MTrBas_OffT069subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT070subtitle
-"*Our base has begun. Now let’s build some units to defend it. Train 2 battalions of Gondor Soldiers from the Barracks now."
+"*Our base has begun. Now letï¿½s build some units to defend it. Train 2 battalions of Gondor Soldiers from the Barracks now."
 END
 
 DIALOGEVENT:MTrBas_OffT071subtitle
@@ -37677,11 +37677,11 @@ DIALOGEVENT:MTrBas_OffT071subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT072subtitle
-"*And lastly, we’ll need a Hero to lead our troops. Heroes can be purchased from the Fortress. And if your Hero should fall in battle, they can be revived from the fortress as well."
+"*And lastly, weï¿½ll need a Hero to lead our troops. Heroes can be purchased from the Fortress. And if your Hero should fall in battle, they can be revived from the fortress as well."
 END
 
 DIALOGEVENT:MTrBas_OffT073subtitle
-"*To summon a Hero, select your fortress and click on the Heroes button. This will bring up options of all the current Heroes you’re allowed to build. Right now Boromir is residing in our fortress."
+"*To summon a Hero, select your fortress and click on the Heroes button. This will bring up options of all the current Heroes youï¿½re allowed to build. Right now Boromir is residing in our fortress."
 END
 
 DIALOGEVENT:MTrBas_OffT074subtitle
@@ -37693,7 +37693,7 @@ DIALOGEVENT:MTrBas_OffT075subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT076subtitle
-"*You will find a Hero’s abilities on the Palantir. Some are Passive abilities which mean they’re always enabled such as Boromir’s Leadership ability."
+"*You will find a Heroï¿½s abilities on the Palantir. Some are Passive abilities which mean theyï¿½re always enabled such as Boromirï¿½s Leadership ability."
 END
 
 DIALOGEVENT:MTrBas_OffT077subtitle
@@ -37705,15 +37705,15 @@ DIALOGEVENT:MTrBas_OffT078subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT079subtitle
-"*Our army is built now and Gondor’s new castle is ready. Excellent work! You're now ready to command an army and defend these passes."
+"*Our army is built now and Gondorï¿½s new castle is ready. Excellent work! You're now ready to command an army and defend these passes."
 END
 
 DIALOGEVENT:MTrBas_Sold004subtitle
-"*The Goblins, they’re here! A large force has gathered and is marching towards this very spot."
+"*The Goblins, theyï¿½re here! A large force has gathered and is marching towards this very spot."
 END
 
 DIALOGEVENT:MTrBas_OffT080subtitle
-"*There is no time to waste. M’lord, you will have to defend this base as you’ve done before with the camps."
+"*There is no time to waste. Mï¿½lord, you will have to defend this base as youï¿½ve done before with the camps."
 END
 
 DIALOGEVENT:MTrBas_OffT081subtitle
@@ -37729,11 +37729,11 @@ DIALOGEVENT:MTrBas_OffT083subtitle
 END
 
 DIALOGEVENT:MTrBas_OffT084subtitle
-"*Come back when you’re ready to finish them off by playing through the Advanced Tutorial."
+"*Come back when youï¿½re ready to finish them off by playing through the Advanced Tutorial."
 END
 
 DIALOGEVENT:MTrAdv_OffT001subtitle
-"*Welcome back M’lord! As you can see we’ve been very busy here, but the attacks have yet to stop."
+"*Welcome back Mï¿½lord! As you can see weï¿½ve been very busy here, but the attacks have yet to stop."
 END
 
 DIALOGEVENT:MTrAdv_OffT002subtitle
@@ -37753,15 +37753,15 @@ DIALOGEVENT:MTrAdv_OffT005subtitle
 END
 
 DIALOGEVENT:MTrAdv_OffT006subtitle
-"*The Aggressive Stance will increase a unit’s offensive capabilities while decreasing their defensive capabilities."
+"*The Aggressive Stance will increase a unitï¿½s offensive capabilities while decreasing their defensive capabilities."
 END
 
 DIALOGEVENT:MTrAdv_OffT007subtitle
-"*The Battle Stance is the default stance for all units and renders no bonuses or negatives to a unit’s abilities."
+"*The Battle Stance is the default stance for all units and renders no bonuses or negatives to a unitï¿½s abilities."
 END
 
 DIALOGEVENT:MTrAdv_OffT008subtitle
-"*And the Hold Ground Stance will greatly increase a unit’s defensive capabilities while decreasing their offensive capabilities."
+"*And the Hold Ground Stance will greatly increase a unitï¿½s defensive capabilities while decreasing their offensive capabilities."
 END
 
 DIALOGEVENT:MTrAdv_OffT009subtitle
@@ -37773,7 +37773,7 @@ DIALOGEVENT:MTrAdv_OffT010subtitle
 END
 
 DIALOGEVENT:MTrAdv_OffT012subtitle
-"*Now press and hold both the right and left mouse buttons and drag your mouse. You’ll notice that a Formation Preview will display on the ground. Once you release the mouse buttons, your units will form up into this battle line."
+"*Now press and hold both the right and left mouse buttons and drag your mouse. Youï¿½ll notice that a Formation Preview will display on the ground. Once you release the mouse buttons, your units will form up into this battle line."
 END
 
 DIALOGEVENT:MTrAdv_OffT013subtitle
@@ -37801,11 +37801,11 @@ DIALOGEVENT:MTrAdv_OffT018subtitle
 END
 
 DIALOGEVENT:MTrAdv_OffT019subtitle
-"*It appears as though Gondor has sent reinforcements to aid us in our reclaiming of this mountain. Let’s join up with them by building a transport of our own. Select the shipwright and click on the Transport button to begin building one."
+"*It appears as though Gondor has sent reinforcements to aid us in our reclaiming of this mountain. Letï¿½s join up with them by building a transport of our own. Select the shipwright and click on the Transport button to begin building one."
 END
 
 DIALOGEVENT:MTrAdv_OffT020subtitle
-"*Now select your battalion and right click on the Transport. You’ll notice that your cursor changes to a garrison icon. Other structures in Middle-earth can be garrisoned as well, so keep an eye out for that icon."
+"*Now select your battalion and right click on the Transport. Youï¿½ll notice that your cursor changes to a garrison icon. Other structures in Middle-earth can be garrisoned as well, so keep an eye out for that icon."
 END
 
 DIALOGEVENT:MTrAdv_OffT021subtitle
@@ -37825,11 +37825,11 @@ DIALOGEVENT:MTrAdv_OffT024subtitle
 END
 
 DIALOGEVENT:MTrAdv_OffT025subtitle
-"*You’ve made it across, M’Lord. Well done. In order to deploy your units from a transport, select the transport ship and give it a move order on land."
+"*Youï¿½ve made it across, Mï¿½Lord. Well done. In order to deploy your units from a transport, select the transport ship and give it a move order on land."
 END
 
 DIALOGEVENT:MTrAdv_OffT026subtitle
-"*There’s one of their camps up ahead. We’ll have to rush them before they have a chance to retreat and warn any others. Issue an \"Attack MOVE\" order and that should take care of them."
+"*Thereï¿½s one of their camps up ahead. Weï¿½ll have to rush them before they have a chance to retreat and warn any others. Issue an \"Attack MOVE\" order and that should take care of them."
 END
 
 DIALOGEVENT:MTrAdv_OffT027subtitle
@@ -37845,7 +37845,7 @@ DIALOGEVENT:MTrAdv_OffT029subtitle
 END
 
 DIALOGEVENT:MTrAdv_OffT030subtitle
-"*We’ll have to call in for greater powers to help us progress any farther."
+"*Weï¿½ll have to call in for greater powers to help us progress any farther."
 END
 
 DIALOGEVENT:MTrAdv_OffT031subtitle
@@ -37873,7 +37873,7 @@ DIALOGEVENT:MTrAdv_OffT036subtitle
 END
 
 DIALOGEVENT:MTrAdv_OffT037subtitle
-"*Now back to the battle. First let’s take down those Goblins taunting us from the other side of the wall. Left click on the Arrow Volley power and move your cursor over the goblins."
+"*Now back to the battle. First letï¿½s take down those Goblins taunting us from the other side of the wall. Left click on the Arrow Volley power and move your cursor over the goblins."
 END
 
 DIALOGEVENT:MTrAdv_OffT038subtitle
@@ -37885,7 +37885,7 @@ DIALOGEVENT:MTrAdv_OffT040subtitle
 END
 
 DIALOGEVENT:MTrAdv_OffT041subtitle
-"*Now to get past this wall. Unfortunately the gate is in disrepair and cannot be opened, so we’ll have to destroy these walls."
+"*Now to get past this wall. Unfortunately the gate is in disrepair and cannot be opened, so weï¿½ll have to destroy these walls."
 END
 
 DIALOGEVENT:MTrAdv_OffT042subtitle
@@ -37901,19 +37901,19 @@ DIALOGEVENT:MTrAdv_OffT044subtitle
 END
 
 DIALOGEVENT:MTrAdv_OffT045subtitle
-"*Excellent! The Goblin’s main base is not much farther off. Continue north along the path and be wary of any more camps you encounter."
+"*Excellent! The Goblinï¿½s main base is not much farther off. Continue north along the path and be wary of any more camps you encounter."
 END
 
 DIALOGEVENT:MTrAdv_Sold001subtitle
-"*M’Lord, we are glad you have come. We’ve been keeping an eye on this Goblin camp and have setup a trap for them. All we need to do is set the forest ablaze around them and it should spread into their camp."
+"*Mï¿½Lord, we are glad you have come. Weï¿½ve been keeping an eye on this Goblin camp and have setup a trap for them. All we need to do is set the forest ablaze around them and it should spread into their camp."
 END
 
 DIALOGEVENT:MTrAdv_OffT046subtitle
-"*Fire, M’Lord, has become a valuable asset as of late. Unfortunately in our enemies hands it could also be a serious danger."
+"*Fire, Mï¿½Lord, has become a valuable asset as of late. Unfortunately in our enemies hands it could also be a serious danger."
 END
 
 DIALOGEVENT:MTrAdv_OffT047subtitle
-"*Select the Rangers who have joined you and have them volley their arrows into the spotlights. This will start a fire there and you’ll be able to watch it spread into the enemy's base, setting it ablaze and destroying their structures."
+"*Select the Rangers who have joined you and have them volley their arrows into the spotlights. This will start a fire there and youï¿½ll be able to watch it spread into the enemy's base, setting it ablaze and destroying their structures."
 END
 
 DIALOGEVENT:MTrAdv_OffT048subtitle
@@ -37941,7 +37941,7 @@ DIALOGEVENT:MTrAdv_OffT053subtitle
 END
 
 DIALOGEVENT:MTrAdv_OffT054subtitle
-"*You may also notice that those Goblins have their backs turned to you. This will result in the cavalry flanking those units. Any time a unit is flanked, it will receive more damage from it’s attackers."
+"*You may also notice that those Goblins have their backs turned to you. This will result in the cavalry flanking those units. Any time a unit is flanked, it will receive more damage from itï¿½s attackers."
 END
 
 DIALOGEVENT:MTrAdv_OffT055subtitle
@@ -37949,15 +37949,15 @@ DIALOGEVENT:MTrAdv_OffT055subtitle
 END
 
 DIALOGEVENT:MTrAdv_OffT056subtitle
-"*Last, I’d send the remaining forces you have into the heart of their base and kill every last one of them. Try splitting your forces amongst the different targets in their base."
+"*Last, Iï¿½d send the remaining forces you have into the heart of their base and kill every last one of them. Try splitting your forces amongst the different targets in their base."
 END
 
 DIALOGEVENT:MTrAdv_OffT057subtitle
-"*When you’re plan has been laid out, hit the execute button and your army will march forth with their orders."
+"*When youï¿½re plan has been laid out, hit the execute button and your army will march forth with their orders."
 END
 
 DIALOGEVENT:MTrAdv_OffT058subtitle
-"*We’re winning M’Lord, but their fortress is killing our army. Use your earthquake power again on their Fortress and it should take down their defenses!"
+"*Weï¿½re winning Mï¿½Lord, but their fortress is killing our army. Use your earthquake power again on their Fortress and it should take down their defenses!"
 END
 
 DIALOGEVENT:MTrAdv_OffT059subtitle
@@ -37965,7 +37965,7 @@ DIALOGEVENT:MTrAdv_OffT059subtitle
 END
 
 DIALOGEVENT:MTrAdv_OffT060subtitle
-"*And you, M’Lord are now ready to vanquish more evil from Middle-earth. Take with you all that you have learned and try a campaign, a skirmish versus the AI, or a multiplayer match online against your friends!"
+"*And you, Mï¿½Lord are now ready to vanquish more evil from Middle-earth. Take with you all that you have learned and try a campaign, a skirmish versus the AI, or a multiplayer match online against your friends!"
 END
 
 DIALOGEVENT:WOTR_Tutorial001subtitle
@@ -43117,7 +43117,7 @@ SCRIPT:HighPass_ExtraCampaignText
 END
 
 SCRIPT:Ettenmoors_ExtraCampaignText
-"In days of old, the Ettenmoors were home to the Witch-king of Angmar. Now the new Goblin Leader has taken these lands for his own. Goblin armies spread wildly through the mountains and will threaten Rivendell again if we don’t stop them here."
+"In days of old, the Ettenmoors were home to the Witch-king of Angmar. Now the new Goblin Leader has taken these lands for his own. Goblin armies spread wildly through the mountains and will threaten Rivendell again if we donï¿½t stop them here."
 END
 
 SCRIPT:Shire_ExtraCampaignText
@@ -43149,7 +43149,7 @@ SCRIPT:Erebor_ExtraCampaignText
 END
 
 SCRIPT:Rivendell_ExtraCampaignText
-"Frodo, the free people’s last hope, lies dead. Gorkil begins the siege of Rivendell while the Dark Lord makes his way west. Crush the last haven for the Elves."
+"Frodo, the free peopleï¿½s last hope, lies dead. Gorkil begins the siege of Rivendell while the Dark Lord makes his way west. Crush the last haven for the Elves."
 END
 
 
@@ -43230,11 +43230,11 @@ DIALOGEVENT:MGHighP_OffE022subtitle
 END
 
 DIALOGEVENT:MGHighP_OffE023subtitle
-"*The attack on Rivendell came from farther North – but before we can track the evil to its source, we must clear High Pass of the Goblin invaders."
+"*The attack on Rivendell came from farther North ï¿½ but before we can track the evil to its source, we must clear High Pass of the Goblin invaders."
 END
 
 DIALOGEVENT:MGEtten_OffE015subtitle
-"*In days of old, the Ettenmoors were held by the Witch-king of Angmar. Now the new Goblin Leader has taken these lands for his own. Goblin armies spread wildly through the mountains and will threaten Rivendell again if we don’t stop them here"
+"*In days of old, the Ettenmoors were held by the Witch-king of Angmar. Now the new Goblin Leader has taken these lands for his own. Goblin armies spread wildly through the mountains and will threaten Rivendell again if we donï¿½t stop them here"
 END
 
 DIALOGEVENT:MGEtten_OffE016subtitle
@@ -43246,7 +43246,7 @@ DIALOGEVENT:MGEtten_OffE017subtitle
 END
 
 DIALOGEVENT:MGEtten_OffE018subtitle
-"*Goblin armies spread wildly through the mountains and will threaten Rivendell again if we don’t stop them here."
+"*Goblin armies spread wildly through the mountains and will threaten Rivendell again if we donï¿½t stop them here."
 END
 
 DIALOGEVENT:MGBlueM_OffD024subtitle
@@ -43438,7 +43438,7 @@ DIALOGEVENT:MGErebo_OffD060subtitle
 END
 
 DIALOGEVENT:MGErebo_Dwar008subtitle
-"*<gasp> That’s a lot of trolls!"
+"*<gasp> Thatï¿½s a lot of trolls!"
 END
 
 DIALOGEVENT:MGErebo_Dwar009subtitle
@@ -43678,7 +43678,7 @@ DIALOGEVENT:MERiven_OffG025subtitle
 END
 
 DIALOGEVENT:MERiven_OffG026subtitle
-"*Frodo, the free people’s last hope, lies dead."
+"*Frodo, the free peopleï¿½s last hope, lies dead."
 END
 
 DIALOGEVENT:MERiven_OffG027subtitle
@@ -44131,7 +44131,7 @@ CREDITS:MPEGNotice
 END
 
 //CREDITS:Miles
-//"Uses Miles Sound System. \n Copyright © 1991-2006 \n by RAD Game //Tools, Inc."
+//"Uses Miles Sound System. \n Copyright ï¿½ 1991-2006 \n by RAD Game //Tools, Inc."
 //END
 
 
@@ -44310,7 +44310,7 @@ CREDITS:On2Notice2
 END
 
 CREDITS:On2Notice3
-"On2 technology © 2003 On2 Technologies, Inc."  
+"On2 technology ï¿½ 2003 On2 Technologies, Inc."  
 END
 
 CREDITS:On2Notice4
@@ -44318,7 +44318,7 @@ CREDITS:On2Notice4
 END
 
 CREDITS:GameSpyNotice
-"This product contains software technology licensed from\nGameSpy Industries, Inc. © 1999-2006 \nGameSpy Industries, Inc. GameSpy and the \n'Powered by GameSpy' design are trademarks \nof GameSpy Industries, Inc. All rights reserved."
+"This product contains software technology licensed from\nGameSpy Industries, Inc. ï¿½ 1999-2006 \nGameSpy Industries, Inc. GameSpy and the \n'Powered by GameSpy' design are trademarks \nof GameSpy Industries, Inc. All rights reserved."
 END
 
 CREDITS:TeamThanks
@@ -44338,7 +44338,7 @@ CREDITS:AdditionalLocalization
 END
 
 CREDITS:Miles
-"Uses Miles Sound System. \n Copyright © 1991-2006 \n by RAD Game Tools, Inc."
+"Uses Miles Sound System. \n Copyright ï¿½ 1991-2006 \n by RAD Game Tools, Inc."
 END
 
 
@@ -44358,7 +44358,7 @@ SUBTITLE:CS12_01
 END
 
 SUBTITLE:CS12_02
-"*As time is now running out, Elrond forms a plan to unite the Elves and Dwarves of the North against Sauron’s advancing armies."
+"*As time is now running out, Elrond forms a plan to unite the Elves and Dwarves of the North against Sauronï¿½s advancing armies."
 END
 
 SUBTITLE:CS12_03
@@ -44446,7 +44446,7 @@ SUBTITLE:CS31_01
 END
 
 SUBTITLE:CS31_02
-"*The Goblins have a new leader who carries out Sauron’s tyrannical will."
+"*The Goblins have a new leader who carries out Sauronï¿½s tyrannical will."
 END
 
 SUBTITLE:CS31_03
@@ -44454,7 +44454,7 @@ SUBTITLE:CS31_03
 END
 
 SUBTITLE:CS32_01
-"*In the battle’s aftermath, a lone dwarven prisoner is freed and desperately begs for Glorfindel and Gloin’s help."
+"*In the battleï¿½s aftermath, a lone dwarven prisoner is freed and desperately begs for Glorfindel and Gloinï¿½s help."
 END
 
 SUBTITLE:CS32_02
@@ -44522,7 +44522,7 @@ SUBTITLE:CS41_03
 END
 
 SUBTITLE:CS42_01
-"*Sauron’s dragon has been defeated and the Dwarven ring reclaimed."
+"*Sauronï¿½s dragon has been defeated and the Dwarven ring reclaimed."
 END
 
 SUBTITLE:CS42_02
@@ -44650,7 +44650,7 @@ SUBTITLE:CS56_06
 END
 
 SUBTITLE:CS61_01
-"*While the heroes wing their way East, Sauron’s armies march north from Dol Guldur and arrive at a human settlement on the river Celduin."
+"*While the heroes wing their way East, Sauronï¿½s armies march north from Dol Guldur and arrive at a human settlement on the river Celduin."
 END
 
 SUBTITLE:CS61_02
@@ -44686,7 +44686,7 @@ SUBTITLE:CS65_01
 END
 
 SUBTITLE:CS65_02
-"*Sauron’s leaders turn to them, seeking a possible ally in this brewing war against the Dwarves."
+"*Sauronï¿½s leaders turn to them, seeking a possible ally in this brewing war against the Dwarves."
 END
 
 SUBTITLE:CS66_01
@@ -44710,7 +44710,7 @@ SUBTITLE:CS71_02
 END
 
 SUBTITLE:CS71_03
-"*Sauron’s armies lay siege to Minas Tirith in the South."
+"*Sauronï¿½s armies lay siege to Minas Tirith in the South."
 END
 
 SUBTITLE:CS71_04
@@ -44762,7 +44762,7 @@ SUBTITLE:CS76_01
 END
 
 SUBTITLE:CS81_01
-"*…slay the Enemy to the last!"
+"*ï¿½slay the Enemy to the last!"
 END
 
 SUBTITLE:CS81_02
@@ -44774,7 +44774,7 @@ SUBTITLE:CS81_03
 END
 
 SUBTITLE:CS82_01
-"*With Sauron’s forces defeated, Galadriel at last throws down the walls of Dol Guldur."
+"*With Sauronï¿½s forces defeated, Galadriel at last throws down the walls of Dol Guldur."
 END
 
 SUBTITLE:CS82_02
@@ -44798,7 +44798,7 @@ SUBTITLE:CS85_03
 END
 
 SUBTITLE:CS86_01
-"*Sauron’s reign over the Northern Lands is unopposed as the leaders of the Free People are no more."
+"*Sauronï¿½s reign over the Northern Lands is unopposed as the leaders of the Free People are no more."
 END
 
 SUBTITLE:CS86_02
@@ -44818,7 +44818,7 @@ SUBTITLE:CS99_03
 END
 
 SUBTITLE:CS99_04
-"*After the Fellowship is assembled and heads south to destroy the source of Sauron’s power, the remaining leaders prepare for the Dark Lord’s assault upon the northern lands."
+"*After the Fellowship is assembled and heads south to destroy the source of Sauronï¿½s power, the remaining leaders prepare for the Dark Lordï¿½s assault upon the northern lands."
 END
 
 SUBTITLE:CS99_05
@@ -50676,7 +50676,7 @@ SUBTITLE:BABME_01
 END
 
 SUBTITLE:BABME_02
-"Like so many cities of Arnor, it lies in ruin, its hopes for a final conquest of the West, gone. Middle Earth rejoiced…"
+"Like so many cities of Arnor, it lies in ruin, its hopes for a final conquest of the West, gone. Middle Earth rejoicedï¿½"
 END
 
 SUBTITLE:BABME_03
@@ -50696,7 +50696,7 @@ SUBTITLE:BABME_06
 END
 
 SUBTITLE:BABME_07
-"We thought him but a powerful Black Númenorean, but he is Nazgul, First of the Nine, most fell servant of the Dark Lord Sauron."
+"We thought him but a powerful Black Nï¿½menorean, but he is Nazgul, First of the Nine, most fell servant of the Dark Lord Sauron."
 END
 
 SUBTITLE:BABME_08
@@ -50704,11 +50704,11 @@ SUBTITLE:BABME_08
 END
 
 SUBTITLE:BABME_09
-"'Far off yet is his doom, and not by the hand of man shall he fall’."
+"'Far off yet is his doom, and not by the hand of man shall he fallï¿½."
 END
 
 SUBTITLE:BABMO_01
-"After the Witch-king’s bloody, final triumph over Arnor, the kingdom of Gondor can look away no more,"
+"After the Witch-kingï¿½s bloody, final triumph over Arnor, the kingdom of Gondor can look away no more,"
 END
 
 SUBTITLE:BABMO_02
@@ -50724,11 +50724,11 @@ SUBTITLE:BABMO_04
 END
 
 SUBTITLE:BABMO_05
-"I ride, Elrond at my side, under Earnur’s banner. Elves and Men together will drive evil from the North forever."
+"I ride, Elrond at my side, under Earnurï¿½s banner. Elves and Men together will drive evil from the North forever."
 END
 
 SUBTITLE:BABMO_06
-"We will not merely push the Witch-king back to his lair of Carn Dûm as we had foolishly done before."
+"We will not merely push the Witch-king back to his lair of Carn Dï¿½m as we had foolishly done before."
 END
 
 SUBTITLE:BABMO_07
@@ -50740,11 +50740,11 @@ SUBTITLE:BACO_01
 END
 
 SUBTITLE:BACO_010
-"…and Arthedain, the most powerful of the Northern realms,"
+"ï¿½and Arthedain, the most powerful of the Northern realms,"
 END
 
 SUBTITLE:BACO_011
-"still ruled by Isildur’s heirs from the capital of Fornost."
+"still ruled by Isildurï¿½s heirs from the capital of Fornost."
 END
 
 SUBTITLE:BACO_012
@@ -50752,7 +50752,7 @@ SUBTITLE:BACO_012
 END
 
 SUBTITLE:BACO_013
-"a twisted, frozen land that lay North beyond the Ettenmoors, and home of the Black Númenoreans."
+"a twisted, frozen land that lay North beyond the Ettenmoors, and home of the Black Nï¿½menoreans."
 END
 
 SUBTITLE:BACO_014
@@ -50764,7 +50764,7 @@ SUBTITLE:BACO_015
 END
 
 SUBTITLE:BACO_016
-"to destroy the Dúnedain and their kingdom of Arnor …"
+"to destroy the Dï¿½nedain and their kingdom of Arnor ï¿½"
 END
 
 SUBTITLE:BACO_02
@@ -50772,7 +50772,7 @@ SUBTITLE:BACO_02
 END
 
 SUBTITLE:BACO_03
-" In time, evil once more began to move…"
+" In time, evil once more began to moveï¿½"
 END
 
 SUBTITLE:BACO_04
@@ -50780,15 +50780,15 @@ SUBTITLE:BACO_04
 END
 
 SUBTITLE:BACO_05
-"This land of passion and promise is waylaid by men’s inability to set aside petty differences;"
+"This land of passion and promise is waylaid by menï¿½s inability to set aside petty differences;"
 END
 
 SUBTITLE:BACO_06
-"and so it was that civil strife weakened the Dúnedain and broke the land into three realms:"
+"and so it was that civil strife weakened the Dï¿½nedain and broke the land into three realms:"
 END
 
 SUBTITLE:BACO_07
-"Rhudaur, the smallest and weakest of the Dúnedain kingships…"
+"Rhudaur, the smallest and weakest of the Dï¿½nedain kingshipsï¿½"
 END
 
 SUBTITLE:BACO_08
@@ -50796,7 +50796,7 @@ SUBTITLE:BACO_08
 END
 
 SUBTITLE:BACO_09
-"where the forefathers of the Dúnedain lay entombed …"
+"where the forefathers of the Dï¿½nedain lay entombed ï¿½"
 END
 
 SUBTITLE:BAM1E_01
@@ -50812,7 +50812,7 @@ SUBTITLE:BAM1E_03
 END
 
 SUBTITLE:BAM1O_01
-"Before Arnor can be invaded, the Witch-king needs a symbol to unite Angmar’s proud and willful denizens."
+"Before Arnor can be invaded, the Witch-king needs a symbol to unite Angmarï¿½s proud and willful denizens."
 END
 
 SUBTITLE:BAM1O_02
@@ -50824,7 +50824,7 @@ SUBTITLE:BAM1O_03
 END
 
 SUBTITLE:BAM1O_04
-"Rebuilding this bastion will secure the Iron Crown’s dominion over the Black Numenoreans and the northern troll tribes..."
+"Rebuilding this bastion will secure the Iron Crownï¿½s dominion over the Black Numenoreans and the northern troll tribes..."
 END
 
 SUBTITLE:BAM30_03
@@ -50856,11 +50856,11 @@ SUBTITLE:BAM3E_04
 END
 
 SUBTITLE:BAM3E_05
-"But despite their wounds, the Dúnedain are not without power."
+"But despite their wounds, the Dï¿½nedain are not without power."
 END
 
 SUBTITLE:BAM3E_06
-"The fortified Weather Hills and fortress at Amon Sûl stand as a shield protecting Fornost and the heart of Arnor…"
+"The fortified Weather Hills and fortress at Amon Sï¿½l stand as a shield protecting Fornost and the heart of Arnorï¿½"
 END
 
 SUBTITLE:BAM3O_01
@@ -50872,31 +50872,31 @@ SUBTITLE:BAM3O_02
 END
 
 SUBTITLE:BAM3O_05
-"But Angmar, its power ready, advances into the weakest of the Dúnedain realms."
+"But Angmar, its power ready, advances into the weakest of the Dï¿½nedain realms."
 END
 
 SUBTITLE:BAM3O_06
-"Thus one man’s lust for power has given the Witch-king an opportunity…"
+"Thus one manï¿½s lust for power has given the Witch-king an opportunityï¿½"
 END
 
 SUBTITLE:BAM4E_01
-"Amon Sûl is laid to ruin."
+"Amon Sï¿½l is laid to ruin."
 END
 
 SUBTITLE:BAM4E_02
-"With its garrison reduced, the great bastion of the north could not withstand Angmar’s rage."
+"With its garrison reduced, the great bastion of the north could not withstand Angmarï¿½s rage."
 END
 
 SUBTITLE:BAM4E_03
-"But Angmar’s victory is not complete;"
+"But Angmarï¿½s victory is not complete;"
 END
 
 SUBTITLE:BAM4E_04
-"Arveleg  has escaped Amon Sûl with a prize that the Witch-king covets over all others…"
+"Arveleg  has escaped Amon Sï¿½l with a prize that the Witch-king covets over all othersï¿½"
 END
 
 SUBTITLE:BAM4O_01
-"The new king, Arveleg son of Argeleb, with the help of Cardolan and the Elves, has checked Angmar’s advance;"
+"The new king, Arveleg son of Argeleb, with the help of Cardolan and the Elves, has checked Angmarï¿½s advance;"
 END
 
 SUBTITLE:BAM4O_02
@@ -50904,11 +50904,11 @@ SUBTITLE:BAM4O_02
 END
 
 SUBTITLE:BAM4O_03
-"Using the power of the Palantir of Amon Sûl, Arveleg has foiled every attack and stratagem."
+"Using the power of the Palantir of Amon Sï¿½l, Arveleg has foiled every attack and stratagem."
 END
 
 SUBTITLE:BAM4O_04
-"The Witch-king must now undertake a daring and dangerous strategy: a direct assault on the fortress of Amon Sûl."
+"The Witch-king must now undertake a daring and dangerous strategy: a direct assault on the fortress of Amon Sï¿½l."
 END
 
 SUBTITLE:BAM4O_05
@@ -50916,7 +50916,7 @@ SUBTITLE:BAM4O_05
 END
 
 SUBTITLE:BAM4O_06
-"Although not the largest bastions in Middle-Earth, Amon Sûl is host to a mighty power – the master Palantir of the North."
+"Although not the largest bastions in Middle-Earth, Amon Sï¿½l is host to a mighty power ï¿½ the master Palantir of the North."
 END
 
 SUBTITLE:BAM5E_01
@@ -50924,7 +50924,7 @@ SUBTITLE:BAM5E_01
 END
 
 SUBTITLE:BAM5E_02
-"For many centuries the Black Númenoreans have dabbled in the dark arts."
+"For many centuries the Black Nï¿½menoreans have dabbled in the dark arts."
 END
 
 SUBTITLE:BAM5E_03
@@ -50932,7 +50932,7 @@ SUBTITLE:BAM5E_03
 END
 
 SUBTITLE:BAM5O_01
-"The fall of Amon Sûl is a terrible blow to the will of the Dúnedain."
+"The fall of Amon Sï¿½l is a terrible blow to the will of the Dï¿½nedain."
 END
 
 SUBTITLE:BAM5O_02
@@ -50940,7 +50940,7 @@ SUBTITLE:BAM5O_02
 END
 
 SUBTITLE:BAM5O_03
-"Angered by its escape, the Witch-king dispatches the Lieutenant of Carn Dûm with orders to retrieve the stolen orb."
+"Angered by its escape, the Witch-king dispatches the Lieutenant of Carn Dï¿½m with orders to retrieve the stolen orb."
 END
 
 SUBTITLE:BAM60_06
@@ -50952,15 +50952,15 @@ SUBTITLE:BAM6E_01
 END
 
 SUBTITLE:BAM6E_02
-"Cardolan has fallen, and all that remains is the realm of Arthedain. Men have allowed this to happen…"
+"Cardolan has fallen, and all that remains is the realm of Arthedain. Men have allowed this to happenï¿½"
 END
 
 SUBTITLE:BAM6E_03
-"Their indecision and disunity have brought them to the brink of annihilation…"
+"Their indecision and disunity have brought them to the brink of annihilationï¿½"
 END
 
 SUBTITLE:BAM6O_01
-"The destruction of Amon Sûl and its palantir crippled the Army of Arthedain, but Fornost still stands."
+"The destruction of Amon Sï¿½l and its palantir crippled the Army of Arthedain, but Fornost still stands."
 END
 
 SUBTITLE:BAM6O_02
@@ -50972,11 +50972,11 @@ SUBTITLE:BAM6O_03
 END
 
 SUBTITLE:BAM6O_04
-"For the army of Cardolan was not at Amon Sûl, and is still in the field."
+"For the army of Cardolan was not at Amon Sï¿½l, and is still in the field."
 END
 
 SUBTITLE:BAM6O_05
-"A way must be devised to make them fight on ground of the Witch-king’s choosing."
+"A way must be devised to make them fight on ground of the Witch-kingï¿½s choosing."
 END
 
 SUBTITLE:BAM6O_07
@@ -50988,7 +50988,7 @@ SUBTITLE:BAM6O_08
 END
 
 SUBTITLE:BAM7E_01
-"The Witch-king’s cunning matches his cruelty."
+"The Witch-kingï¿½s cunning matches his cruelty."
 END
 
 SUBTITLE:BAM7E_02
@@ -50996,19 +50996,19 @@ SUBTITLE:BAM7E_02
 END
 
 SUBTITLE:BAM7E_03
-"The Iron Crown has suffered a heavy blow, but Angmar has not been defeated …"
+"The Iron Crown has suffered a heavy blow, but Angmar has not been defeated ï¿½"
 END
 
 SUBTITLE:BAM7E_04
-"It will take time to recover its strength… Perhaps enough time for Arnor to rise anew."
+"It will take time to recover its strengthï¿½ Perhaps enough time for Arnor to rise anew."
 END
 
 SUBTITLE:BAM7E_05
-"But the Witch-king has no intention of allowing this to happen…"
+"But the Witch-king has no intention of allowing this to happenï¿½"
 END
 
 SUBTITLE:BAM7O_01
-"Arnor sits at the edge of the abyss. Rhudaur is the Witch-king’s, Cardolan is reduced to scattered bands of refugees."
+"Arnor sits at the edge of the abyss. Rhudaur is the Witch-kingï¿½s, Cardolan is reduced to scattered bands of refugees."
 END
 
 SUBTITLE:BAM7O_02
@@ -51020,11 +51020,11 @@ SUBTITLE:BAM7O_03
 END
 
 SUBTITLE:BAM7O_04
-"Now, the Elves of Lindon, Rivendell and even Lórien march against Angmar."
+"Now, the Elves of Lindon, Rivendell and even Lï¿½rien march against Angmar."
 END
 
 SUBTITLE:BAM7O_05
-"They are intent to drive a sword into the heart of Angmar that would last an age …"
+"They are intent to drive a sword into the heart of Angmar that would last an age ï¿½"
 END
 
 SUBTITLE:BAM8E_01
@@ -51032,7 +51032,7 @@ SUBTITLE:BAM8E_01
 END
 
 SUBTITLE:BAM8E_02
-"Angmar’s great plague stretched far and wide, striking at the heart of Arnor and weakening the already fragile Dúnedain defenses."
+"Angmarï¿½s great plague stretched far and wide, striking at the heart of Arnor and weakening the already fragile Dï¿½nedain defenses."
 END
 
 SUBTITLE:BAM8E_03
@@ -51048,7 +51048,7 @@ SUBTITLE:BAM8O_02
 END
 
 SUBTITLE:BAM8O_03
-"But they reckon without knowledge of the depth of the Witch-king’s hatred…"
+"But they reckon without knowledge of the depth of the Witch-kingï¿½s hatredï¿½"
 END
 
 SUBTITLE:BAM8O_04
@@ -51064,7 +51064,7 @@ SUBTITLE:BAM8O_06
 END
 
 SUBTITLE:BAM9E_01
-"Angmar’s hammer fell, and down came Fornost, in ash and fire!"
+"Angmarï¿½s hammer fell, and down came Fornost, in ash and fire!"
 END
 
 SUBTITLE:BAM9E_02
@@ -51072,11 +51072,11 @@ SUBTITLE:BAM9E_02
 END
 
 SUBTITLE:BAM9E_03
-"The Witch-king’s malice can now spread throughout these Northern Lands."
+"The Witch-kingï¿½s malice can now spread throughout these Northern Lands."
 END
 
 SUBTITLE:BAM9E_04
-"Evil had come to Arnor… and evil prevailed."
+"Evil had come to Arnorï¿½ and evil prevailed."
 END
 
 SUBTITLE:BAM9O_01
@@ -51084,7 +51084,7 @@ SUBTITLE:BAM9O_01
 END
 
 SUBTITLE:BAM9O_02
-"In great secrecy the hosts of Angmar have been reforged, and the final stroke is ready to fall upon the last bastion of Arnor’s power: Fornost."
+"In great secrecy the hosts of Angmar have been reforged, and the final stroke is ready to fall upon the last bastion of Arnorï¿½s power: Fornost."
 END
 
 SUBTITLE:BAM9O_03
@@ -51124,7 +51124,7 @@ SUBTITLE:CAC11_02
 END
 
 SUBTITLE:CAC12_01
-"A blade in the dark forces a gathering of the tribes to compete for the crown…"
+"A blade in the dark forces a gathering of the tribes to compete for the crownï¿½"
 END
 
 SUBTITLE:CAC13_01
@@ -51132,7 +51132,7 @@ SUBTITLE:CAC13_01
 END
 
 SUBTITLE:CAC13_02
-"to ensure that the orcs of Gundabad will heed the orders of the Iron Crown…"
+"to ensure that the orcs of Gundabad will heed the orders of the Iron Crownï¿½"
 END
 
 SUBTITLE:CAC14_01
@@ -51144,7 +51144,7 @@ SUBTITLE:CAC14_02
 END
 
 SUBTITLE:CAC14_03
-"The hammer is forged at last, ready to smite the heirs of Elendil and lay their kingdoms low…"
+"The hammer is forged at last, ready to smite the heirs of Elendil and lay their kingdoms lowï¿½"
 END
 
 // ##################################
@@ -51962,11 +51962,11 @@ CONTROLBAR:ToolTipPurchaseUpgradeIsengardFortressBurningForges
 "Reduces the cost of Isengard unit Upgrades \n 1  Fortress with forges = 33% cheaper \n 2 Fortresses with forges = 41% cheaper \n 3 Fortresses with forges = 49% cheaper \n 4 Fortresses with forges = 58% cheaper \n 5 Fortresses with forges = 67% cheaper"
 END
 CONTROLBAR:ToolTipPurchaseUpgradeIsengardFortressWizardsTower
-//"The Wizard’s Tower can shoot several bolts of lightning at an area surrounding the Fortress"
+//"The Wizardï¿½s Tower can shoot several bolts of lightning at an area surrounding the Fortress"
 "Shoots several bolts of lightning that hit near the Fortress"
 END
 ToolTip:LackIronPlating
-//"Requires the Iron Plating upgrade \n The Wizard’s Tower can shoot several lightning bolts at an area surrounding the Fortress"
+//"Requires the Iron Plating upgrade \n The Wizardï¿½s Tower can shoot several lightning bolts at an area surrounding the Fortress"
 "Requires the Iron Plating upgrade \n Shoot several bolts of lightning that hit near the Fortress"
 END
 
@@ -55304,7 +55304,7 @@ Map:MAPMPDwarrowdelf
 "Dwarrowdelf"
 END
 Map:MAPMPDwarrowdelf/Desc
-"Khazad-dûm, also known as Hadhodrond, Casarrondo and Phurunargian, which translates to Dwarrowdelf, latterly known as Moria.\n\n Size: 600 x 500\n Lairs: 8x Goblin Lair, 4x Troll Lair\n Neutral Structures: 4x Outpost, 4x Inn, 2x Signal Fire"
+"Khazad-dï¿½m, also known as Hadhodrond, Casarrondo and Phurunargian, which translates to Dwarrowdelf, latterly known as Moria.\n\n Size: 600 x 500\n Lairs: 8x Goblin Lair, 4x Troll Lair\n Neutral Structures: 4x Outpost, 4x Inn, 2x Signal Fire"
 END
 
 Map:MAPMPEastBight
@@ -55624,7 +55624,7 @@ Map:MAPMPRhunShore
 "Rhun Shore"
 End
 Map:MAPMPRhunShore/Desc
-"Sea of Rhun is a large inland sea located in the arid domain of Esterling. After the downfall of Sauron, Aragorn and Éomer rode there to flush out the last remnants of the enemy forces.\n\n Size: 380 x 350\n Lairs: 4x Warg Lair, 2x Troll Lair\n Neutral Structures: 1x Outpost, 1x Inn"
+"Sea of Rhun is a large inland sea located in the arid domain of Esterling. After the downfall of Sauron, Aragorn and ï¿½omer rode there to flush out the last remnants of the enemy forces.\n\n Size: 380 x 350\n Lairs: 4x Warg Lair, 2x Troll Lair\n Neutral Structures: 1x Outpost, 1x Inn"
 End
 
 Map:mapmpRingloRiver
@@ -57635,10 +57635,64 @@ CONTROLBAR:ToolTipBuildNoldorArcherHorde
 "Strong vs. All Normal Troops\nRequires Level 3 Barracks\nCan stealth near trees\nOnly 8 battalions of Noldor Archers are allowed at any time"
 END
 
-CAH:RangeMenuLabel
-"Range"
+
+//------------ Tauriel ---------------
+CONTROLBAR:LW_Hero_Tauriel
+"Tauriel"
 END
 
-CAH:RangeMenuDesc
-"Increse Range of Attack"
+OBJECT:MirkwoodTauriel
+"Tauriel"
+END
+
+CONTROLBAR:MirkwoodTaurielRecruit
+"Recruit the Captain of the Guard \n \n 'When did we allow evil to become stronger than us?'"
+END
+
+CONTROLBAR:MirkwoodTaurielRevive
+"Revive the fallen hero, Tauriel"
+END
+
+CONTROLBAR:MirkwoodTaurielHotkey
+"Tauriel (&W)"
+END
+
+CONTROLBAR:TaurielLeadership
+"Silvan Captain"
+END
+
+CONTROLBAR:ToolTipTaurielLeadership
+"Nearby Silvan units gain +25% vision & attack range and +25% experience gain\n At Level 3, nearby Silvan units ability cooldown times are reduced by 25% \n Passive ability"
+END
+
+CONTROLBAR:TaurielSummon
+"Eyes and Ears (&R)"
+END
+
+CONTROLBAR:ToolTipTaurielSummon
+"Requires Level 3 \n Tauriel calls a group of stationary Taurdrim to defend targeted location\nThey are immobile, but remain stealthed when not attacking\n Left click icon then left click on pathable location"
+END
+
+CONTROLBAR:TaurielDecisiveStrike
+"Close Quarter Combat (&C)"
+END
+
+CONTROLBAR:TaurielEscape
+"Daughter of the Forest (&V)"
+END
+
+CONTROLBAR:TooltipTaurielEscape
+"Requires Level 8 \n Tauriel is able to disappear into the trees when she wishes \nTauriel teleports to target area \nLeft click icon then left click on pathable location"
+END
+
+CONTROLBAR:ToolTipTaurielDecisiveStrike
+"Requires Level 5\nTauriel temporarily uses her twin daggers\nIncreases attack damage by +33% and deals splash damage\nLeft click to activate"
+END
+
+CONTROLBAR:TaurielFleetFooted
+"Fleet-footed (&T)"
+END
+
+CONTROLBAR:ToolTipTaurielFleetFooted
+"Requires Level 4 \n Modifier Type: Spell \n Nearby infantry gains +20% movement speed\n Stacks with Leadership and Spells\nLeft click to activate"
 END
