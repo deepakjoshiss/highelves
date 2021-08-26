@@ -57662,7 +57662,7 @@ CONTROLBAR:TaurielLeadership
 END
 
 CONTROLBAR:ToolTipTaurielLeadership
-"Nearby Mirkwood and Noldor Archers gain increased range \n Level 1: +20% and Level 7: +30% \n Level 7: Ability cooldown are reduced by 25% \n Passive ability, Stacks with Leadership"
+"Nearby Mirkwood and Noldor Archers gain increased range \n Level 1: +20% and Level 15: +50% \n Level 15: Ability cooldown are reduced by 50% \n Passive ability, Stacks with Leadership"
 END
 
 CONTROLBAR:TaurielSummon
@@ -57703,4 +57703,20 @@ END
 
 CONTROLBAR:ToolTipExplodingArrow
 "Requires Level 1 \n Does small damge in an area \n Left click icon then left click on area"
+END
+
+CONTROLBAR:PurchaseMallornTreeBloom
+"&Bloom Mallorn Tree"
+END
+
+UPGRADE:MallornTreeBloom
+"&Mallorn Tree is now Blooming"
+END
+
+CONTROLBAR:ToolTipMallornTreeBloom
+"Significantly increases Production \n Command points Bonus: 50 \n Health Bonus: 1000"
+END
+
+CONTROLBAR:ToolTipMallornTreeBloomRequired
+"Requires Level 3 Mallorn Tree"
 END
