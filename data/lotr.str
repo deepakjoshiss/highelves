@@ -57706,11 +57706,11 @@ CONTROLBAR:ToolTipExplodingArrow
 END
 
 CONTROLBAR:PurchaseMallornTreeBloom
-"&Bloom Mallorn Tree"
+"Bloom Mallorn Tree (&B)"
 END
 
 UPGRADE:MallornTreeBloom
-"&Mallorn Tree is now Blooming"
+"Mallorn Tree is now Blooming"
 END
 
 CONTROLBAR:ToolTipMallornTreeBloom
@@ -57718,5 +57718,26 @@ CONTROLBAR:ToolTipMallornTreeBloom
 END
 
 CONTROLBAR:ToolTipMallornTreeBloomRequired
-"Requires Level 3 Mallorn Tree"
+"Requires Level 2 Mallorn Tree"
 END
+
+CONTROLBAR:NimrodelWaters
+"Blessed Waters (&W)"
+END
+
+CONTROLBAR:ToolTipNimrodelWaters
+"The Mallorn Tree is bathed in blessed waters. Nearby units are healed in its presence."
+END
+
+CONTROLBAR:ConstructGondolinTower
+"Build Gondolin Tower (&T)"
+END
+
+OBJECT:GondolinTower
+"Gondolin Tower"
+END
+
+OBJECT:GondolinTowerDescription
+"Support Structure \n Turgon built it in secret with the help of the Vala Ulmo, who blessed and gave protection to the city.\n Increases Range of Garrisoned Units"
+END
+
