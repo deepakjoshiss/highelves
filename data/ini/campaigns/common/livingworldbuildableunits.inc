@@ -685,6 +685,15 @@ LivingWorldPlayerArmy
 End
 
 LivingWorldPlayerArmy
+	Name = TaurielArmy
+	DisplayNameTag = LWA:Elves
+	ArmyEntry
+		ThingTemplate = MirkwoodTauriel
+		Quantity = 1
+	End
+End
+
+LivingWorldPlayerArmy
 	Name = ArwenArmy
 	DisplayNameTag = LWA:Elves
 	ArmyEntry
