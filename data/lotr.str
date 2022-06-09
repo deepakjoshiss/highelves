@@ -57635,6 +57635,13 @@ CONTROLBAR:ToolTipBuildNoldorArcherHorde
 "Strong vs. All Normal Troops\nRequires Level 3 Barracks\nCan stealth near trees\nOnly 8 battalions of Noldor Archers are allowed at any time"
 END
 
+CONTROLBAR:LightOfTrees
+"Light Of the Trees"
+End
+
+CONTROLBAR:ToolTipLightOfTrees
+"Temporarily covers the entire map in the light of the two trees \n Modifier Type: Spell \n All ally units gain +33% Damage and +33% Armor \n Stacks with Buffs, Leadership and other Spells \n Cancels Darkness and Freezing Rain \n Left click to activate"
+END
 
 //------------ Tauriel ---------------
 CONTROLBAR:LW_Hero_Tauriel
