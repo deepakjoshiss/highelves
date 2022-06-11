@@ -57733,11 +57733,19 @@ CONTROLBAR:NimrodelWaters
 END
 
 CONTROLBAR:ToolTipNimrodelWaters
-"The Mallorn Tree is bathed in blessed waters. Nearby units are healed in its presence."
+"The Mallorn Tree is bathed in blessed waters. Nearby units are healed and replenish in its presence."
 END
 
 CONTROLBAR:ConstructGondolinTower
 "Build Gondolin Tower (&T)"
+END
+
+UPGRADE:NimrodelWaters
+"Blessed Waters"
+END
+
+UPGRADE:ToolTipNimrodelWaters
+"The Mallorn Tree is bathed in blessed waters. Nearby units are healed and replenish in its presence."
 END
 
 OBJECT:GondolinTower
