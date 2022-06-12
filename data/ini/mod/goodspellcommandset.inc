@@ -76,7 +76,6 @@ CommandSet ElvesSpellBookCommandSet
     18 = Command_SpellBookSunflare
     19 = Command_SpellBookFlood
     20 = Command_SpellBookCitadel
-
 End
 
 CommandSet ElvesSpellStoreCommandSet
@@ -130,7 +129,6 @@ CommandSet DwarvesSpellBookCommandSet
     18 = Command_SpellBookEarthquake
     19 = Command_SpellBookCitadel
     20 = Command_SpellBookSunflare
-
 End
 
 CommandSet DwarvesSpellStoreCommandSet
