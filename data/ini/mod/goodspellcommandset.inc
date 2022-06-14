@@ -62,7 +62,7 @@ CommandSet ElvesSpellBookCommandSet
     6 = Command_SpellBookEnshroudingMist
     7 = Command_SpellBookArrowVolleyGood
     8 = Command_SpellBookTomBombadil
-    9 = Command_SpellBookLoneTowerDwarf
+    9 = Command_SpellBookSpawnTreeFlet
     10 = Command_SpellBookDwarvenRiches
     11 = Command_SpellBookElvenWood
 
@@ -76,6 +76,7 @@ CommandSet ElvesSpellBookCommandSet
     18 = Command_SpellBookSunflare
     19 = Command_SpellBookFlood
     20 = Command_SpellBookCitadel
+
 End
 
 CommandSet ElvesSpellStoreCommandSet
@@ -88,7 +89,7 @@ CommandSet ElvesSpellStoreCommandSet
     6 = Command_PurchaseSpellEnshroudingMistMP
     7 = Command_PurchaseSpellArrowVolleyGood
     8 = Command_PurchaseSpellTomBombadil
-    9 = Command_PurchaseSpellLoneTower
+    9 = Command_PurchaseSpellSpawnTreeFlet
     10 = Command_PurchaseSpellDwarvenRiches
     11 = Command_PurchaseSpellElvenWood
 
@@ -129,6 +130,7 @@ CommandSet DwarvesSpellBookCommandSet
     18 = Command_SpellBookEarthquake
     19 = Command_SpellBookCitadel
     20 = Command_SpellBookSunflare
+
 End
 
 CommandSet DwarvesSpellStoreCommandSet

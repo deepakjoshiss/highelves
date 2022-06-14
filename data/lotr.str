@@ -57643,6 +57643,14 @@ CONTROLBAR:ToolTipLightOfTrees
 "Temporarily covers the entire map in the light of the two trees \n Modifier Type: Spell \n All ally units gain +33% Damage and +33% Armor \n Stacks with Buffs, Leadership and other Spells \n Cancels Darkness and Freezing Rain \n Left click to activate"
 END
 
+CONTROLBAR:TreeFlet
+"Tree Flet"
+End
+
+CONTROLBAR:ToolTipTreeFlet
+"Spawns a Lorien Tree Flet with Galadhrim Archers \n Can be upgraded to provide help to nearby allies"
+END
+
 //------------ Tauriel ---------------
 CONTROLBAR:LW_Hero_Tauriel
 "Tauriel"

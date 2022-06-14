@@ -297,19 +297,26 @@ const getCommandAlias = (science: ScienceType, faction: FactionType, purchase: b
             return purchase ? 'LoneTowerMen' : 'LoneTower'
         }
     }
+
+    if (faction === ScienceElves) {
+        if (science === 'SCIENCE_SpawnLoneTower') {
+            return 'SpawnTreeFlet'
+        }
+    }
+
     if (science === 'SCIENCE_SpawnLoneTower') {
         return purchase ? 'LoneTower' : 'LoneTowerDwarf'
     }
     if (!purchase && science === 'SCIENCE_EnshroudingMistSP') {
         return 'EnshroudingMist'
     }
-    if(purchase && faction === ScienceGood && science === 'SCIENCE_RallyingCall') {
+    if (purchase && faction === ScienceGood && science === 'SCIENCE_RallyingCall') {
         return 'RallyingCallSP'
     }
-    if(!purchase && science === 'SCIENCE_RallyingCallMP') {
+    if (!purchase && science === 'SCIENCE_RallyingCallMP') {
         return 'RallyingCall'
     }
-    if(!purchase && (science === 'SCIENCE_EnshroudingMistMP' || science === 'SCIENCE_EnshroudingMistSP')) {
+    if (!purchase && (science === 'SCIENCE_EnshroudingMistMP' || science === 'SCIENCE_EnshroudingMistSP')) {
         return 'EnshroudingMist'
     }
     return science;
