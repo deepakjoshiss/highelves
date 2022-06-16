@@ -83,13 +83,26 @@ CommandButton Command_PurchaseUpgradeBloom
    Command           = OBJECT_UPGRADE
    Object            = ElvenMallornTree
    Upgrade           = Upgrade_MallornTreeBloom
-   NeededUpgrade	 = Upgrade_StructureLevel2
+   NeededUpgrade	 	 = Upgrade_StructureLevel2
    Options           = NEED_UPGRADE CANCELABLE
    TextLabel         = CONTROLBAR:PurchaseMallornTreeBloom
    ButtonImage       = BEMallornTree ;,; UCCommon_UpgradeStructureNew
    ButtonBorderType	 = BUILD
    DescriptLabel     = CONTROLBAR:ToolTipMallornTreeBloom
    LacksPrerequisiteLabel = CONTROLBAR:ToolTipMallornTreeBloomRequired ;;,;;
+   Radial            = Yes
+   InPalantir        = Yes
+End
+
+CommandButton Command_PurchaseUpgradePurifyngFlames
+   Command           = OBJECT_UPGRADE
+   Object            = TreeFlet
+   Upgrade           = Upgrade_PurifyingFlames
+   Options           = CANCELABLE
+   TextLabel         = UPGRADE:PurifyingFlames
+   ButtonImage       = BILorienFortBanners
+   ButtonBorderType	 = BUILD
+   DescriptLabel     = UPGRADE:ToolTipPurifyingFlames
    Radial            = Yes
    InPalantir        = Yes
 End

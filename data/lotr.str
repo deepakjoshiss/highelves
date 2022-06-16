@@ -57651,6 +57651,14 @@ CONTROLBAR:ToolTipTreeFlet
 "Spawns a Lorien Tree Flet with Galadhrim Archers \n Can be upgraded to provide help to nearby allies"
 END
 
+OBJECT:LothlorienFlet
+"Lorien Tree Flet"
+END
+
+OBJECT:TreeFletDescription
+"Support Structure \n Watchtower of Galadhrim Warriors \n Can be upgraded to help nearby allies"
+END
+
 //------------ Tauriel ---------------
 CONTROLBAR:LW_Hero_Tauriel
 "Tauriel"
@@ -57719,6 +57727,7 @@ END
 CONTROLBAR:ToolTipExplodingArrow
 "Requires Level 1 \n Does small damge in an area \n Left click icon then left click on area"
 END
+//----------------------------------------------------------
 
 CONTROLBAR:PurchaseMallornTreeBloom
 "Bloom Mallorn Tree (&B)"
@@ -57741,7 +57750,7 @@ CONTROLBAR:NimrodelWaters
 END
 
 CONTROLBAR:ToolTipNimrodelWaters
-"The Mallorn Tree is bathed in blessed waters. Nearby units are healed and replenish in its presence."
+"The Tree is bathed in blessed waters. Nearby units are healed and replenish in its presence."
 END
 
 CONTROLBAR:ConstructGondolinTower
@@ -57753,7 +57762,7 @@ UPGRADE:NimrodelWaters
 END
 
 UPGRADE:ToolTipNimrodelWaters
-"The Mallorn Tree is bathed in blessed waters. Nearby units are healed and replenish in its presence."
+"The Tree is bathed in blessed waters. Nearby units are healed and replenish in its presence."
 END
 
 OBJECT:GondolinTower
@@ -57764,3 +57773,10 @@ OBJECT:GondolinTowerDescription
 "Support Structure \n Turgon built it in secret with the help of the Vala Ulmo, who blessed and gave protection to the city.\n Increases Range of Garrisoned Units"
 END
 
+UPGRADE:PurifyingFlames
+"Purifying Flames"
+END
+
+UPGRADE:ToolTipPurifyingFlames
+"Modifier Type: Leadership \n Allies nearby gain +33% Damage, +33% Armor, earn experience 50% faster, and become immune to Fear and Terror \n Stacks with Buffs and Spells"
+END
