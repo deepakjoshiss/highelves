@@ -59,7 +59,7 @@
 
 ;//---Created by <D.J.>
 
-//============Levels============
+;//============Hero Levels============
 
 ModifierList HighElvesHeroBonusLevel11
 	Category = LEVEL
@@ -191,6 +191,24 @@ ModifierList HighElvesHeroBonusLevel25
 End
 
 ;==================levels end=================
+
+;==================Unit Levels================
+ModifierList RivendellKnightsSpeed
+	Category = LEVEL
+	Modifier = SPEED 110% ;;,;; 
+	Modifier = RESIST_KNOCKBACK 60%
+	Modifier = MINIMUM_CRUSH_VELOCITY 70%
+	Modifier = CRUSH_DECELERATE 20%
+	Duration = 0 // FOrever
+End
+
+ModifierList FearlessLevel
+	Category = Level
+	Modifier = RESIST_FEAR 100%	// Additive.  Sum of these is a saving throw against fear
+	Modifier = RESIST_TERROR 100% // Additive.  Sum of these is a saving throw against terror (TERROR) ;,; Added in v5.1
+	Duration = 0				// Duration is forever when zero
+End
+;------------------------------------------------
 
 ModifierList ElvenFortressIvoryTowerBonus
 	Category = STRUCTURE

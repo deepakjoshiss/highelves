@@ -47,8 +47,8 @@ End
 SpecialPower SpellBookSpawnTreeFlet
 	Enum									= SPECIAL_SPELL_BOOK_SPAWN_LONE_TOWER
 	RadiusCursorRadius		= H_SPAWN_TREE_FLET_DECAL_RADIUS
-	;RequiredSciences			= SCIENCE_SpawnLoneTower
-	ReloadTime						= 1000 ;SPELL_RECHARGE_TIME_TIER_2 ;,; SPELL_RECHARGE_TIME_TIER_6 ;;,;; SPELL_RECHARGE_TIME_TIER_1 ; in milliseconds
+	RequiredSciences			= SCIENCE_SpawnLoneTower
+	ReloadTime						= SPELL_RECHARGE_TIME_TIER_2 ;,; SPELL_RECHARGE_TIME_TIER_6 ;;,;; SPELL_RECHARGE_TIME_TIER_1 ; in milliseconds
 	InitiateAtLocationSound	= SpellSpawnLoneTower
 	ViewObjectDuration		= 10000
 	ViewObjectRange				= 200

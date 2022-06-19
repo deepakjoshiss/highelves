@@ -67,6 +67,20 @@ CommandButton Command_ConstructElvenGladhrimHorde
 	ShowProductionCount		= Yes      
 End
 
+CommandButton Command_ConstructElvenRivendellKnights
+	Command						= UNIT_BUILD
+	Object						= RivendellKnightsHorde
+	Options						= NEED_UPGRADE CANCELABLE
+	NeededUpgrade			= Upgrade_ElvenGreenPastureLevel3
+	TextLabel					= CONTROLBAR:BuildElvenRivendellLancers
+	ButtonImage				= BEGreenPasture_RivendellLancer
+	ButtonBorderType	= BUILD													
+	DescriptLabel			= CONTROLBAR:ToolTipBuildElvenRivendellLancers
+	Radial						= Yes
+	InPalantir	   		= Yes
+	ShowProductionCount		= Yes
+End
+
 CommandButton Command_PurchaseNimrodelWaters
   	Command				= OBJECT_UPGRADE
   	Upgrade				= Upgrade_NimrodelWaters

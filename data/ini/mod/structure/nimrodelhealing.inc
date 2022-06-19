@@ -11,6 +11,7 @@
 	End
 
 	Behavior = BannerCarrierUpdate BannerCarrierUpdateModuleTag
+		UpgradeRequired			    = Upgrade_NimrodelWaters
 		IdleSpawnRate				  = 10000 ;;,;; 10000	;5000							; spawn a new member every n seconds when idle (in miliseconds)		
 		UnitSpawnFX					  = FX_BannerCarrierSpawnUnit		; name of particle FX to use when the BannerCarrier spawns a new unit		
 		; This well object acts like a banner carrier except it spawns unit on nearby hordes instead of itself.
