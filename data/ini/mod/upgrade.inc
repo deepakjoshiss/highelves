@@ -28,6 +28,10 @@ Upgrade Upgrade_New5
   Type               = OBJECT
 End
 
+Upgrade Upgrade_ObjectUnderHumanControl ;;,;; Sûlherokhh's method of designating an object as being under the AI's control.  One upgrade is simpler than eight.
+  Type				= OBJECT
+End
+
 Upgrade Upgrade_MallornTreeBloom
   Type            		= OBJECT
 	BuildCost           = H_ELVEN_NIMRODEL_WATERS_COST

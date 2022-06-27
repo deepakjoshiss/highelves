@@ -82,5 +82,6 @@ CommandSet TreeFletCommandSet
 	2 = Command_PurchaseNimrodelWaters
 	3 = Command_PurchaseUpgradePurifyngFlames
 	4 = Command_PurchaseUpgradeElvenFortressBlessedMist
+	5 = Command_PurchaseUpgradeElvenSilverthornTowerArrows
 	6 = Command_Sell
 End

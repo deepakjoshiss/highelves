@@ -216,6 +216,13 @@ ModifierList ElvenFortressIvoryTowerBonus
 	Duration = 0 // FOrever
 End
 
+ModifierList DwarvenCitadelIvoryTowerBonus
+	Category = STRUCTURE
+	Modifier = SHROUD_CLEARING 180% ;;,;; 200% // Additive.  Sum of these is the % bonus to the range at which you clear fog and shroud
+	Duration = 0 // FOrever
+End
+
+
 ModifierList ElvenFortressVinesLeadership
 	Category					= STRUCTURE
 	Modifier					= ARMOR 50%			// Additive.  Sum of these are subtracted from all entries in Armor.ini
