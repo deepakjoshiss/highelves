@@ -1,3 +1,7 @@
+import { createWriteStream, FileType } from "./utils";
+
+const SPELL_CS_FILE = 'spellscommandset.inc';
+const SPELLS_FILE = 'goodsciences.inc';
 
 const Alias = {
     SCIENCE_RebuildSP: 'SCIENCE_Rebuild',
@@ -23,6 +27,7 @@ const Sciences = [
     'SCIENCE_EntAllies',
     'SCIENCE_CloudBreak',
     'SCIENCE_Bombard',
+    'SCIENCE_ElvenWaystone',
     'SCIENCE_LightOfTrees',
     'SCIENCE_EagleAllies',
     'SCIENCE_RohanAllies',
@@ -65,10 +70,10 @@ const ScienceElves = {
         ],
         [
             'SCIENCE_EagleAllies',
-            'SCIENCE_Bombard',
-            'SCIENCE_CloudBreak',
-            'SCIENCE_LightOfTrees',
             'SCIENCE_EntAllies',
+            'SCIENCE_ElvenWaystone',
+            'SCIENCE_LightOfTrees',
+            'SCIENCE_CloudBreak',
         ],
         [
             'SCIENCE_Earthquake',
@@ -206,7 +211,7 @@ type ScienceObj = {
 
 const map = new Map<string, ScienceObj>();
 
-const findDeps = (faction: FactionType, level, index) => {
+const findDeps = (faction: FactionType, level: number, index: number) => {
     if (level <= 0) {
         return [];
     }
@@ -237,17 +242,18 @@ const setCost = (level: number, faction: FactionType, sObj?: ScienceObj) => {
     }
 }
 
-const printScience = (science: string, sObj: ScienceObj) => {
-    console.log('Science ' + science);
-    console.log('  PrerequisiteSciences = ' + createReqString(sObj.requires));
-    console.log('  SciencePurchasePointCost = ' + (sObj.costSP ?? sObj.costMP ?? 1))
-    console.log('  SciencePurchasePointCostMP = ' + (sObj.costMP ?? sObj.costSP ?? 1))
-    console.log('  IsGrantable = Yes')
-    console.log('End');
-    console.log('\n')
+const printScience = (science: string, sObj: ScienceObj, file: FileType) => {
+    file.writeLine('Science ' + science);
+    file.writeLine('  PrerequisiteSciences = ' + createReqString(sObj.requires));
+    file.writeLine('  SciencePurchasePointCost = ' + (sObj.costSP ?? sObj.costMP ?? 1))
+    file.writeLine('  SciencePurchasePointCostMP = ' + (sObj.costMP ?? sObj.costSP ?? 1))
+    file.writeLine('  IsGrantable = Yes')
+    file.writeLine('End');
+    file.nextLine();
 }
 
 const genSciences = () => {
+    const file = createWriteStream(SPELLS_FILE)
     let sObj = undefined as ScienceObj | undefined, lIndex = 0, sIndex = -1, deps = [], hasError = false;
     Sciences.forEach((science) => {
         if (!map.has(science)) {
@@ -285,9 +291,8 @@ const genSciences = () => {
 
     if (!hasError) {
         map.forEach((a, b) => {
-            printScience(b, a);
+            printScience(b, a, file);
         })
-        //  printCommandSet(true, ScienceDwarves)
     }
 }
 
@@ -322,28 +327,33 @@ const getCommandAlias = (science: ScienceType, faction: FactionType, purchase: b
     return science;
 }
 
-const printCommandSet = (purchase: boolean, faction: FactionType) => {
+const printCommandSet = (purchase: boolean, faction: FactionType, file: FileType) => {
     let index = 0;
     const str = purchase ? 'Command_PurchaseSpell' : 'Command_SpellBook';
-    const strSetName = 'CommandSet'
-    console.log('CommandSet ' + faction.nameSet + 'Spell' + (purchase ? 'Store' : 'Book') + 'CommandSet')
-    faction.sciences.forEach((level) => {
+    file.writeLine('CommandSet ' + faction.nameSet + 'Spell' + (purchase ? 'Store' : 'Book') + 'CommandSet')
+    faction.sciences.forEach((level, ind) => {
+        if(ind !== 0) {
+            file.nextLine();
+        }
         level.forEach(science => {
             index++;
-            console.log('    ' + index + ' = ' + str + getCommandAlias(science, faction, purchase).replace('SCIENCE_', ''))
+            file.writeLine('    ' + index + ' = ' + str + getCommandAlias(science, faction, purchase).replace('SCIENCE_', ''))
         })
-        console.log('\n')
     })
-    console.log('End')
-    console.log('\n')
+    file.writeLine('End')
 }
 
 const genCommandSet = () => {
+    const file = createWriteStream(SPELL_CS_FILE)
     AllSciences.forEach((faction) => {
-        printCommandSet(false, faction)
-        printCommandSet(true, faction)
+        file.nextLine();
+        printCommandSet(false, faction, file)
+        file.nextLine();
+        printCommandSet(true, faction, file)
+        file.nextLine();
     })
+    file.end();
 }
 
-//genSciences();
+genSciences();
 genCommandSet();

@@ -56,7 +56,28 @@ SpecialPower SpellBookSpawnTreeFlet
 	ForbiddenObjectFilter	= NO_SUMMON_STRUCTURE_NEAR_OBJECT_FILTER
 	ForbiddenObjectRange	= H_SPAWN_TREE_FLET_DECAL_RADIUS
 End
-;------------------------Spell Book End------------------------------------
+
+SpecialPower SpellBookElvenWaystone
+	Enum									= SPECIAL_SPELL_BOOK_SPAWN_LONE_TOWER
+	RadiusCursorRadius		= H_SPAWN_TREE_FLET_DECAL_RADIUS
+	RequiredSciences			= SCIENCE_ElvenWaystone
+	ReloadTime						= SPELL_RECHARGE_TIME_TIER_2 ;,; SPELL_RECHARGE_TIME_TIER_6 ;;,;; SPELL_RECHARGE_TIME_TIER_1 ; in milliseconds
+	InitiateAtLocationSound	= SpellSpawnLoneTower
+	ViewObjectDuration		= 10000
+	ViewObjectRange				= 200
+	Flags									= NO_FORBIDDEN_OBJECTS RESPECT_RECHARGE_TIME_DISCOUNT
+	ForbiddenObjectFilter	= NO_SUMMON_STRUCTURE_NEAR_OBJECT_FILTER
+	ForbiddenObjectRange	= H_SPAWN_TREE_FLET_DECAL_RADIUS
+End
+
+SpecialPower SpecialAbilityWaystoneTeleport
+	Enum									  	=	SPECIAL_TELEPORT_TEAM_TO_CASTER
+	RadiusCursorRadius				=	100.0
+	ReloadTime								=	60000
+	ObjectFilter							=	ANY	+INFANTRY +CAVALRY +DOZER +HERO -RohanTreeBerd ALLIES
+	InitiateSound					  	= CaH_TeleportPart1
+End
+;------------------------Spell Book End-----------------------------------
 
 ;---------------------------------------------
 ;-----------Tauriel---------------------------

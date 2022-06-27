@@ -1,3 +1,7 @@
+;======================= Created by <D.J.> =========================
+;=================== Generated from Sciencegen =====================
+
+
 CommandSet GoodSpellBookCommandSet
     1 = Command_SpellBookEnshroudingMist
     2 = Command_SpellBookElvenGifts
@@ -22,7 +26,6 @@ CommandSet GoodSpellBookCommandSet
     18 = Command_SpellBookEarthquake
     19 = Command_SpellBookSunflare
     20 = Command_SpellBookCitadel
-
 End
 
 CommandSet GoodSpellStoreCommandSet
@@ -49,8 +52,8 @@ CommandSet GoodSpellStoreCommandSet
     18 = Command_PurchaseSpellEarthquake
     19 = Command_PurchaseSpellSunflare
     20 = Command_PurchaseSpellCitadel
-
 End
+
 
 CommandSet ElvesSpellBookCommandSet
     1 = Command_SpellBookFarsight
@@ -67,16 +70,15 @@ CommandSet ElvesSpellBookCommandSet
     11 = Command_SpellBookElvenWood
 
     12 = Command_SpellBookEagleAllies
-    13 = Command_SpellBookBombard
-    14 = Command_SpellBookCloudBreak
+    13 = Command_SpellBookEntAllies
+    14 = Command_SpellBookElvenWaystone
     15 = Command_SpellBookLightOfTrees
-    16 = Command_SpellBookEntAllies
+    16 = Command_SpellBookCloudBreak
 
     17 = Command_SpellBookEarthquake
     18 = Command_SpellBookSunflare
     19 = Command_SpellBookFlood
     20 = Command_SpellBookCitadel
-
 End
 
 CommandSet ElvesSpellStoreCommandSet
@@ -94,17 +96,17 @@ CommandSet ElvesSpellStoreCommandSet
     11 = Command_PurchaseSpellElvenWood
 
     12 = Command_PurchaseSpellEagleAllies
-    13 = Command_PurchaseSpellBombard
-    14 = Command_PurchaseSpellCloudBreak
+    13 = Command_PurchaseSpellEntAllies
+    14 = Command_PurchaseSpellElvenWaystone
     15 = Command_PurchaseSpellLightOfTrees
-    16 = Command_PurchaseSpellEntAllies
+    16 = Command_PurchaseSpellCloudBreak
 
     17 = Command_PurchaseSpellEarthquake
     18 = Command_PurchaseSpellSunflare
     19 = Command_PurchaseSpellFlood
     20 = Command_PurchaseSpellCitadel
-
 End
+
 
 CommandSet DwarvesSpellBookCommandSet
     1 = Command_SpellBookFarsight
@@ -130,7 +132,6 @@ CommandSet DwarvesSpellBookCommandSet
     18 = Command_SpellBookEarthquake
     19 = Command_SpellBookCitadel
     20 = Command_SpellBookSunflare
-
 End
 
 CommandSet DwarvesSpellStoreCommandSet
@@ -157,8 +158,8 @@ CommandSet DwarvesSpellStoreCommandSet
     18 = Command_PurchaseSpellEarthquake
     19 = Command_PurchaseSpellCitadel
     20 = Command_PurchaseSpellSunflare
-
 End
+
 
 CommandSet MenSpellBookCommandSet
     1 = Command_SpellBookFarsight
@@ -184,7 +185,6 @@ CommandSet MenSpellBookCommandSet
     18 = Command_SpellBookArmyoftheDead
     19 = Command_SpellBookEarthquake
     20 = Command_SpellBookSunflare
-
 End
 
 CommandSet MenSpellStoreCommandSet
@@ -211,8 +211,8 @@ CommandSet MenSpellStoreCommandSet
     18 = Command_PurchaseSpellArmyoftheDead
     19 = Command_PurchaseSpellEarthquake
     20 = Command_PurchaseSpellSunflare
-
 End
+
 
 CommandSet ArnorSpellBookCommandSet
     1 = Command_SpellBookFarsight
@@ -238,7 +238,6 @@ CommandSet ArnorSpellBookCommandSet
     18 = Command_SpellBookArmyoftheDead
     19 = Command_SpellBookEarthquake
     20 = Command_SpellBookSunflare
-
 End
 
 CommandSet ArnorSpellStoreCommandSet
@@ -265,5 +264,5 @@ CommandSet ArnorSpellStoreCommandSet
     18 = Command_PurchaseSpellArmyoftheDead
     19 = Command_PurchaseSpellEarthquake
     20 = Command_PurchaseSpellSunflare
-
 End
+

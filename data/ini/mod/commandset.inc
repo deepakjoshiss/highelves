@@ -85,3 +85,8 @@ CommandSet TreeFletCommandSet
 	5 = Command_PurchaseUpgradeElvenSilverthornTowerArrows
 	6 = Command_Sell
 End
+
+CommandSet ElvenWaystoneCommandSet
+	1 = Command_SpecialAbilityWaystoneTeleport
+	6 = Command_Sell
+End

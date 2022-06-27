@@ -129,12 +129,12 @@ CommandButton Command_SpellBookLightOfTrees_Rays ;,;
  End
 
 CommandButton Command_SpellBookLightOfTrees
-	Command				= SPELL_BOOK
-    SpecialPower		= SpellBookLightOfTrees
-    ButtonImage			= SBGood_LightOfTrees
-	TextLabel			= CONTROLBAR:LightOfTrees
-	DescriptLabel		= CONTROLBAR:ToolTipLightOfTrees
-	CommandTrigger      = Command_SpellBookLightOfTrees_Rays
+	Command						= SPELL_BOOK
+  SpecialPower			= SpellBookLightOfTrees
+  ButtonImage				= SBGood_LightOfTrees
+	TextLabel					= CONTROLBAR:LightOfTrees
+	DescriptLabel			= CONTROLBAR:ToolTipLightOfTrees
+	CommandTrigger    = Command_SpellBookLightOfTrees_Rays
 End
 
 CommandButton Command_PurchaseSpellLightOfTrees
@@ -168,6 +168,42 @@ CommandButton Command_PurchaseSpellSpawnTreeFlet
   Science						= SCIENCE_SpawnLoneTower
   TextLabel					= CONTROLBAR:TreeFlet
 	DescriptLabel			= CONTROLBAR:ToolTipTreeFlet
+End
+
+;------------Spell Store Waystone-----------------------
+
+CommandButton Command_SpellBookElvenWaystone
+	Command						= SPELL_BOOK
+  SpecialPower			= SpellBookElvenWaystone
+	Options         	= NEED_TARGET_POS 
+	TextLabel       	= CONTROLBAR:TreeFlet
+  ButtonImage				= SBWaystone
+	ButtonBorderType  = ACTION 
+	DescriptLabel     = CONTROLBAR:ToolTipTreeFlet
+  RadiusCursorType  = MallornGrove
+  CursorName        = AttackObj
+  InvalidCursorName = GenericInvalid
+End
+
+CommandButton Command_PurchaseSpellElvenWaystone
+	Command						= PURCHASE_SCIENCE
+	ButtonBorderType	= UPGRADE 
+  ButtonImage				= SBWaystone 
+  Science						= SCIENCE_ElvenWaystone
+  TextLabel					= CONTROLBAR:TreeFlet
+	DescriptLabel			= CONTROLBAR:ToolTipTreeFlet
+End
+
+CommandButton Command_SpecialAbilityWaystoneTeleport
+	Command			   		= SPECIAL_POWER
+	SpecialPower	    = SpecialAbilityWaystoneTeleport
+	Options			   		= NEED_TARGET_POS CONTEXTMODE_COMMAND
+	TextLabel		   		= CONTROLBAR:WaystoneTeleport
+	ButtonImage		   	= SBWaystone
+	RadiusCursorType  = SCWaystoneTeleport ;DominateRadiusCursor
+	ButtonBorderType  = ACTION
+	DescriptLabel	    = CONTROLBAR:ToolTipWaystoneTeleport
+	InPalantir		    = Yes
 End
 
 ;--------------------Tauriel-------------------

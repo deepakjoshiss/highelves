@@ -24,10 +24,19 @@
   End
 
 	Behavior = OCLSpecialPower ModuleTag_SpawnTreeFlet
-		SpecialPowerTemplate 		= SpellBookSpawnTreeFlet
-		OCL                  		= OCL_SpellBookSpawnTreeFlet
-		CreateLocation       		= CREATE_AT_LOCATION
-		AvailableAtStart	 			= No
+		SpecialPowerTemplate 		        = SpellBookSpawnTreeFlet
+		OCL                  		        = OCL_SpellBookSpawnTreeFlet
+		CreateLocation       		        = CREATE_AT_LOCATION
+		AvailableAtStart	 			        = Yes
+		RequirementsFilterMPSkirmish 		= SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic 		= SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End	
+
+  Behavior = OCLSpecialPower ModuleTag_ElvenWaystone
+		SpecialPowerTemplate 		        = SpellBookElvenWaystone
+		OCL                  		        = OCL_SpellBookElvenWaystone
+		CreateLocation       		        = CREATE_AT_LOCATION
+		AvailableAtStart	 			        = Yes
 		RequirementsFilterMPSkirmish 		= SPELL_BOOK_REQUIREMENTS_FILTER
 		RequirementsFilterStrategic 		= SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
 	End	

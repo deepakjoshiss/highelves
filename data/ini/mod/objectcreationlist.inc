@@ -10,7 +10,7 @@ ObjectCreationList OCL_LightOfTreesWeatherChanger ;;,;; added
 End
 
 ;-------------------------------------------------------------
-ObjectCreationList OCL_LightOfTreesCaster ;;,;; added for 2.02e
+ObjectCreationList OCL_LightOfTreesCaster
 	CreateObject
 		ObjectNames = LightOfTreesCaster
 	End
@@ -25,5 +25,17 @@ ObjectCreationList OCL_SpellBookSpawnTreeFlet
 		ClearRemovables		= Yes
 		UseJustBuiltFlag	= Yes							; turn on the JUST_BUILT model condition.
 		JustBuiltDuration	= 1500
+	End
+End
+
+ObjectCreationList OCL_SpellBookElvenWaystone
+	CreateObject
+		ObjectNames				= ElvenWaystone
+		Disposition 			= ABSOLUTE_ANGLE
+		DispositionAngle	= 315
+		FadeIn						= Yes
+		ClearRemovables		= Yes
+		UseJustBuiltFlag	= Yes
+		JustBuiltDuration	= 4000
 	End
 End
