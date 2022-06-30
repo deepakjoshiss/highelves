@@ -180,7 +180,7 @@ CommandButton Command_SpellBookElvenWaystone
   ButtonImage				= SBWaystone
 	ButtonBorderType  = ACTION 
 	DescriptLabel     = CONTROLBAR:ToolTipTreeFlet
-  RadiusCursorType  = MallornGrove
+  RadiusCursorType  = Waystone
   CursorName        = AttackObj
   InvalidCursorName = GenericInvalid
 End
@@ -200,10 +200,38 @@ CommandButton Command_SpecialAbilityWaystoneTeleport
 	Options			   		= NEED_TARGET_POS CONTEXTMODE_COMMAND
 	TextLabel		   		= CONTROLBAR:WaystoneTeleport
 	ButtonImage		   	= SBWaystone
-	RadiusCursorType  = SCWaystoneTeleport ;DominateRadiusCursor
+	RadiusCursorType  = WaystoneTeleport ;DominateRadiusCursor
 	ButtonBorderType  = ACTION
 	DescriptLabel	    = CONTROLBAR:ToolTipWaystoneTeleport
 	InPalantir		    = Yes
+End
+
+CommandButton Command_SpecialAbilityMirkwoodTrap
+  Command               = SPECIAL_POWER
+  SpecialPower          = SpecialAbilityMirkwoodTrap
+  Options								= NEED_TARGET_POS CONTEXTMODE_COMMAND ;;.;; Added "OK_FOR_MULTI_EXECUTE"
+  TextLabel             = CONTROLBAR:NecroSoulFreeze
+  ButtonImage           = SBMirkwoodTrap
+  CursorName						= Bombard
+  RadiusCursorType			= MirkwoodTrap ;DoubtRadiusCursor
+  InvalidCursorName			= GenericInvalid
+  ButtonBorderType      = ACTION 
+  DescriptLabel         = CONTROLBAR:ToolTipNecroSoulFreeze
+  InPalantir            = Yes
+  AutoAbility						= No ;Yes ;;,;; ;;; No
+  ;UnitSpecificSound    = 
+End
+
+CommandButton Command_SpecialAbilityPurify
+  Command                 = SPECIAL_POWER 
+  SpecialPower            = SpecialAbilityPurify
+  TextLabel               = CONTROLBAR:CAH_Healing_Level2
+  ButtonImage             = HSAragornAthelas
+  ButtonBorderType        = ACTION 
+  DescriptLabel           = CONTROLBAR:ToolTipCAH_Healing_Level2
+  InPalantir			  			= Yes
+  AutoAbility							= No
+	UnitSpecificSound				= WaystonePurify
 End
 
 ;--------------------Tauriel-------------------

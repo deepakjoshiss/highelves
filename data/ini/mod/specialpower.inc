@@ -47,9 +47,9 @@ End
 SpecialPower SpellBookSpawnTreeFlet
 	Enum									= SPECIAL_SPELL_BOOK_SPAWN_LONE_TOWER
 	RadiusCursorRadius		= H_SPAWN_TREE_FLET_DECAL_RADIUS
-	RequiredSciences			= SCIENCE_SpawnLoneTower
+	;RequiredSciences			= SCIENCE_SpawnLoneTower
 	ReloadTime						= SPELL_RECHARGE_TIME_TIER_2 ;,; SPELL_RECHARGE_TIME_TIER_6 ;;,;; SPELL_RECHARGE_TIME_TIER_1 ; in milliseconds
-	InitiateAtLocationSound	= SpellSpawnLoneTower
+	InitiateAtLocationSound	= SpellSpawnTreeFlet
 	ViewObjectDuration		= 10000
 	ViewObjectRange				= 200
 	Flags									= NO_FORBIDDEN_OBJECTS RESPECT_RECHARGE_TIME_DISCOUNT
@@ -58,11 +58,11 @@ SpecialPower SpellBookSpawnTreeFlet
 End
 
 SpecialPower SpellBookElvenWaystone
-	Enum									= SPECIAL_SPELL_BOOK_SPAWN_LONE_TOWER
+	Enum									= SPECIAL_SPELL_BOOK_DRAGON_ALLY
 	RadiusCursorRadius		= H_SPAWN_TREE_FLET_DECAL_RADIUS
-	RequiredSciences			= SCIENCE_ElvenWaystone
+	;RequiredSciences			= SCIENCE_ElvenWaystone
 	ReloadTime						= SPELL_RECHARGE_TIME_TIER_2 ;,; SPELL_RECHARGE_TIME_TIER_6 ;;,;; SPELL_RECHARGE_TIME_TIER_1 ; in milliseconds
-	InitiateAtLocationSound	= SpellSpawnLoneTower
+	InitiateAtLocationSound	= SpellSpawnWaystone
 	ViewObjectDuration		= 10000
 	ViewObjectRange				= 200
 	Flags									= NO_FORBIDDEN_OBJECTS RESPECT_RECHARGE_TIME_DISCOUNT
@@ -77,6 +77,22 @@ SpecialPower SpecialAbilityWaystoneTeleport
 	ObjectFilter							=	ANY	+INFANTRY +CAVALRY +DOZER +HERO -RohanTreeBerd ALLIES
 	InitiateSound					  	= CaH_TeleportPart1
 End
+
+SpecialPower SpecialAbilityMirkwoodTrap
+	Enum											= SPECIAL_ARROW_STORM
+	ReloadTime								= 60000
+	RadiusCursorRadius				= H_WAYSTONE_STUN_RADIUS
+	Flags											= WATER_OK
+	ObjectFilter 		  				= ALL
+End
+
+SpecialPower SpecialAbilityPurify
+	Enum											= SPECIAL_GENERAL_TARGETLESS
+	ReloadTime								= 120000
+	PublicTimer								= No
+	InitiateSound 						= WaystonePurify
+End
+
 ;------------------------Spell Book End-----------------------------------
 
 ;---------------------------------------------

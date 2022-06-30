@@ -88,5 +88,7 @@ End
 
 CommandSet ElvenWaystoneCommandSet
 	1 = Command_SpecialAbilityWaystoneTeleport
+	2 = Command_SpecialAbilityMirkwoodTrap
+	3 = Command_SpecialAbilityPurify
 	6 = Command_Sell
 End
