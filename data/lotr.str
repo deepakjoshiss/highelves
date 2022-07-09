@@ -53653,7 +53653,7 @@ END
 CONTROLBAR:ToolTipNoldorWeaponSong
 //"Requires Level 7 \n Noldor Warriors gain +50% Damage and +50% Armor \n Left click to activate"
 //"Requires Level 7 \n Noldor Warriors gain\n50% Damage, +100% Armor \n Left click to activate"
-"Requires Level 5 \n Noldor Warriors gain\n50% Damage, +100% Armor \n Left click to activate"
+"Requires Level 5 \n Noldor Warriors: +50% Damage, +100% Armor \n Rivendell Knights: 0% Decelerate, +300% Armor \n Left click to activate"
 END
 
 CONTROLBAR:ToolTipZerkSlayer

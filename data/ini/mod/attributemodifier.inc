@@ -222,7 +222,6 @@ ModifierList DwarvenCitadelIvoryTowerBonus
 	Duration = 0 // FOrever
 End
 
-
 ModifierList ElvenFortressVinesLeadership
 	Category					= STRUCTURE
 	Modifier					= ARMOR 50%			// Additive.  Sum of these are subtracted from all entries in Armor.ini
@@ -308,4 +307,12 @@ ModifierList SpellLightOfTreesSpeedBonus
 	Category = SPELL
 	Modifier = SPEED 120%
 	Duration = 2100 ;;,;; 0 ; changed for 2.02e because this is no longer applied by the weather - see note in system.ini
+End
+
+ModifierList KnightsWeaponSong
+	Category = WEAPON
+	Modifier = ARMOR 90%			;// Additive.  Sum of these are subtracted from all entries in Armor.ini
+	Modifier = CRUSH_DECELERATE 0%		;// Multiplicitive.  Zero would be no deceleration.
+	Duration = 20000			;// lasts for 30 seconds
+	ModelCondition = USER_4
 End

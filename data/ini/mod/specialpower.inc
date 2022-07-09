@@ -47,7 +47,7 @@ End
 SpecialPower SpellBookSpawnTreeFlet
 	Enum									= SPECIAL_SPELL_BOOK_SPAWN_LONE_TOWER
 	RadiusCursorRadius		= H_SPAWN_TREE_FLET_DECAL_RADIUS
-	;RequiredSciences			= SCIENCE_SpawnLoneTower
+	RequiredSciences			= SCIENCE_SpawnLoneTower
 	ReloadTime						= SPELL_RECHARGE_TIME_TIER_2 ;,; SPELL_RECHARGE_TIME_TIER_6 ;;,;; SPELL_RECHARGE_TIME_TIER_1 ; in milliseconds
 	InitiateAtLocationSound	= SpellSpawnTreeFlet
 	ViewObjectDuration		= 10000
@@ -60,7 +60,7 @@ End
 SpecialPower SpellBookElvenWaystone
 	Enum									= SPECIAL_SPELL_BOOK_DRAGON_ALLY
 	RadiusCursorRadius		= H_SPAWN_TREE_FLET_DECAL_RADIUS
-	;RequiredSciences			= SCIENCE_ElvenWaystone
+	RequiredSciences			= SCIENCE_ElvenWaystone
 	ReloadTime						= SPELL_RECHARGE_TIME_TIER_2 ;,; SPELL_RECHARGE_TIME_TIER_6 ;;,;; SPELL_RECHARGE_TIME_TIER_1 ; in milliseconds
 	InitiateAtLocationSound	= SpellSpawnWaystone
 	ViewObjectDuration		= 10000
@@ -91,6 +91,13 @@ SpecialPower SpecialAbilityPurify
 	ReloadTime								= 120000
 	PublicTimer								= No
 	InitiateSound 						= WaystonePurify
+End
+
+SpecialPower SpellBookRingOfAdamant
+	Enum									= SPECIAL_SPELL_BOOK_SCAVENGER
+  RequiredSciences			= SCIENCE_RingOfAdamant
+  ReloadTime						= 0   ; in milliseconds
+  Flags									= RESPECT_RECHARGE_TIME_DISCOUNT
 End
 
 ;------------------------Spell Book End-----------------------------------

@@ -71,6 +71,20 @@ CommandSet GaladhrimWarriorHordeCommandSet
 	18  	= Command_SetStanceHoldGround
 End
 
+CommandSet RivendellKnightsHordeCommandSet
+	1			= Command_ToggleStance
+	2			= Command_SpecialAbilityNoldorWeaponSong
+	4			= Command_PurchaseUpgradeElvenForgedBladesTier4  ;,; Command_PurchaseUpgradeElvenForgedBlades ;,; Command_PurchaseUpgradeElvenHeavyArmor	;;.;;
+	5			= Command_PurchaseUpgradeElvenHeavyArmorTier4  ;,;Command_PurchaseUpgradeElvenHeavyArmor ;,; Command_PurchaseUpgradeElvenForgedBlades	;;.;;	
+	6			= Command_PurchaseUpgradeElvenBasicTrainingTier3 ;,; Command_PurchaseUpgradeElvenBasicTraining	;;.;;
+	12 		= Command_CaptureBuilding	
+	13		= Command_AttackMove
+	14		= Command_Stop
+	16  	= Command_SetStanceBattle
+	17  	= Command_SetStanceAggressive
+	18  	= Command_SetStanceHoldGround
+End
+
 CommandSet ElvenMellornTreeCommandSet
 	1 = Command_PurchaseNimrodelWaters
 	2 = Command_PurchaseUpgradeBloom
