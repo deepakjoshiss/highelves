@@ -79,7 +79,14 @@ Science SCIENCE_SpawnLoneTower
 End
 
 Science SCIENCE_DwarvenRiches
-  PrerequisiteSciences = SCIENCE_GOOD SCIENCE_ElvenGifts OR SCIENCE_GOOD SCIENCE_Heal OR SCIENCE_ELVES SCIENCE_RallyingCallMP OR SCIENCE_ELVES SCIENCE_Heal OR SCIENCE_DWARVES SCIENCE_Rebuild OR SCIENCE_DWARVES SCIENCE_ElvenGifts OR SCIENCE_MEN SCIENCE_ElvenGifts OR SCIENCE_ARNOR SCIENCE_ElvenGifts
+  PrerequisiteSciences = SCIENCE_GOOD SCIENCE_ElvenGifts OR SCIENCE_GOOD SCIENCE_Heal OR SCIENCE_DWARVES SCIENCE_Rebuild OR SCIENCE_DWARVES SCIENCE_ElvenGifts OR SCIENCE_MEN SCIENCE_ElvenGifts OR SCIENCE_ARNOR SCIENCE_ElvenGifts
+  SciencePurchasePointCost = GOOD_RANK_2_COST
+  SciencePurchasePointCostMP = GOOD_RANK_2_COST
+  IsGrantable = Yes
+End
+
+Science SCIENCE_RingOfAdamant
+  PrerequisiteSciences = SCIENCE_ELVES SCIENCE_RallyingCallMP OR SCIENCE_ELVES SCIENCE_Heal
   SciencePurchasePointCost = GOOD_RANK_2_COST
   SciencePurchasePointCostMP = GOOD_RANK_2_COST
   IsGrantable = Yes
@@ -114,7 +121,7 @@ Science SCIENCE_EntAllies
 End
 
 Science SCIENCE_CloudBreak
-  PrerequisiteSciences = SCIENCE_GOOD SCIENCE_DwarvenRiches OR SCIENCE_GOOD SCIENCE_TomBombadil OR SCIENCE_ELVES SCIENCE_ElvenWood OR SCIENCE_ELVES SCIENCE_DwarvenRiches OR SCIENCE_DWARVES SCIENCE_HobbitAllies OR SCIENCE_DWARVES SCIENCE_Undermine OR SCIENCE_MEN SCIENCE_SpawnLoneTower OR SCIENCE_MEN SCIENCE_TomBombadil OR SCIENCE_ARNOR SCIENCE_SpawnLoneTower OR SCIENCE_ARNOR SCIENCE_TomBombadil
+  PrerequisiteSciences = SCIENCE_GOOD SCIENCE_DwarvenRiches OR SCIENCE_GOOD SCIENCE_TomBombadil OR SCIENCE_ELVES SCIENCE_ElvenWood OR SCIENCE_ELVES SCIENCE_RingOfAdamant OR SCIENCE_DWARVES SCIENCE_HobbitAllies OR SCIENCE_DWARVES SCIENCE_Undermine OR SCIENCE_MEN SCIENCE_SpawnLoneTower OR SCIENCE_MEN SCIENCE_TomBombadil OR SCIENCE_ARNOR SCIENCE_SpawnLoneTower OR SCIENCE_ARNOR SCIENCE_TomBombadil
   SciencePurchasePointCost = GOOD_RANK_3_COST
   SciencePurchasePointCostMP = GOOD_RANK_3_COST
   IsGrantable = Yes
@@ -135,7 +142,7 @@ Science SCIENCE_ElvenWaystone
 End
 
 Science SCIENCE_LightOfTrees
-  PrerequisiteSciences = SCIENCE_ELVES SCIENCE_DwarvenRiches OR SCIENCE_ELVES SCIENCE_SpawnLoneTower
+  PrerequisiteSciences = SCIENCE_ELVES SCIENCE_RingOfAdamant OR SCIENCE_ELVES SCIENCE_SpawnLoneTower
   SciencePurchasePointCost = GOOD_RANK_3_COST
   SciencePurchasePointCostMP = GOOD_RANK_3_COST
   IsGrantable = Yes

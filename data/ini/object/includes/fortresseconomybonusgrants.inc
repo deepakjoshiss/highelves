@@ -30,3 +30,13 @@
 		TargetEnemy		= No ;
 		ObjectFilter	= ANY WILD_EVIL_UNIT_FILTER +WildAzog +WildGoblinKing +WildShelob +Drogoth +WildMountainGiant ;,; +Wyrm +SummonedDragon +SummonedDragonJH1 +WatcherHead +WatcherHittingArm +WatcherEgg +SpellBookDragonStrikeDragon +WildMountainGiant_Summoned ; Intended to affect EvilBeasts units even in another faction's hands.
 	End	
+
+	Behavior = AttributeModifierAuraUpdate ModuleTag_AllowRingOfAdamant ;;,;; First added in 2.1
+		StartsActive	= No ;If no, requires upgrade to turn on.
+		BonusName			= RingOfAdamantBonus
+		TriggeredBy		= Upgrade_GrantDwarvenRiches
+		RefreshDelay	= 2000
+		Range					= 999999
+		TargetEnemy		= No ;
+		ObjectFilter	= ANY +ElvenMallornTree
+	End	

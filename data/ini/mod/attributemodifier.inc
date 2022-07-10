@@ -295,6 +295,15 @@ ModifierList MallornTreeBloomBonus
 	Duration = 0
 End
 
+ModifierList RingOfAdamantBonus
+	Category = STUN
+	Modifier = PRODUCTION 1.25	
+	Modifier = ARMOR 20%
+	Modifier = COMMAND_POINT_BONUS 25							// Additive.
+	ModelCondition 	 = USER_3
+	Duration = 0
+End
+
 ModifierList SpellLightOfTreesBonus
 	Category = SPELL
 	Modifier = DAMAGE_MULT 133% ;;,;; 150%	

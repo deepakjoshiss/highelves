@@ -57659,6 +57659,46 @@ OBJECT:TreeFletDescription
 "Support Structure \n Watchtower of Galadhrim Warriors \n Can be upgraded to help nearby allies"
 END
 
+CONTROLBAR:Waystone
+"Elven Waystone"
+End
+
+CONTROLBAR:TooltipWaystone
+"Elven Waystone can teleport units to itself \n Has power to stun enemies \n Can provide a burst of heal to surrounding allies"
+End
+
+CONTROLBAR:WaystoneTeleport
+"Elven &Waystone teleport"
+End
+
+CONTROLBAR:ToolTipWaystoneTeleport
+"Teleport units to the Waystone"
+End
+
+CONTROLBAR:MirkwoodTrap
+"Waystone &Trap"
+End
+
+CONTROLBAR:TooltipMirkwoodTrap
+"Waystone traps enemy units in the area for 5.5 seconds"
+End
+
+CONTROLBAR:WaystonePurify
+"&Purify"
+End
+
+CONTROLBAR:ToolTipWaystonePurify
+"Heals nearby units for 25%"
+End
+
+CONTROLBAR:RingOfAdamant
+"The Ring of Adamant"
+End
+
+CONTROLBAR:TooltipRingOfAdamant
+"Power of Nenya the Ring of Adamant \n Mallorn Tree Production +25%, Armor +25% \n Command Points +25 "
+End
+
 //------------ Tauriel ---------------
 CONTROLBAR:LW_Hero_Tauriel
 "Tauriel"

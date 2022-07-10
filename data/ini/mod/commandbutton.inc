@@ -176,10 +176,10 @@ CommandButton Command_SpellBookElvenWaystone
 	Command						= SPELL_BOOK
   SpecialPower			= SpellBookElvenWaystone
 	Options         	= NEED_TARGET_POS 
-	TextLabel       	= CONTROLBAR:TreeFlet
+	TextLabel       	= CONTROLBAR:Waystone
   ButtonImage				= SBWaystone
 	ButtonBorderType  = ACTION 
-	DescriptLabel     = CONTROLBAR:ToolTipTreeFlet
+	DescriptLabel     = CONTROLBAR:TooltipWaystone
   RadiusCursorType  = Waystone
   CursorName        = AttackObj
   InvalidCursorName = GenericInvalid
@@ -190,8 +190,8 @@ CommandButton Command_PurchaseSpellElvenWaystone
 	ButtonBorderType	= UPGRADE 
   ButtonImage				= SBWaystone 
   Science						= SCIENCE_ElvenWaystone
-  TextLabel					= CONTROLBAR:TreeFlet
-	DescriptLabel			= CONTROLBAR:ToolTipTreeFlet
+  TextLabel					= CONTROLBAR:Waystone
+	DescriptLabel			= CONTROLBAR:TooltipWaystone
 End
 
 CommandButton Command_SpecialAbilityWaystoneTeleport
@@ -210,13 +210,13 @@ CommandButton Command_SpecialAbilityMirkwoodTrap
   Command               = SPECIAL_POWER
   SpecialPower          = SpecialAbilityMirkwoodTrap
   Options								= NEED_TARGET_POS CONTEXTMODE_COMMAND ;;.;; Added "OK_FOR_MULTI_EXECUTE"
-  TextLabel             = CONTROLBAR:NecroSoulFreeze
+  TextLabel             = CONTROLBAR:MirkwoodTrap
   ButtonImage           = SBMirkwoodTrap
   CursorName						= Bombard
   RadiusCursorType			= MirkwoodTrap ;DoubtRadiusCursor
   InvalidCursorName			= GenericInvalid
   ButtonBorderType      = ACTION 
-  DescriptLabel         = CONTROLBAR:ToolTipNecroSoulFreeze
+  DescriptLabel         = CONTROLBAR:TooltipMirkwoodTrap
   InPalantir            = Yes
   AutoAbility						= No ;Yes ;;,;; ;;; No
   ;UnitSpecificSound    = 
@@ -225,13 +225,34 @@ End
 CommandButton Command_SpecialAbilityPurify
   Command                 = SPECIAL_POWER 
   SpecialPower            = SpecialAbilityPurify
-  TextLabel               = CONTROLBAR:CAH_Healing_Level2
+  TextLabel               = CONTROLBAR:WaystonePurify
   ButtonImage             = HSAragornAthelas
   ButtonBorderType        = ACTION 
-  DescriptLabel           = CONTROLBAR:ToolTipCAH_Healing_Level2
+  DescriptLabel           = CONTROLBAR:ToolTipWaystonePurify
   InPalantir			  			= Yes
   AutoAbility							= No
 	UnitSpecificSound				= WaystonePurify
+End
+
+;-------------------Spell Store Ring Of Adamant----------------------------
+CommandButton Command_SpellBookRingOfAdamant
+	Command					= SPELL_BOOK
+	Options					= NONPRESSABLE
+	TextLabel				= CONTROLBAR:RingOfAdamant
+	DescriptLabel		= CONTROLBAR:TooltipRingOfAdamant    
+	SpecialPower		= SpellBookRingOfAdamant
+  ButtonImage			= SBLorienAdamant
+End
+
+CommandButton Command_PurchaseSpellRingOfAdamant
+	Command						= PURCHASE_SCIENCE
+	ButtonBorderType	= UPGRADE
+  ButtonImage				= SBLorienAdamant 
+  Science						= SCIENCE_RingOfAdamant
+  TextLabel					= CONTROLBAR:RingOfAdamant
+	DescriptLabel			= CONTROLBAR:TooltipRingOfAdamant	
+  ;;Trigger this command button when the purchase science is activated	
+  CommandTrigger		= Command_SpellBookRingOfAdamant
 End
 
 ;--------------------Tauriel-------------------

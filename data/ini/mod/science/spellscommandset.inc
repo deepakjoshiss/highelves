@@ -66,7 +66,7 @@ CommandSet ElvesSpellBookCommandSet
     7 = Command_SpellBookArrowVolleyGood
     8 = Command_SpellBookTomBombadil
     9 = Command_SpellBookSpawnTreeFlet
-    10 = Command_SpellBookDwarvenRiches
+    10 = Command_SpellBookRingOfAdamant
     11 = Command_SpellBookElvenWood
 
     12 = Command_SpellBookEagleAllies
@@ -92,7 +92,7 @@ CommandSet ElvesSpellStoreCommandSet
     7 = Command_PurchaseSpellArrowVolleyGood
     8 = Command_PurchaseSpellTomBombadil
     9 = Command_PurchaseSpellSpawnTreeFlet
-    10 = Command_PurchaseSpellDwarvenRiches
+    10 = Command_PurchaseSpellRingOfAdamant
     11 = Command_PurchaseSpellElvenWood
 
     12 = Command_PurchaseSpellEagleAllies

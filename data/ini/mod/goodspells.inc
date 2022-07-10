@@ -39,4 +39,14 @@
 		AvailableAtStart	 			        = Yes
 		RequirementsFilterMPSkirmish 		= SPELL_BOOK_REQUIREMENTS_FILTER
 		RequirementsFilterStrategic 		= SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
+	End
+
+  Behavior = PlayerUpgradeSpecialPower	ModuleTag_RingOfAdamant	;;,;; added for 2.1, now works for AI and affects teammates
+		SpecialPowerTemplate		        = SpellBookRingOfAdamant
+		UpgradeName 			              = Upgrade_GrantDwarvenRiches
+		UpdateModuleStartsAttack	      = No
+		AffectAllies			              = No
+		AvailableAtStart		            = No
+		RequirementsFilterMPSkirmish 	  = SPELL_BOOK_REQUIREMENTS_FILTER
+		RequirementsFilterStrategic 	  = SPELL_BOOK_REQUIREMENTS_FILTER_STRATEGIC
 	End	

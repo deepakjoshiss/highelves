@@ -21,6 +21,7 @@ const Sciences = [
     'SCIENCE_TomBombadil',
     'SCIENCE_SpawnLoneTower',
     'SCIENCE_DwarvenRiches',
+    'SCIENCE_RingOfAdamant',
     'SCIENCE_HobbitAllies',
     'SCIENCE_RallyingCall',
     'SCIENCE_Undermine',
@@ -65,7 +66,7 @@ const ScienceElves = {
             'SCIENCE_ArrowVolleyGood',
             'SCIENCE_TomBombadil',
             'SCIENCE_SpawnLoneTower',
-            'SCIENCE_DwarvenRiches',
+            'SCIENCE_RingOfAdamant',
             'SCIENCE_ElvenWood',
         ],
         [
@@ -253,7 +254,8 @@ const printScience = (science: string, sObj: ScienceObj, file: FileType) => {
 }
 
 const genSciences = () => {
-    const file = createWriteStream(SPELLS_FILE)
+    console.log('Generating Sciences')
+    const file = createWriteStream(SPELLS_FILE, 'Sciencegen')
     let sObj = undefined as ScienceObj | undefined, lIndex = 0, sIndex = -1, deps = [], hasError = false;
     Sciences.forEach((science) => {
         if (!map.has(science)) {
@@ -344,7 +346,7 @@ const printCommandSet = (purchase: boolean, faction: FactionType, file: FileType
 }
 
 const genCommandSet = () => {
-    const file = createWriteStream(SPELL_CS_FILE)
+    const file = createWriteStream(SPELL_CS_FILE, 'Sciencegen')
     AllSciences.forEach((faction) => {
         file.nextLine();
         printCommandSet(false, faction, file)

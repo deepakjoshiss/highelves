@@ -1,10 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-const outputPath = '../ini/mod/science/';
+const outputPath = 'C:/Data/BFME/highelves/data/ini/mod/science/';
 
-const decl =
-  ';======================= Created by <D.J.> =========================\n' +
-  ';=================== Generated from Sciencegen =====================\n\n'
+export const getDecl = (fileName: string) => {
+  return ';======================= Created by <D.J.> =========================\n' +
+  `;=================== Generated from ${fileName} =====================\n\n`
+}
 
 export type FileType = {
   writeLine: (value: string) => void,
@@ -13,12 +14,12 @@ export type FileType = {
   end: () => void
 }
 
-export const createWriteStream = (fileName: string): FileType => {
+export const createWriteStream = (fileName: string, tag = 'code'): FileType => {
   if (!fs.existsSync(outputPath)) {
     fs.mkdirSync(outputPath, { recursive: true });
   }
   const file = fs.createWriteStream(outputPath + fileName);
-  file.write(decl);
+  file.write(getDecl(tag));
   return {
     // writeLine: (value: string) => {},
     // write: (value: string) => {},
