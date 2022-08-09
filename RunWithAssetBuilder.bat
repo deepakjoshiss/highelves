@@ -27,12 +27,14 @@
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
 ::Zh4grVQjdCyDJH2F4EMMCj15aTiKNWyyA7kK7fvH3f+JlUQJXMMsa4rP+KGHLOQW+AvhbZNN
-::YB416Ek+ZG8=
+::YB416Ek+Zm8=
 ::
 ::
 ::978f952a14a936cc963da21a135fa983
-@move art\compiledtextures art\textures
-@assetcachebuilder.exe
-@move art\textures art\compiledtextures
-start "" "runmod.lnk"
+@set current_dir=%~dp0
+@echo %current_dir%  
+@robocopy %~dp0art\compiledtextures %~dp0art\textures /E /MOVE /NFL /NDL /NJH /NJS /nc /ns /np
+@%~dp0assetcachebuilder.exe
+@rename %~dp0art\textures compiledtextures
+@start "" "runmod.lnk"
 @pause
