@@ -1,0 +1,64 @@
+# High Elves in OpenBFME
+
+This folder holds what OpenBFME needs to run parts of this mod on top of RotWK
+2.01, and the scripts used to compare the mod with the base game. The
+engine side lives in OpenBFME's `dj-dev` branch (`../openbfme-godot`):
+`docs/OVERRIDES.md` (how overrides and the art folder load),
+`docs/HIGHELVES.md` (what the mod changes and what is imported) and
+`docs/DJ-DEV.md` (build, test and run on the Mac).
+
+Run the game with the mod (its `art/` folder plus `openbfme/overrides/`):
+
+```sh
+cd ../openbfme-godot
+OPENBFME_MOD_DIR=$HOME/work/apps/bfme/highelves ROTWK_INSTALL=$HOME/Games/BFME/RotWK BFME2_INSTALL=$HOME/Games/BFME/BFME2 \
+  ../godot-4.7.2/Godot.app/Contents/MacOS/Godot --path godot
+```
+
+## overrides/
+
+Loaded in name order after the game's own INI files. A plain `.ini` replaces
+each block it names (retail's reload); a `.merge.ini` copies the block and
+changes only the lines it gives (map.ini's load).
+
+| File | What | How it was made |
+|---|---|---|
+| `10-createahero-archer.ini` | the Create-a-Hero archer's bows (mod's `CreateAHeroBasicRangedWeapon`, `CreateAHeroSuperRangedWeapon` and their warheads, bow and `H_*` constants) | extracted from the mod's `weapon.ini`; level 4 uses the 2.01 Silverthorn arrow until the golden arrow's FX come |
+| `20-createahero-stats.ini` | the mod's 116 Create-a-Hero constants, the 2.01 blocks that use them, the mod's melee weapons, `Object CreateAHero` with the mod's design, respawn and weapon upgrade fragments (the 4th bow fires the super bow), the mounted hero | generated: `tools/gen_cah_stats.py` |
+| `21-createahero-levels-and-powers.merge.ini` | the experience levels and special powers that use those constants (changed lines only) | generated: `tools/gen_cah_stats.py` |
+
+Regenerate 20 and 21 after the mod's Create-a-Hero files change:
+
+```sh
+P=../openbfme-godot/engine/data/retail-archives
+python3 -I openbfme/tools/gen_cah_stats.py ~/Games/BFME/RotWK ~/Games/BFME/BFME2 \
+  $P/rotwk-201-english-archives.json $P/bfme2-106-english-archives.json . openbfme/overrides/20-createahero-stats.ini
+```
+
+Check the folder loads without an error (from `../openbfme-godot/engine/build`):
+
+```sh
+OPENBFME_OVERRIDES_CHECK_DIR=$HOME/work/apps/bfme/highelves/openbfme/overrides \
+  ROTWK_INSTALL=$HOME/Games/BFME/RotWK BFME2_INSTALL=$HOME/Games/BFME/BFME2 \
+  ./openbfme_tests -tc="*OPENBFME_OVERRIDES_CHECK_DIR*" -s
+```
+
+## tools/
+
+Read-only Python (run with `python3 -I`); they read the game's `.big`
+archives and this repo. Most take the two install folders and the engine's
+archive tables (`$P` above), which give the retail mount order.
+
+| Script | What |
+|---|---|
+| `iniblocks.py` | shared helpers: BIG archive reader, the base file lookup in mount order, a block splitter |
+| `bigfind.py`, `bigget.py` | list or extract files of a `.big` archive |
+| `modcompare.py` | every mod file against the base game's: identical, modified, new |
+| `commitblocks.py` | each mod commit's added, changed and removed INI blocks |
+| `blockdiff.py`, `linediff.py` | the changes of one mod file against the base, by block or by line (fragments) |
+| `deps.py` | what a set of mod blocks needs: macros, weapons, projectiles, upgrades, base or mod-only |
+| `cahmacros.py` | the changed Create-a-Hero constants and the base blocks using them |
+| `gen_cah_stats.py` | writes `overrides/20-…` and `21-…` |
+| `artrefs.py`, `artfeatures.py` | the models the mod's INI names: in the mod's `art/`, in 2.01, or nowhere |
+| `modulecheck.py` | the module classes the mod's changes use, against OpenBFME's coverage table |
+| `w3dchannels.py` | the channels an animation names twice for one bone |
