@@ -7,11 +7,11 @@ engine side lives in OpenBFME's `dj-dev` branch (`../openbfme-godot`):
 `docs/HIGHELVES.md` (what the mod changes and what is imported) and
 `docs/DJ-DEV.md` (build, test and run on the Mac).
 
-Run the game with the mod (its `art/` folder plus `openbfme/overrides/`):
+Run the game with the mod (its `data/` and `art/` folders over the unofficial 2.02 v9.8.0's archives in `~/Games/BFME/Patch202`, plus `openbfme/overrides/`):
 
 ```sh
 cd ../openbfme-godot
-OPENBFME_MOD_DIR=$HOME/work/apps/bfme/highelves ROTWK_INSTALL=$HOME/Games/BFME/RotWK BFME2_INSTALL=$HOME/Games/BFME/BFME2 \
+OPENBFME_PATCH_DIR=$HOME/Games/BFME/Patch202 OPENBFME_MOD_DIR=$HOME/work/apps/bfme/highelves ROTWK_INSTALL=$HOME/Games/BFME/RotWK BFME2_INSTALL=$HOME/Games/BFME/BFME2 \
   ../godot-4.7.2/Godot.app/Contents/MacOS/Godot --path godot
 ```
 
@@ -28,17 +28,6 @@ changes only the lines it gives (map.ini's load).
 |---|---|---|
 | `01-openbfme-rules.ini` | OpenBFME's rules for this mod (`GameData` `OpenBFMEAutoAcquireWithinWeaponRange = Yes`: units that auto-acquire shoot, idle or guarding, what their weapon reaches past their vision when their player sees it; `OpenBFMETeamCommandPoints = Yes`: a player's command point cap is its team's share of the game's army, at least the table's cap, at most the two-player cap, raised at every defeat) | written by hand; see OpenBFME's `docs/OVERRIDES.md` |
 | `02-command-points.ini` | the command points by player count: a starting base of 200 (retail 100) and caps 1600 1400 1200 1100 1000 900 800 for 2 .. 8 players (retail 1000 875 750 675 625 575 500) | written by hand |
-| `10-createahero-archer.ini` | the Create-a-Hero archer's bows (mod's `CreateAHeroBasicRangedWeapon`, `CreateAHeroSuperRangedWeapon` and their warheads, bow and `H_*` constants) | extracted from the mod's `weapon.ini`; level 4 uses the 2.01 Silverthorn arrow until the golden arrow's FX come |
-| `20-createahero-stats.ini` | the mod's 116 Create-a-Hero constants, the 2.01 blocks that use them, the mod's melee weapons, `Object CreateAHero` with the mod's design, respawn and weapon upgrade fragments (the 4th bow fires the super bow), the mounted hero | generated: `tools/gen_cah_stats.py` |
-| `21-createahero-levels-and-powers.merge.ini` | the experience levels and special powers that use those constants (changed lines only) | generated: `tools/gen_cah_stats.py` |
-
-Regenerate 20 and 21 after the mod's Create-a-Hero files change:
-
-```sh
-P=../openbfme-godot/engine/data/retail-archives
-python3 -I openbfme/tools/gen_cah_stats.py ~/Games/BFME/RotWK ~/Games/BFME/BFME2 \
-  $P/rotwk-201-english-archives.json $P/bfme2-106-english-archives.json . openbfme/overrides/20-createahero-stats.ini
-```
 
 Check the folder loads without an error (from `../openbfme-godot/engine/build`):
 
@@ -63,7 +52,7 @@ archive tables (`$P` above), which give the retail mount order.
 | `blockdiff.py`, `linediff.py` | the changes of one mod file against the base, by block or by line (fragments) |
 | `deps.py` | what a set of mod blocks needs: macros, weapons, projectiles, upgrades, base or mod-only |
 | `cahmacros.py` | the changed Create-a-Hero constants and the base blocks using them |
-| `gen_cah_stats.py` | writes `overrides/20-…` and `21-…` |
+| `gen_cah_stats.py` | wrote the former `overrides/20-…` and `21-…` (the override-era Create-a-Hero import; the mod's own files load now) |
 | `artrefs.py`, `artfeatures.py` | the models the mod's INI names: in the mod's `art/`, in 2.01, or nowhere |
 | `modulecheck.py` | the module classes the mod's changes use, against OpenBFME's coverage table |
 | `w3dchannels.py` | the channels an animation names twice for one bone |
