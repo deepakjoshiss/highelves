@@ -24,7 +24,7 @@ changes only the lines it gives (map.ini's load).
 | File | What | How it was made |
 |---|---|---|
 | `10-createahero-archer.ini` | the Create-a-Hero archer's bows (mod's `CreateAHeroBasicRangedWeapon`, `CreateAHeroSuperRangedWeapon` and their warheads, bow and `H_*` constants) | extracted from the mod's `weapon.ini`; level 4 uses the 2.01 Silverthorn arrow until the golden arrow's FX come |
-| `20-createahero-stats.ini` | the mod's 116 Create-a-Hero constants, the 2.01 blocks that use them, the mod's melee weapons, `Object CreateAHero` with the mod's design, respawn and weapon upgrade fragments (the 4th bow fires the super bow), the mounted hero | generated: `tools/gen_cah_stats.py` |
+| `20-createahero-stats.ini` | the mod's 116 Create-a-Hero constants, the 2.01 blocks that use them, the mod's melee weapons, `Object CreateAHero` with the mod's design, respawn and weapon upgrade fragments (the 4th bow fires the super bow) and OpenBFME's `OPENBFME_WEAPON_RANGE` idle scan flag, the mounted hero | generated: `tools/gen_cah_stats.py` |
 | `21-createahero-levels-and-powers.merge.ini` | the experience levels and special powers that use those constants (changed lines only) | generated: `tools/gen_cah_stats.py` |
 
 Regenerate 20 and 21 after the mod's Create-a-Hero files change:

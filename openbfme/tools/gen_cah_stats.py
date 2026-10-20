@@ -76,6 +76,9 @@ def fix_include(m):
         return '; the mod\'s ' + target + ' (highelves data/ini/object/createahero):\n' + FRAGMENTS_FROM_MOD[target.lower()].strip('\n')
     return '#include "..\\Object\\CreateAHero\\' + target + '"'
 obj, nincl = re.subn(r'#include\s+"([^"]+)"', fix_include, obj)
+# OpenBFME's own flag (not retail, its docs/OVERRIDES.md): an idle hero answers what its bow reaches and its player sees, not only what its own vision covers
+obj, nacq = re.subn(r'^(\s*AutoAcquireEnemiesWhenIdle\s*=[^\n;]*?)[ \t]*$', r'\1 OPENBFME_WEAPON_RANGE', obj, flags=re.M)
+assert nacq == 1, 'Object CreateAHero: AutoAcquireEnemiesWhenIdle not found once'
 with open(out, 'w', newline='\r\n') as o:
     o.write('''; OpenBFME override: the Create-a-Hero numbers from the High Elves mod (github.com/deepakjoshiss/highelves, data/ini/createaherogamedata.inc and
 ; data/ini/object/createahero/createaherodesign.inc), applied to the game's own blocks (docs/OVERRIDES.md, docs/HIGHELVES.md).
