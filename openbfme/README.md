@@ -18,6 +18,10 @@ OPENBFME_PATCH_DIR=$HOME/Games/BFME/Patch202 OPENBFME_MOD_DIR=$HOME/work/apps/bf
 Or double-click `openbfme/play.command`: it rebuilds the game's library from
 `../openbfme-godot` when its sources changed, then starts the game with the mod.
 
+`openbfme/viewer.command` opens the model viewer the same way: every object's
+model with its model and animation states, played by the game's draw runtime,
+and which parts are hidden and why (`--object=MirkwoodTauriel` selects one).
+
 ## overrides/
 
 Loaded in name order after the game's own INI files. A plain `.ini` replaces
