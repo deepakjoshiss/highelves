@@ -7,7 +7,7 @@ engine side lives in OpenBFME's `dj-dev` branch (`../openbfme-godot`):
 `docs/HIGHELVES.md` (what the mod changes and what is imported) and
 `docs/DJ-DEV.md` (build, test and run on the Mac).
 
-Run the game with the mod (its `data/` and `art/` folders over the unofficial 2.02 v9.8.0's archives in `~/Games/BFME/Patch202`, plus `openbfme/overrides/`):
+Run the game with the mod (its `data/`, `art/` and `apt/` (menus) folders over the unofficial 2.02 v9.8.0's archives in `~/Games/BFME/Patch202`, plus `openbfme/overrides/`):
 
 ```sh
 cd ../openbfme-godot
