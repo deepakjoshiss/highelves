@@ -15,6 +15,9 @@ OPENBFME_MOD_DIR=$HOME/work/apps/bfme/highelves ROTWK_INSTALL=$HOME/Games/BFME/R
   ../godot-4.7.2/Godot.app/Contents/MacOS/Godot --path godot
 ```
 
+Or double-click `openbfme/play.command`: it rebuilds the game's library from
+`../openbfme-godot` when its sources changed, then starts the game with the mod.
+
 ## overrides/
 
 Loaded in name order after the game's own INI files. A plain `.ini` replaces
@@ -23,7 +26,8 @@ changes only the lines it gives (map.ini's load).
 
 | File | What | How it was made |
 |---|---|---|
-| `01-openbfme-rules.ini` | OpenBFME's rules for this mod (`GameData` `OpenBFMEAutoAcquireWithinWeaponRange = Yes`: units that auto-acquire shoot, idle or guarding, what their weapon reaches past their vision when their player sees it) | written by hand; see OpenBFME's `docs/OVERRIDES.md` |
+| `01-openbfme-rules.ini` | OpenBFME's rules for this mod (`GameData` `OpenBFMEAutoAcquireWithinWeaponRange = Yes`: units that auto-acquire shoot, idle or guarding, what their weapon reaches past their vision when their player sees it; `OpenBFMETeamCommandPoints = Yes`: a player's command point cap is its team's share of the game's army, at least the table's cap, at most the two-player cap, raised at every defeat) | written by hand; see OpenBFME's `docs/OVERRIDES.md` |
+| `02-command-points.ini` | the command points by player count: a starting base of 200 (retail 100) and caps 1600 1400 1200 1100 1000 900 800 for 2 .. 8 players (retail 1000 875 750 675 625 575 500) | written by hand |
 | `10-createahero-archer.ini` | the Create-a-Hero archer's bows (mod's `CreateAHeroBasicRangedWeapon`, `CreateAHeroSuperRangedWeapon` and their warheads, bow and `H_*` constants) | extracted from the mod's `weapon.ini`; level 4 uses the 2.01 Silverthorn arrow until the golden arrow's FX come |
 | `20-createahero-stats.ini` | the mod's 116 Create-a-Hero constants, the 2.01 blocks that use them, the mod's melee weapons, `Object CreateAHero` with the mod's design, respawn and weapon upgrade fragments (the 4th bow fires the super bow), the mounted hero | generated: `tools/gen_cah_stats.py` |
 | `21-createahero-levels-and-powers.merge.ini` | the experience levels and special powers that use those constants (changed lines only) | generated: `tools/gen_cah_stats.py` |
