@@ -41,3 +41,25 @@ def merge3(base, ours, theirs, protect=None):
     text = HUNK.sub(sub, p.stdout.decode('latin-1'))
     assert not re.search(r'(?m)^(<<<<<<< mod|\|\|\|\|\|\|\| v8\.4|>>>>>>> v9\.8\.0)$', text), 'unresolved marker'  # the INI has <<<<<<<< comment rules
     return text, spots
+
+# A Draw module's whole text, depth-aware: a line whose first word is a draw sub-block type opens a block, "End" closes one, and BeginScript ..
+# EndScript is skipped (its Lua has its own "end"). -> [(first line, line after the module, module tag, text)]
+DRAW_OPENERS = {'defaultconditionstate', 'conditionstate', 'modelconditionstate', 'defaultmodelconditionstate', 'animationstate', 'idleanimationstate',
+                'transitionstate', 'animation'}
+def draw_modules(text):
+    code = lambda l: re.sub(r'(;|//).*', '', l).strip()
+    word = lambda l: (re.split(r'[\s=]+', code(l)) or [''])[0].lower()
+    lines = text.split('\n'); out = []; i = 0
+    while i < len(lines):
+        if not re.match(r'(?i)^Draw\s*=\s*\w+\s+\w+', code(lines[i])):
+            i += 1; continue
+        d, j = 1, i + 1
+        while j < len(lines) and d:
+            w = word(lines[j])
+            if w == 'beginscript':
+                while j + 1 < len(lines) and word(lines[j]) != 'endscript': j += 1
+            elif w == 'end': d -= 1
+            elif w in DRAW_OPENERS: d += 1
+            j += 1
+        out.append((i, j, code(lines[i]).split()[-1], '\n'.join(lines[i:j]))); i = j
+    return out

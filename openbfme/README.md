@@ -79,4 +79,5 @@ openbfme/tools/rebase202/rebase.sh --apply   # the same, then write it into data
 | `batch1.py` … `batch6.py` | the approved decisions, as hand-merged blocks the merge applies |
 | `keepnames.py` | fails when one of the mod's own names is used less than in HEAD |
 | `checkheroes.py` | fails when a hero waits for a level unlock its levels never grant |
+| `drawcheck.py` | fails when an object whose draw the mod changed loses its model or a quarter of its animation names |
 | `spots.py` | prints a block's undecided spots from `review.json` |

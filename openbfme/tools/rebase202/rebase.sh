@@ -14,6 +14,7 @@ for b in $T/batch*.py(N); do python3 -I -B $b $OUT/m0/review.json $OUT/resolutio
 RESOLUTIONS=$OUT/resolutions python3 -I -B $T/merge.py $H $OUT/m1 $BIG || exit 1
 python3 -I -B $T/keepnames.py $H $OUT/m1/data/ini $OUT/m1/modonly.txt || exit 1
 python3 -I -B $T/checkheroes.py $H $OUT/m1/data/ini $BIG || exit 1  # every hero power's level unlock granted
+python3 -I -B $T/drawcheck.py $H $OUT/m1/data/ini || exit 1  # no model kept with another skeleton's animations
 # the mod as OpenBFME mounts it (data/ art/ apt/ and the overrides), with the merged INI
 rsync -a --delete --exclude 'ini/' $H/data/ $OUT/mod/data/ && rsync -a --delete $H/art $H/apt $OUT/mod/ && rsync -a --delete $H/openbfme/overrides $OUT/mod/openbfme/
 cp -R $OUT/m1/data/ini $OUT/mod/data/ini

@@ -86,3 +86,14 @@ print('haldir interface ported')
 p = os.path.join(D, 'citadel.ini'); c = open(p, encoding='latin-1').read()
 c, k = re.subn(r'(MaxSimultaneousOfType\s*=\s*)5\b', r'\g<1>8 ; mod (2.02 v9.8.0: 5)', c); assert k == 1, k
 open(p, 'w', encoding='latin-1').write(c); print('citadel: fortress limit 8')
+
+# Elrond's draw module is the mod's whole (approved 2026-10-21): the line merge kept the mod's Model line (auelrond_tha, the elf warrior skeleton)
+# but took 2.02's animations, which are for 2.02's RUElrond skeleton. Only the draw module: the edits above (command points, respawn) stay.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from resolve import draw_modules
+src = subprocess.run(['git', '-C', os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..')), 'show',
+                      os.environ['REBASE_OURS'] + ':data/ini/object/goodfaction/units/elven/elrond.ini'], capture_output=True, check=True).stdout.decode('latin-1')
+ours = re.search(r'(?ims)^Object\s+ElvenElrond\b.*?^End\b', src.replace('\r\n', '\n')).group(0)
+p = os.path.join(D, 'elrond.ini'); d = open(p, encoding='latin-1').read()
+mine = [m for m in draw_modules(ours) if m[2] == 'ModuleTag_DRAW']; theirs_ = [m for m in draw_modules(d) if m[2] == 'ModuleTag_DRAW']
+assert len(mine) == 1 and len(theirs_) == 1 and d.count(theirs_[0][3]) == 1, (len(mine), len(theirs_))
+open(p, 'w', encoding='latin-1').write(d.replace(theirs_[0][3], mine[0][3])); print('elrond: the mod\'s draw module')
