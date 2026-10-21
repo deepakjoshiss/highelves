@@ -16,7 +16,7 @@ CreateAHeroClass
 		IconImage			  = CPMaleElfArcher
 		ButtonImage          			 = HICAHMaleElfArcher
 		// In UI it should be  		=  HICAHMaleElfArcher_wotr
-		SpendableAttributePoints        = 60
+		SpendableAttributePoints        = 30
 		//DefaultFaction              = Elves 
 		UsableFactions              = Men Elves Dwarves
 		UpgradeName			  =	Upgrade_CreateAHero_SubClass_0

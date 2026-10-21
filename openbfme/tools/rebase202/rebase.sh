@@ -1,11 +1,11 @@
 #!/bin/zsh
-# Rebases the mod's INI tree (data/ini, committed HEAD) onto the unofficial 2.02 v9.8.0's, block by block, then checks it in OpenBFME.
+# Rebases the mod's INI tree as it was before the rebase (REBASE_OURS, default 9102051: data/ini is the rebased tree from the next commit on) onto the unofficial 2.02 v9.8.0's, block by block, then checks it in OpenBFME.
 #   ./rebase.sh            merge and check; the result stays in $OUT (default: $TMPDIR/highelves-rebase202)
 #   ./rebase.sh --apply    the same, then copies the checked tree into data/ini (uncommitted)
 # Steps: the plain merge (merge.py; its review.json lists every block left to decide), the approved hand merges (batch*.py write whole blocks
 # into $OUT/resolutions), the merge again with them, the check that every H_* / Upgrade_New* name of the mod is still used (keepnames.py),
 # then OpenBFME's mod check on a copy of the mod carrying the merged INI. Inspect a block's open spots with spots.py <review.json> <block name>.
-T=${0:A:h}; H=${T:h:h:h}; OUT=${OUT:-${TMPDIR:-/tmp}/highelves-rebase202}
+T=${0:A:h}; H=${T:h:h:h}; export REBASE_OURS=${REBASE_OURS:-9102051}; OUT=${OUT:-${TMPDIR:-/tmp}/highelves-rebase202}
 BIG=${BIG:-$HOME/Games/BFME/Patch202/__patch202.big}; ENGINE=${ENGINE:-${H:h}/openbfme-godot/engine/build}
 mkdir -p $OUT/resolutions $OUT/mod/openbfme
 rm -rf $OUT/m0 $OUT/m1 $OUT/resolutions/*(N) $OUT/mod/data/ini

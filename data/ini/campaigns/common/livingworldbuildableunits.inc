@@ -174,6 +174,14 @@ LivingWorldPlayerArmy
 		Quantity = 1
 	End
 End
+LivingWorldPlayerArmy ;,;
+	Name = ElvenGuardianEntArmy
+	DisplayNameTag = LWA:Elves
+	ArmyEntry
+		ThingTemplate = RohanEntAshMelee
+		Quantity = 1
+	End
+End
 
 
 ;////////////// Dwarves //////////////
@@ -812,6 +820,14 @@ LivingWorldPlayerArmy
 	DisplayNameTag = LWA:MordorHeroArmy
 	ArmyEntry
 		ThingTemplate = MordorMouthOfSauron
+		Quantity = 1
+	End
+End
+LivingWorldPlayerArmy
+	Name = MordorBlackRider1Army
+	DisplayNameTag = LWA:Mordor
+	ArmyEntry
+		ThingTemplate = EvilMenBlackRider
 		Quantity = 1
 	End
 End

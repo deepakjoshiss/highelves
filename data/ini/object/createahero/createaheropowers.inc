@@ -956,7 +956,7 @@ End
 
 Behavior = UnpauseSpecialPowerUpgrade ModuleTag_WordEnabler ;;.;;
 	SpecialPowerTemplate = SpecialAbilityCreateAHeroWordOfPower
-	TriggeredBy			 = Upgrade_GandalfWordOfPower Upgrade_CreateAHero_ClassIstariWizard
+	TriggeredBy			 = Upgrade_ObjectLevel10 Upgrade_CreateAHero_ClassIstariWizard
 	RequiresAllTriggers = Yes
 End
 

@@ -49,7 +49,7 @@ import subprocess
 p = os.path.join(D, 'haldir.ini'); h = open(p, encoding='latin-1').read()
 h, k = re.subn(r'(BonusName\s*=\s*StandardDebuff\s*\n\s*TriggeredBy\s*=\s*)Upgrade_HaldirGoldenArrow', r'\1Upgrade_ObjectLevel8 ; 2.02 scheme: Upgrade_HaldirGoldenArrow', h)
 assert k == 1, k; open(p, 'w', encoding='latin-1').write(h)
-src = subprocess.run(['git', '-C', os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..')), 'show', 'HEAD:data/ini/weapon.ini'],
+src = subprocess.run(['git', '-C', os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..')), 'show', os.environ['REBASE_OURS'] + ':data/ini/weapon.ini'],
                      capture_output=True, check=True).stdout.decode('latin-1')
 w = re.search(r'(?ims)^Weapon\s+HaldirSuperBowWarhead\b.*?^End\b[^\n]*\n', src).group(0)
 w, k = re.subn(r'(RequiredUpgradeNames\s*=\s*)Upgrade_HaldirGoldenArrow\b', r'\1Upgrade_ObjectLevel8 ; 2.02 scheme: Upgrade_HaldirGoldenArrow', w)
@@ -68,7 +68,7 @@ REMOVED = {u.lower() for u in '''Upgrade_ArwenElvenGraceTrigger Upgrade_ArwenFlo
 done = {name for (_, name) in levels} | {r['name'] for r in R}  # the merge decides every block it reviewed (both changed: its line merge)
 # only levels the plain merge kept as the mod's ("ours changed"); the rest it already takes from v9.8.0 or merges
 ours_changed = set(json.load(open(os.path.join(os.path.dirname(sys.argv[1]), 'merge-report.json'))).get('ours changed', []))
-src = subprocess.run(['git', '-C', os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..')), 'show', 'HEAD:data/ini/experiencelevels.ini'],
+src = subprocess.run(['git', '-C', os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..')), 'show', os.environ['REBASE_OURS'] + ':data/ini/experiencelevels.ini'],
                      capture_output=True, check=True).stdout.decode('latin-1')
 extra = []
 for m in re.finditer(r'(?ims)^ExperienceLevel\s+(\w+)\b.*?^End\b[^\n]*\n', src):

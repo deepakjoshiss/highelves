@@ -289,6 +289,7 @@
 
 #define CREATE_A_HERO_ARROW_BONUS_DAMAGE_L4						20 ;;,;; 25		;;,;; Note - this is hero ranged damage
 #define CREATE_A_HERO_ARROW_BONUS_RADIUS_L4						0.0
+#define CREATE_A_HERO_ATHELAS_HEAL_AMOUNT				1000 ;,;
 
 //	Summon Familiar
 #define CREATE_A_HERO_FAMILIAR_MAX_HEALTH						5000

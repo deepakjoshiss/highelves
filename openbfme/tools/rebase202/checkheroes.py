@@ -8,8 +8,8 @@ strip = lambda t: '\n'.join(re.sub(r'(;|//).*', '', l) for l in t.splitlines())
 def texts_dir(root):
     return [strip(open(os.path.join(r, f), encoding='latin-1').read()) for r, _, fs in os.walk(root) for f in fs if f.lower().endswith(('.ini', '.inc'))]
 def texts_head():
-    names = subprocess.run(['git', '-C', H, 'ls-tree', '-r', '--name-only', 'HEAD', 'data/ini'], capture_output=True, text=True, check=True).stdout.split()
-    return [strip(subprocess.run(['git', '-C', H, 'show', f'HEAD:{n}'], capture_output=True).stdout.decode('latin-1')) for n in names if n.lower().endswith(('.ini', '.inc'))]
+    names = subprocess.run(['git', '-C', H, 'ls-tree', '-r', '--name-only', os.environ['REBASE_OURS'], 'data/ini'], capture_output=True, text=True, check=True).stdout.split()
+    return [strip(subprocess.run(['git', '-C', H, 'show', f"{os.environ['REBASE_OURS']}:{n}"], capture_output=True).stdout.decode('latin-1')) for n in names if n.lower().endswith(('.ini', '.inc'))]
 def texts_big():
     import struct
     f = open(BIG, 'rb'); f.read(8); n = struct.unpack('>I', f.read(4))[0]; f.read(4); ents = []

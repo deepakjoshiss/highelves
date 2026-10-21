@@ -22,10 +22,6 @@ SpecialPower SpecialAbilityThranduilRampage
   ReloadTime		= 1
 End
 
-SpecialPower SpecialAbilitySuperTower
-  Enum              = SPECIAL_GENERAL_TARGETLESS
-  ReloadTime		= 0
-End
 
 ;-----------------Spell Book----------------------------------------
 

@@ -68,7 +68,7 @@ ExperienceLevel	CreateAHeroLevel4
 	LevelUpFx			 = FX:GandalfLevelUp1FX
 	;LevelUpOCL			 = OCL_GandalfLevelUp1OCL
 	Rank				 = 4
-	Upgrades			 = Upgrade_CreateAHeroGloriousCharge
+	;,;Upgrades			 = Upgrade_ObjectLevel4 ;,;Upgrade_CreateAHeroGloriousCharge
 	AttributeModifiers	 = HeroLevelUpDamage3
 ;	Upgrades			 = CreateAHero_Dummy_not_used_reset_in_code_at_runtime
 	SelectionDecal

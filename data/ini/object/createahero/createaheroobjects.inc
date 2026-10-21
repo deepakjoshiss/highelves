@@ -1226,7 +1226,7 @@ Object CreateAHeroFamiliar_Base
 	// *** ENGINEERING Parameters ***
 
 	RadarPriority = UNIT
-	KindOf = SELECTABLE NO_COLLIDE MONSTER MOVE_ONLY IGNORE_FOR_VICTORY IGNORE_FOR_EVA_SPEECH_POSITION IGNORES_SELECT_ALL DO_NOT_CLASSIFY AIRCRAFT SUMMONED ;;,;; Added AIRCRAFT, SUMMONED, removed CLICK_THROUGH
+	KindOf = SELECTABLE NO_COLLIDE MONSTER MOVE_ONLY IGNORE_FOR_VICTORY IGNORE_FOR_EVA_SPEECH_POSITION IGNORES_SELECT_ALL DO_NOT_CLASSIFY AIRCRAFT SUMMONED UNATTACKABLE ;,; Added UNATTACKABLE  ;;,;; Added AIRCRAFT, SUMMONED, removed CLICK_THROUGH
 	
 	Body = ActiveBody ModuleTag_02
 		MaxHealth         = CREATE_A_HERO_FAMILIAR_MAX_HEALTH
@@ -1236,7 +1236,7 @@ Object CreateAHeroFamiliar_Base
 	
 	ArmorSet ;;,;; Added for 2.1, prevents death from logical fires
 		Conditions      = None
-		Armor           = CrebainArmor
+		Armor           = InvulnerableArmor ;,; CrebainArmor
 	End
 
 	Behavior = AIUpdateInterface	ModuleTag_AIUpdateInterface
@@ -1359,7 +1359,7 @@ ChildObject CreateAHeroFamiliar_Level3 CreateAHeroFamiliar_Base
 	Behavior = AttributeModifierAuraUpdate ModuleTag_Debuff	;;,;; Added for 2.3
 		StartsActive	= Yes
 		BonusName		= GenericDebuff
-		AntiCategory	= LEADERSHIP
+		;,; AntiCategory	= LEADERSHIP
 		Range			= 200
 		RefreshDelay	= 2000
 		ObjectFilter	= GENERIC_BUFF_RECIPIENT_OBJECT_FILTER

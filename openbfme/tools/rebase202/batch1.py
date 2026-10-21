@@ -67,7 +67,7 @@ print('citadel merged')
 # Approved: the corrode-allegiance CP include, the tooltip, the dual-weapon aura. Not SpecialEnemySenseUpdate (OpenBFME lacks it); 2.02's other
 # Haldir changes go to batch 2.
 import subprocess
-src = subprocess.run(['git', '-C', os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..')), 'show', 'HEAD:data/ini/object/goodfaction/units/elven/haldir.ini'],
+src = subprocess.run(['git', '-C', os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..')), 'show', os.environ['REBASE_OURS'] + ':data/ini/object/goodfaction/units/elven/haldir.ini'],
                      capture_output=True, check=True).stdout.decode('latin-1')
 iface = src[src.index('Object ElvenHaldirInterface'):]; iface = iface[:re.search(r'(?m)^End\s*$', iface).end()] + '\n'
 lines = iface.split('\n'); out = []

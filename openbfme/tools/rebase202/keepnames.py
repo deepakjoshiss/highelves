@@ -9,8 +9,8 @@ def count(texts):
     c = collections.Counter()
     for t in texts: c.update(tok.findall(strip(t)))
     return c
-names = subprocess.run(['git', '-C', H, 'ls-tree', '-r', '--name-only', 'HEAD', 'data/ini'], capture_output=True, text=True, check=True).stdout.split()
-head = count(subprocess.run(['git', '-C', H, 'show', f'HEAD:{n}'], capture_output=True).stdout.decode('latin-1') for n in names if n.lower().endswith(('.ini', '.inc')))
+names = subprocess.run(['git', '-C', H, 'ls-tree', '-r', '--name-only', os.environ['REBASE_OURS'], 'data/ini'], capture_output=True, text=True, check=True).stdout.split()
+head = count(subprocess.run(['git', '-C', H, 'show', f"{os.environ['REBASE_OURS']}:{n}"], capture_output=True).stdout.decode('latin-1') for n in names if n.lower().endswith(('.ini', '.inc')))
 merged = count(open(os.path.join(r, f), encoding='latin-1').read() for r, _, fs in os.walk(M) for f in fs if f.lower().endswith(('.ini', '.inc')))
 drop = {k: (head[k], merged[k]) for k in head if merged[k] < head[k]}
 for k, v in sorted(drop.items()): print(f'  lost: {k} {v[0]} -> {v[1]}')

@@ -1,7 +1,7 @@
 import sys, os, re, struct, subprocess, json, collections
 # usage: merge.py <mod repo> <out dir> <patch big>
 # Block-level three-way merge of the mod's INI tree onto 2.02 v9.8.0's:
-#   base = the mod's first commit (2.02 ~v8.4 + the first edits), ours = the mod's HEAD, theirs = v9.8.0's data\ini (complete in __patch202.big).
+#   base = the mod's first commit (2.02 ~v8.4 + the first edits), ours = the mod before the rebase (REBASE_OURS), theirs = v9.8.0's data\ini (complete in __patch202.big).
 # The mod's files are the skeleton (comments, #includes, the data/ini/mod/*.inc layout); each block's content is picked by who changed it.
 # Writes <out>/data/ini/... and <out>/merge-report.json. Blocks are matched by (file, name, occurrence), else by name when unique in the tree (moves).
 repo, out, big = sys.argv[1:4]
@@ -96,7 +96,7 @@ def big_tree(path):
 
 first = git('rev-list', '--max-parents=0', 'HEAD').decode().split()[0]
 B, T = Tree(rev_tree(first)), Tree(big_tree(big))
-O = Tree(rev_tree('HEAD'))  # the mod as committed: the working tree holds this script's output
+O = Tree(rev_tree(os.environ['REBASE_OURS']))  # the mod before the rebase (rebase.sh: REBASE_OURS); HEAD holds the rebased tree since 2026-10-21
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from resolve import merge3
 # hand-merged blocks (resolutions/*.ini, whole blocks): each replaces the merge's choice for its name
 strip_file = re.compile(r'\s*;\s*rebase202-file:\s*(\S+)')
