@@ -34,7 +34,7 @@ End
 
 Upgrade Upgrade_MallornTreeBloom
   Type            		= OBJECT
-	BuildCost           = H_ELVEN_NIMRODEL_WATERS_COST
+	BuildCost           = H_ELVEN_MALLORN_TREE_BLOOM_COST
 	BuildTime           = H_ELVEN_MALLORN_TREE_BLOOM_TIME
 	DisplayName         = UPGRADE:MallornTreeBloom
 	ResearchSound				= UpgradeSilverThornArrows
@@ -43,7 +43,7 @@ End
 
 Upgrade Upgrade_NimrodelWaters
 	Type			= OBJECT
-	BuildCost		= H_ELVEN_MALLORN_TREE_BLOOM_COST
+	BuildCost		= H_ELVEN_NIMRODEL_WATERS_COST
 	BuildTime		= H_ELVEN_MALLORN_TREE_BLOOM_TIME
 	DisplayName		= UPGRADE:NimrodelWaters
 	Tooltip		    = UPGRADE:ToolTipNimrodelWaters
