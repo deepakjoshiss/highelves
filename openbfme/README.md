@@ -60,3 +60,23 @@ archive tables (`$P` above), which give the retail mount order.
 | `artrefs.py`, `artfeatures.py` | the models the mod's INI names: in the mod's `art/`, in 2.01, or nowhere |
 | `modulecheck.py` | the module classes the mod's changes use, against OpenBFME's coverage table |
 | `w3dchannels.py` | the channels an animation names twice for one bone |
+
+### tools/rebase202/
+
+The rebase of `data/ini` onto the unofficial 2.02 v9.8.0 (2026-10-21): the
+method, the decisions and the checks are in OpenBFME's `docs/HIGHELVES.md`,
+"The rebase onto 2.02 v9.8.0".
+
+```sh
+openbfme/tools/rebase202/rebase.sh           # rebuild the rebased tree from HEAD and check it (output in $TMPDIR/highelves-rebase202)
+openbfme/tools/rebase202/rebase.sh --apply   # the same, then write it into data/ini
+```
+
+| Script | What |
+|---|---|
+| `merge.py` | the block-level three-way merge (the mod's first commit, HEAD, v9.8.0); writes `review.json` with every block left to decide |
+| `resolve.py` | the line-level merge of a block both sides changed, and its rules |
+| `batch1.py` … `batch6.py` | the approved decisions, as hand-merged blocks the merge applies |
+| `keepnames.py` | fails when one of the mod's own names is used less than in HEAD |
+| `checkheroes.py` | fails when a hero waits for a level unlock its levels never grant |
+| `spots.py` | prints a block's undecided spots from `review.json` |
