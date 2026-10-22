@@ -159,6 +159,11 @@ for bid, b in B.blocks.items():
 # v9.8.0's blocks nobody placed: a new one (or #include) goes into the same file right after the block v9.8.0 has before it (names are defined
 # before use), at the top when none; a new file comes whole
 fix = lambda t: t if t.endswith('\n') else t + '\r\n'
+def added(rel, s):
+    # a block only v9.8.0 has takes its resolution too (an edit made after the rebase: batch7.py)
+    h = HAND.get((rel, s[1]), HAND.get((None, s[1])))
+    if h is None: return s[3]
+    report['hand-merged (resolutions/)'].append(s[1]); return h
 for rel, segs in T.segs.items():
     if rel in outfiles:
         have = {strip(x).lower() for _, x in outfiles[rel] if x and strip(x).lower().startswith('#include')}
@@ -171,7 +176,7 @@ for rel, segs in T.segs.items():
                 if placed[s[4]][0] == rel: anchor = placed[s[4]][1]
                 continue
             if s[4] in used_theirs or s[4] in B.blocks: continue  # the mod removed it (same file only: a fragment .inc reuses names)
-            after[anchor].append(fix(s[3])); report['v9.8.0 added'].append(s[1])
+            after[anchor].append(fix(added(rel, s))); report['v9.8.0 added'].append(s[1])
         merged = [[None, x] for x in after[None]]
         for e in outfiles[rel]:
             merged.append(e)
@@ -182,7 +187,7 @@ for rel, segs in T.segs.items():
         for s in segs:
             if s[0] == 'raw': body.append([None, s[1]]); continue
             if s[4] in used_theirs or s[4] in B.blocks: continue  # the mod removed it (same file only: a fragment .inc reuses names)
-            body.append([None, s[3]]); report['v9.8.0 added'].append(s[1])
+            body.append([None, added(rel, s)]); report['v9.8.0 added'].append(s[1])
         outfiles[rel] = body; report['v9.8.0 new file'].append(T.path[rel])
 
 # a kept v8.4 block of a kind only INI names (an upgrade, a button, a weapon, an object: the mod ships no maps) that no other block reaches by
