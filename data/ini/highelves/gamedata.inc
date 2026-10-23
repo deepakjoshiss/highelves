@@ -1,0 +1,3 @@
+; The High Elves faction (openbfme-godot docs/HIGHELVES.md)
+
+#define HEFEAR_TERROR_DEBUFF_MODIFIER						+INFANTRY +CAVALRY -MONSTER -HERO -STRUCTURE -SIEGEENGINE -MACHINE -IMMOBILE -DOZER -BASE_FOUNDATION -HORDE -SHIP -RohanOathbreaker -DwarvenZerker -DwarvenZerkerHorde -HENoldorWarrior -HENoldorWarriorHorde -GondorKnightsofDol -GondorKnightsofDolHorde -WildBabyDrake -WildBabyDrakeHorde -MordorBlackRider -MordorBlackRiderHorde -IsengardFanatic -IsengardBerserkerHorde -IsengardExplosiveMine -IsengardDeployedExplosiveMine -WildSpiderling_Slaved -AngmarDireWolf_Slaved -IsengardWarg_Slaved;,; removed -IsengardBeserker -DwarvenBattleWagon

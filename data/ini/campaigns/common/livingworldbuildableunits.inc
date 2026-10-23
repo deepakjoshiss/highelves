@@ -692,14 +692,6 @@ LivingWorldPlayerArmy
 		Quantity = 1
 	End
 End
-LivingWorldPlayerArmy
-	Name = TaurielArmy
-	DisplayNameTag = LWA:Elves
-	ArmyEntry
-		ThingTemplate = MirkwoodTauriel
-		Quantity = 1
-	End
-End
 
 LivingWorldPlayerArmy
 	Name = ArwenArmy
@@ -865,14 +857,6 @@ LivingWorldPlayerArmy
 	DisplayNameTag = LWA:MordorHeroArmy
 	ArmyEntry
 		ThingTemplate = MordorGothmog
-		Quantity = 1
-	End
-End
-LivingWorldPlayerArmy
-	Name = FellBeast2PlayerArmy
-	DisplayNameTag = LWA:Mordor
-	ArmyEntry
-		ThingTemplate = MorgomirFellBeast
 		Quantity = 1
 	End
 End

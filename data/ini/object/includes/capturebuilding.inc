@@ -6,7 +6,7 @@
 	End
 	Behavior = SpecialAbilityUpdate ModuleTag_CaptureBuildingUpdate
 		SpecialPowerTemplate		= SpecialAbilityCaptureBuilding
-		StartAbilityRange			= 15.0
+		StartAbilityRange			= 25.0 ;,;15.0
 		UnpackTime					= 1
 		PreparationTime				= 15000
 		PackTime					= 1

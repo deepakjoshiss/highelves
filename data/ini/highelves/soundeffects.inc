@@ -1,3 +1,4 @@
+; The High Elves faction (openbfme-godot docs/HIGHELVES.md)
 
 AudioEvent SpellSpawnTreeFlet
   Sounds = SPtreeflet
@@ -58,5 +59,50 @@ AudioEvent SpellMirkwoodTrap
   MinRange    = 400
   MaxRange    = 800
   Type        = world everyone 
+  SubmixSlider = SoundFX
+End
+
+AudioEvent SpellGoodLightOFTrees
+  Sounds = SPlightof_trees
+  Volume = 120
+
+;,; ------------------------
+
+  Priority = critical
+  Limit = 1
+  Type = ui everyone
+  SubmixSlider = SoundFX
+End
+
+AudioEvent TaurielSwitchToSword
+  Sounds = USwitchSworda
+  Delay = 500 500
+  Volume = 90
+  VolumeShift = -10
+  Type = world shrouded everyone
+  SubmixSlider = SoundFX
+End
+
+AudioEvent TaurielKnifeMode
+  Sounds = gSpTauriel_CloseQuarters
+  Limit = 1
+  Volume = 140
+  MinRange = 250
+  MaxRange = 800
+  Type = world shrouded everyone
+  SubmixSlider = SoundFX
+End
+
+Multisound TaurielKnifeModeMS
+	Subsounds = TaurielKnifeMode TaurielSwitchToSword
+End
+
+AudioEvent TaurielFleetfooted
+  Sounds = gSpTauriel_Fleetfooted
+  Limit = 1
+  Volume = 150
+  MinRange = 250
+  MaxRange = 800
+  Type = world shrouded everyone
   SubmixSlider = SoundFX
 End

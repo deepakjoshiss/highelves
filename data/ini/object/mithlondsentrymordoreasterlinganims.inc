@@ -57,7 +57,7 @@
 	AnimationState = ALTERNATE_FORMATION FIRING_OR_PREATTACK_A
 	 	Animation = ATKC
 			AnimationName		= EUMthlnd_SKL.EUMthlnd_ATKA
-			AnimationMode		= LOOP
+			AnimationMode		= ONCE ;,;LOOP
 			UseWeaponTiming		= Yes	
 		End
 	End
@@ -89,7 +89,15 @@
 		End
 	End
 
-	AnimationState						= DYING SPLATTED
+	AnimationState = ALTERNATE_FORMATION STUNNED_FLAILING ;,;
+		Animation = Flying_1
+			AnimationName = EUMthlnd_SKL.EUMthlnd_FLYA
+			AnimationMode = LOOP
+		End
+		;Flags							= MAINTAIN_FRAME_ACROSS_STATES2
+	End
+	
+	AnimationState						= ALTERNATE_FORMATION DYING SPLATTED ;,; added ALTERNATE_FORMATION
  		Animation						= Splat
 			AnimationName				= EUMthlnd_SKL.EUMthlnd_LNDA
 			AnimationMode				= ONCE
@@ -126,23 +134,36 @@
 		Animation = Dying_1
 			AnimationName = EUMthlnd_SKL.EUMthlnd_DIEA
 			AnimationMode = ONCE
-			AnimationBlendTime			= 15
+			;,;AnimationBlendTime			= 15
 		End
 		Animation = Dying_2
 			AnimationName = EUMthlnd_SKL.EUMthlnd_DIEB
 			AnimationMode = ONCE
-			AnimationBlendTime			= 15
+			;,;AnimationBlendTime			= 15
 		End
 		Animation = Dying_3
 			AnimationName = EUMthlnd_SKL.EUMthlnd_DIEC
 			AnimationMode = ONCE
-			AnimationBlendTime			= 15
+			;,;AnimationBlendTime			= 15
 		End
     End
  
     ; --- stunned anims
+	AnimationState = ALTERNATE_FORMATION STUNNED_STANDING_UP ;,;
 
+ 		Animation = Standing_Back_Up
+			AnimationName = EUMthlnd_SKL.EUMthlnd_GTPA
+			AnimationMode = ONCE
+			AnimationSpeedFactorRange = 1.5 1.5
+		End
+	End
 
+	AnimationState = ALTERNATE_FORMATION STUNNED ;,;
+ 		Animation = Splattered_On_Ground
+			AnimationName = EUMthlnd_SKL.EUMthlnd_LNDA
+			AnimationMode = ONCE
+		End
+	End
 
 	 AnimationState = ALTERNATE_FORMATION PORCUPINE
 	 	Animation = ATKC
@@ -178,6 +199,12 @@
 		End
    End
 
+   	AnimationState = DYING SPLATTED ;,;
+ 		Animation = Splat
+			AnimationName = EUMthlnd_SKL.EUMthlnd_LNDA
+			AnimationMode = ONCE
+		End		
+	End
     
 	; --- death anims --- ;
 
@@ -210,17 +237,17 @@
 		Animation = Dying_1
 			AnimationName = EUMthlnd_SKL.EUMthlnd_DIEA
 			AnimationMode = ONCE
-			AnimationBlendTime			= 15
+			;,;AnimationBlendTime			= 15
 		End
 		Animation = Dying_2
 			AnimationName = EUMthlnd_SKL.EUMthlnd_DIEB
 			AnimationMode = ONCE
-			AnimationBlendTime			= 15
+			;,;AnimationBlendTime			= 15
 		End
 		Animation = Dying_3
 			AnimationName = EUMthlnd_SKL.EUMthlnd_DIEC
 			AnimationMode = ONCE
-			AnimationBlendTime			= 15
+			;,;AnimationBlendTime			= 15
 		End
 	End
 
@@ -244,6 +271,7 @@
 		Animation
 			AnimationName = EUMthlnd_SKL.EUMthlnd_GTPA
 			AnimationMode = ONCE
+			AnimationSpeedFactorRange = 1.5 1.5 ;,;
 		End
     End
 
@@ -294,8 +322,8 @@
 			AnimationName = EUMthlnd_SKL.EUMthlnd_RUNE
 		    AnimationMode = LOOP
 		End
-		Flags = MAINTAIN_FRAME_ACROSS_STATES
-		ParticleSysBone = None InfantryDustTrails
+		;,;Flags = MAINTAIN_FRAME_ACROSS_STATES
+		;,;ParticleSysBone = None InfantryDustTrails
     End
     
     AnimationState = MOVING EMOTION_ALERT
@@ -307,8 +335,8 @@
 			AnimationName = EUMthlnd_SKL.EUMthlnd_RUND
 		    AnimationMode = LOOP
 		End
-		Flags = MAINTAIN_FRAME_ACROSS_STATES
-		ParticleSysBone = None InfantryDustTrails
+		;,;Flags = MAINTAIN_FRAME_ACROSS_STATES
+		;,;ParticleSysBone = None InfantryDustTrails
     End
     
     AnimationState = MOVING ATTACKING
@@ -320,8 +348,8 @@
 			AnimationName = EUMthlnd_SKL.EUMthlnd_RUND
 		    AnimationMode = LOOP
 		End
-		Flags = MAINTAIN_FRAME_ACROSS_STATES
-		ParticleSysBone = None InfantryDustTrails
+		;,;Flags = MAINTAIN_FRAME_ACROSS_STATES
+		;,;ParticleSysBone = None InfantryDustTrails
     End
     
     AnimationState = MOVING ENGAGED
@@ -333,8 +361,8 @@
 			AnimationName = EUMthlnd_SKL.EUMthlnd_RUND
 		    AnimationMode = LOOP
 		End
-		Flags = MAINTAIN_FRAME_ACROSS_STATES
-		ParticleSysBone = None InfantryDustTrails
+		;,;Flags = MAINTAIN_FRAME_ACROSS_STATES
+		;,;ParticleSysBone = None InfantryDustTrails
     End
 
     AnimationState = MOVING
@@ -346,7 +374,7 @@
 			AnimationName = EUMthlnd_SKL.EUMthlnd_RUNB
 		    AnimationMode = LOOP
 		End
-		ParticleSysBone = None InfantryDustTrails
+		;,;ParticleSysBone = None InfantryDustTrails
     End
     
 
@@ -371,23 +399,31 @@
 	End
 
 	; --------- Click and Hit Reactions ------------
-    
-    AnimationState = EMOTION_ALERT EMOTION_AFRAID   ;;,;; cheer when afraid fix
-        ShareAnimation = Yes
-        Animation = Apprehensive
-            AnimationName = EUMthlnd_SKL.EUMthlnd_FERA
-            AnimationMode = LOOP
+	AnimationState = HIT_REACTION ;HIT_LEVEL_1 ;,;
+		 Animation = Hit_Level_1_a
+			AnimationName = EUMthlnd_SKL.EUMthlnd_HITA
+			AnimationMode = ONCE
 		 End
-        Flags = RANDOMSTART
 	End
-    AnimationState = EMOTION_AFRAID ;;,;; cheer when afraid fix
-        ShareAnimation = Yes
-        Animation = FERA
-            AnimationName = EUMthlnd_SKL.EUMthlnd_FERA
-            AnimationMode = LOOP
-        End
-        Flags = RANDOMSTART
-    End
+
+	; --- emotions --- ;
+    
+    ;,;AnimationState = EMOTION_ALERT EMOTION_AFRAID   ;;,;; cheer when afraid fix
+    ;,;    ShareAnimation = Yes
+    ;,;    Animation = Apprehensive
+    ;,;        AnimationName = EUMthlnd_SKL.EUMthlnd_FERA
+    ;,;        AnimationMode = LOOP
+    ;,;    End
+    ;,;    Flags = RANDOMSTART
+    ;,;End
+    ;,;AnimationState = EMOTION_AFRAID ;;,;; cheer when afraid fix
+    ;,;    ShareAnimation = Yes
+    ;,;    Animation = FERA
+    ;,;        AnimationName = EUMthlnd_SKL.EUMthlnd_FERA
+    ;,;        AnimationMode = LOOP
+    ;,;    End
+    ;,;    Flags = RANDOMSTART
+    ;,;End
 
     AnimationState							= WAR_CHANT
 		Animation							= Chant
@@ -408,13 +444,25 @@
 		Flags								= RANDOMSTART RESTART_ANIM_WHEN_COMPLETE
 	End			
 
+	AnimationState							= EMOTION_AFRAID	;these units are immune to fear
+		Animation							= FERA
+			AnimationName					= EUMthlnd_SKL.EUMthlnd_FERA
+			AnimationMode					= LOOP
+		End
 		;Flags = RANDOMSTART
+	End
 
+	AnimationState							= ATTACKING ;,; Moved up
+		Animation							= ALERT
+			AnimationName					= EUMthlnd_SKL.EUMthlnd_IDLA
+			AnimationMode					= LOOP
+		End
 		;,;Flags								= RESTART_ANIM_WHEN_COMPLETE MAINTAIN_FRAME_ACROSS_STATES2
-;			AnimationMode					= LOOP
-;		End
-;		Flags = RANDOMSTART
-;	End
+		BeginScript
+			Prev = CurDrawablePrevAnimationState()
+			if Prev == "STATE_Planted"	then CurDrawableSetTransitionAnimState("Trans_Down_To_Up") return end
+		EndScript
+	End
 	
 	AnimationState							= EMOTION_CELEBRATING
 		Animation							= CHRA
@@ -480,19 +528,7 @@
 			AnimationName					= EUMthlnd_SKL.EUMthlnd_IDLA
 			AnimationMode					= LOOP
 		End
-		Flags								= RESTART_ANIM_WHEN_COMPLETE MAINTAIN_FRAME_ACROSS_STATES2
-		BeginScript
-			Prev = CurDrawablePrevAnimationState()
-			if Prev == "STATE_Planted"	then CurDrawableSetTransitionAnimState("Trans_Down_To_Up") return end
-		EndScript
-	End
 		;,;Flags								= RESTART_ANIM_WHEN_COMPLETE MAINTAIN_FRAME_ACROSS_STATES2
-	AnimationState							= ATTACKING
-		Animation							= ALERT
-			AnimationName					= EUMthlnd_SKL.EUMthlnd_IDLA
-			AnimationMode					= LOOP
-		End
-		Flags								= RESTART_ANIM_WHEN_COMPLETE MAINTAIN_FRAME_ACROSS_STATES2
 		BeginScript
 			Prev = CurDrawablePrevAnimationState()
 			if Prev == "STATE_Planted"	then CurDrawableSetTransitionAnimState("Trans_Down_To_Up") return end
@@ -504,7 +540,7 @@
 			AnimationName					= EUMthlnd_SKL.EUMthlnd_IDLA
 			AnimationMode					= LOOP
 		End
-		Flags								= RESTART_ANIM_WHEN_COMPLETE MAINTAIN_FRAME_ACROSS_STATES2
+		;,;Flags								= RESTART_ANIM_WHEN_COMPLETE MAINTAIN_FRAME_ACROSS_STATES2
 		BeginScript
 			Prev = CurDrawablePrevAnimationState()
 			if Prev == "STATE_Planted"	then CurDrawableSetTransitionAnimState("Trans_Down_To_Up") return end

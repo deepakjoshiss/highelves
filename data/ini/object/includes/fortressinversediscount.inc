@@ -16,13 +16,3 @@ Behavior = CostModifierUpgrade ModuleTag_InverseDiscounsCostModifier
     Percentage				= 80.00% ;,; 100.00%
     Percentage				= 100.00% ;,; 125.00% 
 End
-Behavior = CostModifierUpgrade ModuleTag_CostModifier
-    LabelForPalantirString	= GUI:STRUCTURE_WALL_DISCOUNT
-    StartsActive = Yes
-    ObjectFilter			= ANY +MenFortress +DwarvenFortress +ElvenFortress +IsengardFortress +MordorFortress +WildFortress +AngmarFortress
-    Percentage				= 25.00%
-    Percentage				= 50.00%
-
-;    Percentage				= 100.00%
-;    Percentage				= 125.00% 
-End

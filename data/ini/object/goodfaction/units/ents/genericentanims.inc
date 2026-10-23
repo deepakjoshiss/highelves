@@ -28,18 +28,18 @@
 			Flags               = RANDOMSTART
 		End
 
-		;,;AnimationState = DYING BURNINGDEATH
-		;,;	Animation
-		;,;		AnimationName = RUTreeberd_DIEA
-		;,;		AnimationMode = ONCE
-		;,;		AnimationBlendTime = 10
-		;,;	End
-		;,;	Animation
-		;,;		AnimationName = RUTreeberd_DIE
-		;,;		AnimationMode = ONCE
-		;,;		AnimationBlendTime = 20
-		;,;	End
-		;,;End
+		AnimationState = DYING BURNINGDEATH
+			Animation
+				AnimationName = RUTreeberd_DIEA
+				AnimationMode = ONCE
+				AnimationBlendTime = 10
+			End
+			Animation
+				AnimationName = RUTreeberd_DIE
+				AnimationMode = ONCE
+				AnimationBlendTime = 20
+			End
+		End
 
 		AnimationState = DYING DEATH_2				; fading out.
 			Animation = Die
@@ -84,16 +84,16 @@
 			ParticleSysBone = BAT_SPINE1 TreebeardSplatDust FollowBone:Yes
 		End
 
-		;,;AnimationState			= BURNINGDEATH
-		;,;	Animation
-		;,;		AnimationName	= RUTreeberd_MFDA
-		;,;		AnimationMode	= LOOP
-		;,;		Distance		= 100
-		;,;	End
-		;,;	BeginScript
-		;,;		CurDrawableHideSubObjectPermanently("ROCK")
-		;,;	EndScript			
-		;,;End
+		AnimationState			= BURNINGDEATH
+			Animation
+				AnimationName	= RUTreeberd_MFDA
+				AnimationMode	= LOOP
+				Distance		= 100
+			End
+			BeginScript
+				CurDrawableHideSubObjectPermanently("ROCK")
+			EndScript			
+		End
 
 		; -------- DEBATE ANIMS ---------------
 		AnimationState   = JUST_BUILT
@@ -102,7 +102,7 @@
 				AnimationName = RUTreeberd_MOTC  ;sprout animation
 				AnimationMode = ONCE    ;MANUAL ;; hold first frame
 				AnimationBlendTime = 0
-				AnimationSpeedFactorRange = 1 1 ;;,;; 2 2 ;;.;; 0.5 0.5
+				AnimationSpeedFactorRange = 1.5 1.5 ;,; 1 1 ;;,;; 2 2 ;;.;; 0.5 0.5
 			End
 			BeginScript
 				CurDrawableShowSubObjectPermanently("ROCK")
@@ -179,9 +179,39 @@
 		;
 		;-------------------------------------------------- 
 		
+		AnimationState = FIRING_OR_PREATTACK_C AIM_NEAR ;,;
+            Animation       = CloseRock
+                AnimationName     = RUTreeberd_THRC
+                AnimationMode       = ONCE
+                UseWeaponTiming        = Yes
+                AnimationBlendTime  = 0
+            End
 
+            FrameForPristineBonePositions = 39
+            BeginScript
+                CurDrawableHideSubObjectPermanently("ROCK")
+            EndScript
+        End
 
+        AnimationState = FIRING_OR_PREATTACK_C ;,;
+            Animation       = FarRock
+                AnimationName     = RUTreeberd_THRB
+                AnimationMode       = ONCE
+                UseWeaponTiming        = Yes
+                AnimationBlendTime  = 0
+            End
+            Animation = FarRock
+                AnimationName        = RUTreeberd_BMBA
+                AnimationMode        = ONCE
+                UseWeaponTiming        = Yes
+                AnimationBlendTime = 0
+            End
 
+            FrameForPristineBonePositions = 39
+            BeginScript
+                CurDrawableHideSubObjectPermanently("ROCK")
+            EndScript
+        End
 
 		
 		AnimationState = RELOADING_A WEAPONSET_TOGGLE_1
@@ -189,6 +219,7 @@
 				AnimationName		= RUTreeberd_GRBA
 				AnimationMode		= ONCE
 				AnimationBlendTime	= 0													; Need this so the rock doesn't blend and slide.
+				AnimationSpeedFactorRange 	= 1.25 1.25 ;,; 1.2 1.2 ;,; 
 			End
 			FXEvent	= Frame:20	Name: FX_EntRockGrab
 			FXEvent	= Frame:24	Name: FX_EntRockYank			
