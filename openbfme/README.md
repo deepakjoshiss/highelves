@@ -3,11 +3,11 @@
 This folder holds what OpenBFME needs to run parts of this mod on top of RotWK
 2.01, and the scripts used to compare the mod with the base game. The
 engine side lives in OpenBFME's `dj-dev` branch (`../openbfme-godot`):
-`docs/OVERRIDES.md` (how overrides and the art folder load),
+`docs/MODS.md` (how a mod's folders load, and `data/ini/openbfme.ini`),
 `docs/HIGHELVES.md` (what the mod changes and what is imported) and
 `docs/DJ-DEV.md` (build, test and run on the Mac).
 
-Run the game with the mod (its `data/`, `art/` and `apt/` (menus) folders over the unofficial 2.02 v9.8.0's archives in `~/Games/BFME/Patch202`, plus `openbfme/overrides/`):
+Run the game with the mod (its `data/`, `art/`, `apt/` (menus) and `bases/` (castle layouts) folders over the unofficial 2.02 v9.8.0's archives in `~/Games/BFME/Patch202`):
 
 ```sh
 cd ../openbfme-godot
@@ -22,23 +22,21 @@ Or double-click `openbfme/play.command`: it rebuilds the game's library from
 model with its model and animation states, played by the game's draw runtime,
 and which parts are hidden and why (`--object=MirkwoodTauriel` selects one).
 
-## overrides/
+## OpenBFME's rules: `data/ini/openbfme.ini`
 
-Loaded in name order after the game's own INI files. A plain `.ini` replaces
-each block it names (retail's reload); a `.merge.ini` copies the block and
-changes only the lines it gives (map.ini's load).
+OpenBFME reads `data/ini/openbfme.ini` after the game's INI; the original game
+never opens it, so the mod's other files stay loadable by it. It holds the
+`OpenBFME…` rows only (OpenBFME refuses one anywhere else): the auto-acquire
+and team command point switches and the High Elves spell store menu. The
+command point table (a starting base of 200, caps 1600 1400 1200 1100 1000 900
+800 for 2 .. 8 players; 2.02: 100 and 1000) is in `data/ini/gamedata.ini`.
 
-| File | What | How it was made |
-|---|---|---|
-| `01-openbfme-rules.ini` | OpenBFME's rules for this mod (`GameData` `OpenBFMEAutoAcquireWithinWeaponRange = Yes`: units that auto-acquire shoot, idle or guarding, what their weapon reaches past their vision when their player sees it; `OpenBFMETeamCommandPoints = Yes`: a player's command point cap is its team's share of the game's army, at least the table's cap, at most the two-player cap, raised at every defeat) | written by hand; see OpenBFME's `docs/OVERRIDES.md` |
-| `02-command-points.ini` | the command points by player count: a starting base of 200 (retail 100) and caps 1600 1400 1200 1100 1000 900 800 for 2 .. 8 players (retail 1000 875 750 675 625 575 500) | written by hand |
-
-Check the folder loads without an error (from `../openbfme-godot/engine/build`):
+Check the mod loads without an error and starts (from `../openbfme-godot/engine/build`):
 
 ```sh
-OPENBFME_OVERRIDES_CHECK_DIR=$HOME/work/apps/bfme/highelves/openbfme/overrides \
+OPENBFME_MOD_CHECK_DIR=$HOME/work/apps/bfme/highelves OPENBFME_PATCH_CHECK_DIR=$HOME/Games/BFME/Patch202 \
   ROTWK_INSTALL=$HOME/Games/BFME/RotWK BFME2_INSTALL=$HOME/Games/BFME/BFME2 \
-  ./openbfme_tests -tc="*OPENBFME_OVERRIDES_CHECK_DIR*" -s
+  ./openbfme_tests -tc="mod retail*" -s
 ```
 
 ## tools/
@@ -59,7 +57,7 @@ archive tables (`$P` above), which give the retail mount order.
 | `blockdiff.py`, `linediff.py` | the changes of one mod file against the base, by block or by line (fragments) |
 | `deps.py` | what a set of mod blocks needs: macros, weapons, projectiles, upgrades, base or mod-only |
 | `cahmacros.py` | the changed Create-a-Hero constants and the base blocks using them |
-| `gen_cah_stats.py` | wrote the former `overrides/20-…` and `21-…` (the override-era Create-a-Hero import; the mod's own files load now) |
+| `gen_cah_stats.py` | wrote the former `overrides/20-…` and `21-…` (the override-era Create-a-Hero import; the overrides folder is gone, the mod's own files load) |
 | `artrefs.py`, `artfeatures.py` | the models the mod's INI names: in the mod's `art/`, in 2.01, or nowhere |
 | `modulecheck.py` | the module classes the mod's changes use, against OpenBFME's coverage table |
 | `w3dchannels.py` | the channels an animation names twice for one bone |
