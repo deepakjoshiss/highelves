@@ -243,6 +243,41 @@ heroAbilityList = {
     },
 }
 
+-- The High Elves faction (FactionHighElves): its heroes are copies named HE<hero>, with the High Elves copy of a power where they have one
+heroAbilityList.HEElvenLegolas = {
+        { ability = "HESpecialAbilityHawkStrike", cooldown = 45 },
+        { ability = "SpecialAbilityTrainArchers", cooldown = 150 },
+        { ability = "SpecialAbilityKnifeFighter", cooldown = 15 },
+        { ability = "SpecialAbilityArrowStorm", cooldown = 210 },
+}
+heroAbilityList.HEElvenThranduil = {
+        { ability = "SpecialAbilityMoveUnseen", cooldown = 120 },
+        { ability = "SpecialAbilityThranduilDeadeye", cooldown = 120 },
+		{ ability = "HESpecialAbilityThornVengeance", cooldown = 240 },
+}
+heroAbilityList.HEElvenHaldir = {
+        { ability = "SpecialAbilityHaldirGoldenArrow", cooldown = 180 },
+}
+heroAbilityList.HEElvenArwen = {
+		{ ability = "SpecialAbility202ElvenGrace", cooldown = 90 },
+        { ability = "SpecialAbilityPersonalFlood", cooldown = 180 },
+}
+heroAbilityList.HEElvenGlorfindel = {
+        { ability = "SpecialAbilityGlorfindelBladeOfPurity", cooldown = 120 },
+        { ability = "SpecialAbilityGlorfindelWindRider", cooldown = 120 },
+        { ability = "HESpecialAbilityGlorfindelStarlight", cooldown = 270 },
+}
+heroAbilityList.HEElvenElrond = {
+        { ability = "SpecialAbility202ElrondElvenGrace", cooldown = 90 },
+        { ability = "HESpecialAbilityElrondFarsight", cooldown = 120 },
+        { ability = "SpecialPowerSpawnTornado", cooldown = 300 },
+        { ability = "SpecialAbilityElrondRestoration", cooldown = 240 },
+}
+heroAbilityList.HERohanTreeBerd = {
+        { ability = "SpecialAbilityTreebeardEnrage", cooldown = 120 },
+        { ability = "SpecialAbilityGrabPassenger2", cooldown = 120 },
+}
+
 FlierTable = {}
 heroPowers = {}
 TowerTable = {}
@@ -733,6 +768,7 @@ function RestoreEcoTrackingOnReload()
 	local EcoList = {
 		GondorFarm = true,
 		ElvenMallornTree = true,
+		HEElvenMallornTree = true, -- the High Elves faction
 		DwarvenMineShaft = true,
 		AngmarMill = true,
 		IsengardFurnace = true,
@@ -1470,7 +1506,7 @@ end
 
 function OnRefreshShadowCreated(self)
 	for k, v in globals() do
-		if strfind(k, "ObjID") and ObjectTeamName(self) == ObjectTeamName(v) and ObjectTemplateName(v) == "ElvenElrond" then
+		if strfind(k, "ObjID") and ObjectTeamName(self) == ObjectTeamName(v) and (ObjectTemplateName(v) == "ElvenElrond" or ObjectTemplateName(v) == "HEElvenElrond") then
 			if ObjectTestModelCondition(v, "RIDER4") then
 				local ElrondLevel = GetUnitLevel(v)
 				if ElrondLevel >= 8 then
@@ -2845,7 +2881,7 @@ function OnMiniHeroHordeCreated(self)
 					MiniHeroHorde.id = GetUnitReference(self)
 					if ObjectTemplateName(self) == "WildFortressFireDrake" then
 						GiveUnitExperienceLevel(self, IncreaseByLevels-1, "WildFortressFireDrake")
-					elseif ObjectTemplateName(self) == "RohanTreeBerd" then
+					elseif ObjectTemplateName(self) == "RohanTreeBerd" or ObjectTemplateName(self) == "HERohanTreeBerd" then -- the High Elves Treebeard shares the levels
 						GiveUnitExperienceLevel(self, LevelDiedOn-1, "RohanTreebeard") -- watch the spelling of ExperienceLevel entry vs Object 
 						MiniHeroHorde.level = LevelDiedOn
 						return
