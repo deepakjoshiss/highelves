@@ -9,6 +9,7 @@ export PATH="/opt/homebrew/bin:$PATH"                        # cmake and ninja (
 export DEVELOPER_DIR=/Library/Developer/CommandLineTools     # Xcode's linker cannot read the macOS 27 SDK (DJ-DEV.md)
 cmake --build "$game/engine/build" --target openbfme
 # the mod is built on the unofficial 2.02: its archives (~/Games/BFME/Patch202: __patch202.big, lang/englishpatch202.big, v9.8.0) give the AI
-# bases, art and audio; the mod's own data/ (the whole INI tree) and art/ go over them (openbfme-godot/docs/OVERRIDES.md)
+# bases, art and audio; the mod's own art/, data/ (the whole INI tree, its OpenBFME rules in data/ini/openbfme.ini), apt/ and bases/ go over
+# them (openbfme-godot/docs/MODS.md)
 export OPENBFME_PATCH_DIR="$HOME/Games/BFME/Patch202" OPENBFME_MOD_DIR="$mod" ROTWK_INSTALL="$HOME/Games/BFME/RotWK" BFME2_INSTALL="$HOME/Games/BFME/BFME2"
 exec "$root/godot-4.7.2/Godot.app/Contents/MacOS/Godot" --path "$game/godot"
