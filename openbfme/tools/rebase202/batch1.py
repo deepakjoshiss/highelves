@@ -9,7 +9,7 @@ def spot(name, rx):
     m = [x for x in spots(name) if re.search(rx, x['mod'])]; assert len(m) == 1, (name, rx, len(m)); return m[0]
 DRAFTS = {'watchtower.ini': 'commandset elvenwatchtowercommandset', 'statue.ini': 'modifierlist heroicstatuepassiveleadership',
           'summoned.ini': 'experiencelevel summoneddefensivestructureslevel1', 'legolas.ini': 'object rohanlegolas', 'elrond.ini': 'object elvenelrond',
-          'thranduil.ini': 'object elventhranduil', 'elvenarmy.ini': 'armydefinition elvenarmy', 'citadel.ini': 'object elvencitadel'}
+          'thranduil.ini': 'object elventhranduil', 'citadel.ini': 'object elvencitadel'}  # the elven army: 2.02's since 2026-10-23 (batch7.py)
 for f, n in DRAFTS.items(): open(os.path.join(D, f), 'w', encoding='latin-1').write(block(n)['merged'])
 def put(draft, name, rx, new):
     p = os.path.join(D, draft); d = open(p, encoding='latin-1').read(); old = spot(name, rx)['mod']
@@ -32,9 +32,9 @@ def cp_with_include(name, rx='CommandPoints'):
 
 # 4. watchtower: 2.02's slots are the combination (both put ExitGarrison at 2, Silverthorn at 3; 2.02 adds stealth detection at 1)
 put('watchtower.ini', 'commandset elvenwatchtowercommandset', 'Command_ExitGarrison', spot('commandset elvenwatchtowercommandset', 'Command_ExitGarrison')['theirs'])
-# 6. heroic statue leadership: 2.02's modifiers, the mod's duration (2.02's DAMAGE_MULT 25% kept as 2.02 wrote it: listed for Deepak)
-st = spot('modifierlist heroicstatuepassiveleadership', 'DAMAGE_MULT')['theirs']; assert st.count('= 3000') == 1
-put('statue.ini', 'modifierlist heroicstatuepassiveleadership', 'DAMAGE_MULT', st.replace('= 3000', '= 2100 ; mod (2.02 v9.8.0: 3000)'))
+# 6. heroic statue leadership: 2.02's modifiers and duration (the mod's 2100 went back to 2.02's 3000 on 2026-10-23; 2.02's DAMAGE_MULT 25% becomes
+# 125% in batch2.py)
+put('statue.ini', 'modifierlist heroicstatuepassiveleadership', 'DAMAGE_MULT', spot('modifierlist heroicstatuepassiveleadership', 'DAMAGE_MULT')['theirs'])
 # 5. summoned defensive structures level 1: 2.02's version, the mod's TreeFlet added to its targets
 s = spot('experiencelevel summoneddefensivestructureslevel1', 'TargetNames')['theirs']
 assert s.count('GondorSentryTower_Independant ;,; MordorBarricade') == 1
@@ -48,16 +48,7 @@ for name, f in (('object elvenelrond', 'elrond.ini'), ('object elventhranduil', 
     put(f, name, 'RespawnRules', new2); put(f, name, 'CommandPoints', new1)
 print('batch 1 scripted merges applied')
 
-# 9. elven AI army: 2.02's unit swaps, the mod's percentages, Tauriel. Spots 0 and 2: the mod's tweak was to members 2.02 replaced (peasants,
-# Ent_Member4), so 2.02's; spot 1: 2.02's, with the mod's phase 3 share (20) for the member both changed; spot 3: Tauriel, then 2.02's Legolas
-A = 'armydefinition elvenarmy'
-sp = {i: spot(A, rx) for i, rx in enumerate(('RohanPeasantHordeInn_Member', r'PercentageOfArmyPhase2\s*=\s*30', 'ElvenEnt_Member4', 'MirkwoodTauriel'))}
-mod3 = [l for l in sp[1]['mod'].split('\n') if 'PercentageOfArmyPhase3' in l][0]
-t1 = sp[1]['theirs'].split('\n'); i = next(k for k, l in enumerate(t1) if 'PercentageOfArmyPhase3' in l); t1[i] = mod3 + ' ; mod (2.02 v9.8.0: 35.0)'
-new3, k = re.subn(r'(ArmyMemberDefinition\s+|Unit\s*=\s*)ElvenThranduil\b', r'\1ElvenLegolas', sp[3]['mod']); assert k == 2, k
-put('elvenarmy.ini', A, 'MirkwoodTauriel', new3); put('elvenarmy.ini', A, 'ElvenEnt_Member4', sp[2]['theirs'])
-put('elvenarmy.ini', A, r'PercentageOfArmyPhase2\s*=\s*30', '\n'.join(t1)); put('elvenarmy.ini', A, 'RohanPeasantHordeInn_Member', sp[0]['theirs'])
-print('elven army merged')
+# 9. elven AI army: 2.02's whole since 2026-10-23 (batch7.py: the AI's armies are 2.02's), no hand merge
 
 # 11. elven citadel: spot 0 the mod's (ivory tower, vines); spot 1 2.02's resurrection aura (the line merge already took 2.02's module header)
 put('citadel.ini', 'object elvencitadel', 'IdleSpawnRate', spot('object elvencitadel', 'IdleSpawnRate')['theirs'])

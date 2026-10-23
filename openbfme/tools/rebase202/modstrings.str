@@ -1,0 +1,232 @@
+// The High Elves mod's own strings (2026-10-23): strings.py writes data/lotr.str from 2.02 v9.8.0's data\lotr.str with these in place of
+// 2.02's text (same label) or after it. Edit the mod's strings here, never in data/lotr.str. Every other label is 2.02's.
+
+CONTROLBAR:ToolTipElvenCloak
+"Becomes invisible when standing still \n Left click to activate"
+END
+
+CONTROLBAR:ToolTipNoldorWeaponSong
+//"Requires Level 7 \n Noldor Warriors gain +50% Damage and +50% Armor \n Left click to activate"
+//"Requires Level 7 \n Noldor Warriors gain\n50% Damage, +100% Armor \n Left click to activate"
+"Requires Level 5 \n Noldor Warriors: +50% Damage, +100% Armor \n Rivendell Knights: 0% Decelerate, +300% Armor \n Left click to activate"
+END
+
+CONTROLBAR:ToolTipBlackRiderMorgulBlade
+//"Requires Level 4 \n Targeted enemy takes poison damage over \n time and becomes a wight upon death \n Left click icon then left click on target"
+//"Requires Level 4 \n Targeted enemy takes poison damage over time and becomes a wight upon death \n Left click icon then left click on target"
+"Requires Level 4 \n Targeted enemy takes poison damage over time, and becomes a wight upon death \n Temporarily cripples non-Monster unit \n Monster suffers -33% Speed \n Left click icon then left click on target"
+END
+
+CONTROLBAR:RamBaan
+"Rama's Bow"
+END
+
+CONTROLBAR:ToolTipLegolasRamBaan
+"Requires Level 7 and 10\nSignificantly increses arrow damage\nDamage happens in small area"
+END
+
+OBJECT:HordeNoldorArchers
+"Noldor Archers"
+END
+
+CONTROLBAR:LW_Unit_ElvenNoldorArcherHorde
+"Noldor Archer Battalion"
+END
+
+CONTROLBAR:LW_Unit_ElvenNoldorArcherHordePlural
+"Noldor Archer Battalions"
+END
+
+CONTROLBAR:ConstructNoldorArcherHorde
+"&Noldor Archers"
+END
+
+CONTROLBAR:ToolTipBuildNoldorArcherHorde
+//"Strong vs. All Normal Troops \n Requires Level 3 Barracks \n Only 3 Units of Noldor Warriors are allowed at any time."
+//"Strong vs. All Normal Troops\nRequires Level 3 Barracks\nCan stealth near trees\nOnly 2 units of Noldor Warriors are allowed at any time."
+"Strong vs. All Normal Troops\nRequires Level 3 Barracks\nCan stealth near trees\nOnly 8 battalions of Noldor Archers are allowed at any time"
+END
+
+CONTROLBAR:LightOfTrees
+"Light Of the Trees"
+End
+
+CONTROLBAR:ToolTipLightOfTrees
+"Temporarily covers the entire map in the light of the two trees \n Modifier Type: Spell \n All ally units gain +33% Damage and +33% Armor \n Stacks with Buffs, Leadership and other Spells \n Cancels Darkness and Freezing Rain \n Left click to activate"
+END
+
+CONTROLBAR:TreeFlet
+"Tree Flet"
+End
+
+CONTROLBAR:ToolTipTreeFlet
+"Spawns a Lorien Tree Flet with Galadhrim Archers \n Can be upgraded to provide help to nearby allies"
+END
+
+OBJECT:LothlorienFlet
+"Lorien Tree Flet"
+END
+
+OBJECT:TreeFletDescription
+"Support Structure \n Watchtower of Galadhrim Warriors \n Can be upgraded to help nearby allies"
+END
+
+CONTROLBAR:Waystone
+"Elven Waystone"
+End
+
+CONTROLBAR:TooltipWaystone
+"Elven Waystone can teleport units to itself \n Has power to stun enemies \n Can provide a burst of heal to surrounding allies"
+End
+
+CONTROLBAR:WaystoneTeleport
+"Elven &Waystone teleport"
+End
+
+CONTROLBAR:ToolTipWaystoneTeleport
+"Teleport units to the Waystone"
+End
+
+CONTROLBAR:MirkwoodTrap
+"Waystone &Trap"
+End
+
+CONTROLBAR:TooltipMirkwoodTrap
+"Waystone traps enemy units in the area for 5.5 seconds"
+End
+
+CONTROLBAR:WaystonePurify
+"&Purify"
+End
+
+CONTROLBAR:ToolTipWaystonePurify
+"Heals nearby units for 25%"
+End
+
+CONTROLBAR:RingOfAdamant
+"The Ring of Adamant"
+End
+
+CONTROLBAR:TooltipRingOfAdamant
+"Power of Nenya the Ring of Adamant \n Mallorn Tree Production +25%, Armor +25% \n Command Points +25 "
+End
+
+CONTROLBAR:LW_Hero_Tauriel
+"Tauriel"
+END
+
+OBJECT:MirkwoodTauriel
+"Tauriel"
+END
+
+CONTROLBAR:MirkwoodTaurielRecruit
+"Recruit the Captain of the Guard \n \n 'When did we allow evil to become stronger than us?'"
+END
+
+CONTROLBAR:MirkwoodTaurielRevive
+"Revive the fallen hero, Tauriel"
+END
+
+CONTROLBAR:MirkwoodTaurielHotkey
+"Tauriel (&W)"
+END
+
+CONTROLBAR:TaurielLeadership
+"Silvan Captain"
+END
+
+CONTROLBAR:ToolTipTaurielLeadership
+"Nearby Mirkwood and Noldor Archers gain increased range \n Level 1: +20% and Level 15: +50% \n Level 15: Ability cooldown are reduced by 50% \n Passive ability, Stacks with Leadership"
+END
+
+CONTROLBAR:TaurielSummon
+"Eyes and Ears (&R)"
+END
+
+CONTROLBAR:ToolTipTaurielSummon
+"Requires Level 3 \n Tauriel calls a group of stationary Taurdrim to defend targeted location\nThey are immobile, but remain stealthed when not attacking\n Left click icon then left click on pathable location"
+END
+
+CONTROLBAR:TaurielDecisiveStrike
+"Close Quarter Combat (&C)"
+END
+
+CONTROLBAR:TaurielEscape
+"Daughter of the Forest (&V)"
+END
+
+CONTROLBAR:TooltipTaurielEscape
+"Requires Level 8 \n Tauriel is able to disappear into the trees when she wishes \nTauriel teleports to target area \nLeft click icon then left click on pathable location"
+END
+
+CONTROLBAR:ToolTipTaurielDecisiveStrike
+"Requires Level 5\nTauriel temporarily uses her twin daggers\nIncreases attack damage by +33% and deals splash damage\nLeft click to activate"
+END
+
+CONTROLBAR:TaurielFleetFooted
+"Fleet-footed (&T)"
+END
+
+CONTROLBAR:ToolTipTaurielFleetFooted
+"Requires Level 4 \n Modifier Type: Spell \n Nearby infantry gains +20% movement speed\n Stacks with Leadership and Spells\nLeft click to activate"
+END
+
+CONTROLBAR:ExplodingArrow
+"Exploding Arrow"
+END
+
+CONTROLBAR:ToolTipExplodingArrow
+"Requires Level 1 \n Does small damge in an area \n Left click icon then left click on area"
+END
+
+CONTROLBAR:PurchaseMallornTreeBloom
+"Bloom Mallorn Tree (&B)"
+END
+
+UPGRADE:MallornTreeBloom
+"Mallorn Tree is now Blooming"
+END
+
+CONTROLBAR:ToolTipMallornTreeBloom
+"Significantly increases Production \n Command points Bonus: 50 \n Health Bonus: 1000"
+END
+
+CONTROLBAR:ToolTipMallornTreeBloomRequired
+"Requires Level 2 Mallorn Tree"
+END
+
+CONTROLBAR:NimrodelWaters
+"Blessed Waters (&W)"
+END
+
+CONTROLBAR:ToolTipNimrodelWaters
+"The Tree is bathed in blessed waters. Nearby units are healed and replenish in its presence."
+END
+
+CONTROLBAR:ConstructGondolinTower
+"Build Gondolin Tower (&T)"
+END
+
+UPGRADE:NimrodelWaters
+"Blessed Waters"
+END
+
+UPGRADE:ToolTipNimrodelWaters
+"The Tree is bathed in blessed waters. Nearby units are healed and replenish in its presence."
+END
+
+OBJECT:GondolinTower
+"Gondolin Tower"
+END
+
+OBJECT:GondolinTowerDescription
+"Support Structure \n Turgon built it in secret with the help of the Vala Ulmo, who blessed and gave protection to the city.\n Increases Range of Garrisoned Units"
+END
+
+UPGRADE:PurifyingFlames
+"Purifying Flames"
+END
+
+UPGRADE:ToolTipPurifyingFlames
+"Modifier Type: Leadership \n Allies nearby gain +33% Damage, +33% Armor, earn experience 50% faster, and become immune to Fear and Terror \n Stacks with Buffs and Spells"
+END

@@ -12,6 +12,9 @@ def count(texts):
 names = subprocess.run(['git', '-C', H, 'ls-tree', '-r', '--name-only', os.environ['REBASE_OURS'], 'data/ini'], capture_output=True, text=True, check=True).stdout.split()
 head = count(subprocess.run(['git', '-C', H, 'show', f"{os.environ['REBASE_OURS']}:{n}"], capture_output=True).stdout.decode('latin-1') for n in names if n.lower().endswith(('.ini', '.inc')))
 merged = count(open(os.path.join(r, f), encoding='latin-1').read() for r, _, fs in os.walk(M) for f in fs if f.lower().endswith(('.ini', '.inc')))
-drop = {k: (head[k], merged[k]) for k in head if merged[k] < head[k]}
+# approved drops, each to its exact count (another drop of the same name still fails): 2026-10-23 the mod's changes to other factions went back to
+# 2.02 (batch7.py): the evil buildings' exit delay, the AI's elven army (Tauriel), the game-speed hook on DefaultThingTemplate; what is left is the definition
+APPROVED = {'h_standard_horde_exit_delay': 1, 'mirkwoodtauriel': 16, 'testingfastgameplay': 1, 'upgrade_new0': 1, 'upgrade_objectunderhumancontrol': 1}
+drop = {k: (head[k], merged[k]) for k in head if merged[k] < head[k] and APPROVED.get(k) != merged[k]}
 for k, v in sorted(drop.items()): print(f'  lost: {k} {v[0]} -> {v[1]}')
 print(f'mod names: {len(head)} checked, {len(drop)} used less'); sys.exit(1 if drop else 0)

@@ -69,7 +69,7 @@ method, the decisions and the checks are in OpenBFME's `docs/HIGHELVES.md`,
 
 ```sh
 openbfme/tools/rebase202/rebase.sh           # rebuild the rebased tree from HEAD and check it (output in $TMPDIR/highelves-rebase202)
-openbfme/tools/rebase202/rebase.sh --apply   # the same, then write it into data/ini
+openbfme/tools/rebase202/rebase.sh --apply   # the same, then write it into data/ini and data/lotr.str
 ```
 
 | Script | What |
@@ -81,3 +81,4 @@ openbfme/tools/rebase202/rebase.sh --apply   # the same, then write it into data
 | `checkheroes.py` | fails when a hero waits for a level unlock its levels never grant |
 | `drawcheck.py` | fails when an object whose draw the mod changed loses its model or a quarter of its animation names |
 | `spots.py` | prints a block's undecided spots from `review.json` |
+| `strings.py`, `modstrings.str` | `data/lotr.str`: 2.02 v9.8.0's strings with the mod's own labels (`modstrings.str`, the place to edit them) in place or added |

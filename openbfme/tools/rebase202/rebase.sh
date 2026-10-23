@@ -5,6 +5,7 @@
 # Steps: the plain merge (merge.py; its review.json lists every block left to decide), the approved hand merges (batch*.py write whole blocks
 # into $OUT/resolutions), the merge again with them, the check that every H_* / Upgrade_New* name of the mod is still used (keepnames.py),
 # then OpenBFME's mod check on a copy of the mod carrying the merged INI. Inspect a block's open spots with spots.py <review.json> <block name>.
+# data/lotr.str is generated too (strings.py: 2.02's strings and the mod's own, modstrings.str); --apply writes it with the INI.
 T=${0:A:h}; H=${T:h:h:h}; export REBASE_OURS=${REBASE_OURS:-9102051}; OUT=${OUT:-${TMPDIR:-/tmp}/highelves-rebase202}
 BIG=${BIG:-$HOME/Games/BFME/Patch202/__patch202.big}; ENGINE=${ENGINE:-${H:h}/openbfme-godot/engine/build}
 mkdir -p $OUT/resolutions $OUT/mod/openbfme
@@ -15,12 +16,13 @@ RESOLUTIONS=$OUT/resolutions python3 -I -B $T/merge.py $H $OUT/m1 $BIG || exit 1
 python3 -I -B $T/keepnames.py $H $OUT/m1/data/ini $OUT/m1/modonly.txt || exit 1
 python3 -I -B $T/checkheroes.py $H $OUT/m1/data/ini $BIG || exit 1  # every hero power's level unlock granted
 python3 -I -B $T/drawcheck.py $H $OUT/m1/data/ini || exit 1  # no model kept with another skeleton's animations
+python3 -I -B $T/strings.py ${LANGBIG:-${BIG:h}/lang/englishpatch202.big} $T/modstrings.str $OUT/lotr.str || exit 1
 # the mod as OpenBFME mounts it (data/ art/ apt/ and the overrides), with the merged INI
 rsync -a --delete --exclude 'ini/' $H/data/ $OUT/mod/data/ && rsync -a --delete $H/art $H/apt $OUT/mod/ && rsync -a --delete $H/openbfme/overrides $OUT/mod/openbfme/
-cp -R $OUT/m1/data/ini $OUT/mod/data/ini
+cp -R $OUT/m1/data/ini $OUT/mod/data/ini && cp $OUT/lotr.str $OUT/mod/data/lotr.str
 (cd $ENGINE && ROTWK_INSTALL=$HOME/Games/BFME/RotWK BFME2_INSTALL=$HOME/Games/BFME/BFME2 OPENBFME_PATCH_CHECK_DIR=${BIG:h} \
   OPENBFME_MOD_CHECK_DIR=$OUT/mod ./openbfme_tests -tc="mod retail*" -s > $OUT/check.log 2>&1); rc=$?
 echo "mod check: exit $rc, load errors $(grep -c 'load error' $OUT/check.log) (log: $OUT/check.log)"; grep -E "templates,|skirmish:" $OUT/check.log
 grep "load error" $OUT/check.log | sed 's/.*load error //' | cut -c1-230 | head -25
-[[ $rc == 0 && $1 == --apply ]] && rsync -a $OUT/m1/data/ini/ $H/data/ini/ && echo "applied to $H/data/ini"
+[[ $rc == 0 && $1 == --apply ]] && rsync -a $OUT/m1/data/ini/ $H/data/ini/ && cp $OUT/lotr.str $H/data/lotr.str && echo "applied to $H/data/ini and data/lotr.str"
 exit $rc
