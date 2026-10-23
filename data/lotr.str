@@ -64727,3 +64727,7 @@ END
 UPGRADE:ToolTipPurifyingFlames
 "Modifier Type: Leadership \n Allies nearby gain +33% Damage, +33% Armor, earn experience 50% faster, and become immune to Fear and Terror \n Stacks with Buffs and Spells"
 END
+
+INI:FactionHighElves
+"High Elves"
+END
