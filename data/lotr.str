@@ -64557,7 +64557,7 @@ Version:Format4
 END
 
 
-// The High Elves mod: its labels 2.02 lacks (openbfme/tools/rebase202/modstrings.str)
+// The High Elves mod: its own labels (2.02 lacks them)
 CONTROLBAR:ToolTipElvenCloak
 "Becomes invisible when standing still \n Left click to activate"
 END

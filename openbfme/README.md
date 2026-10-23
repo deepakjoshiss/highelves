@@ -51,6 +51,7 @@ archive tables (`$P` above), which give the retail mount order.
 |---|---|
 | `iniblocks.py` | shared helpers: BIG archive reader, the base file lookup in mount order, a block splitter |
 | `bigfind.py`, `bigget.py` | list or extract files of a `.big` archive |
+| `vanilla202.py` | commits a 2.02 version's `data/ini` and `data/lotr.str` to the `vanilla` branch (see below) |
 | `modcompare.py` | every mod file against the base game's: identical, modified, new |
 | `commitblocks.py` | each mod commit's added, changed and removed INI blocks |
 | `blockdiff.py`, `linediff.py` | the changes of one mod file against the base, by block or by line (fragments) |
@@ -61,24 +62,16 @@ archive tables (`$P` above), which give the retail mount order.
 | `modulecheck.py` | the module classes the mod's changes use, against OpenBFME's coverage table |
 | `w3dchannels.py` | the channels an animation names twice for one bone |
 
-### tools/rebase202/
+### 2.02 on the `vanilla` branch
 
-The rebase of `data/ini` onto the unofficial 2.02 v9.8.0 (2026-10-21): the
-method, the decisions and the checks are in OpenBFME's `docs/HIGHELVES.md`,
-"The rebase onto 2.02 v9.8.0".
+`data/ini/**` and `data/lotr.str` are 2.02 v9.8.0's (branch `vanilla`, tag
+`vanilla-v9.8.0`) with the mod's edits on `master`; `git diff vanilla master -- data`
+shows every change the mod makes to 2.02. Edit the files directly. A new 2.02:
 
 ```sh
-openbfme/tools/rebase202/rebase.sh           # rebuild the rebased tree from HEAD and check it (output in $TMPDIR/highelves-rebase202)
-openbfme/tools/rebase202/rebase.sh --apply   # the same, then write it into data/ini and data/lotr.str
+python3 -I -B openbfme/tools/vanilla202.py <__patch202.big> <englishpatch202.big> <label>   # commits it to vanilla, tags vanilla-<label>
+git merge vanilla                                                                           # on master; then the mod check
 ```
 
-| Script | What |
-|---|---|
-| `merge.py` | the block-level three-way merge (the mod's first commit, HEAD, v9.8.0); writes `review.json` with every block left to decide |
-| `resolve.py` | the line-level merge of a block both sides changed, and its rules |
-| `batch1.py` … `batch7.py` | the approved decisions, as hand-merged blocks the merge applies; `batch7.py` holds the edits made to `data/ini` after the rebase |
-| `keepnames.py` | fails when one of the mod's own names is used less than in HEAD |
-| `checkheroes.py` | fails when a hero waits for a level unlock its levels never grant |
-| `drawcheck.py` | fails when an object whose draw the mod changed loses its model or a quarter of its animation names |
-| `spots.py` | prints a block's undecided spots from `review.json` |
-| `strings.py`, `modstrings.str` | `data/lotr.str`: 2.02 v9.8.0's strings with the mod's own labels (`modstrings.str`, the place to edit them) in place or added |
+The rebase tooling of 2026-10-21 (`tools/rebase202/`, its block merge and decisions) is in the history before
+its removal; OpenBFME's `docs/HIGHELVES.md` keeps its account.
