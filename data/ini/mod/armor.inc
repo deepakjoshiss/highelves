@@ -45,7 +45,6 @@
 
 
 ;//////////////////////MOD ARMORS///////////////////////////////////////////
-
 Armor HeroMiniMountedArmorUpgraded
   Armor = DEFAULT         40%   
   Armor = SLASH           20%	; RotWK originally was 60%  

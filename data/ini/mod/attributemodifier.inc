@@ -22,7 +22,7 @@
 //
 // In general, Additive bonuses should be things like 20% to give a bonus, and Multiplicitive bonuses should be things like 120%.
 // Modifier = 
-//	ARMOR,				// Additive.  The armor coefficients in Armor.ini go first to multiply the damage.  Then all of these are added together, capped at GameData's AttributeModifierArmorMaxBonus protection', and then the damage is multiplied by it again.
+//	ARMOR,				// Additive.  The armor coefficients in Armor.ini go first to multiply the damage.  Then all of these are added together, capped at GameData's AttributeModifierArmorMaxBonus protection, and then the damage is multiplied by it again.
 //	DAMAGE_ADD,			// Additive.  'Base' damage gets increased by this before hitting the DamageMult.
 //	DAMAGE_MULT,			// Multiplicitive.  Then after DamageAdd, the damage is multiplied by all of these.
 //	RESIST_FEAR,			// Additive.  Sum of these is a saving throw against fear (FEAR, DOOM, UNCONTROLLABLE_FEAR)
@@ -56,46 +56,36 @@
 
 //	FX = FX_Name
 //	use this to make a particle FX or tint for the attribute modifier
-
-;//---Created by <D.J.>
-
-;//============Hero Levels============
-
 ModifierList HighElvesHeroBonusLevel11
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
 	Modifier = DAMAGE_MULT H_HERO_HIGH_LVL_DAMAGE_MULT
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel12
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
 	Modifier = DAMAGE_MULT H_HERO_HIGH_LVL_DAMAGE_MULT
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel13
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
 	Modifier = DAMAGE_MULT H_HERO_HIGH_LVL_DAMAGE_MULT
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel14
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
 	Modifier = DAMAGE_MULT H_HERO_HIGH_LVL_DAMAGE_MULT
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel15
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
 	Modifier = DAMAGE_MULT H_HERO_HIGH_LVL_HIGH_DAMAGE_MULT
 	Duration = 0
 End
-
 ModifierList HighElvesRangeHeroBonusLevel15
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
@@ -106,42 +96,36 @@ ModifierList HighElvesRangeHeroBonusLevel15
 	ModelCondition = WEAPONSET_HERO_MODE
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel16
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
 	Modifier = DAMAGE_MULT H_HERO_HIGH_LVL_DAMAGE_MULT
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel17
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
 	Modifier = DAMAGE_MULT H_HERO_HIGH_LVL_DAMAGE_MULT
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel18
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
 	Modifier = DAMAGE_MULT H_HERO_HIGH_LVL_DAMAGE_MULT
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel19
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
 	Modifier = DAMAGE_MULT H_HERO_HIGH_LVL_DAMAGE_MULT
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel20
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
 	Modifier = DAMAGE_MULT H_HERO_HIGH_LVL_HIGH_DAMAGE_MULT
 	Duration = 0
 End
-
 ModifierList HighElvesRangeHeroBonusLevel20
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
@@ -151,7 +135,6 @@ ModifierList HighElvesRangeHeroBonusLevel20
 	Modifier = SHROUD_CLEARING H_HERO_HIGH_LVL_RANGE_BONUS
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel21
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
@@ -159,28 +142,24 @@ ModifierList HighElvesHeroBonusLevel21
 	Modifier = RECHARGE_TIME H_HERO_HIGH_LVL_RECHARGE_TIME
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel22
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
 	Modifier = DAMAGE_MULT H_HERO_HIGH_LVL_DAMAGE_MULT
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel23
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
 	Modifier = DAMAGE_MULT H_HERO_HIGH_LVL_DAMAGE_MULT
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel24
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
 	Modifier = DAMAGE_MULT H_HERO_HIGH_LVL_DAMAGE_MULT
 	Duration = 0
 End
-
 ModifierList HighElvesHeroBonusLevel25
 	Category = LEVEL
 	Modifier = HEALTH H_HERO_HIGH_LVL_HP_ADD
@@ -189,10 +168,6 @@ ModifierList HighElvesHeroBonusLevel25
 	Modifier = VISION H_HERO_HIGH_LVL_RANGE_BONUS
 	Duration = 0
 End
-
-;==================levels end=================
-
-;==================Unit Levels================
 ModifierList RivendellKnightsSpeed
 	Category = LEVEL
 	Modifier = SPEED 110% ;;,;; 
@@ -201,27 +176,22 @@ ModifierList RivendellKnightsSpeed
 	Modifier = CRUSH_DECELERATE 20%
 	Duration = 0 // FOrever
 End
-
 ModifierList FearlessLevel
 	Category = Level
 	Modifier = RESIST_FEAR 100%	// Additive.  Sum of these is a saving throw against fear
 	Modifier = RESIST_TERROR 100% // Additive.  Sum of these is a saving throw against terror (TERROR) ;,; Added in v5.1
 	Duration = 0				// Duration is forever when zero
 End
-;------------------------------------------------
-
 ModifierList ElvenFortressIvoryTowerBonus
 	Category = STRUCTURE
 	Modifier = SHROUD_CLEARING 240% ;;,;; 200% // Additive.  Sum of these is the % bonus to the range at which you clear fog and shroud
 	Duration = 0 // FOrever
 End
-
 ModifierList DwarvenCitadelIvoryTowerBonus
 	Category = STRUCTURE
 	Modifier = SHROUD_CLEARING 180% ;;,;; 200% // Additive.  Sum of these is the % bonus to the range at which you clear fog and shroud
 	Duration = 0 // FOrever
 End
-
 ModifierList ElvenFortressVinesLeadership
 	Category					= STRUCTURE
 	Modifier					= ARMOR 50%			// Additive.  Sum of these are subtracted from all entries in Armor.ini
@@ -232,34 +202,29 @@ ModifierList ElvenFortressVinesLeadership
 	Duration					= 2100				// Matches RefreshRate of giving module
 	FX							  = FX_VineslightBonus
 End
-
 ModifierList ElvenEnvilLeadership
 	Category = WEAPON
 	Modifier = BOUNTY_PERCENTAGE 25.0%	;// Percentage of victim bounty value to build granted to slaying member's player.
 	Duration = 3000						// lasts for 2.5 seconds
 	FX							= FX_EnvillightBonus
 End
-
 ModifierList SuperTowerBonus
 	Category = STRUCTURE
 	Modifier = VISION 30%
 	Modifier = RANGE 25%
 	Duration = 3000						// 2 secs
 End
-
 ModifierList SpellBookHighElvenGifts // Please update cah modifier also
 	Category = SPELL
 	Modifier = DAMAGE_MULT 150%		// damage increased 50%
 	Modifier = ARMOR 33%
 	Duration = 0					// Duration is forever when set to 0
 End
-
 ModifierList SpellBookHighElvenCAHGifts
 	Category = SPELL
 	Modifier = SPEED 130%
 	Duration = 0					// Duration is forever when set to 0
 End
-
 ModifierList TaurielBonusRank7
 	Category = LEVEL
 	Modifier = HEALTH ELVEN_LEGOLAS_LEVEL_HEALTH_BONUS
@@ -268,7 +233,6 @@ ModifierList TaurielBonusRank7
 	Modifier = SHROUD_CLEARING 40%
 	Duration = 0
 End
-
 ModifierList TaurielLeadership
 	Category					= WEAPON
 	Modifier 					= VISION 20%
@@ -276,7 +240,6 @@ ModifierList TaurielLeadership
 	Duration					= 3000
 	FX							= FX_TaurielBonus
 End
-
 ModifierList TaurielLeadershipLvl3
 	Category					= WEAPON
 	Modifier 					= VISION 50%
@@ -285,7 +248,6 @@ ModifierList TaurielLeadershipLvl3
 	Duration					= 3000
 	FX							  = FX_TaurielBonus
 End
-
 ModifierList MallornTreeBloomBonus
 	Category = STRUCTURE
 	Modifier = PRODUCTION 2	
@@ -294,7 +256,6 @@ ModifierList MallornTreeBloomBonus
 	ModelCondition 	 = USER_3
 	Duration = 0
 End
-
 ModifierList RingOfAdamantBonus
 	Category = STUN
 	Modifier = PRODUCTION 1.25	
@@ -303,7 +264,6 @@ ModifierList RingOfAdamantBonus
 	ModelCondition 	 = USER_3
 	Duration = 0
 End
-
 ModifierList SpellLightOfTreesBonus
 	Category = SPELL
 	Modifier = DAMAGE_MULT 133% ;;,;; 150%	
@@ -311,13 +271,11 @@ ModifierList SpellLightOfTreesBonus
 	Duration = 2100 ;;,;; 0 ; changed for 2.02e because this is no longer applied by the weather - see note in system.ini
 	FX		 = FX_SpellLightOfTrees  ;;,;; FX_InfiniteGenericLeadershipLvl1
 End
-
 ModifierList SpellLightOfTreesSpeedBonus
 	Category = SPELL
 	Modifier = SPEED 120%
 	Duration = 2100 ;;,;; 0 ; changed for 2.02e because this is no longer applied by the weather - see note in system.ini
 End
-
 ModifierList KnightsWeaponSong
 	Category = WEAPON
 	Modifier = ARMOR 90%			;// Additive.  Sum of these are subtracted from all entries in Armor.ini

@@ -2,20 +2,16 @@
 ;FILE: mod/objectcreationlist.inc (SYSTEM) ////////////////////////////////////////
 ;//////////////////////////////////////////////////////////////////////////////
 
-;======================<D.J.>=========================
 ObjectCreationList OCL_LightOfTreesWeatherChanger ;;,;; added
 	CreateObject
 		ObjectNames = LightOfTreesWeatherChanger
 	End
 End
-
-;-------------------------------------------------------------
 ObjectCreationList OCL_LightOfTreesCaster
 	CreateObject
 		ObjectNames = LightOfTreesCaster
 	End
 End
-
 ObjectCreationList OCL_SpellBookSpawnTreeFlet
 	CreateObject
 		ObjectNames			  = TreeFlet
@@ -27,7 +23,6 @@ ObjectCreationList OCL_SpellBookSpawnTreeFlet
 		JustBuiltDuration	= 1500
 	End
 End
-
 ObjectCreationList OCL_SpellBookElvenWaystone
 	CreateObject
 		ObjectNames				= ElvenWaystone

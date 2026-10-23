@@ -1424,7 +1424,7 @@ Object WizardFireballProjectileL1
     DeathFX = FX_WizardFireballL1
   End
 
-  Geometry = Sphere
+  Geometry = SPHERE
   GeometryIsSmall = Yes
   GeometryMajorRadius = 0.2
 End
@@ -1483,7 +1483,7 @@ Object WizardFireballProjectileL2
     DeathFX = FX_WizardFireballL2
   End
 
-  Geometry = Sphere
+  Geometry = SPHERE
   GeometryIsSmall = Yes
   GeometryMajorRadius = 0.4
 End
@@ -1542,7 +1542,7 @@ Object WizardFireballProjectileL3
     DeathFX = FX_WizardFireballL3
   End
 
-  Geometry = Sphere
+  Geometry = SPHERE
   GeometryIsSmall = Yes
   GeometryMajorRadius = 0.8
 End

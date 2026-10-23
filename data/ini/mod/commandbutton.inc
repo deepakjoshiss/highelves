@@ -4,9 +4,6 @@
 ;Command buttons are buttons that we place on the in game UI to create the
 ;context sensitive command sets
 ;------------------------------------------------------------------------------
-;;------------------- Added By DJ ---------------------
-;;-----------------------------------------------------
-
 CommandButton Command_SpecialAbilityRamBaan
 	Command					= SPECIAL_POWER 
 	SpecialPower			= SpecialAbilityRamBaan
@@ -17,7 +14,6 @@ CommandButton Command_SpecialAbilityRamBaan
 	DescriptLabel		  	= CONTROLBAR:ToolTipLegolasRamBaan
 	InPalantir			  	= Yes	
 End
-
 CommandButton Command_SpecialAbilityThranduilRampage
   	Command                 = SPECIAL_POWER 
   	SpecialPower            = SpecialAbilityThranduilRampage
@@ -28,7 +24,6 @@ CommandButton Command_SpecialAbilityThranduilRampage
   	DescriptLabel           = CONTROLBAR:ToolTipDeadEye
   	InPalantir		= Yes
 End
-
 CommandButton Command_ConstructSuperBattleTower
   Command          = DOZER_CONSTRUCT
   Object           = SuperBattleTower
@@ -38,7 +33,6 @@ CommandButton Command_ConstructSuperBattleTower
   DescriptLabel    = OBJECT:GondolinTowerDescription
   Radial           = Yes  
 End
-
 CommandButton Command_ConstructNoldorArcherHorde					; Added for BFME2 Expansion
 	Command					= UNIT_BUILD
 	Object					= NoldorArcherHorde
@@ -52,7 +46,6 @@ CommandButton Command_ConstructNoldorArcherHorde					; Added for BFME2 Expansion
 	InPalantir				= Yes
 	ShowProductionCount		= Yes    
 End
-
 CommandButton Command_ConstructElvenGladhrimHorde
 	Command					= UNIT_BUILD
 	Object					= GaladhrimWarriorHorde
@@ -66,7 +59,6 @@ CommandButton Command_ConstructElvenGladhrimHorde
 	Options					= CANCELABLE
 	ShowProductionCount		= Yes      
 End
-
 CommandButton Command_ConstructElvenRivendellKnights
 	Command						= UNIT_BUILD
 	Object						= RivendellKnightsHorde
@@ -80,7 +72,6 @@ CommandButton Command_ConstructElvenRivendellKnights
 	InPalantir	   		= Yes
 	ShowProductionCount		= Yes
 End
-
 CommandButton Command_PurchaseNimrodelWaters
   	Command				= OBJECT_UPGRADE
   	Upgrade				= Upgrade_NimrodelWaters
@@ -92,7 +83,6 @@ CommandButton Command_PurchaseNimrodelWaters
   	Radial            	= Yes
   	InPalantir	   		= Yes
 End
-
 CommandButton Command_PurchaseUpgradeBloom
    Command           = OBJECT_UPGRADE
    Object            = ElvenMallornTree
@@ -107,7 +97,6 @@ CommandButton Command_PurchaseUpgradeBloom
    Radial            = Yes
    InPalantir        = Yes
 End
-
 CommandButton Command_PurchaseUpgradePurifyngFlames
    Command           = OBJECT_UPGRADE
    Object            = TreeFlet
@@ -120,9 +109,6 @@ CommandButton Command_PurchaseUpgradePurifyngFlames
    Radial            = Yes
    InPalantir        = Yes
 End
-
-;----------------Spell Store Light of the trees--------------------
-
 CommandButton Command_SpellBookLightOfTrees_Rays ;,; 
     Command             = SPECIAL_POWER
     SpecialPower        = SpellBookLightOfTrees_Rays
@@ -136,7 +122,6 @@ CommandButton Command_SpellBookLightOfTrees
 	DescriptLabel			= CONTROLBAR:ToolTipLightOfTrees
 	CommandTrigger    = Command_SpellBookLightOfTrees_Rays
 End
-
 CommandButton Command_PurchaseSpellLightOfTrees
 	Command						= PURCHASE_SCIENCE
 	ButtonBorderType	= UPGRADE 
@@ -145,9 +130,6 @@ CommandButton Command_PurchaseSpellLightOfTrees
   TextLabel					= CONTROLBAR:LightOfTrees
 	DescriptLabel			= CONTROLBAR:ToolTipLightOfTrees
 End
-
-;--------------Spell Store Tree flet--------------------
-
 CommandButton Command_SpellBookSpawnTreeFlet
 	Command						= SPELL_BOOK
   SpecialPower			= SpellBookSpawnTreeFlet
@@ -160,7 +142,6 @@ CommandButton Command_SpellBookSpawnTreeFlet
   CursorName        = AttackObj
   InvalidCursorName = GenericInvalid
 End
-
 CommandButton Command_PurchaseSpellSpawnTreeFlet
 	Command						= PURCHASE_SCIENCE
 	ButtonBorderType	= UPGRADE 
@@ -169,9 +150,6 @@ CommandButton Command_PurchaseSpellSpawnTreeFlet
   TextLabel					= CONTROLBAR:TreeFlet
 	DescriptLabel			= CONTROLBAR:ToolTipTreeFlet
 End
-
-;------------Spell Store Waystone-----------------------
-
 CommandButton Command_SpellBookElvenWaystone
 	Command						= SPELL_BOOK
   SpecialPower			= SpellBookElvenWaystone
@@ -184,7 +162,6 @@ CommandButton Command_SpellBookElvenWaystone
   CursorName        = AttackObj
   InvalidCursorName = GenericInvalid
 End
-
 CommandButton Command_PurchaseSpellElvenWaystone
 	Command						= PURCHASE_SCIENCE
 	ButtonBorderType	= UPGRADE 
@@ -193,7 +170,6 @@ CommandButton Command_PurchaseSpellElvenWaystone
   TextLabel					= CONTROLBAR:Waystone
 	DescriptLabel			= CONTROLBAR:TooltipWaystone
 End
-
 CommandButton Command_SpecialAbilityWaystoneTeleport
 	Command			   		= SPECIAL_POWER
 	SpecialPower	    = SpecialAbilityWaystoneTeleport
@@ -205,7 +181,6 @@ CommandButton Command_SpecialAbilityWaystoneTeleport
 	DescriptLabel	    = CONTROLBAR:ToolTipWaystoneTeleport
 	InPalantir		    = Yes
 End
-
 CommandButton Command_SpecialAbilityMirkwoodTrap
   Command               = SPECIAL_POWER
   SpecialPower          = SpecialAbilityMirkwoodTrap
@@ -221,7 +196,6 @@ CommandButton Command_SpecialAbilityMirkwoodTrap
   AutoAbility						= No ;Yes ;;,;; ;;; No
   ;UnitSpecificSound    = 
 End
-
 CommandButton Command_SpecialAbilityPurify
   Command                 = SPECIAL_POWER 
   SpecialPower            = SpecialAbilityPurify
@@ -233,8 +207,6 @@ CommandButton Command_SpecialAbilityPurify
   AutoAbility							= No
 	UnitSpecificSound				= WaystonePurify
 End
-
-;-------------------Spell Store Ring Of Adamant----------------------------
 CommandButton Command_SpellBookRingOfAdamant
 	Command					= SPELL_BOOK
 	Options					= NONPRESSABLE
@@ -243,7 +215,6 @@ CommandButton Command_SpellBookRingOfAdamant
 	SpecialPower		= SpellBookRingOfAdamant
   ButtonImage			= SBLorienAdamant
 End
-
 CommandButton Command_PurchaseSpellRingOfAdamant
 	Command						= PURCHASE_SCIENCE
 	ButtonBorderType	= UPGRADE
@@ -254,8 +225,6 @@ CommandButton Command_PurchaseSpellRingOfAdamant
   ;;Trigger this command button when the purchase science is activated	
   CommandTrigger		= Command_SpellBookRingOfAdamant
 End
-
-;--------------------Tauriel-------------------
 CommandButton Command_SpecialAbilityTaurielLeadership
 	Options			  	= NONPRESSABLE
 	TextLabel			= CONTROLBAR:TaurielLeadership
@@ -265,7 +234,6 @@ CommandButton Command_SpecialAbilityTaurielLeadership
 	DescriptLabel		= CONTROLBAR:ToolTipTaurielLeadership
 	InPalantir			= Yes
 End
-
 CommandButton Command_SpecialAbilityExplodingArrow
 	Command                 = SPECIAL_POWER
 ;;	WeaponSlot              = SECONDARY
@@ -283,5 +251,3 @@ CommandButton Command_SpecialAbilityExplodingArrow
 	AutoAbility		= Yes
 	;UnitSpecificSound      = FaramirRangerVoiceWoundingArrow
 End
-
-

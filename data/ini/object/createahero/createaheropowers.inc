@@ -951,7 +951,7 @@ End
 //--------------------------------------------------------------------------	
 ;;.;;Behavior = UnpauseSpecialPowerUpgrade ModuleTag_WordEnabler
 ;;.;;	SpecialPowerTemplate = SpecialAbilityCreateAHeroWordOfPower
-;;.;;	TriggeredBy			 = Upgrade_GandalfWordOfPower
+;;.;;	TriggeredBy			 = Upgrade_ObjectLevel10
 ;;.;;End
 
 Behavior = UnpauseSpecialPowerUpgrade ModuleTag_WordEnabler ;;.;;

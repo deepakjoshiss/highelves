@@ -69,4 +69,4 @@ Behavior = AttributeModifierUpgrade ModuleTag_BrutalAISinglePlayer
         TriggeredBy                = Upgrade_HardAIMultiPlayer Upgrade_StructureLevel3
         AttributeModifier        = HardAIResourceBuildingBonus_Level3
 		RequiresAllTriggers = Yes
-    End
+    End	

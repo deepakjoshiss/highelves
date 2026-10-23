@@ -174,6 +174,7 @@ LivingWorldPlayerArmy
 		Quantity = 1
 	End
 End
+
 LivingWorldPlayerArmy ;,;
 	Name = ElvenGuardianEntArmy
 	DisplayNameTag = LWA:Elves
@@ -691,7 +692,6 @@ LivingWorldPlayerArmy
 		Quantity = 1
 	End
 End
-
 LivingWorldPlayerArmy
 	Name = TaurielArmy
 	DisplayNameTag = LWA:Elves
@@ -823,6 +823,7 @@ LivingWorldPlayerArmy
 		Quantity = 1
 	End
 End
+
 LivingWorldPlayerArmy
 	Name = MordorBlackRider1Army
 	DisplayNameTag = LWA:Mordor
@@ -831,15 +832,6 @@ LivingWorldPlayerArmy
 		Quantity = 1
 	End
 End
-
-;LivingWorldPlayerArmy
-;	Name = MordorBlackRider1Army
-;	DisplayNameTag = LWA:Mordor
-;	ArmyEntry
-;		ThingTemplate = EvilMenBlackRider
-;		Quantity = 1
-;	End
-;End
 ;
 ;LivingWorldPlayerArmy
 ;	Name = MordorBlackRider2Army
@@ -876,7 +868,6 @@ LivingWorldPlayerArmy
 		Quantity = 1
 	End
 End
-
 LivingWorldPlayerArmy
 	Name = FellBeast2PlayerArmy
 	DisplayNameTag = LWA:Mordor
@@ -885,6 +876,15 @@ LivingWorldPlayerArmy
 		Quantity = 1
 	End
 End
+
+;,; LivingWorldPlayerArmy
+;,; 	Name = FellBeast2PlayerArmy
+;,; 	DisplayNameTag = LWA:Mordor
+;,; 	ArmyEntry
+;,; 		ThingTemplate = MorgomirFellBeast
+;,; 		Quantity = 1
+;,; 	End
+;,; End
 
 LivingWorldPlayerArmy
 	Name = FellBeast1PlayerArmy

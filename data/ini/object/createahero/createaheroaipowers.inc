@@ -217,16 +217,24 @@ Behavior = AISpecialPowerUpdate CrippleStrikeMeleeHotWL2AI
 	CommandButtonName = Command_CreateAHero_HotW_CrippleStrikeMelee_Level2
 	SpecialPowerAIType = AI_SPECIAL_POWER_ENEMY_TYPE_KILLER
 End
-
 Behavior = AISpecialPowerUpdate CrippleStrikeMeleeHotWL3AI
 	CommandButtonName = Command_CreateAHero_HotW_CrippleStrikeMelee_Level3
 	SpecialPowerAIType = AI_SPECIAL_POWER_ENEMY_TYPE_KILLER
 End
-
 Behavior = AISpecialPowerUpdate CrippleStrikeMeleeHotWL4AI
 	CommandButtonName = Command_CreateAHero_HotW_CrippleStrikeMelee_Level4
 	SpecialPowerAIType = AI_SPECIAL_POWER_ENEMY_TYPE_KILLER
 End
+
+;,;Behavior = AISpecialPowerUpdate CrippleStrikeMeleeHotWL3AI
+;,;	CommandButtonName = Command_CreateAHero_HotW_CrippleStrikeMelee_Level3
+;,;	SpecialPowerAIType = AI_SPECIAL_POWER_ENEMY_TYPE_KILLER
+;,;End
+
+;,;Behavior = AISpecialPowerUpdate CrippleStrikeMeleeHotWL4AI
+;,;	CommandButtonName = Command_CreateAHero_HotW_CrippleStrikeMelee_Level4
+;,;	SpecialPowerAIType = AI_SPECIAL_POWER_ENEMY_TYPE_KILLER
+;,;End
 
 Behavior = AISpecialPowerUpdate CrippleStrikeMeleeSoSL1AI
 	CommandButtonName = Command_CreateAHero_SoS_CrippleStrikeMelee_Level1
@@ -237,16 +245,24 @@ Behavior = AISpecialPowerUpdate CrippleStrikeMeleeSoSL2AI
 	CommandButtonName = Command_CreateAHero_SoS_CrippleStrikeMelee_Level2
 	SpecialPowerAIType = AI_SPECIAL_POWER_ENEMY_TYPE_KILLER
 End
-
 Behavior = AISpecialPowerUpdate CrippleStrikeMeleeSoSL3AI
 	CommandButtonName = Command_CreateAHero_SoS_CrippleStrikeMelee_Level3
 	SpecialPowerAIType = AI_SPECIAL_POWER_ENEMY_TYPE_KILLER
 End
-
 Behavior = AISpecialPowerUpdate CrippleStrikeMeleeSoSL4AI
 	CommandButtonName = Command_CreateAHero_SoS_CrippleStrikeMelee_Level4
 	SpecialPowerAIType = AI_SPECIAL_POWER_ENEMY_TYPE_KILLER
 End
+
+;,;Behavior = AISpecialPowerUpdate CrippleStrikeMeleeSoSL3AI
+;,;	CommandButtonName = Command_CreateAHero_SoS_CrippleStrikeMelee_Level3
+;,;	SpecialPowerAIType = AI_SPECIAL_POWER_ENEMY_TYPE_KILLER
+;,;End
+
+;,;Behavior = AISpecialPowerUpdate CrippleStrikeMeleeSoSL4AI
+;,;	CommandButtonName = Command_CreateAHero_SoS_CrippleStrikeMelee_Level4
+;,;	SpecialPowerAIType = AI_SPECIAL_POWER_ENEMY_TYPE_KILLER
+;,;End
 
 Behavior = AISpecialPowerUpdate ToggleMountedAI
 	CommandButtonName = Command_CreateAHero_ToggleMounted

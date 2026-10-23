@@ -2,36 +2,27 @@
 // Upgrade definitions
 //------------------------------------------------------------------------------
 
-;;===========================<D.J.>=======================
-
 Upgrade Upgrade_New0
   Type               = OBJECT
 End
-
 Upgrade Upgrade_New1
   Type               = OBJECT
 End
-
 Upgrade Upgrade_New2
   Type               = OBJECT
 End
-
 Upgrade Upgrade_New3
   Type               = OBJECT
 End
-
 Upgrade Upgrade_New4
   Type               = OBJECT
 End
-
 Upgrade Upgrade_New5
   Type               = OBJECT
 End
-
 Upgrade Upgrade_ObjectUnderHumanControl ;;,;; Sûlherokhh's method of designating an object as being under the AI's control.  One upgrade is simpler than eight.
   Type				= OBJECT
 End
-
 Upgrade Upgrade_MallornTreeBloom
   Type            		= OBJECT
 	BuildCost           = H_ELVEN_MALLORN_TREE_BLOOM_COST
@@ -40,7 +31,6 @@ Upgrade Upgrade_MallornTreeBloom
 	ResearchSound				= UpgradeSilverThornArrows
 	;,; SkirmishAIHeuristic = AI_UPGRADEHEURISTIC_IMPORTANT
 End
-
 Upgrade Upgrade_NimrodelWaters
 	Type			= OBJECT
 	BuildCost		= H_ELVEN_NIMRODEL_WATERS_COST
@@ -49,7 +39,6 @@ Upgrade Upgrade_NimrodelWaters
 	Tooltip		    = UPGRADE:ToolTipNimrodelWaters
 	ResearchCompleteEvaEvent	= MallornTreeWaters
 End
-
 Upgrade Upgrade_PurifyingFlames
   Type            		= OBJECT
 	BuildCost           = H_ELVEN_MALLORN_TREE_BLOOM_COST

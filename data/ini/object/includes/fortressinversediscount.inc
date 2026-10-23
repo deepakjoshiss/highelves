@@ -3,6 +3,7 @@ Behavior = ObjectCreationUpgrade ModuleTag_EnableCostModifierWithADelay ;,;
     Delay                   = 100.0 ;,; must be slightly delayed for prices to be accurate ;,; 
     GrantUpgrade = Upgrade_ObjectLevel1
 End
+
 Behavior = CostModifierUpgrade ModuleTag_InverseDiscounsCostModifier
     LabelForPalantirString	= GUI:FortressInverseDiscount
     StartsActive = No ;,; Yes
