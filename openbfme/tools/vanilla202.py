@@ -1,6 +1,6 @@
 import os, struct, subprocess, sys, tempfile
 # usage: vanilla202.py <patch big> <lang big> <label>   (from the mod repo's root)
-# Commits 2.02's data/ini/** (__patch202.big) and data/lotr.str (englishpatch202.big) to the branch `vanilla` and tags it vanilla-<label>;
+# Commits 2.02's data/ini/**, data/scripts/scripts.lua (__patch202.big) and data/lotr.str (englishpatch202.big) to the branch `vanilla` and tags it vanilla-<label>;
 # master and the work tree stay untouched (a temporary index and work tree). CRLF becomes LF, nothing else changes. A path keeps the spelling
 # master already tracks (case-blind), else lower case, so the two branches name the same files. A 2.02 update: this, then `git merge vanilla`.
 def entries(path):
@@ -27,11 +27,14 @@ patch, lang, label = sys.argv[1:4]
 tag = f'vanilla-{label}'
 if subprocess.run(['git', 'rev-parse', '-q', '--verify', f'refs/tags/{tag}'], capture_output=True).returncode == 0:
     raise SystemExit(f'tag {tag} exists')
-files = {n.replace('\\', '/'): b for n, b in entries(patch).items() if n.lower().startswith('data\\ini\\')}
+pe = entries(patch)
+files = {n.replace('\\', '/'): b for n, b in pe.items() if n.lower().startswith('data\\ini\\')}
 lotr = [b for n, b in entries(lang).items() if n.lower() == 'data\\lotr.str']
-if not files or len(lotr) != 1:
-    raise SystemExit(f'{patch}: {len(files)} data\\ini files, {lang}: {len(lotr)} data\\lotr.str')
+lua = [b for n, b in pe.items() if n.lower() == 'data\\scripts\\scripts.lua']  # the mod edits it too (the High Elves heroes, 2026-10-23)
+if not files or len(lotr) != 1 or len(lua) != 1:
+    raise SystemExit(f'{patch}: {len(files)} data\\ini files, {len(lua)} data\\scripts\\scripts.lua; {lang}: {len(lotr)} data\\lotr.str')
 files['data/lotr.str'] = lotr[0]
+files['data/scripts/scripts.lua'] = lua[0]
 tracked = {p.lower(): p for p in git('ls-files', 'data').split('\n') if p}
 repo = os.path.abspath(git('rev-parse', '--git-dir'))
 with tempfile.TemporaryDirectory() as tmp:
