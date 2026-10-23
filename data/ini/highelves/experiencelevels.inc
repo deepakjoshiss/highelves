@@ -1,5 +1,8 @@
 ; The High Elves faction (openbfme-godot docs/HIGHELVES.md)
 
+; the macros of this file's own blocks (an audio file loads without the main load's macros)
+#define SAURON MordorSauron MordorSauron_RingHero
+
 ExperienceLevel	HELegolasLevel7
 	TargetNames = HERohanLegolas
 	RequiredExperience				=	LEGOLAS_LVL7_EXP_NEEDED 

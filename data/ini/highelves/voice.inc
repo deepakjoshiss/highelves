@@ -1,5 +1,9 @@
 ; The High Elves faction (openbfme-godot docs/HIGHELVES.md)
 
+; the macros of this file's own blocks (an audio file loads without the main load's macros)
+#define M_TAURIEL_RESPONSE_VOLUME	95 ;170 
+#define M_TAURIEL_RESPONSE_MINVOLUME 90  ;165 
+
 AudioEvent TaurielVoiceAttack
   Sounds = tauriel_atk1 tauriel_atk2 tauriel_atk3 tauriel_atk4 tauriel_atk5 tauriel_atk6
   Priority = high
