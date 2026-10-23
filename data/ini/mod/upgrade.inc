@@ -29,7 +29,7 @@ Upgrade Upgrade_MallornTreeBloom
 	BuildTime           = H_ELVEN_MALLORN_TREE_BLOOM_TIME
 	DisplayName         = UPGRADE:MallornTreeBloom
 	ResearchSound				= UpgradeSilverThornArrows
-	;,; SkirmishAIHeuristic = AI_UPGRADEHEURISTIC_IMPORTANT
+
 End
 Upgrade Upgrade_NimrodelWaters
 	Type			= OBJECT

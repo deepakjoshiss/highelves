@@ -88,7 +88,7 @@
 			AnimationMode		= LOOP
 		End
 	End
-	
+
 	AnimationState						= DYING SPLATTED
  		Animation						= Splat
 			AnimationName				= EUMthlnd_SKL.EUMthlnd_LNDA
@@ -141,6 +141,9 @@
     End
  
     ; --- stunned anims
+
+
+
 	 AnimationState = ALTERNATE_FORMATION PORCUPINE
 	 	Animation = ATKC
 			AnimationName		= EUMthlnd_SKL.EUMthlnd_PLTB
@@ -174,6 +177,7 @@
 			AnimationMode = LOOP
 		End
    End
+
     
 	; --- death anims --- ;
 
@@ -366,16 +370,16 @@
 		End
 	End
 
-	; --- emotions --- ;
+	; --------- Click and Hit Reactions ------------
     
     AnimationState = EMOTION_ALERT EMOTION_AFRAID   ;;,;; cheer when afraid fix
         ShareAnimation = Yes
         Animation = Apprehensive
             AnimationName = EUMthlnd_SKL.EUMthlnd_FERA
             AnimationMode = LOOP
-        End
+		 End
         Flags = RANDOMSTART
-    End
+	End
     AnimationState = EMOTION_AFRAID ;;,;; cheer when afraid fix
         ShareAnimation = Yes
         Animation = FERA
@@ -404,9 +408,9 @@
 		Flags								= RANDOMSTART RESTART_ANIM_WHEN_COMPLETE
 	End			
 
-;	AnimationState							= EMOTION_AFRAID	these units are immune to fear
-;		Animation							= FERA
-;			AnimationName					= EUMthlnd_SKL.EUMthlnd_FERA
+		;Flags = RANDOMSTART
+
+		;,;Flags								= RESTART_ANIM_WHEN_COMPLETE MAINTAIN_FRAME_ACROSS_STATES2
 ;			AnimationMode					= LOOP
 ;		End
 ;		Flags = RANDOMSTART
@@ -482,7 +486,7 @@
 			if Prev == "STATE_Planted"	then CurDrawableSetTransitionAnimState("Trans_Down_To_Up") return end
 		EndScript
 	End
-		
+		;,;Flags								= RESTART_ANIM_WHEN_COMPLETE MAINTAIN_FRAME_ACROSS_STATES2
 	AnimationState							= ATTACKING
 		Animation							= ALERT
 			AnimationName					= EUMthlnd_SKL.EUMthlnd_IDLA

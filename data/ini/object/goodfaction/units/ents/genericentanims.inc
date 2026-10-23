@@ -178,6 +178,12 @@
 		;	ROCK THROWING; WEAPONSET_TOGGLE_1
 		;
 		;-------------------------------------------------- 
+		
+
+
+
+
+		
 		AnimationState = RELOADING_A WEAPONSET_TOGGLE_1
 			Animation
 				AnimationName		= RUTreeberd_GRBA

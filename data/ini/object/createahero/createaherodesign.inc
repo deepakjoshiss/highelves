@@ -12,7 +12,7 @@
 
 	DisplayMeleeDamage		 = FARAMIR_DAMAGE
 	DisplayRangedDamage		 = CREATE_A_HERO_BOW_DAMAGE
-	
+;//	DisplayMeleeDamage		 = FARAMIR_DAMAGE
 	VisionRange				 = 150
 	ShroudClearingRange		 = 200
 

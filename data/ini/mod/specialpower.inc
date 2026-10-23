@@ -103,7 +103,7 @@ End
 SpecialPower SpecialAbilityTaurielFleetFooted
   Enum                = SPECIAL_TRIGGER_ATTRIBUTE_MODIFIER
   ReloadTime          = 120000
-  ;InitiateAtLocationSound     = GondorSoldierCelebratingLarge
+
 End
 SpecialPower SpecialAbilityExplodingArrow
   Enum                = SPECIAL_ARROW_STORM

@@ -1222,7 +1222,7 @@ End
 		End
 		AnimationState				= BETWEEN_FIRING_SHOTS_A WEAPONSET_TOGGLE_1
 			StateName				= STATE_ready
-			Animation					// hold the drawn bow between shots (as CONTINUOUS_FIRE_MEAN): the one tick between the reload's end and the next shot dropped to #(MODEL)_B_IDLA and back
+			Animation
 				AnimationName		= #(MODEL)_B_ATKA2
 				AnimationMode		= MANUAL
 			End
