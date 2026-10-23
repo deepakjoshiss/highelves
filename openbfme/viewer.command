@@ -8,5 +8,6 @@ game="$root/openbfme-godot"
 export PATH="/opt/homebrew/bin:$PATH"                        # cmake and ninja (a Finder launch has a short PATH)
 export DEVELOPER_DIR=/Library/Developer/CommandLineTools     # Xcode's linker cannot read the macOS 27 SDK (DJ-DEV.md)
 cmake --build "$game/engine/build" --target openbfme
-export OPENBFME_PATCH_DIR="$HOME/Games/BFME/Patch202" OPENBFME_MOD_DIR="$mod" ROTWK_INSTALL="$HOME/Games/BFME/RotWK" BFME2_INSTALL="$HOME/Games/BFME/BFME2"
+modfolder="$("$mod/openbfme/modfolder.sh")"   # its own line: set -e stops here when the build fails
+export OPENBFME_MOD_INSTALL="$HOME/Games/BFME/Patch202" OPENBFME_MOD="$modfolder" ROTWK_INSTALL="$HOME/Games/BFME/RotWK" BFME2_INSTALL="$HOME/Games/BFME/BFME2"
 exec "$root/godot-4.7.2/Godot.app/Contents/MacOS/Godot" --path "$game/godot" res://scenes/model_viewer.tscn -- "$@"

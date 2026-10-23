@@ -7,16 +7,16 @@ engine side lives in OpenBFME's `dj-dev` branch (`../openbfme-godot`):
 `docs/HIGHELVES.md` (what the mod changes and what is imported) and
 `docs/DJ-DEV.md` (build, test and run on the Mac).
 
-Run the game with the mod (its `data/`, `art/`, `apt/` (menus) and `bases/` (castle layouts) folders over the unofficial 2.02 v9.8.0's archives in `~/Games/BFME/Patch202`):
+Run the game with the mod (its `data/`, `art/`, `apt/` (menus) and `bases/` (castle layouts) as a `-mod` folder over the unofficial 2.02 v9.8.0's archives in `~/Games/BFME/Patch202`, a mod installed into the game folder). `openbfme/modfolder.sh` builds that folder (`openbfme/build/highelves`, ignored: the game files only, the menus at its top) and prints its path; OpenBFME fingerprints every file of a mod folder, so the repository itself is not one:
 
 ```sh
 cd ../openbfme-godot
-OPENBFME_PATCH_DIR=$HOME/Games/BFME/Patch202 OPENBFME_MOD_DIR=$HOME/work/apps/bfme/highelves ROTWK_INSTALL=$HOME/Games/BFME/RotWK BFME2_INSTALL=$HOME/Games/BFME/BFME2 \
+OPENBFME_MOD_INSTALL=$HOME/Games/BFME/Patch202 OPENBFME_MOD="$(../highelves/openbfme/modfolder.sh)" ROTWK_INSTALL=$HOME/Games/BFME/RotWK BFME2_INSTALL=$HOME/Games/BFME/BFME2 \
   ../godot-4.7.2/Godot.app/Contents/MacOS/Godot --path godot
 ```
 
 Or double-click `openbfme/play.command`: it rebuilds the game's library from
-`../openbfme-godot` when its sources changed, then starts the game with the mod.
+`../openbfme-godot` when its sources changed, builds the mod folder, then starts the game with the mod.
 
 `openbfme/viewer.command` opens the model viewer the same way: every object's
 model with its model and animation states, played by the game's draw runtime,
@@ -34,7 +34,7 @@ command point table (a starting base of 200, caps 1600 1400 1200 1100 1000 900
 Check the mod loads without an error and starts (from `../openbfme-godot/engine/build`):
 
 ```sh
-OPENBFME_MOD_CHECK_DIR=$HOME/work/apps/bfme/highelves OPENBFME_PATCH_CHECK_DIR=$HOME/Games/BFME/Patch202 \
+OPENBFME_MOD_CHECK_DIR="$(../../../highelves/openbfme/modfolder.sh)" OPENBFME_PATCH_CHECK_DIR=$HOME/Games/BFME/Patch202 \
   ROTWK_INSTALL=$HOME/Games/BFME/RotWK BFME2_INSTALL=$HOME/Games/BFME/BFME2 \
   ./openbfme_tests -tc="mod retail*" -s
 ```
