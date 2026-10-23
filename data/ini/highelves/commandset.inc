@@ -19,7 +19,7 @@ End
 
 CommandSet HERohanLegolasCommandSet
 	1	= Command_ToggleStance
-	2  	= Command_LegolasHawkStrike
+	2  	= HECommand_LegolasHawkStrike
 	3  	= Command_SpecialAbilityTrainArchersLegolas ;;,;; Command_LegolasKnifeFightingMode
 	4  	= Command_ToggleLegolasWeapon ;,; Command_LegolasKnifeFightingMode ;;,;; Command_SpecialAbilityTrainArchersLegolas ;;,;; Command_SpecialAbilityTrainArchers
 	5  	= Command_SpecialAbilityArrowStorm
@@ -231,29 +231,29 @@ CommandSet HEElvenFoundationCommandSet
 End
 
 CommandSet HEElvesSpellBookCommandSet
-    1 = Command_SpellBookFarsight
-    2 = Command_SpellBookRebuild
+    1 = HECommand_SpellBookFarsight
+    2 = HECommand_SpellBookRebuild
     3 = HECommand_SpellBookElvenGifts
-    4 = Command_SpellBookRallyingCall
-    5 = Command_SpellBookHeal
+    4 = HECommand_SpellBookRallyingCall
+    5 = HECommand_SpellBookHeal
 
-    6 = Command_SpellBookEnshroudingMist
-    7 = Command_SpellBookArrowVolleyGood
-    8 = Command_SpellBookTomBombadil
+    6 = HECommand_SpellBookEnshroudingMist
+    7 = HECommand_SpellBookArrowVolleyGood
+    8 = HECommand_SpellBookTomBombadil
     9 = Command_SpellBookSpawnTreeFlet
     10 = Command_SpellBookRingOfAdamant
-    11 = Command_SpellBookElvenWood
+    11 = HECommand_SpellBookElvenWood
 
-    12 = Command_SpellBookEagleAllies
-    13 = Command_SpellBookEntAllies
+    12 = HECommand_SpellBookEagleAllies
+    13 = HECommand_SpellBookEntAllies
     14 = Command_SpellBookElvenWaystone
     15 = Command_SpellBookLightOfTrees
-    16 = Command_SpellBookCloudBreak
+    16 = HECommand_SpellBookCloudBreak
 
-    17 = Command_SpellBookEarthquake
-    18 = Command_SpellBookSunflare
-    19 = Command_SpellBookFlood
-    20 = Command_SpellBookCitadel
+    17 = HECommand_SpellBookEarthquake
+    18 = HECommand_SpellBookSunflare
+    19 = HECommand_SpellBookFlood
+    20 = HECommand_SpellBookCitadel
 End
 
 CommandSet HEElvesSpellStoreCommandSet

@@ -202,3 +202,10 @@ Science HESCIENCE_Earthquake
   SciencePurchasePointCostMP = GOOD_RANK_4_COST
   IsGrantable = Yes
 End
+
+Science HESCIENCE_ArmyoftheDead
+  PrerequisiteSciences = SCIENCE_MEN HESCIENCE_CloudBreak OR SCIENCE_MEN HESCIENCE_DunedainAllies OR SCIENCE_ARNOR HESCIENCE_CloudBreak OR SCIENCE_ARNOR HESCIENCE_DunedainAllies
+  SciencePurchasePointCost = GOOD_RANK_4_COST
+  SciencePurchasePointCostMP = GOOD_RANK_4_COST
+  IsGrantable = Yes
+End

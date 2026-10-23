@@ -1,5 +1,21 @@
 ; The High Elves faction (openbfme-godot docs/HIGHELVES.md)
 
+CommandButton HECommand_LegolasHawkStrike
+  Command                 	= SPECIAL_POWER 
+  SpecialPower            	= HESpecialAbilityHawkStrike
+  Options                 	= NEED_TARGET_ENEMY_OBJECT ; NEED_TARGET_NEUTRAL_OBJECT CONTEXTMODE_COMMAND
+  TextLabel               	= CONTROLBAR:HawkStrike
+  ButtonImage             	= HSLegolasHawkStrike
+  CursorName              	= Bombard
+  InvalidCursorName       	= GenericInvalid
+  ButtonBorderType        	= ACTION 
+  DescriptLabel           	= CONTROLBAR:ToolTipHawkStrike
+  InPalantir			= Yes
+  AutoAbility			= Yes
+ ; UnitSpecificSound       	= LegolasVoiceModeHawkStrike
+  DisableOnModelCondition 	= WEAPONSET_TOGGLE_1 USER_67 ;,; WEAPONLOCK_SECONDARY					; disable if currently using swords
+End
+
 CommandButton HECommand_GlorfindelStarlight
 	Command			= SPECIAL_POWER
 	SpecialPower		= HESpecialAbilityGlorfindelStarlight
@@ -244,6 +260,17 @@ CommandButton HECommand_ConstructElvenRivendellLancers
 	ShowProductionCount		= Yes
 End
 
+CommandButton HECommand_SpellBookHeal
+	Command = SPELL_BOOK
+	TextLabel			= CONTROLBAR:Heal
+	Options				= NEED_TARGET_POS ; Huh, you can't have this flag and a radius cursor: CONTEXTMODE_COMMAND
+	DescriptLabel		= CONTROLBAR:TooltipHeal    
+	SpecialPower		= HESpellBookHeal
+    ButtonImage			= SBGood_Heal
+	ButtonBorderType	= ACTION 
+	RadiusCursorType	= HealRadiusCursor
+End
+
 CommandButton HECommand_SpellBookElvenGifts
 	Command = SPELL_BOOK
 	Options				= NONPRESSABLE
@@ -251,6 +278,88 @@ CommandButton HECommand_SpellBookElvenGifts
 	DescriptLabel		= CONTROLBAR:TooltipElvenGifts    
 	SpecialPower		= HESpellBookElvenGifts
     ButtonImage			= SBGood_ElvenGifts
+End
+
+CommandButton HECommand_SpellBookEnshroudingMist
+	Command				= SPELL_BOOK
+    SpecialPower		= HESpellBookEnshroudingMist
+    ButtonImage			= SBGood_EnshroudingMist
+	Options				= NEED_TARGET_POS
+	TextLabel			= CONTROLBAR:EnshroudingMist
+	ButtonBorderType	= ACTION 
+	DescriptLabel		= CONTROLBAR:TooltipEnshroudingMist
+	RadiusCursorType    = EnshroudingMistRadiusCursor
+End
+
+CommandButton HECommand_SpellBookRallyingCall
+	Command				= SPELL_BOOK
+    SpecialPower		= HESpellBookRallyingCall
+    ButtonImage			= SBGood_RallyingCall
+	Options				= NEED_TARGET_POS
+	TextLabel			= CONTROLBAR:RallyingCall
+	ButtonBorderType	= ACTION 
+	DescriptLabel		= CONTROLBAR:TooltipRallyingCall
+	RadiusCursorType    = RallyRadiusCursor
+End
+
+CommandButton HECommand_SpellBookTomBombadil
+	Command				= SPELL_BOOK
+    SpecialPower		= HESpellBookTomBombadil
+	Options				= NEED_TARGET_POS 
+	TextLabel			= CONTROLBAR:SummonTomBombadil
+    ButtonImage			= SBGood_TomBombadil
+	ButtonBorderType	= ACTION 
+	DescriptLabel		= CONTROLBAR:TooltipSummonTomBombadil
+	RadiusCursorType	= TomBombadilRadiusCursor	
+End
+
+CommandButton HECommand_SpellBookFarsight
+	Command				= SPELL_BOOK
+    SpecialPower		= HESpellBookFarsight
+    ButtonImage			= HSElrondFarSight
+	Options				= NEED_TARGET_POS
+	TextLabel			= CONTROLBAR:Farsight
+	ButtonBorderType	= ACTION
+	DescriptLabel		= CONTROLBAR:TooltipFarsight
+	RadiusCursorType    = FarsightRadiusCursor
+End
+
+CommandButton HECommand_SpellBookRebuild
+	Command				= SPELL_BOOK
+    SpecialPower		= HESpellBookRebuild
+    ButtonImage			= SBGood_Rebuild
+	Options				= NEED_TARGET_POS
+	TextLabel			= CONTROLBAR:Rebuild
+	ButtonBorderType	= ACTION 
+	DescriptLabel		= CONTROLBAR:TooltipRebuild
+	RadiusCursorType    = RebuildRadiusCursor
+	InvalidCursorName	= GenericInvalid
+End
+
+CommandButton HECommand_SpellBookArrowVolleyGood
+	Command				= SPELL_BOOK
+    SpecialPower		= HESpellBookArrowVolleyGood
+	Options				= NEED_TARGET_POS 
+	TextLabel			= CONTROLBAR:ArrowVolley
+    ButtonImage			= SBGood_ArrowVolley
+	ButtonBorderType	= ACTION 
+	DescriptLabel		= CONTROLBAR:TooltipArrowVolley
+    RadiusCursorType	= ArrowStormRadiusCursor
+    CursorName			= AttackObj
+    InvalidCursorName	= GenericInvalid
+End
+
+CommandButton HECommand_SpellBookElvenWood
+	Command				= SPELL_BOOK
+	SpecialPower		= HESpellBookElvenWood
+	Options				= NEED_TARGET_POS
+	TextLabel			= CONTROLBAR:ElvenWood
+	ButtonImage			= SBGood_ElvenWood
+	ButtonBorderType	= ACTION 
+	DescriptLabel		= CONTROLBAR:TooltipElvenWood
+	RadiusCursorType	= ElvenWoodRadiusCursor
+    CursorName          = AttackObj
+    InvalidCursorName   = GenericInvalid
 End
 
 CommandButton HECommand_SpellBookDwarvenRiches
@@ -264,6 +373,94 @@ CommandButton HECommand_SpellBookDwarvenRiches
 	RadiusCursorType	= DwarvenRichesRadiusCursor
    CursorName          = AttackObj
     InvalidCursorName   = GenericInvalid
+End
+
+CommandButton HECommand_SpellBookCloudBreak
+	Command				= SPELL_BOOK
+	TextLabel			= CONTROLBAR:CloudBreak
+	DescriptLabel		= CONTROLBAR:TooltipCloudBreak	
+	SpecialPower		= HESpellBookCloudBreak
+	ButtonImage		= SBGood_CloudBreak
+	DescriptLabel		= CONTROLBAR:TooltipCloudBreak
+	CommandTrigger        = Command_SpellBookCloudBreak_Rays ;,; Command_SpellBookCloudBreak_Healing
+	DisableOnModelCondition = USER_69 ;,; 
+End
+
+CommandButton HECommand_SpellBookEntAllies
+	Command				= SPELL_BOOK
+    SpecialPower		= HESpellBookEntAllies
+    ButtonImage			= SBGood_EntAllies
+    Options				= NEED_TARGET_POS ; Huh, you can't have this flag and a radius cursor: CONTEXTMODE_COMMAND
+	TextLabel			= CONTROLBAR:SummonEntAllies
+	ButtonBorderType	= ACTION
+	DescriptLabel		= CONTROLBAR:TooltipSummonEntAllies
+	RadiusCursorType	= EntAlliesRadiusCursor
+    CursorName          = AttackObj
+    InvalidCursorName   = GenericInvalid
+End
+
+CommandButton HECommand_SpellBookEagleAllies
+	Command = SPELL_BOOK
+    SpecialPower		= HESpellBookEagleAllies
+    ButtonImage			= SBGood_EagleAllies
+    Options				= NEED_TARGET_POS ; Huh, you can't have this flag and a radius cursor: CONTEXTMODE_COMMAND
+	TextLabel			= CONTROLBAR:SummonEagleAllies
+	ButtonBorderType	= ACTION
+	DescriptLabel		= CONTROLBAR:TooltipSummonEagleAllies
+	RadiusCursorType	= EagleAlliesRadiusCursor
+End
+
+CommandButton HECommand_SpellBookEarthquake
+	Command				= SPELL_BOOK
+    SpecialPower		= HESpellBookEarthquake
+	Options				= NEED_TARGET_POS 
+	TextLabel			= CONTROLBAR:Earthquake
+    ButtonImage			= SBGood_Earthquake
+	ButtonBorderType	= ACTION
+	DescriptLabel		= CONTROLBAR:TooltipEarthquake
+    RadiusCursorType	= EarthquakeRadiusCursor
+    CursorName			= AttackObj
+    InvalidCursorName	= GenericInvalid
+     CommandTrigger        = Command_SpellBookEarthquake_Devastation ;,; 
+End
+
+CommandButton HECommand_SpellBookFlood
+	Command				= SPELL_BOOK
+    SpecialPower		= HESpellBookFlood
+	Options				= NEED_TARGET_POS 
+	TextLabel			= CONTROLBAR:Flood
+    ButtonImage			= SBGood_Flood
+	ButtonBorderType	= ACTION
+	DescriptLabel		= CONTROLBAR:TooltipFlood
+    RadiusCursorType	= FloodRadiusCursor
+    CursorName			= AttackObj
+    InvalidCursorName	= GenericInvalid
+End
+
+CommandButton HECommand_SpellBookSunflare
+	Command				= SPELL_BOOK
+    SpecialPower		= HESpellBookSunflare
+	Options				= NEED_TARGET_POS 
+	TextLabel			= CONTROLBAR:Sunflare
+    ButtonImage			= SBGood_Sunflare
+	ButtonBorderType	= ACTION
+	DescriptLabel		= CONTROLBAR:TooltipSunflare
+    RadiusCursorType	= SunflareRadiusCursor
+    CursorName			= AttackObj
+    InvalidCursorName	= GenericInvalid
+End
+
+CommandButton HECommand_SpellBookCitadel
+	Command				= SPELL_BOOK
+    SpecialPower		= HESpellBookCitadel
+	Options				= NEED_TARGET_POS 
+	TextLabel			= CONTROLBAR:Citadel
+    ButtonImage			= SBGood_Citadel
+	ButtonBorderType	= ACTION
+	DescriptLabel		= CONTROLBAR:TooltipCitadel
+    RadiusCursorType	= UndermineRadiusCursor
+    CursorName			= AttackObj
+    InvalidCursorName	= GenericInvalid
 End
 
 CommandButton HECommand_PurchaseSpellHeal

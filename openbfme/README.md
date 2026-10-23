@@ -43,7 +43,7 @@ OPENBFME_OVERRIDES_CHECK_DIR=$HOME/work/apps/bfme/highelves/openbfme/overrides \
 
 ## tools/
 
-Read-only Python (run with `python3 -I`); they read the game's `.big`
+Python (run with `python3 -I`), read-only but for `vanilla202.py`, `split.py` and `hebases.py`, which write into this repo; they read the game's `.big`
 archives and this repo. Most take the two install folders and the engine's
 archive tables (`$P` above), which give the retail mount order.
 
@@ -52,6 +52,8 @@ archive tables (`$P` above), which give the retail mount order.
 | `iniblocks.py` | shared helpers: BIG archive reader, the base file lookup in mount order, a block splitter |
 | `bigfind.py`, `bigget.py` | list or extract files of a `.big` archive |
 | `vanilla202.py` | commits a 2.02 version's `data/ini` and `data/lotr.str` to the `vanilla` branch (see below) |
+| `split.py` | rewrote `data/ini` into the High Elves faction from the pre-split tree (mod commit `f792b52`), and `--check`s the result (openbfme-godot `docs/HIGHELVES.md`, "The High Elves faction") |
+| `hebases.py` | writes `bases/hefortress_elves/`: 2.02's elven fortress layout building `HEElvenCitadel` (reads `Bases.big`, writes into this repo) |
 | `modcompare.py` | every mod file against the base game's: identical, modified, new |
 | `commitblocks.py` | each mod commit's added, changed and removed INI blocks |
 | `blockdiff.py`, `linediff.py` | the changes of one mod file against the base, by block or by line (fragments) |

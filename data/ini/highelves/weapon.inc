@@ -46,6 +46,42 @@ Weapon HELegolasBow
 	End
 End
 
+Weapon HELegolasHawkStrike
+    LeechRangeWeapon      	= Yes ;,;
+    AttackRange 	= LEGOLAS_HAWKSTRIKE_RANGE
+    WeaponSpeed 	= 321         					; dist/sec 
+    MinWeaponSpeed 	= 241
+    MaxWeaponSpeed 	= 481      					; dist/sec Upper limit on scaling, when attacking past nominal "max" range
+    FireFX 		= FX_RohanArcherBowWeapon
+    ScaleWeaponSpeed 	= Yes 						; Used for lob weapons, scales speed proportional to range
+    HitPercentage     	= 100     					;When this weapon is used it will hit exactly 75% of the time.
+
+	;All these delays are controlled by the special power. Basically the special power can
+	;launch whenever it's ready.
+    DelayBetweenShots		= 0					; time between shots, msec
+    PreAttackDelay		= 3000					; we want isntant
+    PreAttackType		= PER_POSITION
+    FiringDuration		= 1000					; Duration of the archer firing shot is 500ms.
+    ;,; ClipSize 			= 1
+    ;,; AutoReloadsClip 		= Yes
+    ;,; AutoReloadWhenIdle 		= 1	
+    ;,; ClipReloadTime 		= Min:1 Max:1
+
+    AntiAirborneVehicle		= Yes
+    AntiAirborneMonster		= Yes
+    
+	PreferredTargetBone = B_LLLID 					; Likes to shoot things in their left eye.
+
+	ProjectileNugget                    				; A Nugget that creates an Object and sends it to the target with a Warhead
+		ProjectileTemplateName = LegolasSpecialArrow
+		WarheadTemplateName = HELegolasHawkStrikeWarhead
+	End
+	ProjectileNugget                    				; A Nugget that creates an Object and sends it to the target with a Warhead
+		ProjectileTemplateName = LegolasSpecialArrow2ndArrow
+		WarheadTemplateName = HELegolasHawkStrikeWarhead
+	End
+End
+
 Weapon HELegolasHawkStrikeWarhead
 	ProjectileCollidesWith 	= ALLIES ENEMIES NEUTRAL STRUCTURES WALLS 
 	RadiusDamageAffects 	= ENEMIES NEUTRALS NOT_SIMILAR

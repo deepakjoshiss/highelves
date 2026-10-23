@@ -1,7 +1,10 @@
 ; The High Elves faction (openbfme-godot docs/HIGHELVES.md)
 
 ; the macros of this file's own blocks (an audio file loads without the main load's macros)
-#define SAURON MordorSauron MordorSauron_RingHero
+
+#define HEGOOD_PORTERS DwarvenPorter MenPorter HEElvenPorter ArnorPorter
+
+#define HEGOOD_SUMMONED RohanElvenWarrior_Summoned RohanElvenWarriorHorde_Summoned DwarvenMenOfDale_Summoned ArnorRangerHorde_Summoned ArnorRanger_Summoned ArnorFighterHorde_Summoned ArnorTowerShieldGuardHorde_Summoned ArnorArcherHorde_Summoned GondorFighterHorde_Summoned GondorTowerShieldGuardHorde_Summoned GondorArcherHorde_Summoned ArnorArcher_Summoned ArnorFighter_Summoned ArnorTowerShieldGuard_Summoned  MenofDaleBanner_Summoned  GondorArcher_Summoned GondorTowerShieldGuard_Summoned GondorFighter_Summoned RohanRohirrim_Summoned ArnorKnightHorde_Summoned GondorKnightHorde_Summoned RohanRohirrimHorde_Summoned ArnorCavalry_Summoned GondorCavalry_Summoned RohanHobbit_Summoned RohanHobbitFriendsHorde_Summoned HEElvenMirkwoodArcher_Summoned GondorRangerHordeDamrod_Summoned GondorRangerDamrod_Summoned ;,; Removed GondorRangerHorde_Summoned GondorRanger_Summoned DwarvenMenOfDaleHorde_Summoned DwarvenMenOfDale_Summoned ;,; Added MenofDaleBanner_Summoned ;;,;;
 
 ExperienceLevel	HELegolasLevel7
 	TargetNames = HERohanLegolas
@@ -82,8 +85,163 @@ ExperienceLevel	HEElvenMallornTreeLevel3
 	LevelUpFx				= FX:ElfMallornTreeUpgrade
 End	
 
+ExperienceLevel HESummonedDefensiveStructuresLevel1
+	TargetNames = TreeFlet
+		RequiredExperience		= 1
+		ExperienceAward			= 0 ;;,;; 20
+		Rank					= 1
+		Upgrades				= Upgrade_StructureLevel1 ;,;
+;,;	SelectionDecal
+;,;		Texture				=	decal_hero_good
+;,;		Style				=	SHADOW_ALPHA_DECAL
+;,;		OpacityMin			=	30%
+;,;		OpacityMax			=	60%
+;,;		MinRadius			=	GONDOR_STATUE_AOE_RADIUS_DECAL
+;,;		MaxRadius			=	GONDOR_STATUE_AOE_RADIUS_DECAL
+;,;		MaxSelectedUnits	  	=	1
+;,;	End	
+
+	SelectionDecal ;,;
+		Texture						= excustomdecal2
+		Style						=	SHADOW_ALPHA_DECAL
+		OpacityMin					=	30%
+		OpacityMax					=	60%
+		MinRadius			  		=	#MULTIPLY( KEEP_ARCHER_RANGE_DECAL 2.3 )
+		MaxRadius					=	#MULTIPLY( KEEP_ARCHER_RANGE_DECAL 2.3 )
+		MaxSelectedUnits	  		=	1
+	End	
+
+End	
+
+ExperienceLevel	HEElvenMirkwoodArcherLevel1
+	TargetNames = HEElvenMirkwoodArcher HEElvenMirkwoodArcherHorde HEElvenMirkwoodArcherBanner GaladhrimWarrior GaladhrimWarriorHorde RivendellKnights RivendellKnightsHorde
+	RequiredExperience			=	1
+	ExperienceAward				=	ELVEN_MIRKWOOD_ARCHER_AWARD_LEVEL_1
+	InformUpdateModule			=	Yes
+	Rank						=	1
+	LevelUpTintColor			=	R:255 G:255	B:255
+	LevelUpTintPreColorTime		=	500
+	LevelUpTintPostColorTime	=	3000
+	LevelUpTintSustainColorTime	=	500
+	Upgrades					=	Upgrade_ObjectLevel1
+	SelectionDecal
+		Texture					=	decal_G_level1
+		Texture2				=	decal_good_CO
+		Style					=	SHADOW_MERGE_DECAL
+		OpacityMin				=	ELVEN_MIRKWOOD_ARCHER_DECAL_OPACITY_MIN 
+		OpacityMax				=	100% 
+		MinRadius				=	ELVEN_MIRKWOOD_ARCHER_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_MIRKWOOD_ARCHER_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	ELVEN_MIRKWOOD_ARCHER_DECAL_MAX_SELECTED_UNITS
+	End
+END
+
+ExperienceLevel	HEElvenMirkwoodArcherLevel2
+	TargetNames = HEElvenMirkwoodArcher HEElvenMirkwoodArcherHorde HEElvenMirkwoodArcherBanner GaladhrimWarrior GaladhrimWarriorHorde RivendellKnights RivendellKnightsHorde
+	RequiredExperience			=	ELVEN_MIRKWOOD_ARCHER_REQUIRED_EXP_LEVEL_2
+	ExperienceAward				=	ELVEN_MIRKWOOD_ARCHER_AWARD_LEVEL_2
+	AttributeModifiers			=	ElvenMirkwoodArcherBonusRank2 GenericUnitDamageBonusRank2
+	InformUpdateModule			=	Yes
+	Rank						=	2
+	LevelUpFx					=	FX:GenericLevelUp2FX
+	LevelUpTintColor			=	R:255 G:255	B:255
+	LevelUpTintPreColorTime		=	500
+	LevelUpTintPostColorTime	=	3000
+	LevelUpTintSustainColorTime	=	500
+	EmotionType					=	CHEER
+	Upgrades					=	Upgrade_ObjectLevel2 Upgrade_ElvenBasicTraining ;,;added Upgrade_ElvenBasicTraining
+	SelectionDecal
+		Texture					=	decal_G_level2
+		Texture2				=	decal_good_CO
+		Style					=	SHADOW_MERGE_DECAL
+		OpacityMin				=	ELVEN_MIRKWOOD_ARCHER_DECAL_OPACITY_MIN 
+		OpacityMax				=	100% 
+		MinRadius				=	ELVEN_MIRKWOOD_ARCHER_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_MIRKWOOD_ARCHER_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	ELVEN_MIRKWOOD_ARCHER_DECAL_MAX_SELECTED_UNITS
+	End
+END
+
+ExperienceLevel	HEElvenMirkwoodArcherLevel3
+	TargetNames = HEElvenMirkwoodArcher HEElvenMirkwoodArcherHorde HEElvenMirkwoodArcherBanner GaladhrimWarrior GaladhrimWarriorHorde RivendellKnights RivendellKnightsHorde
+	RequiredExperience			=	ELVEN_MIRKWOOD_ARCHER_REQUIRED_EXP_LEVEL_3
+	ExperienceAward				=	ELVEN_MIRKWOOD_ARCHER_AWARD_LEVEL_3
+	AttributeModifiers			=	ElvenMirkwoodArcherBonusRank3 GenericUnitDamageBonusRank3
+	InformUpdateModule			=	Yes
+	Rank						=	3
+	LevelUpFx					=	FX:GenericLevelUp3FX
+	LevelUpTintColor			=	R:255 G:255	B:255
+	LevelUpTintPreColorTime		=	500
+	LevelUpTintPostColorTime	=	3000
+	LevelUpTintSustainColorTime	=	500
+	EmotionType					=	CHEER
+	Upgrades					=	Upgrade_ObjectLevel3
+	SelectionDecal
+		Texture					=	decal_G_level3
+		Texture2				=	decal_good_CO
+		Style					=	SHADOW_MERGE_DECAL
+		OpacityMin				=	ELVEN_MIRKWOOD_ARCHER_DECAL_OPACITY_MIN 
+		OpacityMax				=	100% 
+		MinRadius				=	ELVEN_MIRKWOOD_ARCHER_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_MIRKWOOD_ARCHER_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	ELVEN_MIRKWOOD_ARCHER_DECAL_MAX_SELECTED_UNITS
+	End
+END
+
+ExperienceLevel	HEElvenMirkwoodArcherLevel4
+	TargetNames = HEElvenMirkwoodArcher HEElvenMirkwoodArcherHorde HEElvenMirkwoodArcherBanner GaladhrimWarrior GaladhrimWarriorHorde RivendellKnights RivendellKnightsHorde
+	RequiredExperience			=	ELVEN_MIRKWOOD_ARCHER_REQUIRED_EXP_LEVEL_4
+	ExperienceAward				=	ELVEN_MIRKWOOD_ARCHER_AWARD_LEVEL_4
+	AttributeModifiers			=	ElvenMirkwoodArcherBonusRank4 GenericUnitDamageBonusRank4
+	InformUpdateModule			=	Yes
+	Rank						=	4
+	LevelUpFx					=	FX:GenericLevelUp4FX
+	LevelUpTintColor			=	R:255 G:255	B:255
+	LevelUpTintPreColorTime		=	500
+	LevelUpTintPostColorTime	=	3000
+	LevelUpTintSustainColorTime	=	500
+	EmotionType					=	CHEER
+	Upgrades					=	Upgrade_ObjectLevel4
+	SelectionDecal
+		Texture					=	decal_G_level4
+		Texture2				=	decal_good_CO
+		Style					=	SHADOW_MERGE_DECAL
+		OpacityMin				=	ELVEN_MIRKWOOD_ARCHER_DECAL_OPACITY_MIN 
+		OpacityMax				=	100% 
+		MinRadius				=	ELVEN_MIRKWOOD_ARCHER_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_MIRKWOOD_ARCHER_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	ELVEN_MIRKWOOD_ARCHER_DECAL_MAX_SELECTED_UNITS
+	End
+END
+
+ExperienceLevel	HEElvenMirkwoodArcherLevel5
+	TargetNames = HEElvenMirkwoodArcher HEElvenMirkwoodArcherHorde HEElvenMirkwoodArcherBanner GaladhrimWarrior GaladhrimWarriorHorde RivendellKnights RivendellKnightsHorde
+	RequiredExperience			=	ELVEN_MIRKWOOD_ARCHER_REQUIRED_EXP_LEVEL_5
+	ExperienceAward				=	ELVEN_MIRKWOOD_ARCHER_AWARD_LEVEL_5
+	AttributeModifiers			=	ElvenMirkwoodArcherBonusRank5 GenericUnitDamageBonusRank5
+	InformUpdateModule			=	Yes
+	Rank						=	5
+	LevelUpFx					=	FX:GenericLevelUp4FX
+	LevelUpTintColor			=	R:255 G:255	B:255
+	LevelUpTintPreColorTime		=	500
+	LevelUpTintPostColorTime	=	3000
+	LevelUpTintSustainColorTime	=	500
+	EmotionType					=	CHEER
+	Upgrades					=	Upgrade_ObjectLevel5
+	SelectionDecal
+		Texture					=	decal_G_level4
+		Texture2				=	decal_good_CO
+		Style					=	SHADOW_MERGE_DECAL
+		OpacityMin				=	ELVEN_MIRKWOOD_ARCHER_DECAL_OPACITY_MIN 
+		OpacityMax				=	100% 
+		MinRadius				=	ELVEN_MIRKWOOD_ARCHER_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_MIRKWOOD_ARCHER_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	ELVEN_MIRKWOOD_ARCHER_DECAL_MAX_SELECTED_UNITS
+	End
+END
+
 ExperienceLevel	HENoldorWarriorLevel1
-	TargetNames = HENoldorWarrior HENoldorWarriorHorde
+	TargetNames = HENoldorWarrior HENoldorWarriorHorde NoldorArcher NoldorArcherHorde
 	RequiredExperience			=	1
 	ExperienceAward				=	NOLDOR_WARRIOR_AWARD_LEVEL_1
 	InformUpdateModule			=	Yes
@@ -106,7 +264,7 @@ ExperienceLevel	HENoldorWarriorLevel1
 END
 
 ExperienceLevel	HENoldorWarriorLevel2
-	TargetNames = HENoldorWarrior HENoldorWarriorHorde
+	TargetNames = HENoldorWarrior HENoldorWarriorHorde NoldorArcher NoldorArcherHorde
 	RequiredExperience			=	NOLDOR_WARRIOR_REQUIRED_EXP_LEVEL_2
 	ExperienceAward				=	NOLDOR_WARRIOR_AWARD_LEVEL_2
 	AttributeModifiers			=	NoldorWarriorBonusRank2 GenericHeroDamageBonusRank2
@@ -132,7 +290,7 @@ ExperienceLevel	HENoldorWarriorLevel2
 END
 
 ExperienceLevel	HENoldorWarriorLevel3
-	TargetNames = HENoldorWarrior HENoldorWarriorHorde
+	TargetNames = HENoldorWarrior HENoldorWarriorHorde NoldorArcher NoldorArcherHorde
 	RequiredExperience			=	NOLDOR_WARRIOR_REQUIRED_EXP_LEVEL_3
 	ExperienceAward				=	NOLDOR_WARRIOR_AWARD_LEVEL_3
 	AttributeModifiers			=	NoldorWarriorBonusRank3 GenericHeroDamageBonusRank3
@@ -158,7 +316,7 @@ ExperienceLevel	HENoldorWarriorLevel3
 END
 
 ExperienceLevel	HENoldorWarriorLevel4
-	TargetNames = HENoldorWarrior HENoldorWarriorHorde
+	TargetNames = HENoldorWarrior HENoldorWarriorHorde NoldorArcher NoldorArcherHorde
 	RequiredExperience			=	NOLDOR_WARRIOR_REQUIRED_EXP_LEVEL_4
 	ExperienceAward				=	NOLDOR_WARRIOR_AWARD_LEVEL_4
 	AttributeModifiers			=	NoldorWarriorBonusRank4 GenericHeroDamageBonusRank4
@@ -184,7 +342,7 @@ ExperienceLevel	HENoldorWarriorLevel4
 END
 
 ExperienceLevel	HENoldorWarriorLevel5
-	TargetNames = HENoldorWarrior HENoldorWarriorHorde
+	TargetNames = HENoldorWarrior HENoldorWarriorHorde NoldorArcher NoldorArcherHorde
 	RequiredExperience			=	NOLDOR_WARRIOR_REQUIRED_EXP_LEVEL_5
 	ExperienceAward				=	NOLDOR_WARRIOR_AWARD_LEVEL_5
 	AttributeModifiers			=	NoldorWarriorBonusRank5 GenericHeroDamageBonusRank5
@@ -210,7 +368,7 @@ ExperienceLevel	HENoldorWarriorLevel5
 END
 
 ExperienceLevel	HENoldorWarriorLevel6
-	TargetNames = HENoldorWarrior HENoldorWarriorHorde
+	TargetNames = HENoldorWarrior HENoldorWarriorHorde NoldorArcher NoldorArcherHorde
 	RequiredExperience			=	NOLDOR_WARRIOR_REQUIRED_EXP_LEVEL_6
 	ExperienceAward				=	NOLDOR_WARRIOR_AWARD_LEVEL_6
 	AttributeModifiers			=	NoldorWarriorBonusRank6 GenericHeroDamageBonusRank6
@@ -236,7 +394,7 @@ ExperienceLevel	HENoldorWarriorLevel6
 END
 
 ExperienceLevel	HENoldorWarriorLevel7
-	TargetNames = HENoldorWarrior HENoldorWarriorHorde
+	TargetNames = HENoldorWarrior HENoldorWarriorHorde NoldorArcher NoldorArcherHorde
 	RequiredExperience			=	NOLDOR_WARRIOR_REQUIRED_EXP_LEVEL_7
 	ExperienceAward				=	NOLDOR_WARRIOR_AWARD_LEVEL_7
 	AttributeModifiers			=	NoldorWarriorBonusRank7 GenericHeroDamageBonusRank7
@@ -262,7 +420,7 @@ ExperienceLevel	HENoldorWarriorLevel7
 END
 
 ExperienceLevel	HENoldorWarriorLevel8
-	TargetNames = HENoldorWarrior HENoldorWarriorHorde
+	TargetNames = HENoldorWarrior HENoldorWarriorHorde NoldorArcher NoldorArcherHorde
 	RequiredExperience			=	NOLDOR_WARRIOR_REQUIRED_EXP_LEVEL_8
 	ExperienceAward				=	NOLDOR_WARRIOR_AWARD_LEVEL_8
 	AttributeModifiers			=	NoldorWarriorBonusRank8 GenericHeroDamageBonusRank8
@@ -288,7 +446,7 @@ ExperienceLevel	HENoldorWarriorLevel8
 END
 
 ExperienceLevel	HENoldorWarriorLevel9
-	TargetNames = HENoldorWarrior HENoldorWarriorHorde
+	TargetNames = HENoldorWarrior HENoldorWarriorHorde NoldorArcher NoldorArcherHorde
 	RequiredExperience			=	NOLDOR_WARRIOR_REQUIRED_EXP_LEVEL_9
 	ExperienceAward				=	NOLDOR_WARRIOR_AWARD_LEVEL_9
 	AttributeModifiers			=	NoldorWarriorBonusRank9 GenericHeroDamageBonusRank9
@@ -314,7 +472,7 @@ ExperienceLevel	HENoldorWarriorLevel9
 END
 
 ExperienceLevel	HENoldorWarriorLevel10
-	TargetNames = HENoldorWarrior HENoldorWarriorHorde
+	TargetNames = HENoldorWarrior HENoldorWarriorHorde NoldorArcher NoldorArcherHorde
 	RequiredExperience			=	NOLDOR_WARRIOR_REQUIRED_EXP_LEVEL_10
 	ExperienceAward				=	NOLDOR_WARRIOR_AWARD_LEVEL_10
 	AttributeModifiers			=	NoldorWarriorBonusRank10 GenericHeroDamageBonusRank10
