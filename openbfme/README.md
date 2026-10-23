@@ -66,7 +66,9 @@ archive tables (`$P` above), which give the retail mount order.
 
 `data/ini/**` and `data/lotr.str` are 2.02 v9.8.0's (branch `vanilla`, tag
 `vanilla-v9.8.0`) with the mod's edits on `master`; `git diff vanilla master -- data`
-shows every change the mod makes to 2.02. Edit the files directly. A new 2.02:
+shows every change the mod makes to 2.02. Edit the files directly; the mod's elven content is the faction
+`FactionHighElves` (`data/ini/object/zz_highelves/`, `data/ini/highelves/`; OpenBFME's `docs/HIGHELVES.md`, "The High Elves
+faction"). A new 2.02:
 
 ```sh
 python3 -I -B openbfme/tools/vanilla202.py <__patch202.big> <englishpatch202.big> <label>   # commits it to vanilla, tags vanilla-<label>
