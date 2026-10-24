@@ -3079,6 +3079,11 @@ TOOLTIP:RangedDamage
 "Ranged Damage: %d"
 END
 
+TOOLTIP:OpenBFMEWeaponRange
+// OpenBFME only (data/ini/openbfme.ini OpenBFMELiveUnitHelp): the attack range after a unit's ranged damage in the in-game help text
+"(Range: %d)"
+END
+
 TOOLTIP:BattlesFought
 // Used to display the unit's number of battles fought in the in-game help text
 "Battles Fought: %d"
