@@ -1,5 +1,5 @@
 #!/bin/zsh
-# Double-click to play with the cheats: play.command's start with --no-intro (no start-up movies: straight to the main menu) and --cheats (a skirmish
+# Double-click to play with the cheats: play.command's start (--no-intro: no start-up movies, straight to the main menu) with --cheats (a skirmish
 # gets the cheat panel, Ctrl+Shift+C: money, +10 spell points, level up the selection, instant build, instant units, instant upgrade; openbfme-godot/docs/DJ-DEV.md).
 set -e
 mod="${0:A:h:h}"   # highelves (this file is highelves/openbfme/play.command)
