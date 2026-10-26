@@ -20,7 +20,7 @@ End
 SpecialPower SpellBookLightOfTrees
 	Enum                     = SPECIAL_SPELL_BOOK_CLOUD_BREAK
 	RequiredSciences         = SCIENCE_LightOfTrees
-	ReloadTime               = 240000;SPELL_RECHARGE_TIME_TIER_2 ;;,;; 360000; RotWK originally SPELL_RECHARGE_TIME_TIER_3 ;600000 in milliseconds
+	ReloadTime               = 30000 ;,; 240000;SPELL_RECHARGE_TIME_TIER_2 ;;,;; 360000; RotWK originally SPELL_RECHARGE_TIME_TIER_3 ;600000 in milliseconds
 	InitiateAtLocationSound  = SpellGoodLightOFTrees
 	Flags					 = RESPECT_RECHARGE_TIME_DISCOUNT
 End

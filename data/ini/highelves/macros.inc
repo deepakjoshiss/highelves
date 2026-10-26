@@ -84,7 +84,7 @@
 #define H_SPELL_REBUILD_RADIUS_STRUCTURE_SCAN       300
 #define H_PLAYER_MAX_PURCHASE_POINTS_DEFAULT        260
 #define H_PLAYER_MAX_PURCHASE_POINTS_GOOD           260
-#define H_SPELL_LIGHT_OF_TREES_DURATION                 180000
+#define H_SPELL_LIGHT_OF_TREES_DURATION                 20000 ;,; 180000
 #define H_SPAWN_TREE_FLET_DECAL_RADIUS                  25
 #define H_WAYSTONE_STUN_RADIUS                          100
 #define H_HERO_COMMAND_POINTS_TIER_1	 10 ; v4.0 ;,; v2.3 40 ;;,;; v2.1 50 ;;,;; v2.0  20 ;;,;; 2.02f  30 ;;,;; 2.02e  40

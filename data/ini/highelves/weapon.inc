@@ -1451,6 +1451,36 @@ Weapon MakeLightOfTreesCaster ;;,;; added for 2.02e
 	End
 End
 
+; WeatherKiller (weapon.ini) less its last block: Light of the Trees' own weather changer must not clear the sunbeams the same cast makes
+Weapon WeatherKillerLightOfTrees
+	RadiusDamageAffects	= ENEMIES NEUTRALS ALLIES
+
+	DamageNugget
+		DamageType	= FROST
+		DeathType	= CRUSHED
+		SpecialObjectFilter		= ANY +DarknessCaster +FreezingRainCaster +BlizzardCaster +BlizzardFXObject +DarknessAmbientSoundObject
+		Radius		  = 999999
+		ForceKillObjectFilter	= ANY +DarknessCaster +FreezingRainCaster +BlizzardCaster +BlizzardFXObject +DarknessAmbientSoundObject
+	End
+
+	DamageNugget
+		DamageType	= FROST
+		DeathType	= CRUSHED
+		DelayTime     = 2000
+		SpecialObjectFilter		= ANY +AmbientDimmer
+		Radius		  = 999999
+		ForceKillObjectFilter	= ANY +AmbientDimmer
+	End
+
+	DamageNugget
+		DamageType	= FROST
+		DeathType	= CRUSHED
+		SpecialObjectFilter	= NONE ENEMIES +LightOfTreesCaster +LightOfTreesSunbeam
+		Radius		  = 999999
+		ForceKillObjectFilter	= NONE ENEMIES +LightOfTreesCaster +LightOfTreesSunbeam
+	End
+End
+
 Weapon ConstantLightOfTrees ;;,;; 
 	RadiusDamageAffects = ALLIES
 	LeechRangeWeapon      = Yes
