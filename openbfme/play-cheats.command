@@ -1,6 +1,7 @@
 #!/bin/zsh
-# Double-click to play with the cheats: play.command's start (--no-intro: no start-up movies, straight to the main menu) with --cheats (a skirmish
-# gets the cheat panel, Ctrl+Shift+C: money, +10 spell points, level up the selection, instant build, instant units, instant upgrade; openbfme-godot/docs/DJ-DEV.md).
+# Double-click to play with the cheats: play.command's start (--no-intro: no start-up movies, straight to the main menu) with --cheat-mode (the skirmish
+# lobby opens with the Rules tab's Cheat Mode ticked; in the game Ctrl+Shift+C opens the panel: resources, spawn, levels, instant build / units / upgrade;
+# openbfme-godot/docs/CHEAT_MODE.md and DJ-DEV.md).
 set -e
 mod="${0:A:h:h}"   # highelves (this file is highelves/openbfme/play.command)
 root="${mod:h}"
@@ -13,4 +14,4 @@ cmake --build "$game/engine/build" --target openbfme
 # whole INI tree and its OpenBFME rules in data/ini/openbfme.ini, bases/, the menus) goes over them as -mod (openbfme-godot/docs/MODS.md)
 modfolder="$("$mod/openbfme/modfolder.sh")"   # its own line: set -e stops here when the build fails
 export OPENBFME_MOD_INSTALL="$HOME/Games/BFME/Patch202" OPENBFME_MOD="$modfolder" ROTWK_INSTALL="$HOME/Games/BFME/RotWK" BFME2_INSTALL="$HOME/Games/BFME/BFME2"
-exec "$root/godot-4.7.2/Godot.app/Contents/MacOS/Godot" --path "$game/godot" -- --no-intro --cheats
+exec "$root/godot-4.7.2/Godot.app/Contents/MacOS/Godot" --path "$game/godot" -- --no-intro --cheat-mode
