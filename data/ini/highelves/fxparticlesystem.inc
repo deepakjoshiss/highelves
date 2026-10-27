@@ -654,46 +654,230 @@ FXParticleSystem GondolinTowerGlow
   End
 End
 
-FXParticleSystem LightOfTreesRays
+; Light of the Trees: the light over the whole map (2026-10-27; each LightOfTreesSunbeam of CloudBreakSpecialPower's 500-unit grid carries
+; these five). Colours: silver R:160 G:185 B:255, gold R:255 G:175 B:70; the colour keys carry the brightness and the rise / fall (additive and
+; emissive particles fade by colour), over the spell's 19 s. A system attached to an object emits only while the object is not fogged for the
+; local player (RW 0x5FA2CE): the sunbeam is ALWAYS_VISIBLE (as 2.02's CloudBreakSunbeam), so the light shows over the whole map.
+; Art: openbfme/tools/lightoftrees_fx.py
+; the silver haze ray: a wide soft ray from the top right (AngleZ 2.6), faint
+FXParticleSystem LightOfTreesHazeSilver
   System
     Priority = ALWAYS_RENDER
     Shader = W3D_EMISSIVE
     Type = DRAWABLE
-    ParticleName = exlorfortlight.W3D
-    Lifetime = 800 800
-    SystemLifetime = 4500
-    Size = 5 5
-    BurstDelay = 400 400
+    ParticleName = exlotfx_raywide.w3d
+    Lifetime = 570 570
+    IsOneShot = Yes
+    Size = 1 1
+    BurstDelay = 1 1
     BurstCount = 1 1
   End
   Color = DefaultColor
-    Color1 = R:140 G:140 B:180 1
-    Color2 = R:164 G:140 B:104 600
+    Color1 = R:0 G:0 B:0 0
+    Color2 = R:160 G:185 B:255 45
+    Color3 = R:160 G:185 B:255 95
+    Color4 = R:160 G:185 B:255 190
+    Color5 = R:160 G:185 B:255 285
+    Color6 = R:160 G:185 B:255 380
+    Color7 = R:160 G:185 B:255 475
+    Color8 = R:0 G:0 B:0 570
   End
   Alpha = DefaultAlpha
-    Alpha2 = 0.15 0.25 200
-    Alpha3 = 0.10 0.15 600
-    Alpha4 = 0 0 800
+    Alpha1 = 0.11 0.11 0
   End
   Update = RenderObjectUpdate
-    StartSizeX = 3 3
-    StartSizeY = 3 3
-    StartSizeZ = 2 2
-    SizeRateX = 0.01 0.01
-    SizeRateY = 0.01 0.01
-    SizeDampingX = 0.99 0.99
-    SizeDampingY = 0.99 0.99
-    SizeDampingZ = 0.98 0.98
+    StartSizeX = 1.0 1.0
+    StartSizeY = 1.0 1.0
+    StartSizeZ = 1 1
+    AngleZ = 2.6 2.6
+    Rotation = ROTATE_Z
   End
   Physics = DefaultPhysics
     VelocityDamping = 1 1
+
   End
   EmissionVelocity = OrthoEmissionVelocity
+
   End
   EmissionVolume = CylinderEmissionVolume
-    Radius = 50
-    Offset = X:0 Y:0 Z:120
+    Radius = 250
+    Offset = X:0 Y:0 Z:0
   End
   Draw = RenderObjectDraw
+  End
+End
+
+; the gold haze ray: from the top left (AngleZ 0.55)
+FXParticleSystem LightOfTreesHazeGold
+  System
+    Priority = ALWAYS_RENDER
+    Shader = W3D_EMISSIVE
+    Type = DRAWABLE
+    ParticleName = exlotfx_raywide.w3d
+    Lifetime = 570 570
+    IsOneShot = Yes
+    Size = 1 1
+    BurstDelay = 1 1
+    BurstCount = 1 1
+  End
+  Color = DefaultColor
+    Color1 = R:0 G:0 B:0 0
+    Color2 = R:255 G:175 B:70 45
+    Color3 = R:255 G:175 B:70 95
+    Color4 = R:255 G:175 B:70 190
+    Color5 = R:255 G:175 B:70 285
+    Color6 = R:255 G:175 B:70 380
+    Color7 = R:255 G:175 B:70 475
+    Color8 = R:0 G:0 B:0 570
+  End
+  Alpha = DefaultAlpha
+    Alpha1 = 0.11 0.11 0
+  End
+  Update = RenderObjectUpdate
+    StartSizeX = 1.0 1.0
+    StartSizeY = 1.0 1.0
+    StartSizeZ = 1 1
+    AngleZ = 0.55 0.55
+    Rotation = ROTATE_Z
+  End
+  Physics = DefaultPhysics
+    VelocityDamping = 1 1
+
+  End
+  EmissionVelocity = OrthoEmissionVelocity
+
+  End
+  EmissionVolume = CylinderEmissionVolume
+    Radius = 250
+    Offset = X:0 Y:0 Z:0
+  End
+  Draw = RenderObjectDraw
+  End
+End
+
+; retail's slanted sunrays (LM_Sunrays2) from the top right, 1 or 2 a sunbeam (1.5 on average), waxing silver to gold
+FXParticleSystem LightOfTreesSunrays
+  System
+    Priority = ALWAYS_RENDER
+    Shader = W3D_EMISSIVE
+    Type = DRAWABLE
+    ParticleName = LM_Sunrays2.w3d
+    Lifetime = 570 570
+    IsOneShot = Yes
+    Size = 1 1
+    BurstDelay = 1 1
+    BurstCount = 1 3 ; 1 or 2 (1.5 on average): the count is a random real, its fraction dropped (1 2 gave 1 every time, measured)
+  End
+  Color = DefaultColor
+    Color1 = R:0 G:0 B:0 0
+    Color2 = R:204 G:180 B:170 45
+    Color3 = R:255 G:175 B:70 95
+    Color4 = R:160 G:185 B:255 190
+    Color5 = R:255 G:175 B:70 285
+    Color6 = R:160 G:185 B:255 380
+    Color7 = R:255 G:175 B:70 475
+    Color8 = R:0 G:0 B:0 570
+  End
+  Alpha = DefaultAlpha
+    Alpha1 = 0.18 0.18 0
+  End
+  Update = RenderObjectUpdate
+    StartSizeX = 1.5 1.5
+    StartSizeY = 1.5 1.5
+    StartSizeZ = 1 1
+    AngleZ = 3.14 3.14
+    Rotation = ROTATE_Z
+  End
+  Physics = DefaultPhysics
+    VelocityDamping = 1 1
+
+  End
+  EmissionVelocity = OrthoEmissionVelocity
+
+  End
+  EmissionVolume = CylinderEmissionVolume
+    Radius = 240
+    Offset = X:0 Y:0 Z:0
+  End
+  Draw = RenderObjectDraw
+  End
+End
+
+; silver dew falling from the rain's height (800), one every 7-8 s a sunbeam
+FXParticleSystem LightOfTreesDew
+  System
+    Priority = ALWAYS_RENDER
+    ParticleName = exlotfx_dew.tga
+    Lifetime = 170 170
+    SystemLifetime = 540
+    Size = 13 15
+    BurstDelay = 200 240
+    BurstCount = 1 1
+  End
+  Color = DefaultColor
+    Color1 = R:0 G:0 B:0 0
+    Color2 = R:160 G:185 B:255 15
+    Color3 = R:160 G:185 B:255 155
+    Color4 = R:0 G:0 B:0 170
+  End
+  Alpha = DefaultAlpha
+    Alpha1 = 1 1 0
+  End
+  Update = DefaultUpdate
+  End
+  Physics = DefaultPhysics
+    VelocityDamping = 1 1
+
+  End
+  EmissionVelocity = OrthoEmissionVelocity
+    Z = -5.0 -4.6
+  End
+  EmissionVolume = CylinderEmissionVolume
+    Radius = 240
+    Length = 40
+    Offset = X:0 Y:0 Z:800
+  End
+  Draw = DefaultDraw
+  End
+End
+
+; gold leaf-flakes falling from 800, one every 9-10 s a sunbeam
+FXParticleSystem LightOfTreesLeaf
+  System
+    Priority = ALWAYS_RENDER
+    ParticleName = exlotfx_leaf.tga
+    Lifetime = 260 260
+    SystemLifetime = 540
+    Size = 12 14
+    BurstDelay = 260 300
+    BurstCount = 1 1
+  End
+  Color = DefaultColor
+    Color1 = R:0 G:0 B:0 0
+    Color2 = R:255 G:175 B:70 15
+    Color3 = R:255 G:175 B:70 245
+    Color4 = R:0 G:0 B:0 260
+  End
+  Alpha = DefaultAlpha
+    Alpha1 = 1 1 0
+  End
+  Update = DefaultUpdate
+    AngleZ = -3 3
+    AngularRateZ = -0.06 0.06
+    AngularDamping = 1 1
+  End
+  Physics = DefaultPhysics
+    VelocityDamping = 1 1
+    DriftVelocity = X:0.25 Y:0.08 Z:0
+  End
+  EmissionVelocity = OrthoEmissionVelocity
+    Z = -3.2 -2.8
+  End
+  EmissionVolume = CylinderEmissionVolume
+    Radius = 240
+    Length = 40
+    Offset = X:0 Y:0 Z:800
+  End
+  Draw = DefaultDraw
   End
 End
