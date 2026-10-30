@@ -181,9 +181,11 @@ FXParticleSystem MirkwoodLight ;;,;;
     BurstDelay = 10 15
     BurstCount = 1 1
   End
-  Color = DefaultColor
-    Color2 = R:196 G:38 B:21 15
-    Color3 = R:0 G:0 B:0 15
+  Color = DefaultColor ; fades in, holds, fades out over the 30-frame life (2026-10-30; was black to red at 15, then black at once)
+    Color1 = R:0 G:0 B:0 0
+    Color2 = R:196 G:38 B:21 8
+    Color3 = R:196 G:38 B:21 22
+    Color4 = R:0 G:0 B:0 30
   End
   Update = DefaultUpdate
     SizeRate = 0.1 0.1 ;0.5 0.5
