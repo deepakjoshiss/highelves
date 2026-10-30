@@ -755,7 +755,7 @@ FXParticleSystem LightOfTreesHazeGold
   End
 End
 
-; retail's slanted sunrays (LM_Sunrays2) from the top right, 1 or 2 a sunbeam (1.5 on average), waxing silver to gold
+; retail's slanted sunrays (LM_Sunrays2) from the top right, 1 a sunbeam (2026-10-30, was 1 or 2), waxing silver to gold
 FXParticleSystem LightOfTreesSunrays
   System
     Priority = ALWAYS_RENDER
@@ -766,7 +766,7 @@ FXParticleSystem LightOfTreesSunrays
     IsOneShot = Yes
     Size = 1 1
     BurstDelay = 1 1
-    BurstCount = 1 3 ; 1 or 2 (1.5 on average): the count is a random real, its fraction dropped (1 2 gave 1 every time, measured)
+    BurstCount = 1 1 ; 1 a sunbeam (1 3 gave 1 or 2: the count is a random real, its fraction dropped)
   End
   Color = DefaultColor
     Color1 = R:0 G:0 B:0 0
