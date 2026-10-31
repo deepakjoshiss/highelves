@@ -17,6 +17,7 @@ OPENBFME_MOD_INSTALL=$HOME/Games/BFME/Patch202 OPENBFME_MOD="$(../highelves/open
 
 Or double-click `openbfme/play.command`: it rebuilds the game's library from
 `../openbfme-godot` when its sources changed, builds the mod folder, then starts the game with the mod.
+`openbfme/play-vanilla.command` starts vanilla RotWK 2.01 the same way: no 2.02, no mod.
 
 `openbfme/viewer.command` opens the model viewer the same way: every object's
 model with its model and animation states, played by the game's draw runtime,
