@@ -70,6 +70,16 @@ CommandButton HECommand_ConstructElvenEntMoot
   Radial           = Yes  
 End
 
+CommandButton HECommand_ConstructElvenFortress ; Command_ConstructElvenFortress building the High Elves fortress: it unpacks bases\hefortress_elves (HEElvenCitadel)
+	Command          = DOZER_CONSTRUCT
+	Object           = HEElvenFortress
+	TextLabel        = CONTROLBAR:ConstructElvenFortress
+	ButtonImage      = BEFortress
+	ButtonBorderType = BUILD 
+	DescriptLabel    = CONTROLBAR:ToolTipConstructElvenFortress
+	Radial           = Yes  
+End
+
 CommandButton HECommand_ConstructElvenBarracks
 	Command          = DOZER_CONSTRUCT
 	Object           = HEElvenBarracks

@@ -13,7 +13,7 @@ CommandSet HEElvenPorterCommandSet
    10 = Command_ConstructEregionForge
    11 = Command_ConstructSuperBattleTower
    12 =	Command_ConstructElvenWallHub
-   13 = Command_ConstructElvenFortress
+   13 = HECommand_ConstructElvenFortress
 
 End
 
