@@ -58892,7 +58892,8 @@ END
 CONTROLBAR:ToolTipSummonEntAllies
 //"Summons Ents \n Left click icon then left click on pathable location"
 //"Summons 2 Ents to the battlefield \n Highly resistant to arrows and effective against structures \n Duration: 1m 15s \n Recharge Time: 9m \n Left click icon then left click on pathable location"
-"Summons 3 Guardian Ents and a Siege Ent to the battlefield \n Highly resistant to arrows and effective against structures \n Duration: 1m 15s \n Recharge Time: 9m \n Left click icon then left click on pathable location"
+//"Summons 3 Guardian Ents and a Siege Ent to the battlefield \n Highly resistant to arrows and effective against structures \n Duration: 1m 15s \n Recharge Time: 9m \n Left click icon then left click on pathable location"
+"Summons 2 Ents to the battlefield \n Highly resistant to arrows and effective against structures \n Duration: 1m 15s \n Recharge Time: 9m \n Left click icon then left click on pathable location"
 END
 
 CONTROLBAR:TooltipPalantirVision
