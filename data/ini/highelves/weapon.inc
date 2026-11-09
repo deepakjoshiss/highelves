@@ -44,6 +44,20 @@ Weapon HELegolasBow
 	    WarheadTemplateName       = LegolasSuperBowWarhead
 	    RequiredUpgradeNames   	  = Upgrade_New1
 	End
+
+	; TEST (split shot): a second arrow from level 3, a third from level 7. OpenBFME (OpenBFMESplitShot in openbfme.ini) sends each to a different
+	; enemy near the target; the original game fires them at the target
+	ProjectileNugget
+	    ProjectileTemplateName    = OrangeFeatherArrow
+	    WarheadTemplateName       = LegolasSuperBowWarhead
+	    RequiredUpgradeNames      = Upgrade_ObjectLevel3
+	End
+
+	ProjectileNugget
+	    ProjectileTemplateName    = OrangeFeatherArrow
+	    WarheadTemplateName       = LegolasSuperBowWarhead
+	    RequiredUpgradeNames      = Upgrade_ObjectLevel7
+	End
 End
 
 Weapon HELegolasHawkStrike
