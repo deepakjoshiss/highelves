@@ -74,37 +74,38 @@ CommandSet HEDwarvenSummonedCitadelCommandSet ;;,;; 2.02e commandset
 End
 
 CommandSet HEElvenFortressCommandSet
-	InitialVisible = 6
+	InitialVisible = 7 ; PROTOTYPE: 7 for the Hero Armory (was 6)
 	//Main Menu
 	1	= HECommand_ConstructElvenPorter
 ;	2	= HECommand_ConstructNoldorWarriorHorde				; Added for BFME2 Expansion
-	2   	= Command_SelectRevivablesElvenFortress
-	3	= Command_SelectUpgradesElvenFortress
+	2   	= HECommand_SelectRevivablesElvenFortress ; PROTOTYPE: its range shifted by one (Hero Armory at 7)
+	3	= HECommand_SelectUpgradesElvenFortress ; PROTOTYPE: its range shifted by one
 	4	= Command_PurchaseNewEagle
 	5   = Command_EnableCEContentsElves ;,;
 	6	= Command_Sell
+	7	= HECommand_HEArmoryOpen ; PROTOTYPE: the Hero Armory pages
 	
 		//Improvements
-	7       = Command_PurchaseUpgradeElvenFortressEnchantedAnvil
-	8	= Command_PurchaseUpgradeElvenFortressBlessedMist
-	9	= Command_PurchaseUpgradeElvenFortressCrystalMoat
-	10	= Command_PurchaseUpgradeElvenFortressMysticFountains
-	11	= Command_PurchaseUpgradeElvenFortressFlamingMunitions ;;,;; Added for 2.1, pushing down positions of following buttons by one
-	12	= Command_PurchaseUpgradeElvenFortressEncasingVines
-	13	= Command_PurchaseUpgradeElvenFortressEaglesNest
-	14	= Command_RadialBack
+	8       = Command_PurchaseUpgradeElvenFortressEnchantedAnvil
+	9	= Command_PurchaseUpgradeElvenFortressBlessedMist
+	10	= Command_PurchaseUpgradeElvenFortressCrystalMoat
+	11	= Command_PurchaseUpgradeElvenFortressMysticFountains
+	12	= Command_PurchaseUpgradeElvenFortressFlamingMunitions ;;,;; Added for 2.1, pushing down positions of following buttons by one
+	13	= Command_PurchaseUpgradeElvenFortressEncasingVines
+	14	= Command_PurchaseUpgradeElvenFortressEaglesNest
+	15	= Command_RadialBack
 	
 	//Heroes
-	15	= Command_RingHeroReviveSlot
-	16	= Command_CreateAHeroReviveSlot		// Note we also need an extra slot for the Create A Hero
-	17	= Command_GenericReviveSlot1		//Revives any hero. Use Slot1-Slot8 and keep them UNIQUE within the same commandset! 
-	18	= Command_GenericReviveSlot2	
-	19	= Command_GenericReviveSlot3	
-	20	= Command_GenericReviveSlot4	
-	21	= Command_GenericReviveSlot5	
-	22	= Command_GenericReviveSlot6	
-	23	= Command_GenericReviveSlot7
-	24	= Command_RadialBack			
+	16	= Command_RingHeroReviveSlot
+	17	= Command_CreateAHeroReviveSlot		// Note we also need an extra slot for the Create A Hero
+	18	= Command_GenericReviveSlot1		//Revives any hero. Use Slot1-Slot8 and keep them UNIQUE within the same commandset! 
+	19	= Command_GenericReviveSlot2	
+	20	= Command_GenericReviveSlot3	
+	21	= Command_GenericReviveSlot4	
+	22	= Command_GenericReviveSlot5	
+	23	= Command_GenericReviveSlot6	
+	24	= Command_GenericReviveSlot7
+	25	= Command_RadialBack			
 End
 
 CommandSet HEERElvenBarracksCommandSet
@@ -280,4 +281,22 @@ CommandSet HEElvesSpellStoreCommandSet
     18 = HECommand_PurchaseSpellSunflare
     19 = HECommand_PurchaseSpellFlood
     20 = HECommand_PurchaseSpellCitadel
+End
+
+; ---- PROTOTYPE: Hero Armory pages (HEElvenCitadel's CommandSetUpgrades). The Armory page comes first in the object's modules, so a hero page
+; (later) wins while both are held, and closing a hero page brings the Armory page back (CommandSetUpgrade::postUpgradeCheck)
+CommandSet HEArmoryCommandSet
+	1	= HECommand_HEArmoryLegolas
+	2	= HECommand_HEArmoryThranduil
+	3	= HECommand_HEArmoryElrond
+	4	= HECommand_HEArmoryBack
+End
+CommandSet HEArmoryLegolasCommandSet
+	1	= HECommand_HEArmoryBackHero
+End
+CommandSet HEArmoryThranduilCommandSet
+	1	= HECommand_HEArmoryBackHero
+End
+CommandSet HEArmoryElrondCommandSet
+	1	= HECommand_HEArmoryBackHero
 End

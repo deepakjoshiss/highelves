@@ -64737,3 +64737,27 @@ END
 INI:FactionHighElves
 "High Elves"
 END
+
+CONTROLBAR:HEArmory
+"Hero &Armory"
+END
+
+CONTROLBAR:ToolTipHEArmory
+"Hero Armory (prototype): items for Legolas, Thranduil and Elrond."
+END
+
+CONTROLBAR:HEArmoryLegolas
+"&Legolas"
+END
+
+CONTROLBAR:HEArmoryThranduil
+"&Thranduil"
+END
+
+CONTROLBAR:HEArmoryElrond
+"&Elrond"
+END
+
+CONTROLBAR:ToolTipHEArmoryHero
+"This hero's items (prototype: none yet)."
+END

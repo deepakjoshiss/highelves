@@ -744,3 +744,79 @@ CommandButton Command_PurchaseUpgradeElvenForgedBladesTier4
 	InPalantir			= Yes
 	LacksPrerequisiteLabel		= TOOLTIP:LackElvenForgedBlades
 End
+
+; ---- PROTOTYPE: Hero Armory (fortress pages)
+CommandButton HECommand_HEArmoryOpen
+  Command          = SPECIAL_POWER
+  SpecialPower     = HEArmoryOpen
+  TextLabel        = CONTROLBAR:HEArmory
+  ButtonImage      = HIThranduilCrown
+  ButtonBorderType = SYSTEM
+  DescriptLabel    = CONTROLBAR:ToolTipHEArmory
+  Radial           = Yes
+End
+CommandButton HECommand_HEArmoryLegolas
+  Command          = SPECIAL_POWER
+  SpecialPower     = HEArmoryOpenLegolas
+  TextLabel        = CONTROLBAR:HEArmoryLegolas
+  ButtonImage      = HILegolas
+  ButtonBorderType = SYSTEM
+  DescriptLabel    = CONTROLBAR:ToolTipHEArmoryHero
+  Radial           = Yes
+End
+CommandButton HECommand_HEArmoryThranduil
+  Command          = SPECIAL_POWER
+  SpecialPower     = HEArmoryOpenThranduil
+  TextLabel        = CONTROLBAR:HEArmoryThranduil
+  ButtonImage      = HIThranduil
+  ButtonBorderType = SYSTEM
+  DescriptLabel    = CONTROLBAR:ToolTipHEArmoryHero
+  Radial           = Yes
+End
+CommandButton HECommand_HEArmoryElrond
+  Command          = SPECIAL_POWER
+  SpecialPower     = HEArmoryOpenElrond
+  TextLabel        = CONTROLBAR:HEArmoryElrond
+  ButtonImage      = HIElrond
+  ButtonBorderType = SYSTEM
+  DescriptLabel    = CONTROLBAR:ToolTipHEArmoryHero
+  Radial           = Yes
+End
+CommandButton HECommand_HEArmoryBackHero
+  Command          = SPECIAL_POWER
+  SpecialPower     = HEArmoryBackHero
+  TextLabel        = CONTROLBAR:RadialBack
+  ButtonImage      = UCCommon_BackArrow
+  ButtonBorderType = SYSTEM
+  DescriptLabel    = CONTROLBAR:ToolTipCommandRadialBack
+  Radial           = Yes
+End
+CommandButton HECommand_HEArmoryBack
+  Command          = SPECIAL_POWER
+  SpecialPower     = HEArmoryBack
+  TextLabel        = CONTROLBAR:RadialBack
+  ButtonImage      = UCCommon_BackArrow
+  ButtonBorderType = SYSTEM
+  DescriptLabel    = CONTROLBAR:ToolTipCommandRadialBack
+  Radial           = Yes
+End
+CommandButton HECommand_SelectUpgradesElvenFortress
+  Command           = PUSH_VISIBLE_COMMAND_RANGE
+  TextLabel         = CONTROLBAR:SelectUpgradesElvenFortress
+  ButtonImage       = UCCommon_UpgradeStructureNew
+  ButtonBorderType  = SYSTEM
+  DescriptLabel     = CONTROLBAR:ToolTipCommandSelectUpgradesElvenFortress
+  Radial            = Yes
+  CommandRangeStart = 7
+  CommandRangeCount = 8
+End
+CommandButton HECommand_SelectRevivablesElvenFortress
+  Command           = PUSH_VISIBLE_COMMAND_RANGE
+  TextLabel         = CONTROLBAR:SelectRevivablesElvenFortress
+  ButtonImage       = UCCommon_GoodHeroes
+  ButtonBorderType  = SYSTEM
+  DescriptLabel     = CONTROLBAR:ToolTipCommandSelectRevivablesElvenFortress
+  Radial            = Yes
+  CommandRangeStart = 15
+  CommandRangeCount = 10
+End

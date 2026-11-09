@@ -54,3 +54,24 @@ Upgrade Upgrade_PurifyingFlames
 	Tooltip		    			= UPGRADE:ToolTipPurifyingFlames
 	ResearchSound				= UpgradeSilverThornArrows
 End
+
+; ---- PROTOTYPE: Hero Armory pages on the fortress (HEElvenCitadel). Each page is a player upgrade: a CommandSetUpgrade shows the page while
+; it is held; Back removes it (RemoveUpgradeUpgrade). Granted instantly by special powers (PlayerUpgradeSpecialPower), no production queue.
+Upgrade Upgrade_HEArmoryPage
+  Type = PLAYER
+End
+Upgrade Upgrade_HEArmoryLegolas
+  Type = PLAYER
+End
+Upgrade Upgrade_HEArmoryThranduil
+  Type = PLAYER
+End
+Upgrade Upgrade_HEArmoryElrond
+  Type = PLAYER
+End
+Upgrade Upgrade_HEArmoryBackHero
+  Type = PLAYER
+End
+Upgrade Upgrade_HEArmoryBack
+  Type = PLAYER
+End

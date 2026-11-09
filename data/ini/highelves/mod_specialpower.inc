@@ -116,3 +116,29 @@ SpecialPower SpecialAbilityExplodingArrow
   InitiateSound 	  = TaurielFleetfooted
   ObjectFilter 		  = ALL ;-BASE_FOUNDATION -INERT -IGNORED_IN_GUI -WALK_ON_TOP_OF_WALL -BLOCKING_GATE -WALL_UPGRADE -UNATTACKABLE -MOVE_ONLY
 End
+
+; ---- PROTOTYPE: Hero Armory page switches (instant, no recharge); their modules are on HEElvenCitadel
+SpecialPower HEArmoryOpen
+  Enum = SPECIAL_GENERAL_TARGETLESS
+  ReloadTime = 0
+End
+SpecialPower HEArmoryOpenLegolas
+  Enum = SPECIAL_GENERAL_TARGETLESS
+  ReloadTime = 0
+End
+SpecialPower HEArmoryOpenThranduil
+  Enum = SPECIAL_GENERAL_TARGETLESS
+  ReloadTime = 0
+End
+SpecialPower HEArmoryOpenElrond
+  Enum = SPECIAL_GENERAL_TARGETLESS
+  ReloadTime = 0
+End
+SpecialPower HEArmoryBackHero
+  Enum = SPECIAL_GENERAL_TARGETLESS
+  ReloadTime = 0
+End
+SpecialPower HEArmoryBack
+  Enum = SPECIAL_GENERAL_TARGETLESS
+  ReloadTime = 0
+End
