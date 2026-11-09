@@ -10,4 +10,8 @@ rm -rf "$out"
 mkdir -p "$out"
 cp -cpR "$mod/art" "$mod/data" "$mod/bases" "$out/"
 cp -cpR "$mod/apt/" "$out/"
+# Map fixes only, not the mod's whole maps/ (its 203 map folders are not loaded by OpenBFME): 2.02's Southfarthing map.ini, corrected
+# (a loose file in the mod folder wins over the patch archive; docs/MODS.md "Which file wins")
+mkdir -p "$out/maps"
+cp -cpR "$mod/maps/map mp southfarthing" "$out/maps/"
 print -r -- "$out"
