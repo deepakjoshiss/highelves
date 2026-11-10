@@ -35,3 +35,20 @@ ObjectCreationList OCL_SpellBookElvenWaystone
 		JustBuiltDuration	= 4000
 	End
 End
+
+; Thranduil's Call of the Woodland Realm (hero rework, openbfme/HERO-REWORK-PLAN.md): Mirkwood archers for 40 s where he stands
+ObjectCreationList OCL_HEThranduilWoodlandRealm5
+	CreateObject
+		ObjectNames				= HEThranduilSummonedArcherHorde5
+		IgnoreCommandPointLimit	= Yes
+		Disposition				= LIKE_EXISTING
+	End
+End
+
+ObjectCreationList OCL_HEThranduilWoodlandRealm10
+	CreateObject
+		ObjectNames				= HEThranduilSummonedArcherHorde10
+		IgnoreCommandPointLimit	= Yes
+		Disposition				= LIKE_EXISTING
+	End
+End

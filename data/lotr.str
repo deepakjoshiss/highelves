@@ -64738,26 +64738,322 @@ INI:FactionHighElves
 "High Elves"
 END
 
-CONTROLBAR:HEArmory
-"Hero &Armory"
+CONTROLBAR:HEThranduilRampage
+"&Rampage"
 END
 
-CONTROLBAR:ToolTipHEArmory
-"Hero Armory (prototype): items for Legolas, Thranduil and Elrond."
+CONTROLBAR:ToolTipHEThranduilRampage1
+"Thranduil shoots much faster for 8 seconds, without drawing on a new target. \n Longer at level 10 and 20; for good at level 25. \n Recharge: 60 s"
 END
 
-CONTROLBAR:HEArmoryLegolas
-"&Legolas"
+CONTROLBAR:ToolTipHEThranduilRampage2
+"Thranduil shoots much faster for 14 seconds, without drawing on a new target. \n Longer at level 20; for good at level 25. \n Recharge: 60 s"
 END
 
-CONTROLBAR:HEArmoryThranduil
-"&Thranduil"
+CONTROLBAR:ToolTipHEThranduilRampage3
+"Thranduil shoots much faster for 20 seconds, without drawing on a new target. \n For good at level 25. \n Recharge: 60 s"
 END
 
-CONTROLBAR:HEArmoryElrond
-"&Elrond"
+CONTROLBAR:ToolTipHEThranduilRampagePassive
+"Level 25: Thranduil is always in Rampage. \n Passive ability"
 END
 
-CONTROLBAR:ToolTipHEArmoryHero
-"This hero's items (prototype: none yet)."
+CONTROLBAR:HEThranduilWoodlandRealm
+"Call of the &Woodland Realm"
+END
+
+CONTROLBAR:ToolTipHEThranduilWoodlandRealm5
+"Requires Level 3 \n Five Mirkwood archers answer the Elvenking for 40 seconds. \n Ten at level 15. \n Recharge: 90 s"
+END
+
+CONTROLBAR:ToolTipHEThranduilWoodlandRealm10
+"Ten Mirkwood archers answer the Elvenking for 40 seconds. \n Recharge: 90 s"
+END
+
+CONTROLBAR:HEThranduilPinningShot
+"&Pinning Shot"
+END
+
+CONTROLBAR:ToolTipHEThranduilPinningShot
+"Requires Level 5 \n An arrow that pins an enemy hero or monster for 4 seconds: it can neither move nor attack. \n Damage: 400 (Hero) \n Recharge: 60 s \n Left click icon then left click on target"
+END
+
+CONTROLBAR:HEThranduilElvenkingsCommand
+"Elvenking's &Command"
+END
+
+CONTROLBAR:ToolTipHEThranduilElvenkingsCommand
+"Requires Level 8 \n Every Mirkwood archer on the map deals +10% damage and shoots 10% farther. \n Level 18: +15% and 15% farther. \n Passive ability"
+END
+
+CONTROLBAR:ToolTipHEThornofVengeance
+"Requires Level 10 \n A single arrow of great power that bursts on impact. \n Damage: 1500 (Hero), 600 (Magic) and a 600 (Magic) burst in radius 60 \n Range: 420 \n Recharge: 2 min (1 min at level 25) \n Left click icon then left click on target"
+END
+
+CONTROLBAR:ToolTipHEThornofVengeance25
+"A single arrow of great power that bursts on impact. \n Damage: 1500 (Hero), 600 (Magic) and a 600 (Magic) burst in radius 60 \n Range: 420 \n Recharge: 1 min \n Left click icon then left click on target"
+END
+
+UPGRADE:HEThranduilArrowheads1
+"Arrowheads I"
+END
+
+CONTROLBAR:HEThranduilArrowheads1
+"&Arrowheads I"
+END
+
+CONTROLBAR:ToolTipHEThranduilArrowheads1
+"Arrowheads I \n +80 hero damage to monsters and machines and +50 to heroes, per arrow. \n Cost: 300"
+END
+
+CONTROLBAR:ToolTipHEThranduilArrowheads1Purchased
+"Arrowheads I: +80 hero damage to monsters and machines and +50 to heroes, per arrow."
+END
+
+UPGRADE:HEThranduilArmor1
+"Elvenking's Mail I"
+END
+
+CONTROLBAR:HEThranduilArmor1
+"Elvenking's Mail I"
+END
+
+CONTROLBAR:ToolTipHEThranduilArmor1
+"Elvenking's Mail I \n +15% armor. \n Cost: 250"
+END
+
+UPGRADE:HEThranduilArmor2
+"Elvenking's Mail II"
+END
+
+CONTROLBAR:HEThranduilArmor2
+"Elvenking's Mail II"
+END
+
+CONTROLBAR:ToolTipHEThranduilArmor2
+"Elvenking's Mail II \n +10% more armor (25% in all); cannot be thrown back or trampled. \n Cost: 700"
+END
+
+UPGRADE:HEThranduilArmor3
+"Elvenking's Mail III"
+END
+
+CONTROLBAR:HEThranduilArmor3
+"Elvenking's Mail III"
+END
+
+CONTROLBAR:ToolTipHEThranduilArmor3
+"Elvenking's Mail III \n +10% more armor (35% in all); nearby allied soldiers +20% armor. \n Cost: 1500"
+END
+
+UPGRADE:HEThranduilLife1
+"Life of the Greenwood I"
+END
+
+CONTROLBAR:HEThranduilLife1
+"Life of the Greenwood I"
+END
+
+CONTROLBAR:ToolTipHEThranduilLife1
+"Life of the Greenwood I \n +400 health. \n Cost: 250"
+END
+
+UPGRADE:HEThranduilLife2
+"Life of the Greenwood II"
+END
+
+CONTROLBAR:HEThranduilLife2
+"Life of the Greenwood II"
+END
+
+CONTROLBAR:ToolTipHEThranduilLife2
+"Life of the Greenwood II \n +600 more health (1000 in all); heals 20 a second, in battle too. \n Cost: 700"
+END
+
+UPGRADE:HEThranduilLife3
+"Life of the Greenwood III"
+END
+
+CONTROLBAR:HEThranduilLife3
+"Life of the Greenwood III"
+END
+
+CONTROLBAR:ToolTipHEThranduilLife3
+"Life of the Greenwood III \n +1000 more health (2000 in all); heals 30 more a second (50 in all). \n Cost: 1500"
+END
+
+UPGRADE:HEThranduilMobility1
+"Swift Feet I"
+END
+
+CONTROLBAR:HEThranduilMobility1
+"Swift Feet I"
+END
+
+CONTROLBAR:ToolTipHEThranduilMobility1
+"Swift Feet I \n +15% speed. \n Cost: 200"
+END
+
+UPGRADE:HEThranduilMobility2
+"Swift Feet II"
+END
+
+CONTROLBAR:HEThranduilMobility2
+"Swift Feet II"
+END
+
+CONTROLBAR:ToolTipHEThranduilMobility2
+"Swift Feet II \n Speed +25% in all; +10% range. \n Cost: 500"
+END
+
+UPGRADE:HEThranduilMobility3
+"Swift Feet III"
+END
+
+CONTROLBAR:HEThranduilMobility3
+"Swift Feet III"
+END
+
+CONTROLBAR:ToolTipHEThranduilMobility3
+"Swift Feet III \n Gives Thranduil Leap: a short jump to a place within 300 (20 s recharge). \n Cost: 1200"
+END
+
+UPGRADE:HEThranduilBow1
+"Bow of the Elvenking I"
+END
+
+CONTROLBAR:HEThranduilBow1
+"Bow of the Elvenking I"
+END
+
+CONTROLBAR:ToolTipHEThranduilBow1
+"Bow of the Elvenking I \n +10% range. \n Cost: 300"
+END
+
+UPGRADE:HEThranduilBow2
+"Bow of the Elvenking II"
+END
+
+CONTROLBAR:HEThranduilBow2
+"Bow of the Elvenking II"
+END
+
+CONTROLBAR:ToolTipHEThranduilBow2
+"Bow of the Elvenking II \n A second full arrow at another enemy near the target, with all his item damage; range +15% in all. \n Cost: 1000"
+END
+
+UPGRADE:HEThranduilBow3
+"Bow of the Elvenking III"
+END
+
+CONTROLBAR:HEThranduilBow3
+"Bow of the Elvenking III"
+END
+
+CONTROLBAR:ToolTipHEThranduilBow3
+"Bow of the Elvenking III \n A third full arrow at another enemy near the target; range +25% in all. \n Cost: 2500"
+END
+
+UPGRADE:HEThranduilArrowheads2
+"Arrowheads II"
+END
+
+CONTROLBAR:HEThranduilArrowheads2
+"Arrowheads II"
+END
+
+CONTROLBAR:ToolTipHEThranduilArrowheads2
+"Arrowheads II \n +50 more hero damage to monsters and heroes, per arrow. \n Cost: 1000"
+END
+
+UPGRADE:HEThranduilArrowheads3
+"Arrowheads III"
+END
+
+CONTROLBAR:HEThranduilArrowheads3
+"Arrowheads III"
+END
+
+CONTROLBAR:ToolTipHEThranduilArrowheads3
+"Arrowheads III \n +60 more hero damage to monsters, machines and heroes, per arrow. \n Cost: 2500"
+END
+
+UPGRADE:HEThranduilDamage1
+"Wrath of Mirkwood I"
+END
+
+CONTROLBAR:HEThranduilDamage1
+"Wrath of Mirkwood I"
+END
+
+CONTROLBAR:ToolTipHEThranduilDamage1
+"Wrath of Mirkwood I \n +40 magic damage on every arrow. \n Cost: 300"
+END
+
+UPGRADE:HEThranduilDamage2
+"Wrath of Mirkwood II"
+END
+
+CONTROLBAR:HEThranduilDamage2
+"Wrath of Mirkwood II"
+END
+
+CONTROLBAR:ToolTipHEThranduilDamage2
+"Wrath of Mirkwood II \n +40 siege damage on every arrow. \n Cost: 1000"
+END
+
+UPGRADE:HEThranduilDamage3
+"Wrath of Mirkwood III"
+END
+
+CONTROLBAR:HEThranduilDamage3
+"Wrath of Mirkwood III"
+END
+
+CONTROLBAR:ToolTipHEThranduilDamage3
+"Wrath of Mirkwood III \n +80 hero damage on every arrow. \n Cost: 2500"
+END
+
+UPGRADE:HEThranduilHunter1
+"Eyes of the Greenwood"
+END
+
+CONTROLBAR:HEThranduilHunter1
+"Eyes of the Greenwood"
+END
+
+CONTROLBAR:ToolTipHEThranduilHunter1
+"Eyes of the Greenwood \n Sees farther: +50% shroud clearing, +25% vision. \n Cost: 200"
+END
+
+UPGRADE:HEThranduilHunter2
+"Hunter's Snare"
+END
+
+CONTROLBAR:HEThranduilHunter2
+"Hunter's Snare"
+END
+
+CONTROLBAR:ToolTipHEThranduilHunter2
+"Hunter's Snare \n Pinning Shot pins for 5 seconds and deals +200 hero damage. \n Cost: 500"
+END
+
+UPGRADE:HEThranduilHunter3
+"Hunter's Net"
+END
+
+CONTROLBAR:HEThranduilHunter3
+"Hunter's Net"
+END
+
+CONTROLBAR:ToolTipHEThranduilHunter3
+"Hunter's Net \n Pinning Shot pins and deals its +200 hero damage to every soldier, hero and monster within 50 of its target; soldiers it kills are thrown back. \n Cost: 1000"
+END
+
+CONTROLBAR:HEThranduilLeap
+"&Leap"
+END
+
+CONTROLBAR:ToolTipHEThranduilLeap
+"Swift Feet III \n Thranduil leaps to a place within 300. \n Recharge: 30 s \n Left click icon then left click on the ground"
 END

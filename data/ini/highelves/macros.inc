@@ -18,7 +18,7 @@
 #define H_GENERIC_SPEED_BUFF_OBJECT_FILTER	    ANY +INFANTRY +ARCHER +CAVALRY +HERO +MACHINE +HORDE -MONSTER -STRUCTURE -BASE_FOUNDATION
 #define H_ALL_ELVEN_ARCHER_AURA_FILTER          NONE +HEElvenMirkwoodArcher +HEElvenMirkwoodArcherHorde +HEElvenMirkwoodArcherBanner +GaladhrimWarrior +GaladhrimWarriorHorde +NoldorArcher +NoldorArcherHorde
 #define H_HERO_FILTER_DAMAGE_BUFF               HEElvenElrond HEElvenHaldir HEElvenGlorfindel
-#define H_HERO_FILTER_RANGE_BUFF                HEElvenThranduil HEElvenLegolas MirkwoodTauriel
+#define H_HERO_FILTER_RANGE_BUFF                HEElvenLegolas MirkwoodTauriel ; HEElvenThranduil has his own levels 2-25 (hero rework)
 #define H_ELVEN_ARCHER_DAMAGE_FILTER            HEElvenMirkwoodArcher HEElvenMirkwoodArcherHorde HEElvenMirkwoodArcherBanner GaladhrimWarrior GaladhrimWarriorHorde RivendellKnights RivendellKnightsHorde
 #define	H_HERO_BOW_RANGE				        	420
 #define	H_VISION_HERO_RANGED				    	450
@@ -32,8 +32,8 @@
 #define H_HALDIR_PREATTACKDELAY 					800 
 #define H_HALDIR_RELOADTIME_MIN				    1100
 #define H_HALDIR_RELOADTIME_MAX				    1100
-#define	H_THRANDUIL_BOW_DAMAGE				    200
-#define	H_THRANDUIL_BUILDCOST				    	3000
+#define	H_THRANDUIL_BOW_DAMAGE				    120 ; hero rework (openbfme/HERO-REWORK-PLAN.md) ;,; 200
+#define	H_THRANDUIL_BUILDCOST				    	800 ; hero rework ;,; 3000
 #define	H_LEGOLAS_BOW_DAMAGE				    	150
 #define	H_LEGOLAS_BUILDCOST				    		2500
 #define	H_TAURIEL_BOW_DAMAGE				    130
@@ -142,3 +142,93 @@
 #define    H_HERO_LVL23_EXP_NEEDED        #DIVIDE( 12500 H_HERO_EXP_DIVIDER )
 #define    H_HERO_LVL24_EXP_NEEDED        #DIVIDE( 13600 H_HERO_EXP_DIVIDER )
 #define    H_HERO_LVL25_EXP_NEEDED        #DIVIDE( 15000 H_HERO_EXP_DIVIDER )
+
+; ---- Hero rework (Legolas, Thranduil, Elrond; openbfme/HERO-REWORK-PLAN.md) ----
+; Every level (2-25) adds the same: +60 HP, +1.7% damage (DAMAGE_MULT, and SPELL_DAMAGE for magic), +2 flat (DAMAGE_ADD: only the damage blocks that
+; accept it, the bow's arrows; powers and item blocks say AcceptDamageAdd = No). Level 25: x1.499 damage, arrow (120 + 48) x 1.499 = 252 for Thranduil.
+#define H_RW_LEVEL_HP				60
+#define H_RW_LEVEL_DAMAGE_MULT		101.7%
+#define H_RW_LEVEL_DAMAGE_ADD		2
+; XP to reach a level: each next level costs more than the one before: 145 for level 2, +25 a level up to level 10 (2,205 in all), then +47 a
+; level (13,020 at level 25); the same for the three heroes
+#define H_RW_HERO_LVL2_EXP_NEEDED	145
+#define H_RW_HERO_LVL3_EXP_NEEDED	315
+#define H_RW_HERO_LVL4_EXP_NEEDED	510
+#define H_RW_HERO_LVL5_EXP_NEEDED	730
+#define H_RW_HERO_LVL6_EXP_NEEDED	975
+#define H_RW_HERO_LVL7_EXP_NEEDED	1245
+#define H_RW_HERO_LVL8_EXP_NEEDED	1540
+#define H_RW_HERO_LVL9_EXP_NEEDED	1860
+#define H_RW_HERO_LVL10_EXP_NEEDED	2205
+#define H_RW_HERO_LVL11_EXP_NEEDED	2597
+#define H_RW_HERO_LVL12_EXP_NEEDED	3036
+#define H_RW_HERO_LVL13_EXP_NEEDED	3522
+#define H_RW_HERO_LVL14_EXP_NEEDED	4055
+#define H_RW_HERO_LVL15_EXP_NEEDED	4635
+#define H_RW_HERO_LVL16_EXP_NEEDED	5262
+#define H_RW_HERO_LVL17_EXP_NEEDED	5936
+#define H_RW_HERO_LVL18_EXP_NEEDED	6657
+#define H_RW_HERO_LVL19_EXP_NEEDED	7425
+#define H_RW_HERO_LVL20_EXP_NEEDED	8240
+#define H_RW_HERO_LVL21_EXP_NEEDED	9102
+#define H_RW_HERO_LVL22_EXP_NEEDED	10011
+#define H_RW_HERO_LVL23_EXP_NEEDED	10967
+#define H_RW_HERO_LVL24_EXP_NEEDED	11970
+#define H_RW_HERO_LVL25_EXP_NEEDED	13020
+; XP awarded for killing the hero at a level: the 2.02 hero factor (100% at level 1, +10% a level), continued to level 25
+#define H_RW_AWARD_FACTOR_LEVEL_2	110
+#define H_RW_AWARD_FACTOR_LEVEL_3	120
+#define H_RW_AWARD_FACTOR_LEVEL_4	130
+#define H_RW_AWARD_FACTOR_LEVEL_5	140
+#define H_RW_AWARD_FACTOR_LEVEL_6	150
+#define H_RW_AWARD_FACTOR_LEVEL_7	160
+#define H_RW_AWARD_FACTOR_LEVEL_8	170
+#define H_RW_AWARD_FACTOR_LEVEL_9	180
+#define H_RW_AWARD_FACTOR_LEVEL_10	190
+#define H_RW_AWARD_FACTOR_LEVEL_11	200
+#define H_RW_AWARD_FACTOR_LEVEL_12	210
+#define H_RW_AWARD_FACTOR_LEVEL_13	220
+#define H_RW_AWARD_FACTOR_LEVEL_14	230
+#define H_RW_AWARD_FACTOR_LEVEL_15	240
+#define H_RW_AWARD_FACTOR_LEVEL_16	250
+#define H_RW_AWARD_FACTOR_LEVEL_17	260
+#define H_RW_AWARD_FACTOR_LEVEL_18	270
+#define H_RW_AWARD_FACTOR_LEVEL_19	280
+#define H_RW_AWARD_FACTOR_LEVEL_20	290
+#define H_RW_AWARD_FACTOR_LEVEL_21	300
+#define H_RW_AWARD_FACTOR_LEVEL_22	310
+#define H_RW_AWARD_FACTOR_LEVEL_23	320
+#define H_RW_AWARD_FACTOR_LEVEL_24	330
+#define H_RW_AWARD_FACTOR_LEVEL_25	340
+#define H_THRANDUIL_HEALTH			1100 ; 2.02: 2000
+#define H_THRANDUIL_RAMPAGE_RELOAD	600 ; fires every 3rd logic frame with OpenBFMEFireWaitsForReload (the normal bow: every 5th)
+#define H_THRANDUIL_THORN_DAMAGE		1500 ; 2.02: 2000
+#define H_THRANDUIL_THORN_MAGIC_DAMAGE	600 ; the burst (radius 60) and the hit each; 2.02: 850
+#define H_THRANDUIL_PINNING_DAMAGE	400
+#define H_THRANDUIL_PINNING_DURATION	4000
+#define H_THRANDUIL_SUMMON_LIFETIME	40000
+; Thranduil's Armory (hero rework, pass 2)
+#define H_THRANDUIL_ARROWHEADS1_COST	300
+#define H_THRANDUIL_ARROWHEADS1_TIME	10 ; seconds (placeholder)
+#define H_THRANDUIL_ARROWHEADS1_DAMAGE	80 ; hero damage to monsters and machines, the level percentage only
+#define H_THRANDUIL_ARMOR1_COST	250
+#define H_THRANDUIL_ARMOR2_COST	700
+#define H_THRANDUIL_ARMOR3_COST	1500
+#define H_THRANDUIL_LIFE1_COST	250
+#define H_THRANDUIL_LIFE2_COST	700
+#define H_THRANDUIL_LIFE3_COST	1500
+#define H_THRANDUIL_MOBILITY1_COST	200
+#define H_THRANDUIL_MOBILITY2_COST	500
+#define H_THRANDUIL_MOBILITY3_COST	1200
+#define H_THRANDUIL_BOW1_COST	300
+#define H_THRANDUIL_BOW2_COST	1000
+#define H_THRANDUIL_BOW3_COST	2500
+#define H_THRANDUIL_ARROWHEADS2_COST	1000
+#define H_THRANDUIL_ARROWHEADS3_COST	2500
+#define H_THRANDUIL_DAMAGE1_COST	300
+#define H_THRANDUIL_DAMAGE2_COST	1000
+#define H_THRANDUIL_DAMAGE3_COST	2500
+#define H_THRANDUIL_HUNTER1_COST	200
+#define H_THRANDUIL_HUNTER2_COST	500
+#define H_THRANDUIL_HUNTER3_COST	1000
+#define H_THRANDUIL_ITEM_TIME	10 ; seconds (placeholder)

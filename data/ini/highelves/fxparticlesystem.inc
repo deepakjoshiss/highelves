@@ -883,3 +883,42 @@ FXParticleSystem LightOfTreesLeaf
   Draw = DefaultDraw
   End
 End
+
+FXParticleSystem HEThranduilPinningArrowRed ; hero rework: Pinning Shot's waves, ThranDeadeyeArrow in red
+  System
+    Priority = ALWAYS_RENDER
+    ParticleName = EXspearhead.tga
+    Lifetime = 15 15
+    SortLevel = 1
+    Size = 5 5
+    BurstCount = 4 4
+    IsGroundAligned = Yes
+    IsParticleUpTowardsEmitter = Yes
+  End
+  Color = DefaultColor
+    Color1 = R:220 G:30 B:30 0 ;,; R:30 G:170 B:50 0 (ThranDeadeyeArrow's green)
+    Color2 = R:0 G:0 B:0 15
+  End
+  Alpha = DefaultAlpha
+    Alpha1 = 0.5 0.5 0 ;,; 0.25 (ThranDeadeyeArrow's)
+    Alpha2 = 0 0 15
+  End
+  Update = DefaultUpdate
+    SizeRate = -0.25 -0.25
+    SizeRateDamping = 1 1
+    AngleZ = 0 2
+    AngularDamping = 1 1
+    AngularDampingXY = 1 1
+  End
+  Physics = DefaultPhysics
+    VelocityDamping = 1 1
+  End
+  EmissionVelocity = OrthoEmissionVelocity
+  End
+  EmissionVolume = LineEmissionVolume
+    StartPoint = X:-5 Y:0 Z:0
+    EndPoint = X:-5 Y:0 Z:0
+  End
+  Draw = DefaultDraw
+  End
+End

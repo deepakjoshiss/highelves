@@ -74,38 +74,37 @@ CommandSet HEDwarvenSummonedCitadelCommandSet ;;,;; 2.02e commandset
 End
 
 CommandSet HEElvenFortressCommandSet
-	InitialVisible = 7 ; PROTOTYPE: 7 for the Hero Armory (was 6)
+	InitialVisible = 6
 	//Main Menu
 	1	= HECommand_ConstructElvenPorter
 ;	2	= HECommand_ConstructNoldorWarriorHorde				; Added for BFME2 Expansion
-	2   	= HECommand_SelectRevivablesElvenFortress ; PROTOTYPE: its range shifted by one (Hero Armory at 7)
-	3	= HECommand_SelectUpgradesElvenFortress ; PROTOTYPE: its range shifted by one
+	2   	= Command_SelectRevivablesElvenFortress
+	3	= Command_SelectUpgradesElvenFortress
 	4	= Command_PurchaseNewEagle
 	5   = Command_EnableCEContentsElves ;,;
 	6	= Command_Sell
-	7	= HECommand_HEArmoryOpen ; PROTOTYPE: the Hero Armory pages
 	
 		//Improvements
-	8       = Command_PurchaseUpgradeElvenFortressEnchantedAnvil
-	9	= Command_PurchaseUpgradeElvenFortressBlessedMist
-	10	= Command_PurchaseUpgradeElvenFortressCrystalMoat
-	11	= Command_PurchaseUpgradeElvenFortressMysticFountains
-	12	= Command_PurchaseUpgradeElvenFortressFlamingMunitions ;;,;; Added for 2.1, pushing down positions of following buttons by one
-	13	= Command_PurchaseUpgradeElvenFortressEncasingVines
-	14	= Command_PurchaseUpgradeElvenFortressEaglesNest
-	15	= Command_RadialBack
+	7       = Command_PurchaseUpgradeElvenFortressEnchantedAnvil
+	8	= Command_PurchaseUpgradeElvenFortressBlessedMist
+	9	= Command_PurchaseUpgradeElvenFortressCrystalMoat
+	10	= Command_PurchaseUpgradeElvenFortressMysticFountains
+	11	= Command_PurchaseUpgradeElvenFortressFlamingMunitions ;;,;; Added for 2.1, pushing down positions of following buttons by one
+	12	= Command_PurchaseUpgradeElvenFortressEncasingVines
+	13	= Command_PurchaseUpgradeElvenFortressEaglesNest
+	14	= Command_RadialBack
 	
 	//Heroes
-	16	= Command_RingHeroReviveSlot
-	17	= Command_CreateAHeroReviveSlot		// Note we also need an extra slot for the Create A Hero
-	18	= Command_GenericReviveSlot1		//Revives any hero. Use Slot1-Slot8 and keep them UNIQUE within the same commandset! 
-	19	= Command_GenericReviveSlot2	
-	20	= Command_GenericReviveSlot3	
-	21	= Command_GenericReviveSlot4	
-	22	= Command_GenericReviveSlot5	
-	23	= Command_GenericReviveSlot6	
-	24	= Command_GenericReviveSlot7
-	25	= Command_RadialBack			
+	15	= Command_RingHeroReviveSlot
+	16	= Command_CreateAHeroReviveSlot		// Note we also need an extra slot for the Create A Hero
+	17	= Command_GenericReviveSlot1		//Revives any hero. Use Slot1-Slot8 and keep them UNIQUE within the same commandset! 
+	18	= Command_GenericReviveSlot2	
+	19	= Command_GenericReviveSlot3	
+	20	= Command_GenericReviveSlot4	
+	21	= Command_GenericReviveSlot5	
+	22	= Command_GenericReviveSlot6	
+	23	= Command_GenericReviveSlot7
+	24	= Command_RadialBack			
 End
 
 CommandSet HEERElvenBarracksCommandSet
@@ -205,13 +204,85 @@ CommandSet HEElvenGlorfindelCommandSet
 	18  = Command_SetStanceHoldGround
 End
 
-CommandSet HEElvenThranduilCommandSet	
+; Thranduil (hero rework, openbfme/HERO-REWORK-PLAN.md): Rampage, Call of the Woodland Realm, Pinning Shot, Elvenking's Command (passive), Thorn of
+; Vengeance. The hero's CommandSetUpgrades swap in the next set at levels 10 / 15 / 20 / 25 (a power's next tier).
+; levels 1-9
+CommandSet HEElvenThranduilCommandSet
 	1	= Command_ToggleStance
-    2  	= Command_SpecialAbilityElfCloakThranduil ;;,;; Command_ThranduilWildWalkButton
-	3  	= Command_SpecialAbilityMoveUnseen ;,; Command_ThranduilWildWalkButton ;,; Command_SpecialAbilityMoveUnseen ;,; Command_SpecialAbilityDeadEye ;;,;; Command_SpecialAbilityMoveUnseen ; Command_SpecialAbilityDeadEye
-	4  	= Command_ThranduilWildWalkButton ;,; Command_SpecialAbilityMoveUnseen ;;,;; Command_SpecialAbilityDeadEye ; Command_SpecialAbilityMoveUnseen
-    5  	= Command_SpecialAbilityThranduilRampage ;,; Command_ThranduilWildWalkButton ;;,;; Command_SpecialAbilityElfCloakThranduil
-    6  	= HECommand_SpecialAbilityThornofVengeance
+	2	= HECommand_ThranduilRampage1
+	3	= HECommand_ThranduilWoodlandRealm5
+	4	= HECommand_ThranduilPinningShot
+	5	= HECommand_ThranduilElvenkingsCommand
+	6	= HECommand_SpecialAbilityThornofVengeance
+	7	= HECommand_ThranduilLeap
+    12 	= Command_CaptureBuilding
+	13 	= Command_AttackMove
+	14 	= Command_Stop
+	16  = Command_SetStanceBattle
+	17  = Command_SetStanceAggressive
+	18  = Command_SetStanceHoldGround
+End
+
+; levels 10-14: Rampage tier 2
+CommandSet HEElvenThranduilCommandSetL10
+	1	= Command_ToggleStance
+	2	= HECommand_ThranduilRampage2
+	3	= HECommand_ThranduilWoodlandRealm5
+	4	= HECommand_ThranduilPinningShot
+	5	= HECommand_ThranduilElvenkingsCommand
+	6	= HECommand_SpecialAbilityThornofVengeance
+	7	= HECommand_ThranduilLeap
+    12 	= Command_CaptureBuilding
+	13 	= Command_AttackMove
+	14 	= Command_Stop
+	16  = Command_SetStanceBattle
+	17  = Command_SetStanceAggressive
+	18  = Command_SetStanceHoldGround
+End
+
+; levels 15-19: ten archers
+CommandSet HEElvenThranduilCommandSetL15
+	1	= Command_ToggleStance
+	2	= HECommand_ThranduilRampage2
+	3	= HECommand_ThranduilWoodlandRealm10
+	4	= HECommand_ThranduilPinningShot
+	5	= HECommand_ThranduilElvenkingsCommand
+	6	= HECommand_SpecialAbilityThornofVengeance
+	7	= HECommand_ThranduilLeap
+    12 	= Command_CaptureBuilding
+	13 	= Command_AttackMove
+	14 	= Command_Stop
+	16  = Command_SetStanceBattle
+	17  = Command_SetStanceAggressive
+	18  = Command_SetStanceHoldGround
+End
+
+; levels 20-24: Rampage tier 3
+CommandSet HEElvenThranduilCommandSetL20
+	1	= Command_ToggleStance
+	2	= HECommand_ThranduilRampage3
+	3	= HECommand_ThranduilWoodlandRealm10
+	4	= HECommand_ThranduilPinningShot
+	5	= HECommand_ThranduilElvenkingsCommand
+	6	= HECommand_SpecialAbilityThornofVengeance
+	7	= HECommand_ThranduilLeap
+    12 	= Command_CaptureBuilding
+	13 	= Command_AttackMove
+	14 	= Command_Stop
+	16  = Command_SetStanceBattle
+	17  = Command_SetStanceAggressive
+	18  = Command_SetStanceHoldGround
+End
+
+; level 25: Rampage for good, Thorn every 60 s
+CommandSet HEElvenThranduilCommandSetL25
+	1	= Command_ToggleStance
+	2	= HECommand_ThranduilRampagePassive
+	3	= HECommand_ThranduilWoodlandRealm10
+	4	= HECommand_ThranduilPinningShot
+	5	= HECommand_ThranduilElvenkingsCommand
+	6	= HECommand_SpecialAbilityThornofVengeance25
+	7	= HECommand_ThranduilLeap
     12 	= Command_CaptureBuilding
 	13 	= Command_AttackMove
 	14 	= Command_Stop
@@ -283,20 +354,31 @@ CommandSet HEElvesSpellStoreCommandSet
     20 = HECommand_PurchaseSpellCitadel
 End
 
-; ---- PROTOTYPE: Hero Armory pages (HEElvenCitadel's CommandSetUpgrades). The Armory page comes first in the object's modules, so a hero page
-; (later) wins while both are held, and closing a hero page brings the Armory page back (CommandSetUpgrade::postUpgradeCheck)
-CommandSet HEArmoryCommandSet
-	1	= HECommand_HEArmoryLegolas
-	2	= HECommand_HEArmoryThranduil
-	3	= HECommand_HEArmoryElrond
-	4	= HECommand_HEArmoryBack
-End
+; ---- Hero Armory: each hero's items, the list the Armory overlay reads (openbfme.ini OpenBFMEArmory; no object shows these sets)
 CommandSet HEArmoryLegolasCommandSet
-	1	= HECommand_HEArmoryBackHero
 End
 CommandSet HEArmoryThranduilCommandSet
-	1	= HECommand_HEArmoryBackHero
+	2	= HECommand_HEThranduilArmor1
+	3	= HECommand_HEThranduilArmor2
+	4	= HECommand_HEThranduilArmor3
+	5	= HECommand_HEThranduilLife1
+	6	= HECommand_HEThranduilLife2
+	7	= HECommand_HEThranduilLife3
+	8	= HECommand_HEThranduilMobility1
+	9	= HECommand_HEThranduilMobility2
+	10	= HECommand_HEThranduilMobility3
+	11	= HECommand_HEThranduilBow1
+	12	= HECommand_HEThranduilBow2
+	13	= HECommand_HEThranduilBow3
+	14	= HECommand_HEThranduilArrowheads1
+	15	= HECommand_HEThranduilArrowheads2
+	16	= HECommand_HEThranduilArrowheads3
+	17	= HECommand_HEThranduilDamage1
+	18	= HECommand_HEThranduilDamage2
+	19	= HECommand_HEThranduilDamage3
+	20	= HECommand_HEThranduilHunter1
+	21	= HECommand_HEThranduilHunter2
+	22	= HECommand_HEThranduilHunter3
 End
 CommandSet HEArmoryElrondCommandSet
-	1	= HECommand_HEArmoryBackHero
 End

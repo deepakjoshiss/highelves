@@ -260,3 +260,320 @@ ModifierList KnightsWeaponSong
 	Duration = 20000			;// lasts for 30 seconds
 	ModelCondition = USER_4
 End
+
+; ---- Hero rework (openbfme/HERO-REWORK-PLAN.md): one list per level, the same values in each (level lists stack: a list's name is applied once)
+ModifierList HEReworkHeroLevel2
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel3
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel4
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel5
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel6
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel7
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel8
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel9
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel10
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel11
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel12
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel13
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel14
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel15
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel16
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel17
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel18
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel19
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel20
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel21
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel22
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel23
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel24
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+ModifierList HEReworkHeroLevel25
+	Category = LEVEL
+	Modifier = HEALTH H_RW_LEVEL_HP
+	Modifier = DAMAGE_MULT H_RW_LEVEL_DAMAGE_MULT
+	Modifier = SPELL_DAMAGE H_RW_LEVEL_DAMAGE_MULT
+	Modifier = DAMAGE_ADD H_RW_LEVEL_DAMAGE_ADD
+	Duration = 0
+End
+
+; Thranduil's Elvenking's Command (passive, the whole map): Mirkwood archers +10% damage and +10% range from level 8; level 18 adds the second list
+; for +15% / +15% in all (damage multiplies: 1.10 x 1.04545 = 1.15; range adds: 10% + 5%)
+ModifierList HEThranduilElvenkingsCommand1
+	Category = LEADERSHIP
+	Modifier = DAMAGE_MULT 110%
+	Modifier = RANGE 10%
+	Duration = 2200	; the aura refreshes every 2000
+End
+
+ModifierList HEThranduilElvenkingsCommand2
+	Category = LEADERSHIP
+	Modifier = DAMAGE_MULT 104.545%
+	Modifier = RANGE 5%
+	Duration = 2200
+End
+
+; ---- Thranduil's Armory items (hero rework, pass 2); each tier adds to the one before
+ModifierList HEThranduilArmor1
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = ARMOR 15%
+	Duration = 0
+End
+
+ModifierList HEThranduilArmor2
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = ARMOR 10%
+	Modifier = RESIST_KNOCKBACK 100%
+	Modifier = CRUSHABLE_LEVEL 2
+	Duration = 0
+End
+
+ModifierList HEThranduilArmor3
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = ARMOR 10%
+	Duration = 0
+End
+
+ModifierList HEThranduilArmor3Aura
+	Category = LEADERSHIP
+	Modifier = ARMOR 20%
+	Duration = 2200
+End
+
+ModifierList HEThranduilLife1
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = HEALTH 400
+	Duration = 0
+End
+
+ModifierList HEThranduilLife2
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = HEALTH 600
+	Duration = 0
+End
+
+ModifierList HEThranduilLife3
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = HEALTH 1000
+	Duration = 0
+End
+
+ModifierList HEThranduilMobility1
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = SPEED 115%
+	Duration = 0
+End
+
+ModifierList HEThranduilMobility2
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = SPEED 108.7% ; 1.15 x 1.087 = +25% in all
+	Modifier = RANGE 10%
+	Duration = 0
+End
+
+ModifierList HEThranduilBow1
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = RANGE 10%
+	Duration = 0
+End
+
+ModifierList HEThranduilBow2
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = RANGE 5%
+	Duration = 0
+End
+
+ModifierList HEThranduilBow3
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = RANGE 10%
+	Duration = 0
+End
+
+ModifierList HEThranduilHunter1
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = SHROUD_CLEARING 50%
+	Modifier = VISION 25%
+	Duration = 0
+End
+

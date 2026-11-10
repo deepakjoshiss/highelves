@@ -55,23 +55,199 @@ Upgrade Upgrade_PurifyingFlames
 	ResearchSound				= UpgradeSilverThornArrows
 End
 
-; ---- PROTOTYPE: Hero Armory pages on the fortress (HEElvenCitadel). Each page is a player upgrade: a CommandSetUpgrade shows the page while
-; it is held; Back removes it (RemoveUpgradeUpgrade). Granted instantly by special powers (PlayerUpgradeSpecialPower), no production queue.
-Upgrade Upgrade_HEArmoryPage
-  Type = PLAYER
+
+; Hero rework (openbfme/HERO-REWORK-PLAN.md): the level upgrades above 2.02's ten (Upgrade_ObjectLevel1-10 are in upgrade.ini)
+Upgrade Upgrade_ObjectLevel11
+	Type			= OBJECT
 End
-Upgrade Upgrade_HEArmoryLegolas
-  Type = PLAYER
+Upgrade Upgrade_ObjectLevel12
+	Type			= OBJECT
 End
-Upgrade Upgrade_HEArmoryThranduil
-  Type = PLAYER
+Upgrade Upgrade_ObjectLevel13
+	Type			= OBJECT
 End
-Upgrade Upgrade_HEArmoryElrond
-  Type = PLAYER
+Upgrade Upgrade_ObjectLevel14
+	Type			= OBJECT
 End
-Upgrade Upgrade_HEArmoryBackHero
-  Type = PLAYER
+Upgrade Upgrade_ObjectLevel15
+	Type			= OBJECT
 End
-Upgrade Upgrade_HEArmoryBack
-  Type = PLAYER
+Upgrade Upgrade_ObjectLevel16
+	Type			= OBJECT
+End
+Upgrade Upgrade_ObjectLevel17
+	Type			= OBJECT
+End
+Upgrade Upgrade_ObjectLevel18
+	Type			= OBJECT
+End
+Upgrade Upgrade_ObjectLevel19
+	Type			= OBJECT
+End
+Upgrade Upgrade_ObjectLevel20
+	Type			= OBJECT
+End
+Upgrade Upgrade_ObjectLevel21
+	Type			= OBJECT
+End
+Upgrade Upgrade_ObjectLevel22
+	Type			= OBJECT
+End
+Upgrade Upgrade_ObjectLevel23
+	Type			= OBJECT
+End
+Upgrade Upgrade_ObjectLevel24
+	Type			= OBJECT
+End
+Upgrade Upgrade_ObjectLevel25
+	Type			= OBJECT
+End
+
+; ---- Hero Armory items (hero rework, openbfme/HERO-REWORK-PLAN.md): player upgrades bought on the hero's Armory page of the fortress
+Upgrade Upgrade_HEThranduilArrowheads1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilArrowheads1
+	BuildCost		= H_THRANDUIL_ARROWHEADS1_COST
+	BuildTime		= H_THRANDUIL_ARROWHEADS1_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilArmor1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilArmor1
+	BuildCost		= H_THRANDUIL_ARMOR1_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilArmor2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilArmor2
+	BuildCost		= H_THRANDUIL_ARMOR2_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilArmor3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilArmor3
+	BuildCost		= H_THRANDUIL_ARMOR3_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilLife1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilLife1
+	BuildCost		= H_THRANDUIL_LIFE1_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilLife2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilLife2
+	BuildCost		= H_THRANDUIL_LIFE2_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilLife3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilLife3
+	BuildCost		= H_THRANDUIL_LIFE3_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilMobility1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilMobility1
+	BuildCost		= H_THRANDUIL_MOBILITY1_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilMobility2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilMobility2
+	BuildCost		= H_THRANDUIL_MOBILITY2_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilMobility3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilMobility3
+	BuildCost		= H_THRANDUIL_MOBILITY3_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilBow1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilBow1
+	BuildCost		= H_THRANDUIL_BOW1_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilBow2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilBow2
+	BuildCost		= H_THRANDUIL_BOW2_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilBow3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilBow3
+	BuildCost		= H_THRANDUIL_BOW3_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilArrowheads2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilArrowheads2
+	BuildCost		= H_THRANDUIL_ARROWHEADS2_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilArrowheads3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilArrowheads3
+	BuildCost		= H_THRANDUIL_ARROWHEADS3_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilDamage1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilDamage1
+	BuildCost		= H_THRANDUIL_DAMAGE1_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilDamage2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilDamage2
+	BuildCost		= H_THRANDUIL_DAMAGE2_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilDamage3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilDamage3
+	BuildCost		= H_THRANDUIL_DAMAGE3_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilHunter1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilHunter1
+	BuildCost		= H_THRANDUIL_HUNTER1_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilHunter2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilHunter2
+	BuildCost		= H_THRANDUIL_HUNTER2_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEThranduilHunter3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEThranduilHunter3
+	BuildCost		= H_THRANDUIL_HUNTER3_COST
+	BuildTime		= H_THRANDUIL_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
 End

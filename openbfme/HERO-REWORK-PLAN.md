@@ -17,41 +17,37 @@ then Elrond.
 | Rule | Decision |
 |---|---|
 | Cost / command points | 800 / 40 |
-| Levels | 25 (today 10). The engine's level table has no cap. |
+| Levels | 25. The High Elves heroes already went to 25 through a table shared by six heroes (`HighElvesHeroLevel11-25`); each reworked hero gets its own levels 2-25 and leaves that table. |
 | HP per level | +60, flat |
-| Damage per level | +2.5% of base for weapons and powers, **additive** (each level's modifier list carries the ratio, so level 25 = x1.60). *Proposed for all three; confirm.* |
+| Damage per level | The same each level (`HEReworkHeroLevelN`): **+1.7%** damage (`DAMAGE_MULT`, `SPELL_DAMAGE` for magic) and **+2 flat** (`DAMAGE_ADD`), which only the bow's arrows take: powers and item blocks say `AcceptDamageAdd = No`. Level 25: powers x1.50, Thranduil's arrow (120 + 48) x 1.499 = 252 (210%). The flat bonus is added before the percentage, so it grows with it. |
 | Weapon upgrades | split shot, splash, extra damage blocks come from **items only**, never from levels |
 | Item tiers | tier 1 ~500-2000, tier 2 ~2500-6000, tier 3 6000+; each higher item requires the one before; tiers add up |
-| XP curve | draft: levels 1-10 as today, then +500 per level (~9,500 to level 25). *Open: level 25 should stay very hard.* |
+| XP curve | Each next level costs 40 more than the one before, from 125: level 10 at 2,565, 15 at 5,390, 20 at 9,215, 25 at 14,040 (`H_RW_HERO_LVLn_EXP_NEEDED`); the same for the three heroes. The table it replaces reached level 10 at 2,050 and 25 at 15,000. Killing the hero awards 2.02's factor continued (+10% a level). |
 | Items vs heroes | items are player upgrades, so they survive death and revival |
 
-## 3. The Hero Armory (fortress menu)
+## 3. The Hero Armory (overlay)
 
-Built and checked in a test game (mod commit 20a50a0, PROTOTYPE): a 7th fortress ring button opens the Armory page,
-one page per hero (Legolas, Thranduil, Elrond), Back on each; every page has its own 33 button slots, so items are not
-limited by the fortress's command set.
+An OpenBFME overlay (dj-dev, `godot/scripts/armory_overlay.gd`; engine row `OpenBFMEArmory = <hero> <CommandSet>` in
+`data/ini/openbfme.ini`) opens from a gold button above the Palantir's Powers button: the heroes on the left (portrait,
+level, items owned, a dot per tier), the chosen hero's lines (tier I -> II -> III, what each line gives now), the chosen
+item's details with Research / Cancel, a big Close at the bottom left. Each hero's items are the PLAYER_UPGRADE buttons
+of `HEArmory<Hero>CommandSet` (no object shows these sets); the lines follow the `NeededUpgrade` chains; an item's effect
+line is its tooltip's middle line, so tooltips keep the "Name \n effect \n Cost: N" form.
 
-How it works (the rules are retail's, as our engine ports them):
+No building takes part: each hero has a research queue of his own, kept by the game (MSG_OPENBFME_ARMORY): paid when
+queued, refunded when cancelled, granted at the end of its research time (10 s); one item at a time per hero, the heroes
+in parallel, usable from the game start; nothing waits behind the citadel's upgrades or recruits. The fortress ring is the
+original game's again (the prototype pages of 20a50a0 are removed).
 
-- Each button is an instant power (`PlayerUpgradeSpecialPower`) granting a hidden player upgrade: no production queue.
-- Each page is a `CommandSetUpgrade` on `HEElvenCitadel`; every update re-applies held pages in module order, the last
-  one wins.
-- Removing a page's upgrade never removes its buttons (`resetUpgrade` clears "executed" before the removal runs), so
-  **Back applies the page it returns to**.
-- A module that removes its own trigger stays stuck: **every trigger is removed by another module** (opening a page
-  clears the Back upgrades; Back clears the pages).
-- A demo test must wait ~1 s after a button press before checking (commands run a few logic frames later).
-
-Pending for the Armory:
-
-- The real item buttons on each hero page (labels, icons, costs, requirements via `NeededUpgrade`).
-- The computer player: it may fire these instant powers; its build lists need the items.
-- Multiplayer check; Elrond's page.
+Pending for the Armory: final icons; the computer player does not use it; a real multiplayer check; Legolas's and
+Elrond's items.
 
 ## 4. Thranduil (decided)
 
-**Start:** 1100 HP, arrow 120 (today 2000 HP, arrow 200, cost 3000). His bow keeps today's range (420), 1 shot/s and
-draw. Today's level-3 extra hit, level-7 splash + knockback and level-10 magic splash are **removed** (they become items).
+**Built (pass 1, in game by demo; Deepak's check pending).** Start: 800 cost, 1100 HP, arrow 120 (before: 3000, 2000 HP,
+arrow 200). His bow keeps its range (420), 1 shot/s and draw. The old level-3 extra hit, level-7 splash + knockback and
+level-10 magic splash are **removed** (they become items); his bow has its own warhead. Move Unseen, Wild Walk, the hidden
+Elf Cloak, the automatic Deadeye and the melee switch are removed.
 
 **Levels**
 
@@ -59,10 +55,10 @@ draw. Today's level-3 extra hit, level-7 splash + knockback and level-10 magic s
 |---|---|
 | 1 | **Rampage** tier 1 (replaces the dead Elf Cloak button) |
 | 3 | **Call of the Woodland Realm**: 5 Mirkwood archers (half battalion) for **40 s**, 90 s recharge |
-| 5 | **Pinning Shot**: pins a hero or monster 3 s, 300 damage, 60 s |
+| 5 | **Pinning Shot**: pins a hero or monster 3 s (`ParalyzeNugget`), 300 damage, 60 s |
 | 8 | **Elvenking's Command** (passive): every Mirkwood archer on the map +10% damage, +10% range |
-| 10 | Rampage tier 2 |
-| 15 | **Thorn of Vengeance** (2000 hero + 850 magic in radius 60, 120 s); the summon grows to **10 archers** |
+| 10 | Rampage tier 2; **Thorn of Vengeance**: 1500 hero + 600 magic + a 600 magic burst (radius 60), his bow's range (420), 120 s |
+| 15 | The summon grows to **10 archers** |
 | 18 | Elvenking's Command tier 2: +15% / +15% (replaces tier 1) |
 | 20 | Rampage tier 3 |
 | 25 | **Rampage permanent (passive)**, **Thorn recharge 60 s** |
@@ -70,6 +66,8 @@ draw. Today's level-3 extra hit, level-7 splash + knockback and level-10 magic s
 **Rampage**
 
 - Duration 8 / 14 / 20 s (tiers at levels 1 / 10 / 20), recharge **60 s**, cast by hand.
+- **Measured 2026-11-10 (single troll, attack order or self-picked): every 4th logic frame (x1.25)**, not the 3rd measured
+  before the horde-chain change (x1.67). Probably the same missing frame as the horde case below; open.
 - Effect: a timed switch (`WeaponModeSpecialPowerUpdate`, `WEAPONSET_HERO_MODE`) to a faster copy of his bow that
   **fires every 3rd logic frame** (0.6 s reload, named in `OpenBFMEFireWaitsForReload`; about x1.67) with **no draw on
   new targets** (`PreAttackDelay = 0`, decided 2026-11-10: with a draw, each new target in a horde added 0.45 s after the
@@ -93,32 +91,50 @@ draw. Today's level-3 extra hit, level-7 splash + knockback and level-10 magic s
 - Tiers: one power per tier, his button swapped by level (the Armory's command-set mechanism).
 - Level 25: a `WeaponSetUpgrade` sets a **different** flag (e.g. `PLAYER_UPGRADE`) for a permanent fast bow, so an
   active Rampage ending cannot switch it off; the Rampage button becomes a passive icon.
-- In progress: the engine row `OpenBFMEFireWaitsForReload` (see 7) so the fast bow reaches every 3rd frame without a
-  per-shot wind-up (the wind-up version animated badly: wind-up after each shot, very brief firing).
+- The engine row `OpenBFMEFireWaitsForReload` (see 7) lets the fast bow fire without a per-shot wind-up (the wind-up version
+  animated badly: wind-up after each shot, very brief firing).
 
-**Armory**
+**Armory** (prices and effects set by Deepak 2026-11-10; placeholder icons, 10 s research; each tier requires the one
+before and adds to it; the values are the totals; the whole tree 19,900)
 
 | Line | Tier 1 | Tier 2 | Tier 3 |
 |---|---|---|---|
-| Armor | 800: +10% armor | 3500: +20%, immune to knockback and trampling | 8000: +30%, nearby troops +20% armor |
-| Life | 1000: +300 HP | 3000: +600 HP, regeneration in combat | 7000: +1500 HP, strong regeneration |
-| Mobility | 500: +15% speed | 2500: +20% speed, +10% range | 6000: active short teleport *(check)* |
-| Bow | 500: +5% range | 3000: **2nd arrow** (split, 60% damage), 10% range total | 8000: **3rd arrow** (60%), 20% range total |
-| Arrowheads | 800: +30% vs cavalry and monsters | ~3500: +50% vs machines, +15% vs monsters | ~7000: +50% vs heroes, +15% vs monsters (monsters 60% total) |
-| Damage | 1500: +40 magic per arrow | 4500: +80 magic; infantry killed are thrown back (knockback 30, radius 10) | 9000: +80 magic and +80 hero damage |
-| Hunter | 1200: Eyes of the Greenwood: shroud clearing + reveals stealthed enemies within 300 *(check)* | 4500: Pinning Shot 5 s, +50% damage, -25% recharge | 9000: Elvenking's Wrath: Thorn recharges when it kills a hero |
+| Elvenking's Mail | 250: +15% armor | 700: +25%, no knockback, cannot be trampled (crush level +2) | 1500: +35%; allied soldiers within 200 +20% armor |
+| Life of the Greenwood | 250: +400 HP | 700: +1000 HP, heals 20/s in battle too | 1500: +2000 HP, 50/s |
+| Swift Feet | 200: +15% speed | 500: +25% speed, +10% range | 1200: **Leap**, a jump within 300, 20 s (its button is not shown yet: see below) |
+| Bow of the Elvenking | 300: +10% range | 1000: 2nd arrow at another enemy, +15% range | 2500: 3rd arrow, +25% range (both bows in `OpenBFMESplitShot`) |
+| Arrowheads | 300: +80 hero damage to monsters and machines, +50 to heroes | 1000: +50 more to monsters and heroes | 2500: +60 more to monsters, machines and heroes |
+| Wrath of Mirkwood | 300: +40 magic per arrow | 1000: +40 siege per arrow | 2500: +80 hero damage per arrow |
+| Hunter | 200: Eyes of the Greenwood: +50% shroud clearing, +25% vision | 500: Hunter's Snare: Pinning Shot 5 s, +200 damage | 1000: Hunter's Net (placeholder name): the pin takes every soldier, hero and monster within 50 of the target |
+
+Item damage blocks take the level percentage only (`AcceptDamageAdd = No`) and sit in his warhead, so the Rampage bow has
+them too; the 2nd / 3rd arrows use the same warhead (a full arrow with every item). Wrath II's throw-back is gone (its
+level is siege damage now). Measured: three trolls in reach each lose 220 per volley with Bow III and Arrowheads I at
+level 1 (120 + 80 x 1.25), so the extra arrows carry everything; Hunter's Net pinned the troll and 13 Uruks beside it, none
+of a battalion 230 away, and without it only the troll. Earlier values (HP, the 137 -> 287 arrow) were measured at the
+old numbers. Not built: Eyes of the Greenwood's stealth reveal (a disabled `StealthDetectorUpdate` has no switch in data),
+Hunter's Snare's -25% recharge (recharge modifiers reach every power).
 
 Kingship is dropped (replaced by the Damage line). Cooldown items may stay on his page (the earlier 50% level-25
 cooldown idea was dropped).
 
+How pass 1 is built: one power per tier (Rampage 1-3, the summon 5 / 10, Thorn 120 s / 60 s); the hero's
+`CommandSetUpgrade`s swap in the next set at levels 10 / 15 / 20 / 25, later tiers start paused until their level (an auto
+ability only fires from a button in the current set). Level 25's permanent bow is a `WeaponSetUpgrade` (`PLAYER_UPGRADE`).
+Elvenking's Command is two global auras (`Range = 999999`), the second adding the difference.
+
+Checked in demo games (evendim): the buttons per level; HP 1100 / 1220 (L3) / 2540 (L25); arrow before armour 160.6 at
+level 10 and 251.8 at level 25; the auras on a Mirkwood horde (both tiers); 5 and 10 summoned archers, gone after 40 s;
+Pinning Shot 436 on a troll (349 x its 125% against hero damage); Thorn kills a troll at level 10, its level-25 power hits
+2810 (1500 x 1.499 x 1.25); the Rampage bow during Rampage and from level 25.
+
 Pending for Thranduil:
 
-- Move Unseen and Wild Walk: replaced by the new powers or kept? (not decided)
-- The Arrowhead / Damage lines' damage blocks go in the **shared warhead**; extra arrows use their own warhead at 60%.
-- Clean-ups: the dead Elf Cloak and Rampage buttons, the automatic Deadeye, the unused melee switch
-  (`DualWeaponBehavior`), the stale tooltips.
-- Tests: Rampage against an orc horde (target switching), recorded close up; every power and item in a demo game;
-  then Deepak's check in game.
+- Deepak's check in game (pass 1); then pass 2: the Armory items (the Arrowhead / Damage blocks go in his warhead; extra
+  arrows use their own warhead at 60%), with the two *(check)* items.
+- Not checked: that a pinned target cannot move or attack (the test trolls stood still); the casts' look; the computer
+  player's use of the new powers.
+- Revive costs above level 10 fall back to level 1's (`RespawnEntry` stops at 10), for every High Elves hero.
 
 ## 5. Legolas (partly decided)
 
@@ -143,7 +159,8 @@ Not started: current sheet, role, levels, Armory page.
 |---|---|
 | `OpenBFMESplitShot = <Weapon> <near> <far>`: later arrows each to a different enemy unit, radius scaled by range; none if no other enemy | done, openbfme-godot 60be0432 |
 | `OpenBFMEMapOverrideReplacesModules`: 2.02 map.ini duplicate module tags replace instead of crashing (25 maps) | done, d053f758 |
-| `OpenBFMEFireWaitsForReload = <Weapon>`: the fire state waits for a named weapon's reload instead of bouncing 2 frames | **in progress** (code written, test being pinned) |
+| `OpenBFMEFireWaitsForReload = <Weapon>`: the fire state waits for a named weapon's reload instead of bouncing 2 frames | done (openbfme-godot 0aa9f156, 4ee91f2e); in game every 4th frame, not 3rd (open) |
+| `OpenBFMEChainHordeMembers = <unit>`: an attack on a horde's soldier moves on to the next soldier in reach | done, 4ee91f2e |
 | `RATE_OF_FIRE` attribute modifier | not ported (stub returns 1.0, S-320); **not** used for Rampage by decision |
 
 Demo tooling added (committed): `alive`, `level`, `select`, `press`, `bar`. Recording: VinDesk API `record_start` /

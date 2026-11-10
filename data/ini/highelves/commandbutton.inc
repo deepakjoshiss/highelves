@@ -53,7 +53,7 @@ CommandButton HECommand_SpecialAbilityThornofVengeance
 	CursorName              = Bombard
 	InvalidCursorName       = GenericInvalid
 	ButtonBorderType        = ACTION
-	DescriptLabel           = CONTROLBAR:ToolTipThornofVengeance
+	DescriptLabel           = CONTROLBAR:ToolTipHEThornofVengeance ; hero rework
 	DisableOnModelCondition = WEAPONSET_TOGGLE_1 USER_67 ;,;
 	InPalantir		= Yes
 	AutoAbility		= Yes
@@ -745,78 +745,249 @@ CommandButton Command_PurchaseUpgradeElvenForgedBladesTier4
 	LacksPrerequisiteLabel		= TOOLTIP:LackElvenForgedBlades
 End
 
-; ---- PROTOTYPE: Hero Armory (fortress pages)
-CommandButton HECommand_HEArmoryOpen
-  Command          = SPECIAL_POWER
-  SpecialPower     = HEArmoryOpen
-  TextLabel        = CONTROLBAR:HEArmory
-  ButtonImage      = HIThranduilCrown
-  ButtonBorderType = SYSTEM
-  DescriptLabel    = CONTROLBAR:ToolTipHEArmory
+; ---- Hero Armory items (hero rework): ButtonImage is a placeholder
+CommandButton HECommand_HEThranduilArrowheads1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEThranduilArrowheads1
+  TextLabel        = CONTROLBAR:HEThranduilArrowheads1
+  ButtonImage      = BEEregionForge_SilverthornArrows
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilArrowheads1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilArrowheads1Purchased
   Radial           = Yes
 End
-CommandButton HECommand_HEArmoryLegolas
-  Command          = SPECIAL_POWER
-  SpecialPower     = HEArmoryOpenLegolas
-  TextLabel        = CONTROLBAR:HEArmoryLegolas
-  ButtonImage      = HILegolas
-  ButtonBorderType = SYSTEM
-  DescriptLabel    = CONTROLBAR:ToolTipHEArmoryHero
+CommandButton HECommand_HEThranduilArmor1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEThranduilArmor1
+  TextLabel        = CONTROLBAR:HEThranduilArmor1
+  ButtonImage      = BEEregionForge_ElvenArmor
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilArmor1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilArmor1
   Radial           = Yes
 End
-CommandButton HECommand_HEArmoryThranduil
-  Command          = SPECIAL_POWER
-  SpecialPower     = HEArmoryOpenThranduil
-  TextLabel        = CONTROLBAR:HEArmoryThranduil
-  ButtonImage      = HIThranduil
-  ButtonBorderType = SYSTEM
-  DescriptLabel    = CONTROLBAR:ToolTipHEArmoryHero
+CommandButton HECommand_HEThranduilArmor2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilArmor2
+  NeededUpgrade    = Upgrade_HEThranduilArmor1
+  TextLabel        = CONTROLBAR:HEThranduilArmor2
+  ButtonImage      = BEEregionForge_ElvenArmor
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilArmor2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilArmor2
   Radial           = Yes
 End
-CommandButton HECommand_HEArmoryElrond
-  Command          = SPECIAL_POWER
-  SpecialPower     = HEArmoryOpenElrond
-  TextLabel        = CONTROLBAR:HEArmoryElrond
-  ButtonImage      = HIElrond
-  ButtonBorderType = SYSTEM
-  DescriptLabel    = CONTROLBAR:ToolTipHEArmoryHero
+CommandButton HECommand_HEThranduilArmor3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilArmor3
+  NeededUpgrade    = Upgrade_HEThranduilArmor2
+  TextLabel        = CONTROLBAR:HEThranduilArmor3
+  ButtonImage      = BEEregionForge_ElvenArmor
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilArmor3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilArmor3
   Radial           = Yes
 End
-CommandButton HECommand_HEArmoryBackHero
-  Command          = SPECIAL_POWER
-  SpecialPower     = HEArmoryBackHero
-  TextLabel        = CONTROLBAR:RadialBack
-  ButtonImage      = UCCommon_BackArrow
-  ButtonBorderType = SYSTEM
-  DescriptLabel    = CONTROLBAR:ToolTipCommandRadialBack
+CommandButton HECommand_HEThranduilLife1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEThranduilLife1
+  TextLabel        = CONTROLBAR:HEThranduilLife1
+  ButtonImage      = BEEregionForge_BannerCarrier
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilLife1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilLife1
   Radial           = Yes
 End
-CommandButton HECommand_HEArmoryBack
-  Command          = SPECIAL_POWER
-  SpecialPower     = HEArmoryBack
-  TextLabel        = CONTROLBAR:RadialBack
-  ButtonImage      = UCCommon_BackArrow
-  ButtonBorderType = SYSTEM
-  DescriptLabel    = CONTROLBAR:ToolTipCommandRadialBack
+CommandButton HECommand_HEThranduilLife2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilLife2
+  NeededUpgrade    = Upgrade_HEThranduilLife1
+  TextLabel        = CONTROLBAR:HEThranduilLife2
+  ButtonImage      = BEEregionForge_BannerCarrier
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilLife2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilLife2
   Radial           = Yes
 End
-CommandButton HECommand_SelectUpgradesElvenFortress
-  Command           = PUSH_VISIBLE_COMMAND_RANGE
-  TextLabel         = CONTROLBAR:SelectUpgradesElvenFortress
-  ButtonImage       = UCCommon_UpgradeStructureNew
-  ButtonBorderType  = SYSTEM
-  DescriptLabel     = CONTROLBAR:ToolTipCommandSelectUpgradesElvenFortress
-  Radial            = Yes
-  CommandRangeStart = 7
-  CommandRangeCount = 8
+CommandButton HECommand_HEThranduilLife3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilLife3
+  NeededUpgrade    = Upgrade_HEThranduilLife2
+  TextLabel        = CONTROLBAR:HEThranduilLife3
+  ButtonImage      = BEEregionForge_BannerCarrier
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilLife3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilLife3
+  Radial           = Yes
 End
-CommandButton HECommand_SelectRevivablesElvenFortress
-  Command           = PUSH_VISIBLE_COMMAND_RANGE
-  TextLabel         = CONTROLBAR:SelectRevivablesElvenFortress
-  ButtonImage       = UCCommon_GoodHeroes
-  ButtonBorderType  = SYSTEM
-  DescriptLabel     = CONTROLBAR:ToolTipCommandSelectRevivablesElvenFortress
-  Radial            = Yes
-  CommandRangeStart = 15
-  CommandRangeCount = 10
+CommandButton HECommand_HEThranduilMobility1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEThranduilMobility1
+  TextLabel        = CONTROLBAR:HEThranduilMobility1
+  ButtonImage      = HSThranduilMoveUnseen
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilMobility1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilMobility1
+  Radial           = Yes
+End
+CommandButton HECommand_HEThranduilMobility2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilMobility2
+  NeededUpgrade    = Upgrade_HEThranduilMobility1
+  TextLabel        = CONTROLBAR:HEThranduilMobility2
+  ButtonImage      = HSThranduilMoveUnseen
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilMobility2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilMobility2
+  Radial           = Yes
+End
+CommandButton HECommand_HEThranduilMobility3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilMobility3
+  NeededUpgrade    = Upgrade_HEThranduilMobility2
+  TextLabel        = CONTROLBAR:HEThranduilMobility3
+  ButtonImage      = HSThranduilMoveUnseen
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilMobility3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilMobility3
+  Radial           = Yes
+End
+CommandButton HECommand_HEThranduilBow1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEThranduilBow1
+  TextLabel        = CONTROLBAR:HEThranduilBow1
+  ButtonImage      = HSThranduilDeadeye
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilBow1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilBow1
+  Radial           = Yes
+End
+CommandButton HECommand_HEThranduilBow2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilBow2
+  NeededUpgrade    = Upgrade_HEThranduilBow1
+  TextLabel        = CONTROLBAR:HEThranduilBow2
+  ButtonImage      = HSThranduilDeadeye
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilBow2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilBow2
+  Radial           = Yes
+End
+CommandButton HECommand_HEThranduilBow3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilBow3
+  NeededUpgrade    = Upgrade_HEThranduilBow2
+  TextLabel        = CONTROLBAR:HEThranduilBow3
+  ButtonImage      = HSThranduilDeadeye
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilBow3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilBow3
+  Radial           = Yes
+End
+CommandButton HECommand_HEThranduilArrowheads2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilArrowheads2
+  NeededUpgrade    = Upgrade_HEThranduilArrowheads1
+  TextLabel        = CONTROLBAR:HEThranduilArrowheads2
+  ButtonImage      = BEEregionForge_SilverthornArrows
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilArrowheads2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilArrowheads2
+  Radial           = Yes
+End
+CommandButton HECommand_HEThranduilArrowheads3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilArrowheads3
+  NeededUpgrade    = Upgrade_HEThranduilArrowheads2
+  TextLabel        = CONTROLBAR:HEThranduilArrowheads3
+  ButtonImage      = BEEregionForge_SilverthornArrows
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilArrowheads3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilArrowheads3
+  Radial           = Yes
+End
+CommandButton HECommand_HEThranduilDamage1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEThranduilDamage1
+  TextLabel        = CONTROLBAR:HEThranduilDamage1
+  ButtonImage      = BEEregionForge_ForgedBlades
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilDamage1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilDamage1
+  Radial           = Yes
+End
+CommandButton HECommand_HEThranduilDamage2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilDamage2
+  NeededUpgrade    = Upgrade_HEThranduilDamage1
+  TextLabel        = CONTROLBAR:HEThranduilDamage2
+  ButtonImage      = BEEregionForge_ForgedBlades
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilDamage2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilDamage2
+  Radial           = Yes
+End
+CommandButton HECommand_HEThranduilDamage3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilDamage3
+  NeededUpgrade    = Upgrade_HEThranduilDamage2
+  TextLabel        = CONTROLBAR:HEThranduilDamage3
+  ButtonImage      = BEEregionForge_ForgedBlades
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilDamage3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilDamage3
+  Radial           = Yes
+End
+CommandButton HECommand_HEThranduilHunter1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEThranduilHunter1
+  TextLabel        = CONTROLBAR:HEThranduilHunter1
+  ButtonImage      = HSThranduilWildWalk
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilHunter1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilHunter1
+  Radial           = Yes
+End
+CommandButton HECommand_HEThranduilHunter2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilHunter2
+  NeededUpgrade    = Upgrade_HEThranduilHunter1
+  TextLabel        = CONTROLBAR:HEThranduilHunter2
+  ButtonImage      = HSThranduilWildWalk
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilHunter2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilHunter2
+  Radial           = Yes
+End
+CommandButton HECommand_HEThranduilHunter3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEThranduilHunter3
+  NeededUpgrade    = Upgrade_HEThranduilHunter2
+  TextLabel        = CONTROLBAR:HEThranduilHunter3
+  ButtonImage      = HSThranduilWildWalk
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEThranduilHunter3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilHunter3
+  Radial           = Yes
 End

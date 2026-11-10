@@ -5,11 +5,6 @@ SpecialPower SpecialAbilityRamBaan
   ReloadTime		= 1
 End
 
-SpecialPower SpecialAbilityThranduilRampage
-  Enum              = SPECIAL_GENERAL_TARGETLESS
-  ReloadTime		= 1
-End
-
 SpecialPower SpellBookLightOfTrees_Rays ;,; SpellBookCloudBreak_Healing
   Enum            	= SPECIAL_SPELL_BOOK_CLOUD_BREAK
   ReloadTime       	= 5000 
@@ -117,28 +112,47 @@ SpecialPower SpecialAbilityExplodingArrow
   ObjectFilter 		  = ALL ;-BASE_FOUNDATION -INERT -IGNORED_IN_GUI -WALK_ON_TOP_OF_WALL -BLOCKING_GATE -WALL_UPGRADE -UNATTACKABLE -MOVE_ONLY
 End
 
-; ---- PROTOTYPE: Hero Armory page switches (instant, no recharge); their modules are on HEElvenCitadel
-SpecialPower HEArmoryOpen
-  Enum = SPECIAL_GENERAL_TARGETLESS
-  ReloadTime = 0
+
+; ---- Thranduil (hero rework, openbfme/HERO-REWORK-PLAN.md). A power that grows by level is one power per tier: the command set shows the
+; current tier's button (CommandSetUpgrade at levels 10 / 15 / 20 / 25), and each later tier starts paused until its level.
+SpecialPower HESpecialAbilityThranduilRampage1
+	Enum		= SPECIAL_HERO_MODE
+	ReloadTime	= 60000
 End
-SpecialPower HEArmoryOpenLegolas
-  Enum = SPECIAL_GENERAL_TARGETLESS
-  ReloadTime = 0
+SpecialPower HESpecialAbilityThranduilRampage2
+	Enum		= SPECIAL_HERO_MODE
+	ReloadTime	= 60000
 End
-SpecialPower HEArmoryOpenThranduil
-  Enum = SPECIAL_GENERAL_TARGETLESS
-  ReloadTime = 0
+SpecialPower HESpecialAbilityThranduilRampage3
+	Enum		= SPECIAL_HERO_MODE
+	ReloadTime	= 60000
 End
-SpecialPower HEArmoryOpenElrond
-  Enum = SPECIAL_GENERAL_TARGETLESS
-  ReloadTime = 0
+SpecialPower HESpecialAbilityThranduilWoodlandRealm5
+	Enum		= SPECIAL_GENERAL_TARGETLESS
+	ReloadTime	= 90000
 End
-SpecialPower HEArmoryBackHero
-  Enum = SPECIAL_GENERAL_TARGETLESS
-  ReloadTime = 0
+SpecialPower HESpecialAbilityThranduilWoodlandRealm10
+	Enum		= SPECIAL_GENERAL_TARGETLESS
+	ReloadTime	= 90000
 End
-SpecialPower HEArmoryBack
-  Enum = SPECIAL_GENERAL_TARGETLESS
-  ReloadTime = 0
+SpecialPower HESpecialAbilityThranduilPinningShot
+	Enum			= SPECIAL_AT_VISIBLE_OBJECT
+	ReloadTime		= 60000
+	ObjectFilter	= ANY +HERO +MONSTER
+End
+SpecialPower HESpecialAbilityThornVengeance25
+	Enum			= SPECIAL_WOUND_ARROW
+	ReloadTime		= 60000
+	InitiateAtLocationSound = GenericSpell
+	ObjectFilter	= ALL -BASE_FOUNDATION -INERT -IGNORED_IN_GUI -WALK_ON_TOP_OF_WALL -BLOCKING_GATE -WALL_UPGRADE -UNATTACKABLE -MOVE_ONLY
+End
+SpecialPower HESpecialAbilityThranduilLeap ; Swift Feet III (Armory)
+	Enum					= SPECIAL_BALROG_WINGS
+	ReloadTime				= 20000
+	PublicTimer				= No
+	Flags					= NO_FORBIDDEN_OBJECTS LIMIT_DISTANCE
+	ForbiddenObjectFilter	= NONE +STRUCTURE
+	ForbiddenObjectRange	= 10
+	MaxCastRange			= 300
+	InitiateAtLocationSound	= CaH_Invulnerability
 End

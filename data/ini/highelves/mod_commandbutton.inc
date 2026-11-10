@@ -11,17 +11,6 @@ CommandButton Command_SpecialAbilityRamBaan
 	InPalantir			  	= Yes	
 End
 
-CommandButton Command_SpecialAbilityThranduilRampage
-  	Command                 = SPECIAL_POWER 
-  	SpecialPower            = SpecialAbilityThranduilRampage
-  	TextLabel               = CONTROLBAR:DeadEye
-  	ButtonImage             = HSThranduilDeadeye
-	Options                 = NONPRESSABLE
-  	ButtonBorderType        = ACTION 
-  	DescriptLabel           = CONTROLBAR:ToolTipDeadEye
-  	InPalantir		= Yes
-End
-
 CommandButton Command_ConstructSuperBattleTower
   Command          = DOZER_CONSTRUCT
   Object           = SuperBattleTower
@@ -267,4 +256,126 @@ CommandButton Command_SpecialAbilityExplodingArrow
 	InPalantir		= Yes
 	AutoAbility		= Yes
 	;UnitSpecificSound      = FaramirRangerVoiceWoundingArrow
+End
+
+; ---- Thranduil (hero rework, openbfme/HERO-REWORK-PLAN.md)
+CommandButton HECommand_ThranduilRampage1
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityThranduilRampage1
+	TextLabel				= CONTROLBAR:HEThranduilRampage
+	ButtonImage				= HSThranduilDeadeye
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilRampage1
+	InPalantir				= Yes
+	DisableOnModelCondition = USER_67
+End
+
+CommandButton HECommand_ThranduilRampage2
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityThranduilRampage2
+	TextLabel				= CONTROLBAR:HEThranduilRampage
+	ButtonImage				= HSThranduilDeadeye
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilRampage2
+	InPalantir				= Yes
+	DisableOnModelCondition = USER_67
+End
+
+CommandButton HECommand_ThranduilRampage3
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityThranduilRampage3
+	TextLabel				= CONTROLBAR:HEThranduilRampage
+	ButtonImage				= HSThranduilDeadeye
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilRampage3
+	InPalantir				= Yes
+	DisableOnModelCondition = USER_67
+End
+
+CommandButton HECommand_ThranduilRampagePassive
+	Command					= SPECIAL_POWER
+	SpecialPower			= SpecialAbilityFakeLeadership2
+	Options					= NONPRESSABLE
+	TextLabel				= CONTROLBAR:HEThranduilRampage
+	ButtonImage				= HSThranduilDeadeye
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilRampagePassive
+	InPalantir				= Yes
+End
+
+CommandButton HECommand_ThranduilWoodlandRealm5
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityThranduilWoodlandRealm5
+	TextLabel				= CONTROLBAR:HEThranduilWoodlandRealm
+	ButtonImage				= WOR_MirkwoodArcher
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilWoodlandRealm5
+	InPalantir				= Yes
+	DisableOnModelCondition = USER_67
+End
+
+CommandButton HECommand_ThranduilWoodlandRealm10
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityThranduilWoodlandRealm10
+	TextLabel				= CONTROLBAR:HEThranduilWoodlandRealm
+	ButtonImage				= WOR_MirkwoodArcher
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilWoodlandRealm10
+	InPalantir				= Yes
+	DisableOnModelCondition = USER_67
+End
+
+CommandButton HECommand_ThranduilPinningShot
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityThranduilPinningShot
+	Options					= NEED_TARGET_ENEMY_OBJECT
+	TextLabel				= CONTROLBAR:HEThranduilPinningShot
+	ButtonImage				= HSFaramirWoundingArrow
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilPinningShot
+	InPalantir				= Yes
+	WeaponSlot				= SECONDARY
+	CursorName				= Bombard
+	InvalidCursorName		= GenericInvalid
+	DisableOnModelCondition = WEAPONSET_TOGGLE_1 USER_67
+	AutoAbility				= Yes
+End
+
+CommandButton HECommand_ThranduilElvenkingsCommand
+	Command					= SPECIAL_POWER
+	SpecialPower			= SpecialAbilityFakeLeadership
+	Options					= NONPRESSABLE
+	TextLabel				= CONTROLBAR:HEThranduilElvenkingsCommand
+	ButtonImage				= HSThranduilWildWalk
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilElvenkingsCommand
+	InPalantir				= Yes
+End
+
+CommandButton HECommand_SpecialAbilityThornofVengeance25
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityThornVengeance25
+	Options					= NEED_TARGET_ENEMY_OBJECT
+	TextLabel				= CONTROLBAR:ThornofVengeance
+	ButtonImage				= HSThranduilThornofVengeance
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEThornofVengeance25
+	InPalantir				= Yes
+	WeaponSlot				= SECONDARY
+	CursorName				= Bombard
+	InvalidCursorName		= GenericInvalid
+	DisableOnModelCondition = WEAPONSET_TOGGLE_1 USER_67
+	AutoAbility				= Yes
+End
+CommandButton HECommand_ThranduilLeap
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityThranduilLeap
+	Options					= NEED_TARGET_POS CONTEXTMODE_COMMAND
+	TextLabel				= CONTROLBAR:HEThranduilLeap
+	ButtonImage				= KUBlinkIcon
+	ButtonBorderType		= ACTION
+	CursorName				= EvilAbilityObj
+	InvalidCursorName		= GenericInvalid
+	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilLeap
+	InPalantir				= Yes
 End

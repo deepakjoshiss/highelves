@@ -401,16 +401,73 @@ Weapon HEElvenThranduilBow
 	HitPassengerPercentage	= 20%
 	CanBeDodged				= No ;;.;; Yes ; Will check for a DodgePercent on the target to have a second chance at failing HitPercent
 
-	ProjectileNugget                    ; Default arrow
+	ProjectileNugget                    ; hero rework: one arrow, his own warhead (2.02's level 3 / 7 / 10 blocks are gone: items will add them)
 	    ProjectileTemplateName    = SilverFeatherArrow
-	    WarheadTemplateName       = ElvenThranduilSuperBowWarhead
-	    ForbiddenUpgradeNames     = Upgrade_New1
+	    WarheadTemplateName       = HEElvenThranduilBowWarhead
 	End
+	ProjectileNugget                    ; Bow of the Elvenking II: a second arrow at another enemy (OpenBFMESplitShot)
+	    ProjectileTemplateName    = SilverFeatherArrow
+	    WarheadTemplateName       = HEElvenThranduilBowWarhead ; Bow of the Elvenking: a full arrow with the items' damage
+	    RequiredUpgradeNames      = Upgrade_HEThranduilBow2
+	End
+	ProjectileNugget                    ; Bow of the Elvenking III: a third
+	    ProjectileTemplateName    = SilverFeatherArrow
+	    WarheadTemplateName       = HEElvenThranduilBowWarhead ; Bow of the Elvenking: a full arrow with the items' damage
+	    RequiredUpgradeNames      = Upgrade_HEThranduilBow3
+	End
+End
 
-	ProjectileNugget                    ; Default arrow
+; Thranduil's Rampage bow (hero rework): the bow firing every 3rd logic frame (named in openbfme.ini's OpenBFMEFireWaitsForReload), no draw,
+; the same warhead. Used while Rampage runs (WEAPONSET_HERO_MODE) and for good from level 25 (PLAYER_UPGRADE).
+Weapon HEThranduilRampageBow
+	AttackRange         = H_HERO_BOW_RANGE
+	
+	RangeBonusMinHeight      = 30 ;	= 10
+	RangeBonus		= 1
+	RangeBonusPerFoot	= #MULTIPLY( H_HERO_BOW_RANGE H_ARCHER_RANGE_MULTI )
+	LeechRangeWeapon	= Yes ;;,;; Added for 2.4
+	
+	WeaponSpeed         = 1200
+	MinWeaponSpeed      = 600
+	MaxWeaponSpeed      = 1600
+	FireFX              = FX_RohanArcherBowWeapon
+	ScaleWeaponSpeed    = Yes ; Used for lob weapons, scales speed proportional to range
+	HitPercentage       = 100     ;When this weapon is used it will hit exactly 50% of the time.
+	HitStoredTarget = Yes	; Always hits initial target.
+	;ScatterRadius       = 16.0     ;When this weapon misses it can randomly miss by as much as this distance.
+	
+	DelayBetweenShots   = 0
+	PreAttackDelay      = 0 ; no draw on a new target
+	PreAttackType       = PER_POSITION
+	FiringDuration      = 0
+
+	;OverrideVoiceAttackSound		= ElvenWarriorVoiceAttackBow
+	  
+	ClipSize			= 1
+	AutoReloadsClip		= Yes
+	AutoReloadWhenIdle	= 1	
+	ClipReloadTime		= Min:H_THRANDUIL_RAMPAGE_RELOAD Max:H_THRANDUIL_RAMPAGE_RELOAD
+	ContinuousFireOne	= 0
+	ContinuousFireCoast	= H_THRANDUIL_RAMPAGE_RELOAD
+	  
+	AntiAirborneVehicle	= Yes
+	AntiAirborneMonster	= Yes
+	HitPassengerPercentage	= 20%
+	CanBeDodged				= No ;;.;; Yes ; Will check for a DodgePercent on the target to have a second chance at failing HitPercent
+
+	ProjectileNugget
 	    ProjectileTemplateName    = GoodFactionArrowDeadeye
-	    WarheadTemplateName       = ElvenThranduilSuperBowWarhead
-	    RequiredUpgradeNames   	  = Upgrade_New1
+	    WarheadTemplateName       = HEElvenThranduilBowWarhead
+	End
+	ProjectileNugget                    ; Bow of the Elvenking II: a second arrow at another enemy (OpenBFMESplitShot)
+	    ProjectileTemplateName    = GoodFactionArrowDeadeye
+	    WarheadTemplateName       = HEElvenThranduilBowWarhead ; Bow of the Elvenking: a full arrow with the items' damage
+	    RequiredUpgradeNames      = Upgrade_HEThranduilBow2
+	End
+	ProjectileNugget                    ; Bow of the Elvenking III: a third
+	    ProjectileTemplateName    = GoodFactionArrowDeadeye
+	    WarheadTemplateName       = HEElvenThranduilBowWarhead ; Bow of the Elvenking: a full arrow with the items' damage
+	    RequiredUpgradeNames      = Upgrade_HEThranduilBow3
 	End
 End
 
@@ -419,23 +476,95 @@ Weapon HEElvenThranduilBowWarhead
   RadiusDamageAffects = ENEMIES NEUTRALS ALLIES NOT_SIMILAR
   HitStoredTarget = Yes	; Always hits initial target.
   DamageNugget                        ; A basic Nugget that just does damage
-    Damage        = THRANDUIL_BOW_DAMAGE
+    Damage        = H_THRANDUIL_BOW_DAMAGE ; takes the level's flat bonus (DAMAGE_ADD)
     	;DamageScalar  		= 25000% NONE +MordorMumakil
     Radius        = 0.0	; HitStoredTarget means we hurt the person we launched at.  And nobody else.  So a miss hurts nobody.
     DelayTime     = 0
     DamageType    = HERO_RANGED
     DamageFXType  = GOOD_ARROW_PIERCE
     DeathType     = NORMAL
-		ForbiddenUpgradeNames	= Upgrade_New1
+  End
+  ; ---- Armory items (hero rework); the Rampage bow shares this warhead
+  DamageNugget                        ; Arrowheads I: monsters and machines
+    Damage        = H_THRANDUIL_ARROWHEADS1_DAMAGE
+    AcceptDamageAdd = No
+    Radius        = 0.0
+    DelayTime     = 0
+    DamageType    = HERO
+    DamageFXType  = GOOD_ARROW_PIERCE
+    DeathType     = NORMAL
+    SpecialObjectFilter  = ANY +MONSTER +MACHINE
+    RequiredUpgradeNames = Upgrade_HEThranduilArrowheads1
+  End
+  DamageNugget                        ; Arrowheads I: heroes
+    Damage        = 50
+    AcceptDamageAdd = No
+    Radius        = 0.0
+    DelayTime     = 0
+    DamageType    = HERO
+    DamageFXType  = GOOD_ARROW_PIERCE
+    DeathType     = NORMAL
+    SpecialObjectFilter  = ANY +HERO
+    RequiredUpgradeNames = Upgrade_HEThranduilArrowheads1
+  End
+  DamageNugget                        ; Arrowheads II: monsters and heroes
+    Damage        = 50
+    AcceptDamageAdd = No
+    Radius        = 0.0
+    DelayTime     = 0
+    DamageType    = HERO
+    DamageFXType  = GOOD_ARROW_PIERCE
+    DeathType     = NORMAL
+    SpecialObjectFilter  = ANY +MONSTER +HERO
+    RequiredUpgradeNames = Upgrade_HEThranduilArrowheads2
+  End
+  DamageNugget                        ; Arrowheads III: monsters, machines and heroes
+    Damage        = 60
+    AcceptDamageAdd = No
+    Radius        = 0.0
+    DelayTime     = 0
+    DamageType    = HERO
+    DamageFXType  = GOOD_ARROW_PIERCE
+    DeathType     = NORMAL
+    SpecialObjectFilter  = ANY +MONSTER +MACHINE +HERO
+    RequiredUpgradeNames = Upgrade_HEThranduilArrowheads3
+  End
+  DamageNugget                        ; Wrath of Mirkwood I: magic
+    Damage        = 40
+    AcceptDamageAdd = No
+    Radius        = 0.0
+    DelayTime     = 0
+    DamageType    = MAGIC
+    DamageFXType  = MAGIC
+    DeathType     = NORMAL
+    RequiredUpgradeNames = Upgrade_HEThranduilDamage1
+  End
+  DamageNugget                        ; Wrath of Mirkwood II: siege
+    Damage        = 40
+    AcceptDamageAdd = No
+    Radius        = 0.0
+    DelayTime     = 0
+    DamageType    = SIEGE
+    DamageFXType  = GOOD_ARROW_PIERCE
+    DeathType     = NORMAL
+    RequiredUpgradeNames = Upgrade_HEThranduilDamage2
+  End
+  DamageNugget                        ; Wrath of Mirkwood III: hero damage
+    Damage        = 80
+    AcceptDamageAdd = No
+    Radius        = 0.0
+    DamageType    = HERO
+    DamageFXType  = GOOD_ARROW_PIERCE
+    RequiredUpgradeNames = Upgrade_HEThranduilDamage3
   End
 End
 
 Weapon HEThranduilThornofVengeance
-	AttackRange				= FARAMIR_WOUNDING_ARROW_RANGE
+	AttackRange				= H_HERO_BOW_RANGE ; hero rework: his bow's range ;,; FARAMIR_WOUNDING_ARROW_RANGE
 	LeechRangeWeapon			= Yes
-	WeaponSpeed				= 321				 ; dist/sec 
-	MinWeaponSpeed			= 241
-	MaxWeaponSpeed			= 481			; dist/sec Upper limit on scaling, when attacking past nominal "max" range
+	WeaponSpeed				= H_FAST_WEAPON_SPEED ; hero rework ;,; 321
+	MinWeaponSpeed			= H_FAST_WEAPON_SPEED_MIN ;,; 241
+	MaxWeaponSpeed			= H_FAST_WEAPON_SPEED_MAX ;,; 481
 	FireFX					= FX_ThranduilThornOfVengeance	;FX_FaramirWoundingArrow
 	ScaleWeaponSpeed		= Yes ; Used for lob weapons, scales speed proportional to range
 	HitStoredTarget			= Yes	; Always hits initial target.
@@ -466,7 +595,8 @@ Weapon HEThranduilThornofVengeanceWarhead
   HitStoredTarget		 = Yes	; Always hits initial target.
   HitPercentage		     = 100	
   DamageNugget                        ; A basic Nugget that just does damage
-    Damage        = THRANDUIL_THORN_DAMAGE
+    Damage        = H_THRANDUIL_THORN_DAMAGE
+    AcceptDamageAdd = No ; powers grow with the level's percentage only
 	DamageScalar  = 80% NONE +MordorBalrog +AngmarShadeWolf +SummonedDragon +SummonedDragonJH1 ;,;
     Radius        = 0.0	; HitStoredTarget means we hurt the person we launched at.  And nobody else.  So a miss hurts nobody.
     DelayTime     = 0
@@ -476,7 +606,8 @@ Weapon HEThranduilThornofVengeanceWarhead
   End
  
   DamageNugget                       
-	Damage        		= THRANDUIL_THORN_FIRE_DAMAGE
+	Damage        		= H_THRANDUIL_THORN_MAGIC_DAMAGE
+	AcceptDamageAdd		= No
 	DamageScalar  		= 80% NONE +MordorBalrog +AngmarShadeWolf +SummonedDragon +SummonedDragonJH1 ;,;				
 	DamageType    		= MAGIC
 	DamageFXType  		= MAGIC
@@ -486,7 +617,8 @@ Weapon HEThranduilThornofVengeanceWarhead
   End
 
   DamageNugget                      
-	Damage        		= THRANDUIL_THORN_MAGIC_DAMAGE
+	Damage        		= H_THRANDUIL_THORN_MAGIC_DAMAGE
+	AcceptDamageAdd		= No
 	DamageScalar  		= 80% NONE +MordorBalrog +AngmarShadeWolf +SummonedDragon +SummonedDragonJH1 ;,;		
 	DamageType    		= MAGIC
 	DamageFXType  		= ELECTRIC
@@ -1640,5 +1772,93 @@ Weapon MirkwoodTrapWeapon
 		ParalyzeFX							= FX_LorienStunEffect
 		FreezeAnimation 				= Yes
 		AffectHordeMembers 			= Yes		;This will propagate the effect down to the horde members
+	End
+End
+
+; Thranduil's Pinning Shot (hero rework, level 5): an arrow that pins a hero or monster (it cannot move or attack) and hurts it
+Weapon HEThranduilPinningShot
+	AttackRange				= H_HERO_BOW_RANGE
+	LeechRangeWeapon		= Yes
+	WeaponSpeed				= H_FAST_WEAPON_SPEED
+	MinWeaponSpeed			= H_FAST_WEAPON_SPEED_MIN
+	MaxWeaponSpeed			= H_FAST_WEAPON_SPEED_MAX
+	FireFX					= FX_RohanArcherBowWeapon
+	ScaleWeaponSpeed		= Yes
+	HitStoredTarget			= Yes
+	HitPercentage			= 100
+	DelayBetweenShots		= 5000
+	PreAttackDelay			= 1
+	PreAttackType			= PER_POSITION
+	FiringDuration			= 1
+	ClipSize				= 1
+	AutoReloadsClip			= Yes
+	AutoReloadWhenIdle		= 1
+	ClipReloadTime			= Min:1500 Max:1500
+	AntiAirborneVehicle		= Yes
+	AntiAirborneMonster		= Yes
+	ProjectileNugget
+		ProjectileTemplateName	= HEThranduilPinningArrow ; the Deadeye arrow with red waves
+		WarheadTemplateName		= HEThranduilPinningShotWarhead
+	End
+End
+
+Weapon HEThranduilPinningShotWarhead
+	ProjectileCollidesWith	= ENEMIES NEUTRAL STRUCTURES WALLS
+	RadiusDamageAffects		= ENEMIES NEUTRALS NOT_SIMILAR
+	HitStoredTarget			= Yes
+	HitPercentage			= 100
+	DamageNugget
+		Damage				= H_THRANDUIL_PINNING_DAMAGE
+		AcceptDamageAdd		= No ; powers grow with the level's percentage only
+		Radius				= 0.0
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+	End
+	ParalyzeNugget
+		Radius				= 0.0
+		Duration			= H_THRANDUIL_PINNING_DURATION
+		SpecialObjectFilter	= ANY +HERO +MONSTER
+		ParalyzeFX			= FX_PoisonedStunEffect
+	End
+	ParalyzeNugget						; Hunter's Snare: 5 s
+		Radius				= 0.0
+		Duration			= 5000
+		SpecialObjectFilter	= ANY +HERO +MONSTER
+		RequiredUpgradeNames = Upgrade_HEThranduilHunter2
+	End
+	ParalyzeNugget						; Hunter III: the pin takes the soldiers, heroes and monsters within 50 of the target
+		Radius				= 50.0
+		Duration			= 5000
+		SpecialObjectFilter	= ANY +INFANTRY +CAVALRY +HERO +MONSTER
+		ParalyzeFX			= FX_PoisonedStunEffect
+		RequiredUpgradeNames = Upgrade_HEThranduilHunter3
+	End
+	DamageNugget						; Hunter's Snare: +200 hero damage on the target (Hunter's Net spreads it instead)
+		Damage				= 200
+		AcceptDamageAdd		= No
+		Radius				= 0.0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		RequiredUpgradeNames = Upgrade_HEThranduilHunter2
+		ForbiddenUpgradeNames = Upgrade_HEThranduilHunter3
+	End
+	DamageNugget						; Hunter's Net: the +200 on the soldiers, heroes and monsters within 50 of the target, the target too
+		Damage				= 200
+		AcceptDamageAdd		= No
+		Radius				= 50.0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		SpecialObjectFilter	= ANY +INFANTRY +CAVALRY +HERO +MONSTER
+		RequiredUpgradeNames = Upgrade_HEThranduilHunter3
+	End
+	MetaImpactNugget					; Hunter's Net: the soldiers it kills are thrown back
+		SpecialObjectFilter	= NONE +INFANTRY
+		ShockWaveAmount		= 30.0
+		ShockWaveRadius		= 50.0
+		ShockWaveTaperOff	= 1.0
+		OnlyWhenJustDied	= Yes
+		RequiredUpgradeNames = Upgrade_HEThranduilHunter3
 	End
 End
