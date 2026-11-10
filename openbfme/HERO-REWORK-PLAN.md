@@ -80,7 +80,14 @@ draw. Today's level-3 extra hit, level-7 splash + knockback and level-10 magic s
   he takes ~1 s to shoot the next soldier. Not the bow, not the draw (0 tested), not the target-check rate
   (`MoodAttackCheckRate` 200 tested), and not wasted arrows (traced: every shot hits a different orc at full health).
   Each kill costs a fixed retarget (attack ends, next soldier, approach / aim, fire): 5 frames between shots with the
-  normal bow, 6 with the Rampage bow. The retargeting step itself is not traced yet. The same ~1 s per volley shows with Legolas's
+  normal bow, 6 with the Rampage bow.
+- **Fix in progress (engine, uncommitted):** `OpenBFMEChainHordeMembers = <unit>` keeps the attack on the horde and
+  moves to the next member when one dies (no idle, no new attack), in any stance; and a `OpenBFMEFireWaitsForReload`
+  weapon fires on entering the fire step when ready. Synthetic test: a kill every 3 frames on a horde of 6 (retail:
+  1 kill then idle). In game (Rampage, orc horde): **4 frames per kill, 1.25 kills/s** (was 1/s); one frame per kill
+  is unexplained (not the wind-up, not arrow flight: double arrow speed changed nothing). Performance: a 100-archer vs
+  30-horde battle ran as fast with the rows as without (within noise). HE Thranduil (and later Legolas) must be named
+  in the chain row. The same ~1 s per volley shows with Legolas's
   split shot (3 kills per second with 3 arrows). For now Rampage is a single-target burst (heroes, monsters, buildings).
 - The cast plays his 1.6 s Deadeye animation, without today's self-freeze (`NoAttackBonus`).
 - Tiers: one power per tier, his button swapped by level (the Armory's command-set mechanism).
