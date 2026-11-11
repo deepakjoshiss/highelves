@@ -258,7 +258,8 @@ by Vilya's Grace; his arrow 350 off a troll with Wrath III (about 60 without); L
 (Herald I) and burning an Uruk battalion within 150 for about 200 each (Light of Elbereth); the thorns 52 off a troll per hit;
 Herald II: 12 s on him, the shelter on Legolas, the 12 s debuff on a troll; the River Answers: two waves on a Mordor citadel 15
 frames apart (-988, -832); Stones III healing the target orc pit and one 80 away from 500 to full with the 30 s Stones' Ward on
-both. Not measured: the spellbook recharge, Stones' Ward on enemy buildings, a flood that did not reach two trolls 260 away (a line
+both; Wrath I at level 15 adds to each arrow 86 on a Mordor catapult or Gondor trebuchet, 103 on an orc pit, 77 on a Mordor citadel and 301 on
+a battering ram (dead in 9 arrows, about 10 s; kept as is, Deepak 2026-11-11). Not measured: the spellbook recharge, Stones' Ward on enemy buildings, a flood that did not reach two trolls 260 away (a line
 of soldiers was hit out to 250; not traced).
 
 ## 7. Engine work (OpenBFME, dj-dev)
@@ -271,7 +272,7 @@ of soldiers was hit out to 250; not traced).
 | `OpenBFMEChainHordeMembers = <unit>`: an attack on a horde's soldier moves on to the next soldier in reach | done, 4ee91f2e |
 | `RATE_OF_FIRE` attribute modifier | not ported (stub returns 1.0, S-320); **not** used for Rampage by decision |
 
-Demo tooling added (committed): `alive`, `level`, `select`, `press`, `bar`. Recording: VinDesk API `record_start` /
+Demo tooling added (committed): `alive`, `level`, `select`, `press`, `bar`, `hurt`. Recording: VinDesk API `record_start` /
 `record_stop` (`~/work/apps/deskpad/API.md`).
 
 ## 8. Discoveries that shape the design
