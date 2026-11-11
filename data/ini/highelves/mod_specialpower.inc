@@ -211,9 +211,9 @@ SpecialPower HESpecialAbilityElrondWill
 	ReloadTime		= 90000
 	ObjectFilter	= ANY +STRUCTURE
 End
-SpecialPower HESpecialAbilityElrondFlood
-	Enum			= SPECIAL_AT_VISIBLE_OBJECT
-	ReloadTime		= 120000
-	ObjectFilter	= ALL -BASE_FOUNDATION -INERT -IGNORED_IN_GUI -WALK_ON_TOP_OF_WALL -BLOCKING_GATE -WALL_UPGRADE -UNATTACKABLE -MOVE_ONLY -STRUCTURE
-	InitiateSound	= ArwenFloodStart
+SpecialPower HESpecialAbilityElrondFlood ; aimed at the ground (a weapon-fire power, as Arwen's personal flood)
+	Enum				= SPECIAL_ARROW_STORM ; Arrow Wind's type, tested with a ground click (a spot must lie inside the map less RadiusCursorRadius)
+	ReloadTime			= 120000
+	RadiusCursorRadius	= 100 ; the wall's width: horses 120 apart side to side, each hitting within 40
+	InitiateSound		= ArwenFloodStart
 End

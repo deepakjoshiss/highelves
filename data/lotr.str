@@ -65387,7 +65387,7 @@ CONTROLBAR:HEElrondFlood
 END
 
 CONTROLBAR:ToolTipHEElrondFlood
-"Flood of the Bruinen \n Five water horses charge 300 ahead of Elrond: heavy damage, the soldiers they kill thrown back, survivors slowed 30% for 5 seconds. \n Recharge: 120 s \n Left click icon then left click on target"
+"Flood of the Bruinen \n Five water horses charge 400 toward the target spot: heavy damage, the soldiers they kill thrown back, survivors slowed 30% for 5 seconds. \n Recharge: 120 s \n Left click icon then left click on the ground"
 END
 
 UPGRADE:HEElrondArmor1

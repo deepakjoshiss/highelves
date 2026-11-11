@@ -535,12 +535,11 @@ End
 CommandButton HECommand_ElrondFlood
 	Command					= SPECIAL_POWER
 	SpecialPower			= HESpecialAbilityElrondFlood
-	Options					= NEED_TARGET_ENEMY_OBJECT
+	Options					= NEED_TARGET_POS CONTEXTMODE_COMMAND ; as Arwen's flood and Arrow Wind
 	TextLabel				= CONTROLBAR:HEElrondFlood
 	ButtonImage				= SBGood_Flood
 	ButtonBorderType		= ACTION
 	DescriptLabel			= CONTROLBAR:ToolTipHEElrondFlood
 	InPalantir				= Yes
-	CursorName				= Bombard
-	InvalidCursorName		= GenericInvalid
+	RadiusCursorType		= FloodRadiusCursor ; the spellbook / Arwen flood ring, the power's 100
 End
