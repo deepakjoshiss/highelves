@@ -205,9 +205,47 @@ first volley hits four Uruks (276 each). Piercing Arrow at level 9 through an Ur
 701 without items, 2704 with Heartseeker III (7 points reach it); a Mordor orc pit (1500) dies to one arrow; the slow is on
 the battalion and the orc pit, not on him. Not measured: the battalion's walking speed under the slow, Heartseeker II alone.
 
-## 6. Elrond
+**Later (Deepak 2026-11-11): Piercing Arrow as one flying arrow.** The power's weapon creates an "arrow flood" object (a
+`WeaponOCLNugget`, as Arwen's flood) facing the target; its `FloodUpdate` moves one member, the arrow model, out to 500 at a
+fixed distance per logic frame (MemberSpeed; the render interpolates between frames). Each frame the arrow fires a short
+`LinearTarget` strip along its own facing covering the step it moved (radius 15, 120 a frame at 600/s), so the line stays thin
+with no gaps and each enemy is hit once; the throw-back, the Heartseeker slow and the building damage ride that weapon. To check
+first: flood members are put on the ground height every frame (an arrow may skim the ground unless its model can be raised),
+`FloodUpdate` has not been seen running in our engine, nor a power weapon's OCL. One prototype with Elrond's Flood of the
+Bruinen (the same mechanism with horses).
 
-Not started: current sheet, role, levels, Armory page.
+## 6. Elrond (pass 1 built 2026-11-11)
+
+A tanky support hero with an area clear at level 15 (design set by Deepak 2026-11-11). Everything is HEElvenElrond's own (2.02's
+Elven Grace, Farsight, Restoration, Tornado and leadership removed). Before: 2500 cost, 3500 HP, levels 1-10.
+
+| | Built |
+|---|---|
+| Base | 900 cost, 1500 HP (+80 a level: the shared 60 and his own 20, `HEElrondLevelHPN`; 3420 at 25), his own bow (`HEElvenElrondBow`, 60 with the shared growth); taken off the old level 11-17 hero bonus (`H_HERO_FILTER_DAMAGE_BUFF`); his targeted powers start 450 and reach 475 (`OpenBFMEAbilityRangeFollowsBonus`) |
+| Level 1 / 5 / 10 | **Vilya's Calm** (passive LEADERSHIP, replaces): infantry and cavalry within 200 (`H_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER`) +10 / +20 / +30% armor and damage; the tiers last 3.1 / 3.2 / 3.3 s, so a higher tier replaces a lower one and other heroes' 3 s leadership |
+| Level 3 | **Light of the Eldar**: allies within 150 (him too) healed 50 at once and each second for 5 s (a healing `DOTNugget`: a healing `DamageNugget` heals at once whatever its DelayTime), 60 s |
+| Level 5 | **Bulwark of Imladris**: 8 s, he takes 60% less (ARMOR 60%, the 75% cap applies with Mail), enemies within 150 deal 25% less, 60 s |
+| Level 9 | **Will of Imladris** (a building): friendly invulnerable 5 s and healed 100 at once and each second for 4 s; enemy 100 unresistable at once and each second for 4 s and paralysed 5 s (a garrison would be thrown out); 90 s |
+| Level 15 | **Flood of the Bruinen**: five of Arwen's water horses side by side (30 apart) ride 300 along his facing in about 1.4 s (42 a logic frame; `HEElrondFlood`, a `WeaponOCLNugget` with `DamageDealtAtSelfPosition`); each hits within 40 every logic frame: 40 magic and 40 siege, and 100 siege more to structures, all at 40% on a COMMANDCENTER (Deepak 2026-11-11); kills thrown back, survivors slowed 30% for 5 s; 120 s |
+| Level 16 | **Wisdom of Ages**: his powers recharge 15% faster |
+| Level 20 | **Breath of Vilya**: his arrows slow 15% for 2 s |
+| Level 25 | **Lord of Imladris**: allied heroes within 200 get Vilya's Calm III |
+
+Measured in demo games (evendim, level cheat; `hurt` damages a spawned object): HP 3420 at 25; Vilya's Calm I / II / III on a
+Mirkwood archer at levels 1 / 5 / 10, and III on Legolas at Elrond's 25; Light of the Eldar at 25 healed a troll and Elrond 75 a
+hit for 6 hits (+450: 300 times the power growth); Bulwark's 60% on him and its debuff on an enemy troll; Will of Imladris at level
+11: a friendly orc pit +592 over 4 s with the ward, an enemy one -611 over 4 s and paralysed exactly those 5 s; the Flood at 15 kills a whole
+Uruk battalion 200 ahead in one pass (each soldier in the path takes 4 to 5 hits) and slows it, none of one 380 ahead; it takes 832
+of a Mordor citadel's 7500 and still destroys an orc pit (1500) within three frames. Not measured: the casts' look, production
+stopping under the paralysis, the AI's and auto-cast's use of the powers.
+
+**Pass 2 (Armory, agreed 2026-11-11):** Armor of the Last Alliance, Life of Imladris, Vilya (radius 300; heroes recharge 20% faster,
+SPELL; spellbook powers recharge 20% faster through the spellbook object, as 2.02's cooldown upgrade), Herald of Gil-galad (Light
+within 250; Bulwark 12 s and allies within 150 take 30% less; the River Answers: a second flood wave 3 s later), Wisdom of the Eldar
+(Vilya's Grace aura: heroes 5 HP/s, infantry 3; Vilya's Thorns 1000: 40 within 50 when he is hit, once a second; Light of Elbereth:
+200 magic to enemies within 150), Stones of Imladris (750; Stones' Ward: buildings within 300, walls and gates included, allies +30% /
+enemies -30% armor for 30 s, STRUCTURE; Heart of Imladris 2500: 1000 to every building within 100), Wrath of the Noldor (400: +40 siege,
+1000: +80 hero, both in `H_ARCHER_RADIUS` with the flat bonus; 2500: +30% to all his damage).
 
 ## 7. Engine work (OpenBFME, dj-dev)
 

@@ -17,7 +17,7 @@
 #define H_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER	ANY +INFANTRY +CAVALRY -MONSTER -SIEGEENGINE -MACHINE -IMMOBILE -DOZER -HERO -STRUCTURE -BASE_FOUNDATION -HORDE -SHIP -DwarvenBattleWagon -RohanOathbreaker -MordorRamCrew +MordorWorker -IsengardRamCrew -IsengardBeserker -DwarvenZerker -DwarvenZerkerHorde -GondorKnightsofDol -GondorKnightsofDolHorde -WildBabyDrake -WildBabyDrakeHorde -MordorBlackRider -MordorBlackRiderHorde -IsengardFanatic -IsengardBerserkerHorde -IsengardExplosiveMine -IsengardDeployedExplosiveMine -WildSpiderling_Slaved -AngmarDireWolf_Slaved -IsengardWarg_Slaved ;;,;; removed WargSentries, Fortress Spiderlings/Wolves, SIEGEENGINE and MONSTER (3.0.1 - experimental); added Mines; Added -SHIP for v3.0.3 ship balance
 #define H_GENERIC_SPEED_BUFF_OBJECT_FILTER	    ANY +INFANTRY +ARCHER +CAVALRY +HERO +MACHINE +HORDE -MONSTER -STRUCTURE -BASE_FOUNDATION
 #define H_ALL_ELVEN_ARCHER_AURA_FILTER          NONE +HEElvenMirkwoodArcher +HEElvenMirkwoodArcherHorde +HEElvenMirkwoodArcherBanner +GaladhrimWarrior +GaladhrimWarriorHorde +NoldorArcher +NoldorArcherHorde
-#define H_HERO_FILTER_DAMAGE_BUFF               HEElvenElrond HEElvenHaldir HEElvenGlorfindel
+#define H_HERO_FILTER_DAMAGE_BUFF               HEElvenHaldir HEElvenGlorfindel ; HEElvenElrond has his own levels 2-25 (hero rework)
 #define H_HERO_FILTER_RANGE_BUFF                MirkwoodTauriel ; HEElvenThranduil has his own levels 2-25 (hero rework)
 #define H_ELVEN_ARCHER_DAMAGE_FILTER            HEElvenMirkwoodArcher HEElvenMirkwoodArcherHorde HEElvenMirkwoodArcherBanner GaladhrimWarrior GaladhrimWarriorHorde RivendellKnights RivendellKnightsHorde
 #define	H_HERO_BOW_RANGE				        	420
@@ -232,6 +232,18 @@
 #define H_THRANDUIL_HUNTER2_COST	500
 #define H_THRANDUIL_HUNTER3_COST	1000
 #define H_THRANDUIL_ITEM_TIME	10 ; seconds (placeholder)
+
+; ---- Elrond (hero rework, openbfme/HERO-REWORK-PLAN.md): a tanky support hero; HEElvenElrond's own values
+#define H_RW_ELROND_BUILDCOST	900
+#define H_RW_ELROND_HEALTH	1500 ; +80 a level: the shared 60 (HEReworkHeroLevelN) and his own 20 (HEElrondLevelHPN)
+#define H_RW_ELROND_BOW_DAMAGE	60 ; takes the level's flat bonus (DAMAGE_ADD)
+#define H_RW_ELROND_LIGHT_TICK	50 ; Light of the Eldar: at once and each second for 5 s, 6 x 50 = 300
+#define H_RW_ELROND_WILL_TICK	100 ; Will of Imladris: at once and each second for 4 s, 500 (heal or damage)
+#define H_RW_ELROND_FLOOD_MAGIC	40 ; a flood horse's hits each logic frame within 40 (Deepak 2026-11-11)
+#define H_RW_ELROND_FLOOD_SIEGE	40
+#define H_RW_ELROND_FLOOD_STRUCTURE	100 ; structures only, on top (Deepak 2026-11-11): an orc pit (1500) survives one flood
+#define H_RW_ELROND_FLOOD_FORTRESS	40% ; the flood's hits on a COMMANDCENTER (under every horse at once): about 1000 a flood
+#define H_RW_ELROND_FLOOD_SPEED	42 ; per logic frame: 300 in about 7 frames (1.4 s; 60 before: 30% slower)
 
 ; Reworked heroes' targeted powers (Legolas, Thranduil; Deepak 2026-11-11): they start from here, times the hero's range bonus (openbfme.ini's
 ; OpenBFMEAbilityRangeFollowsBonus), and their weapons reach the second, never short of the start (a shot beyond it is spent with no arrow)

@@ -2441,3 +2441,213 @@ Weapon HEThranduilPinningShotWarhead
 		RequiredUpgradeNames = Upgrade_HEThranduilHunter3
 	End
 End
+
+; ---- Elrond (hero rework, pass 1)
+Weapon HEElvenElrondBow ; his own bow: 2.02's ElvenElrondBow with his own warhead
+	AttackRange		= H_HERO_BOW_RANGE
+	RangeBonusMinHeight      = 10
+	RangeBonus		= 1
+	RangeBonusPerFoot	= #MULTIPLY( H_HERO_BOW_RANGE H_ARCHER_RANGE_MULTI )
+	LeechRangeWeapon	= Yes
+	WeaponSpeed			= H_FAST_WEAPON_SPEED
+	MinWeaponSpeed		= H_FAST_WEAPON_SPEED_MIN
+	MaxWeaponSpeed		= H_FAST_WEAPON_SPEED_MAX
+	FireFX				= FX_RohanArcherBowWeapon
+	ScaleWeaponSpeed	= Yes
+	HitPercentage		= 100
+	ScatterRadius		= 5.0
+	AcceptableAimDelta	= 20
+	DelayBetweenShots	= H_LEGOLAS_DELAYBETWEENSHOTS
+	PreAttackDelay		= H_LEGOLAS_PREATTACKDELAY
+	PreAttackType		= PER_POSITION
+	FiringDuration		= H_LEGOLAS_FIRINGDURATION
+	ClipSize			= 1
+	AutoReloadsClip		= Yes
+	AutoReloadWhenIdle	= 1
+	ClipReloadTime		= Min:H_LEGOLAS_RELOADTIME_MIN Max:H_LEGOLAS_RELOADTIME_MAX
+	ContinuousFireOne	= 0
+	ContinuousFireCoast	= H_LEGOLAS_RELOADTIME_MAX
+	AntiAirborneVehicle	= Yes
+	AntiAirborneMonster	= Yes
+	CanFireWhileMoving	= Yes
+	ProjectileNugget
+		ProjectileTemplateName	= SilverFeatherArrow
+		WarheadTemplateName		= HEElvenElrondBowWarhead
+	End
+End
+
+Weapon HEElvenElrondBowWarhead
+	ProjectileCollidesWith	= ENEMIES NEUTRAL STRUCTURES WALLS
+	RadiusDamageAffects		= ENEMIES NEUTRALS NOT_SIMILAR
+	HitStoredTarget			= Yes
+	DamageNugget
+		Damage				= H_RW_ELROND_BOW_DAMAGE
+		Radius				= 0.0
+		DelayTime			= 0
+		DamageType			= HERO_RANGED
+		DamageFXType		= EARTH2
+		DeathType			= NORMAL
+	End
+	AttributeModifierNugget					; Breath of Vilya (level 20): the arrow slows 15% for 2 s
+		AttributeModifier		= HEElrondBreathSlow
+		Radius					= 0.0
+		AffectHordeMembers		= Yes
+		RequiredUpgradeNames	= Upgrade_ObjectLevel20
+	End
+End
+
+; Light of the Eldar (level 3): allies within 150 (Elrond too) healed 300 over 5 s, fired at his own position
+Weapon HEElrondLightOfTheEldar
+	AttackRange				= 10
+	RadiusDamageAffects		= ALLIES SELF
+	DelayBetweenShots		= 0
+	PreAttackDelay			= 0
+	FiringDuration			= 0
+	DOTNugget								; a heal at once and one each second for 5 s: 6 x 50 = 300 (a healing DamageNugget heals at once, its DelayTime unused)
+		Damage				= H_RW_ELROND_LIGHT_TICK
+		AcceptDamageAdd		= No
+		Radius				= 150.0
+		DelayTime			= 0
+		DamageType			= HEALING
+		DamageFXType		= MAGIC
+		DeathType			= NORMAL
+		DamageInterval		= 1000
+		DamageDuration		= 5000
+	End
+End
+
+; Bulwark of Imladris (level 5), fired at his own position: he takes 60% less for 8 s, enemies within 150 deal 25% less
+Weapon HEElrondBulwark
+	AttackRange				= 10
+	RadiusDamageAffects		= SELF ALLIES ENEMIES ; the caster is an ally of itself; the parts' filters pick him and the enemies
+	DelayBetweenShots		= 0
+	PreAttackDelay			= 0
+	FiringDuration			= 0
+	AttributeModifierNugget
+		AttributeModifier		= HEElrondBulwark
+		Radius					= 5.0
+		SpecialObjectFilter		= NONE +HEElvenElrond
+	End
+	AttributeModifierNugget
+		AttributeModifier		= HEElrondBulwarkAwe
+		Radius					= 150.0
+		AffectHordeMembers		= Yes
+		SpecialObjectFilter		= ALL ENEMIES ; "ANY" with no kind listed matches nothing
+	End
+End
+
+; Will of Imladris (level 9), at a building: friendly: invulnerable 5 s and healed 500; enemy: 500 unresistable damage and disabled 5 s
+Weapon HEElrondWillOfImladris
+	AttackRange				= H_RW_HERO_POWER_REACH
+	LeechRangeWeapon		= Yes
+	RadiusDamageAffects		= ALLIES ENEMIES NEUTRALS
+	DelayBetweenShots		= 0
+	PreAttackDelay			= 0
+	FiringDuration			= 0
+	AttributeModifierNugget					; friendly: no damage for 5 s
+		AttributeModifier		= HEElrondWillWard
+		Radius					= 0.0
+		SpecialObjectFilter		= ANY ALLIES +STRUCTURE
+	End
+	DOTNugget								; friendly: healed 100 at once and each second for 4 s (500)
+		Damage				= H_RW_ELROND_WILL_TICK
+		AcceptDamageAdd		= No
+		Radius				= 0.0
+		DelayTime			= 0
+		DamageType			= HEALING
+		DamageFXType		= MAGIC
+		DeathType			= NORMAL
+		SpecialObjectFilter	= ANY ALLIES +STRUCTURE
+		DamageInterval		= 1000
+		DamageDuration		= 4000
+	End
+	DOTNugget								; enemy: 100 at once and each second for 4 s (500)
+		Damage				= H_RW_ELROND_WILL_TICK
+		AcceptDamageAdd		= No
+		Radius				= 0.0
+		DelayTime			= 0
+		DamageType			= UNRESISTABLE
+		DamageFXType		= MAGIC
+		DeathType			= NORMAL
+		SpecialObjectFilter	= ANY ENEMIES +STRUCTURE
+		DamageInterval		= 1000
+		DamageDuration		= 4000
+	End
+	ParalyzeNugget							; enemy: disabled 5 s
+		Radius				= 0.0
+		Duration			= 5000
+		SpecialObjectFilter	= ANY ENEMIES +STRUCTURE
+	End
+End
+
+; Flood of the Bruinen (level 15): he turns to the target and the flood starts at his own position (DamageDealtAtSelfPosition), along his facing
+Weapon HEElrondFloodOfTheBruinen
+	AttackRange				= H_RW_HERO_POWER_REACH
+	LeechRangeWeapon		= Yes
+	DamageDealtAtSelfPosition	= Yes
+	DelayBetweenShots		= 0
+	PreAttackDelay			= 0
+	FiringDuration			= 0
+	FireFX					= FX_ArwenFlood
+	WeaponOCLNugget
+		WeaponOCLName		= OCL_HEElrondFlood
+	End
+End
+
+; a flood horse's hit, every logic frame as it rides (Arwen's horse weapon with his numbers)
+Weapon HEElrondFloodHorseWeapon
+	RadiusDamageAffects		= ENEMIES NOT_SIMILAR
+	LeechRangeWeapon		= Yes
+	AttackRange				= 9999999.0
+	DelayBetweenShots		= 0
+	PreAttackDelay			= 0
+	PreAttackType			= PER_SHOT
+	FiringDuration			= 0
+	DamageNugget							; magic
+		Damage				= H_RW_ELROND_FLOOD_MAGIC
+		Radius				= 40.0
+		DelayTime			= 0
+		DamageType			= MAGIC
+		DamageFXType		= FLOOD_HORSE
+		DeathType			= CRUSHED
+		DamageScalar		= H_RW_ELROND_FLOOD_FORTRESS NONE +COMMANDCENTER ; a fortress is under every horse at once
+	End
+	DamageNugget							; siege
+		Damage				= H_RW_ELROND_FLOOD_SIEGE
+		Radius				= 40.0
+		DelayTime			= 0
+		DamageType			= SIEGE
+		DamageFXType		= FLOOD_HORSE
+		DeathType			= CRUSHED
+		DamageScalar		= H_RW_ELROND_FLOOD_FORTRESS NONE +COMMANDCENTER ; a fortress is under every horse at once
+	End
+	DamageNugget							; siege (structures only)
+		Damage				= H_RW_ELROND_FLOOD_STRUCTURE
+		Radius				= 40.0
+		DelayTime			= 0
+		DamageType			= SIEGE
+		DamageFXType		= FLOOD_HORSE
+		DeathType			= CRUSHED
+		DamageScalar		= H_RW_ELROND_FLOOD_FORTRESS NONE +COMMANDCENTER ; a fortress is under every horse at once
+		SpecialObjectFilter	= ANY +STRUCTURE
+	End
+	AttributeModifierNugget					; survivors slowed 30% for 5 s
+		AttributeModifier		= HEElrondFloodSlow
+		Radius					= 40.0
+		AffectHordeMembers		= Yes
+	End
+	MetaImpactNugget						; the soldiers it kills are thrown back
+		SpecialObjectFilter	= NONE +INFANTRY
+		ShockWaveAmount		= 75.0
+		ShockWaveRadius		= 40.0
+		ShockWaveTaperOff	= 0.75
+		ShockWaveZMult		= 1.0
+		OnlyWhenJustDied	= Yes
+	End
+	FireLogicNugget
+		LogicType		= DECREASE_BURN_RATE
+		Radius			= ARWEN_FLOOD_DECREASEBURNRATE_RADIUS
+		Damage			= ARWEN_FLOOD_DECREASEBURNRATE_AMOUNT
+		DelayTime		= 200
+	End
+End

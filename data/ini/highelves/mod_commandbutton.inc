@@ -488,3 +488,59 @@ CommandButton HECommand_LegolasArrowWind25
 	AutoAbility				= Yes
 	DisableOnModelCondition = USER_67
 End
+
+; ---- Elrond (hero rework)
+CommandButton HECommand_ElrondVilyaCalm
+	Command					= SPECIAL_POWER
+	SpecialPower			= SpecialAbilityFakeLeadership
+	Options					= NONPRESSABLE
+	TextLabel				= CONTROLBAR:HEElrondVilyaCalm
+	ButtonImage				= HSElrondLeadership
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEElrondVilyaCalm
+	InPalantir				= Yes
+End
+CommandButton HECommand_ElrondLight
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityElrondLight
+	Options					= NONE
+	TextLabel				= CONTROLBAR:HEElrondLight
+	ButtonImage				= HSAragornAthelas
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEElrondLight
+	InPalantir				= Yes
+End
+CommandButton HECommand_ElrondBulwark
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityElrondBulwark
+	Options					= NONE
+	TextLabel				= CONTROLBAR:HEElrondBulwark
+	ButtonImage				= HSElrondRestoration
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEElrondBulwark
+	InPalantir				= Yes
+End
+CommandButton HECommand_ElrondWill
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityElrondWill
+	Options					= NEED_TARGET_ENEMY_OBJECT NEED_TARGET_ALLY_OBJECT
+	TextLabel				= CONTROLBAR:HEElrondWill
+	ButtonImage				= HSElrondFarSight
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEElrondWill
+	InPalantir				= Yes
+	CursorName				= Bombard
+	InvalidCursorName		= GenericInvalid
+End
+CommandButton HECommand_ElrondFlood
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityElrondFlood
+	Options					= NEED_TARGET_ENEMY_OBJECT
+	TextLabel				= CONTROLBAR:HEElrondFlood
+	ButtonImage				= SBGood_Flood
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHEElrondFlood
+	InPalantir				= Yes
+	CursorName				= Bombard
+	InvalidCursorName		= GenericInvalid
+End

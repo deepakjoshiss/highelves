@@ -196,3 +196,24 @@ SpecialPower HESpecialAbilityLegolasArrowWind25
 	ViewObjectRange		= 120
 	Flags				= WATER_OK
 End
+
+; ---- Elrond (hero rework, openbfme/HERO-REWORK-PLAN.md)
+SpecialPower HESpecialAbilityElrondLight
+	Enum			= SPECIAL_GENERAL_TARGETLESS
+	ReloadTime		= 60000
+End
+SpecialPower HESpecialAbilityElrondBulwark
+	Enum			= SPECIAL_GENERAL_TARGETLESS
+	ReloadTime		= 60000
+End
+SpecialPower HESpecialAbilityElrondWill
+	Enum			= SPECIAL_AT_VISIBLE_OBJECT
+	ReloadTime		= 90000
+	ObjectFilter	= ANY +STRUCTURE
+End
+SpecialPower HESpecialAbilityElrondFlood
+	Enum			= SPECIAL_AT_VISIBLE_OBJECT
+	ReloadTime		= 120000
+	ObjectFilter	= ALL -BASE_FOUNDATION -INERT -IGNORED_IN_GUI -WALK_ON_TOP_OF_WALL -BLOCKING_GATE -WALL_UPGRADE -UNATTACKABLE -MOVE_ONLY -STRUCTURE
+	InitiateSound	= ArwenFloodStart
+End

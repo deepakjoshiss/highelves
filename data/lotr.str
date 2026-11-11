@@ -65349,3 +65349,43 @@ END
 CONTROLBAR:ToolTipHELegolasHeartseeker3
 "Heartseeker III \n The slow is 50%; 200 siege damage to buildings, per point of its line. \n Cost: 2000"
 END
+
+CONTROLBAR:HEElrondVilyaCalm
+"Vilya's Calm"
+END
+
+CONTROLBAR:ToolTipHEElrondVilyaCalm
+"Vilya's Calm \n Passive: infantry and cavalry within 200 get +10% armor and damage; +20% from level 5, +30% from level 10. From level 25 allied heroes nearby get it too."
+END
+
+CONTROLBAR:HEElrondLight
+"&Light of the Eldar"
+END
+
+CONTROLBAR:ToolTipHEElrondLight
+"Light of the Eldar \n Allies within 150 are healed 300 over 5 seconds. \n Recharge: 60 s"
+END
+
+CONTROLBAR:HEElrondBulwark
+"&Bulwark of Imladris"
+END
+
+CONTROLBAR:ToolTipHEElrondBulwark
+"Bulwark of Imladris \n For 8 seconds Elrond takes 60% less damage and enemies within 150 deal 25% less. \n Recharge: 60 s"
+END
+
+CONTROLBAR:HEElrondWill
+"&Will of Imladris"
+END
+
+CONTROLBAR:ToolTipHEElrondWill
+"Will of Imladris \n Friendly building: invulnerable and healed 500 over 5 seconds. Enemy building: 500 damage over 5 seconds and disabled. \n Recharge: 90 s \n Left click icon then left click on a building"
+END
+
+CONTROLBAR:HEElrondFlood
+"&Flood of the Bruinen"
+END
+
+CONTROLBAR:ToolTipHEElrondFlood
+"Flood of the Bruinen \n Five water horses charge 300 ahead of Elrond: heavy damage, the soldiers they kill thrown back, survivors slowed 30% for 5 seconds. \n Recharge: 120 s \n Left click icon then left click on target"
+END

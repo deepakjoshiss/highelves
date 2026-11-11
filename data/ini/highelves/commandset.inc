@@ -78,13 +78,13 @@ CommandSet HERohanLegolasCommandSet
 	18  	= Command_SetStanceHoldGround
 End
 
-CommandSet HEElrondCommandSet
+CommandSet HEElrondCommandSet ; hero rework: the stance, Vilya's Calm (passive), Light of the Eldar, Bulwark, Will of Imladris, Flood of the Bruinen
 	1	= Command_ToggleStance
-	2	= Command_ElrondFakeLeadership ;,; Command_SpecialAbility202ElrondElvenGrace ;;.;; Command_SpecialAbilityElrondElvenGrace
-	3	= HECommand_SpecialAbilityElrondFarsight ;;,;; Command_ElrondFakeLeadership
-	4	= Command_SpecialAbility202ElrondElvenGrace ;,; Command_ElrondFakeLeadership ;;,;; HECommand_SpecialAbilityElrondFarsight
-	5	= Command_SpecialAbilityElrondRestoration ;,;Command_SpecialPowerSpawnWhirlwind ;;,;; Command_SpecialAbilityElrondRestoration
-	6	= Command_SpecialPowerSpawnWhirlwind ;,; Command_SpecialAbilityElrondRestoration ;;,;; Command_SpecialPowerSpawnWhirlwind
+	2	= HECommand_ElrondVilyaCalm
+	3	= HECommand_ElrondLight
+	4	= HECommand_ElrondBulwark
+	5	= HECommand_ElrondWill
+	6	= HECommand_ElrondFlood
 	12	= Command_CaptureBuilding
 	13	= Command_AttackMove
 	14	= Command_Stop

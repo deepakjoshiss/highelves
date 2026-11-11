@@ -52,3 +52,12 @@ ObjectCreationList OCL_HEThranduilWoodlandRealm10
 		Disposition				= LIKE_EXISTING
 	End
 End
+
+; Elrond's Flood of the Bruinen (hero rework): the flood at his position, turned as he faces
+ObjectCreationList OCL_HEElrondFlood
+	CreateObject
+		ObjectNames			= HEElrondFlood
+		Disposition			= RELATIVE_ANGLE
+		DispositionAngle	= 0
+	End
+End

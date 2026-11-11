@@ -481,14 +481,14 @@ End
 ; Thranduil's Elvenking's Command (passive, the whole map): Mirkwood archers +10% damage and +10% range from level 8; level 18 adds the second list
 ; for +15% / +15% in all (damage multiplies: 1.10 x 1.04545 = 1.15; range adds: 10% + 5%)
 ModifierList HEThranduilElvenkingsCommand1
-	Category = LEADERSHIP
+	Category = SPELL ; hero rework (Deepak 2026-11-11): not LEADERSHIP, so a replacing leadership (any hero's) cannot remove it; stacks with them
 	Modifier = DAMAGE_MULT 110%
 	Modifier = RANGE 10%
 	Duration = 2200	; the aura refreshes every 2000
 End
 
 ModifierList HEThranduilElvenkingsCommand2
-	Category = LEADERSHIP
+	Category = SPELL ; hero rework (Deepak 2026-11-11): not LEADERSHIP, so a replacing leadership (any hero's) cannot remove it; stacks with them
 	Modifier = DAMAGE_MULT 104.545%
 	Modifier = RANGE 5%
 	Duration = 2200
@@ -516,7 +516,7 @@ ModifierList HEThranduilArmor3
 End
 
 ModifierList HEThranduilArmor3Aura
-	Category = LEADERSHIP
+	Category = SPELL ; hero rework (Deepak 2026-11-11): not LEADERSHIP, so a replacing leadership (any hero's) cannot remove it; stacks with them
 	Modifier = ARMOR 20%
 	Duration = 2200
 End
@@ -614,4 +614,180 @@ ModifierList HELegolasHeartseekerSlow3
 	Category = WEAPON
 	Modifier = SPEED 50%
 	Duration = 10000
+End
+
+; ---- Elrond (hero rework, pass 1)
+ModifierList HEElrondVilyaCalm1 ; Vilya's Calm tier 1: a longer duration so the higher tier (and Vilya over other heroes' 3 s leadership) replaces
+	Category = LEADERSHIP
+	Modifier = ARMOR 10%
+	Modifier = DAMAGE_MULT 110%
+	Duration = 3100
+	FX = FX_GenericLeadership
+	ReplaceInCategoryIfLongest = Yes
+End
+ModifierList HEElrondVilyaCalm2 ; Vilya's Calm tier 2: a longer duration so the higher tier (and Vilya over other heroes' 3 s leadership) replaces
+	Category = LEADERSHIP
+	Modifier = ARMOR 20%
+	Modifier = DAMAGE_MULT 120%
+	Duration = 3200
+	FX = FX_GenericLeadership
+	ReplaceInCategoryIfLongest = Yes
+End
+ModifierList HEElrondVilyaCalm3 ; Vilya's Calm tier 3: a longer duration so the higher tier (and Vilya over other heroes' 3 s leadership) replaces
+	Category = LEADERSHIP
+	Modifier = ARMOR 30%
+	Modifier = DAMAGE_MULT 130%
+	Duration = 3300
+	FX = FX_GenericLeadership
+	ReplaceInCategoryIfLongest = Yes
+End
+ModifierList HEElrondBulwark ; Bulwark of Imladris: Elrond takes 60% less
+	Category = SPELL
+	Modifier = ARMOR 60%
+	Duration = 8000
+End
+ModifierList HEElrondBulwarkAwe ; Bulwark of Imladris: enemies within 150 deal 25% less
+	Category = WEAPON
+	Modifier = DAMAGE_MULT 75%
+	Duration = 8000
+End
+ModifierList HEElrondWillWard ; Will of Imladris: a friendly building takes nothing for 5 s (unresistable damage still hits)
+	Category = SPELL
+	Modifier = INVULNERABLE CREATE_A_HERO_INVULNERABILITY_MODIFIER
+	Duration = 5000
+End
+ModifierList HEElrondFloodSlow ; Flood of the Bruinen: survivors slowed 30%
+	Category = WEAPON
+	Modifier = SPEED 70%
+	Duration = 5000
+End
+ModifierList HEElrondBreathSlow ; Breath of Vilya (level 20): his arrows slow 15%
+	Category = WEAPON
+	Modifier = SPEED 85%
+	Duration = 2000
+End
+ModifierList HEElrondWisdomOfAges ; level 16: his powers recharge 15% faster
+	Category = LEVEL
+	Modifier = RECHARGE_TIME 85%
+	Duration = 0
+End
+ModifierList HEElrondLevelHP2 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP3 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP4 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP5 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP6 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP7 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP8 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP9 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP10 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP11 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP12 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP13 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP14 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP15 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP16 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP17 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP18 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP19 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP20 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP21 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP22 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP23 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP24 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
+End
+ModifierList HEElrondLevelHP25 ; his own 20 a level on top of the shared 60
+	Category = LEVEL
+	Modifier = HEALTH 20
+	Duration = 0
 End
