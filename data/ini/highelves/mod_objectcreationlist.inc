@@ -61,3 +61,12 @@ ObjectCreationList OCL_HEElrondFlood
 		DispositionAngle	= 0
 	End
 End
+
+; the River Answers (Herald of Gil-galad III): an invisible marker, turned as Elrond faces, that makes a second flood when it expires 3 s later
+ObjectCreationList OCL_HEElrondFloodEcho
+	CreateObject
+		ObjectNames			= HEElrondFloodEcho
+		Disposition			= RELATIVE_ANGLE
+		DispositionAngle	= 0
+	End
+End

@@ -446,4 +446,25 @@ CommandSet HEArmoryThranduilCommandSet
 	22	= HECommand_HEThranduilHunter3
 End
 CommandSet HEArmoryElrondCommandSet
+	2	= HECommand_HEElrondArmor1
+	3	= HECommand_HEElrondArmor2
+	4	= HECommand_HEElrondArmor3
+	5	= HECommand_HEElrondLife1
+	6	= HECommand_HEElrondLife2
+	7	= HECommand_HEElrondLife3
+	8	= HECommand_HEElrondVilya1
+	9	= HECommand_HEElrondVilya2
+	10	= HECommand_HEElrondVilya3
+	11	= HECommand_HEElrondHerald1
+	12	= HECommand_HEElrondHerald2
+	13	= HECommand_HEElrondHerald3
+	14	= HECommand_HEElrondWisdom1
+	15	= HECommand_HEElrondWisdom2
+	16	= HECommand_HEElrondWisdom3
+	17	= HECommand_HEElrondStones1
+	18	= HECommand_HEElrondStones2
+	19	= HECommand_HEElrondStones3
+	20	= HECommand_HEElrondWrath1
+	21	= HECommand_HEElrondWrath2
+	22	= HECommand_HEElrondWrath3
 End

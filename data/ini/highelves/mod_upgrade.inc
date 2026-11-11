@@ -398,3 +398,150 @@ Upgrade Upgrade_HELegolasHeartseeker3
 	BuildTime		= H_LEGOLAS_ITEM_TIME
 	ResearchSound	= UpgradeSilverThornArrows
 End
+Upgrade Upgrade_HEElrondArmor1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondArmor1
+	BuildCost		= H_ELROND_ARMOR1_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondArmor2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondArmor2
+	BuildCost		= H_ELROND_ARMOR2_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondArmor3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondArmor3
+	BuildCost		= H_ELROND_ARMOR3_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondLife1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondLife1
+	BuildCost		= H_ELROND_LIFE1_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondLife2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondLife2
+	BuildCost		= H_ELROND_LIFE2_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondLife3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondLife3
+	BuildCost		= H_ELROND_LIFE3_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondVilya1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondVilya1
+	BuildCost		= H_ELROND_VILYA1_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondVilya2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondVilya2
+	BuildCost		= H_ELROND_VILYA2_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondVilya3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondVilya3
+	BuildCost		= H_ELROND_VILYA3_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondHerald1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondHerald1
+	BuildCost		= H_ELROND_HERALD1_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondHerald2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondHerald2
+	BuildCost		= H_ELROND_HERALD2_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondHerald3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondHerald3
+	BuildCost		= H_ELROND_HERALD3_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondWisdom1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondWisdom1
+	BuildCost		= H_ELROND_WISDOM1_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondWisdom2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondWisdom2
+	BuildCost		= H_ELROND_WISDOM2_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondWisdom3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondWisdom3
+	BuildCost		= H_ELROND_WISDOM3_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondStones1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondStones1
+	BuildCost		= H_ELROND_STONES1_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondStones2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondStones2
+	BuildCost		= H_ELROND_STONES2_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondStones3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondStones3
+	BuildCost		= H_ELROND_STONES3_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondWrath1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondWrath1
+	BuildCost		= H_ELROND_WRATH1_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondWrath2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondWrath2
+	BuildCost		= H_ELROND_WRATH2_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HEElrondWrath3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HEElrondWrath3
+	BuildCost		= H_ELROND_WRATH3_COST
+	BuildTime		= H_ELROND_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End

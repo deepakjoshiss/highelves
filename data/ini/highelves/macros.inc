@@ -243,6 +243,29 @@
 #define H_RW_ELROND_FLOOD_SIEGE	40
 #define H_RW_ELROND_FLOOD_STRUCTURE	100 ; structures only, on top (Deepak 2026-11-11): an orc pit (1500) survives one flood
 #define H_RW_ELROND_FLOOD_FORTRESS	40% ; the flood's hits on a COMMANDCENTER (under every horse at once): about 1000 a flood
+; Elrond's Armory (hero rework, pass 2; set by Deepak 2026-11-11)
+#define H_ELROND_ITEM_TIME	10 ; seconds (placeholder)
+#define H_ELROND_ARMOR1_COST	250
+#define H_ELROND_ARMOR2_COST	700
+#define H_ELROND_ARMOR3_COST	1500
+#define H_ELROND_LIFE1_COST	250
+#define H_ELROND_LIFE2_COST	700
+#define H_ELROND_LIFE3_COST	1500
+#define H_ELROND_VILYA1_COST	300
+#define H_ELROND_VILYA2_COST	1000
+#define H_ELROND_VILYA3_COST	2500
+#define H_ELROND_HERALD1_COST	300
+#define H_ELROND_HERALD2_COST	1000
+#define H_ELROND_HERALD3_COST	2500
+#define H_ELROND_WISDOM1_COST	200
+#define H_ELROND_WISDOM2_COST	1000
+#define H_ELROND_WISDOM3_COST	1500
+#define H_ELROND_STONES1_COST	300
+#define H_ELROND_STONES2_COST	800
+#define H_ELROND_STONES3_COST	2500
+#define H_ELROND_WRATH1_COST	400
+#define H_ELROND_WRATH2_COST	1000
+#define H_ELROND_WRATH3_COST	2500
 #define H_RW_ELROND_FLOOD_SPEED	42 ; per logic frame: 300 in about 7 frames (1.4 s; 60 before: 30% slower)
 
 ; Reworked heroes' targeted powers (Legolas, Thranduil; Deepak 2026-11-11): they start from here, times the hero's range bonus (openbfme.ini's

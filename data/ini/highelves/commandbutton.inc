@@ -1236,3 +1236,248 @@ CommandButton HECommand_HELegolasHeartseeker3
   PurchasedLabel   = CONTROLBAR:ToolTipHELegolasHeartseeker3
   Radial           = Yes
 End
+CommandButton HECommand_HEElrondArmor1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEElrondArmor1
+  TextLabel        = CONTROLBAR:HEElrondArmor1
+  ButtonImage      = BEEregionForge_ElvenArmor
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondArmor1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondArmor1
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondArmor2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondArmor2
+  NeededUpgrade    = Upgrade_HEElrondArmor1
+  TextLabel        = CONTROLBAR:HEElrondArmor2
+  ButtonImage      = BEEregionForge_ElvenArmor
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondArmor2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondArmor2
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondArmor3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondArmor3
+  NeededUpgrade    = Upgrade_HEElrondArmor2
+  TextLabel        = CONTROLBAR:HEElrondArmor3
+  ButtonImage      = BEEregionForge_ElvenArmor
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondArmor3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondArmor3
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondLife1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEElrondLife1
+  TextLabel        = CONTROLBAR:HEElrondLife1
+  ButtonImage      = BEEregionForge_BannerCarrier
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondLife1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondLife1
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondLife2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondLife2
+  NeededUpgrade    = Upgrade_HEElrondLife1
+  TextLabel        = CONTROLBAR:HEElrondLife2
+  ButtonImage      = BEEregionForge_BannerCarrier
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondLife2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondLife2
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondLife3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondLife3
+  NeededUpgrade    = Upgrade_HEElrondLife2
+  TextLabel        = CONTROLBAR:HEElrondLife3
+  ButtonImage      = BEEregionForge_BannerCarrier
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondLife3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondLife3
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondVilya1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEElrondVilya1
+  TextLabel        = CONTROLBAR:HEElrondVilya1
+  ButtonImage      = HSElrondLeadership
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondVilya1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondVilya1
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondVilya2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondVilya2
+  NeededUpgrade    = Upgrade_HEElrondVilya1
+  TextLabel        = CONTROLBAR:HEElrondVilya2
+  ButtonImage      = HSElrondLeadership
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondVilya2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondVilya2
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondVilya3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondVilya3
+  NeededUpgrade    = Upgrade_HEElrondVilya2
+  TextLabel        = CONTROLBAR:HEElrondVilya3
+  ButtonImage      = HSElrondLeadership
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondVilya3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondVilya3
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondHerald1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEElrondHerald1
+  TextLabel        = CONTROLBAR:HEElrondHerald1
+  ButtonImage      = HSElrondRestoration
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondHerald1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondHerald1
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondHerald2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondHerald2
+  NeededUpgrade    = Upgrade_HEElrondHerald1
+  TextLabel        = CONTROLBAR:HEElrondHerald2
+  ButtonImage      = HSElrondRestoration
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondHerald2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondHerald2
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondHerald3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondHerald3
+  NeededUpgrade    = Upgrade_HEElrondHerald2
+  TextLabel        = CONTROLBAR:HEElrondHerald3
+  ButtonImage      = HSElrondRestoration
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondHerald3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondHerald3
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondWisdom1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEElrondWisdom1
+  TextLabel        = CONTROLBAR:HEElrondWisdom1
+  ButtonImage      = HSAragornAthelas
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondWisdom1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondWisdom1
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondWisdom2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondWisdom2
+  NeededUpgrade    = Upgrade_HEElrondWisdom1
+  TextLabel        = CONTROLBAR:HEElrondWisdom2
+  ButtonImage      = HSAragornAthelas
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondWisdom2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondWisdom2
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondWisdom3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondWisdom3
+  NeededUpgrade    = Upgrade_HEElrondWisdom2
+  TextLabel        = CONTROLBAR:HEElrondWisdom3
+  ButtonImage      = HSAragornAthelas
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondWisdom3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondWisdom3
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondStones1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEElrondStones1
+  TextLabel        = CONTROLBAR:HEElrondStones1
+  ButtonImage      = HSElrondFarSight
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondStones1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondStones1
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondStones2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondStones2
+  NeededUpgrade    = Upgrade_HEElrondStones1
+  TextLabel        = CONTROLBAR:HEElrondStones2
+  ButtonImage      = HSElrondFarSight
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondStones2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondStones2
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondStones3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondStones3
+  NeededUpgrade    = Upgrade_HEElrondStones2
+  TextLabel        = CONTROLBAR:HEElrondStones3
+  ButtonImage      = HSElrondFarSight
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondStones3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondStones3
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondWrath1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HEElrondWrath1
+  TextLabel        = CONTROLBAR:HEElrondWrath1
+  ButtonImage      = BEEregionForge_ForgedBlades
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondWrath1
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondWrath1
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondWrath2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondWrath2
+  NeededUpgrade    = Upgrade_HEElrondWrath1
+  TextLabel        = CONTROLBAR:HEElrondWrath2
+  ButtonImage      = BEEregionForge_ForgedBlades
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondWrath2
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondWrath2
+  Radial           = Yes
+End
+CommandButton HECommand_HEElrondWrath3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HEElrondWrath3
+  NeededUpgrade    = Upgrade_HEElrondWrath2
+  TextLabel        = CONTROLBAR:HEElrondWrath3
+  ButtonImage      = BEEregionForge_ForgedBlades
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHEElrondWrath3
+  PurchasedLabel   = CONTROLBAR:ToolTipHEElrondWrath3
+  Radial           = Yes
+End

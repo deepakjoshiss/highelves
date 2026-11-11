@@ -65389,3 +65389,255 @@ END
 CONTROLBAR:ToolTipHEElrondFlood
 "Flood of the Bruinen \n Five water horses charge 300 ahead of Elrond: heavy damage, the soldiers they kill thrown back, survivors slowed 30% for 5 seconds. \n Recharge: 120 s \n Left click icon then left click on target"
 END
+
+UPGRADE:HEElrondArmor1
+"Armor of the Last Alliance I"
+END
+
+CONTROLBAR:HEElrondArmor1
+"Armor of the Last Alliance I"
+END
+
+CONTROLBAR:ToolTipHEElrondArmor1
+"Armor of the Last Alliance I \n +15% armor. \n Cost: 250"
+END
+
+UPGRADE:HEElrondArmor2
+"Armor of the Last Alliance II"
+END
+
+CONTROLBAR:HEElrondArmor2
+"Armor of the Last Alliance II"
+END
+
+CONTROLBAR:ToolTipHEElrondArmor2
+"Armor of the Last Alliance II \n +10% more armor (25% in all); cannot be thrown back or trampled. \n Cost: 700"
+END
+
+UPGRADE:HEElrondArmor3
+"Armor of the Last Alliance III"
+END
+
+CONTROLBAR:HEElrondArmor3
+"Armor of the Last Alliance III"
+END
+
+CONTROLBAR:ToolTipHEElrondArmor3
+"Armor of the Last Alliance III \n +10% more armor (35% in all). \n Cost: 1500"
+END
+
+UPGRADE:HEElrondLife1
+"Life of Imladris I"
+END
+
+CONTROLBAR:HEElrondLife1
+"Life of Imladris I"
+END
+
+CONTROLBAR:ToolTipHEElrondLife1
+"Life of Imladris I \n +500 health. \n Cost: 250"
+END
+
+UPGRADE:HEElrondLife2
+"Life of Imladris II"
+END
+
+CONTROLBAR:HEElrondLife2
+"Life of Imladris II"
+END
+
+CONTROLBAR:ToolTipHEElrondLife2
+"Life of Imladris II \n +700 more health (1200 in all); heals 20 a second, in battle too. \n Cost: 700"
+END
+
+UPGRADE:HEElrondLife3
+"Life of Imladris III"
+END
+
+CONTROLBAR:HEElrondLife3
+"Life of Imladris III"
+END
+
+CONTROLBAR:ToolTipHEElrondLife3
+"Life of Imladris III \n +1200 more health (2400 in all); heals 40 a second. \n Cost: 1500"
+END
+
+UPGRADE:HEElrondVilya1
+"Vilya, Ring of Air I"
+END
+
+CONTROLBAR:HEElrondVilya1
+"Vilya, Ring of Air I"
+END
+
+CONTROLBAR:ToolTipHEElrondVilya1
+"Vilya, Ring of Air I \n Vilya's Calm reaches 300. \n Cost: 300"
+END
+
+UPGRADE:HEElrondVilya2
+"Vilya, Ring of Air II"
+END
+
+CONTROLBAR:HEElrondVilya2
+"Vilya, Ring of Air II"
+END
+
+CONTROLBAR:ToolTipHEElrondVilya2
+"Vilya, Ring of Air II \n Allied heroes within 300 recharge their powers 20% faster. \n Cost: 1000"
+END
+
+UPGRADE:HEElrondVilya3
+"Vilya, Ring of Air III"
+END
+
+CONTROLBAR:HEElrondVilya3
+"Vilya, Ring of Air III"
+END
+
+CONTROLBAR:ToolTipHEElrondVilya3
+"Vilya, Ring of Air III \n Your spellbook powers recharge 20% faster. \n Cost: 2500"
+END
+
+UPGRADE:HEElrondHerald1
+"Herald of Gil-galad I"
+END
+
+CONTROLBAR:HEElrondHerald1
+"Herald of Gil-galad I"
+END
+
+CONTROLBAR:ToolTipHEElrondHerald1
+"Herald of Gil-galad I \n Light of the Eldar heals allies within 250. \n Cost: 300"
+END
+
+UPGRADE:HEElrondHerald2
+"Herald of Gil-galad II"
+END
+
+CONTROLBAR:HEElrondHerald2
+"Herald of Gil-galad II"
+END
+
+CONTROLBAR:ToolTipHEElrondHerald2
+"Herald of Gil-galad II \n Bulwark of Imladris lasts 12 seconds, and allies within 150 when it is cast take 30% less damage. \n Cost: 1000"
+END
+
+UPGRADE:HEElrondHerald3
+"Herald of Gil-galad III"
+END
+
+CONTROLBAR:HEElrondHerald3
+"Herald of Gil-galad III"
+END
+
+CONTROLBAR:ToolTipHEElrondHerald3
+"Herald of Gil-galad III \n The River Answers: Flood of the Bruinen sends a second wave 3 seconds after the first. \n Cost: 2500"
+END
+
+UPGRADE:HEElrondWisdom1
+"Wisdom of the Eldar I"
+END
+
+CONTROLBAR:HEElrondWisdom1
+"Wisdom of the Eldar I"
+END
+
+CONTROLBAR:ToolTipHEElrondWisdom1
+"Wisdom of the Eldar I \n Vilya's Grace: allies within 200 heal 3 a second, heroes 5. \n Cost: 200"
+END
+
+UPGRADE:HEElrondWisdom2
+"Wisdom of the Eldar II"
+END
+
+CONTROLBAR:HEElrondWisdom2
+"Wisdom of the Eldar II"
+END
+
+CONTROLBAR:ToolTipHEElrondWisdom2
+"Wisdom of the Eldar II \n Vilya's Thorns: each time Elrond is hit, every enemy within 50 takes 40 (at most once a second). \n Cost: 1000"
+END
+
+UPGRADE:HEElrondWisdom3
+"Wisdom of the Eldar III"
+END
+
+CONTROLBAR:HEElrondWisdom3
+"Wisdom of the Eldar III"
+END
+
+CONTROLBAR:ToolTipHEElrondWisdom3
+"Wisdom of the Eldar III \n Light of Elbereth: Light of the Eldar also burns enemies within 150 for 200 magic damage. \n Cost: 1500"
+END
+
+UPGRADE:HEElrondStones1
+"Stones of Imladris I"
+END
+
+CONTROLBAR:HEElrondStones1
+"Stones of Imladris I"
+END
+
+CONTROLBAR:ToolTipHEElrondStones1
+"Stones of Imladris I \n Will of Imladris heals or damages 750. \n Cost: 300"
+END
+
+UPGRADE:HEElrondStones2
+"Stones of Imladris II"
+END
+
+CONTROLBAR:HEElrondStones2
+"Stones of Imladris II"
+END
+
+CONTROLBAR:ToolTipHEElrondStones2
+"Stones of Imladris II \n Stones' Ward: for 30 seconds, buildings within 300 of the target get +30% armor if allied, -30% if enemy (walls and gates too). \n Cost: 800"
+END
+
+UPGRADE:HEElrondStones3
+"Stones of Imladris III"
+END
+
+CONTROLBAR:HEElrondStones3
+"Stones of Imladris III"
+END
+
+CONTROLBAR:ToolTipHEElrondStones3
+"Stones of Imladris III \n Heart of Imladris: Will of Imladris heals or damages 1000, to every building within 100 of the target. \n Cost: 2500"
+END
+
+UPGRADE:HEElrondWrath1
+"Wrath of the Noldor I"
+END
+
+CONTROLBAR:HEElrondWrath1
+"Wrath of the Noldor I"
+END
+
+CONTROLBAR:ToolTipHEElrondWrath1
+"Wrath of the Noldor I \n +40 siege damage per arrow. \n Cost: 400"
+END
+
+UPGRADE:HEElrondWrath2
+"Wrath of the Noldor II"
+END
+
+CONTROLBAR:HEElrondWrath2
+"Wrath of the Noldor II"
+END
+
+CONTROLBAR:ToolTipHEElrondWrath2
+"Wrath of the Noldor II \n +80 hero damage per arrow. \n Cost: 1000"
+END
+
+UPGRADE:HEElrondWrath3
+"Wrath of the Noldor III"
+END
+
+CONTROLBAR:HEElrondWrath3
+"Wrath of the Noldor III"
+END
+
+CONTROLBAR:ToolTipHEElrondWrath3
+"Wrath of the Noldor III \n +30% to all of his damage. \n Cost: 2500"
+END

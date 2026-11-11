@@ -239,13 +239,27 @@ Uruk battalion 200 ahead in one pass (each soldier in the path takes 4 to 5 hits
 of a Mordor citadel's 7500 and still destroys an orc pit (1500) within three frames. Not measured: the casts' look, production
 stopping under the paralysis, the AI's and auto-cast's use of the powers.
 
-**Pass 2 (Armory, agreed 2026-11-11):** Armor of the Last Alliance, Life of Imladris, Vilya (radius 300; heroes recharge 20% faster,
+**Armory (pass 2, built 2026-11-11; placeholder icons, 10 s research; about 22,500 for the tree):** Armor of the Last Alliance, Life of Imladris, Vilya (radius 300; heroes recharge 20% faster,
 SPELL; spellbook powers recharge 20% faster through the spellbook object, as 2.02's cooldown upgrade), Herald of Gil-galad (Light
 within 250; Bulwark 12 s and allies within 150 take 30% less; the River Answers: a second flood wave 3 s later), Wisdom of the Eldar
 (Vilya's Grace aura: heroes 5 HP/s, infantry 3; Vilya's Thorns 1000: 40 within 50 when he is hit, once a second; Light of Elbereth:
 200 magic to enemies within 150), Stones of Imladris (750; Stones' Ward: buildings within 300, walls and gates included, allies +30% /
 enemies -30% armor for 30 s, STRUCTURE; Heart of Imladris 2500: 1000 to every building within 100), Wrath of the Noldor (400: +40 siege,
 1000: +80 hero, both in `H_ARCHER_RADIUS` with the flat bonus; 2500: +30% to all his damage).
+
+Built as: Mail reuses Thranduil's lists; Vilya I adds radius-300 copies of the auras (`RequiresAllTriggers`: the level and the
+item; the 200 ones go on, the same list only refreshes); Vilya II a SPELL aura on heroes (RECHARGE_TIME 80%); Vilya III an
+AttributeModifierUpgrade on `HEGoodSpellBook`; Herald I / II and Stones I / III swap weapon parts (Required / Forbidden item);
+Herald III a marker (`HEElrondFloodEcho`, LifetimeUpdate 3 s, CreateObjectDie) that makes the second flood; Vilya's Grace two
+AutoHealBehaviors with Radius (infantry and cavalry 3, heroes 2 more: heroes are INFANTRY too); Vilya's Thorns a
+FireWeaponWhenDamagedBehavior (HEElrondThorns, a 1 s clip); Wrath III DAMAGE_MULT and SPELL_DAMAGE 130% (his heals grow too).
+Measured: HP 3900 at level 1 with Life III; Vilya's Calm on an archer 260 away (Vilya I); Vilya II on Legolas; Legolas healed 5/s
+by Vilya's Grace; his arrow 350 off a troll with Wrath III (about 60 without); Light of the Eldar healing Legolas 220 away
+(Herald I) and burning an Uruk battalion within 150 for about 200 each (Light of Elbereth); the thorns 52 off a troll per hit;
+Herald II: 12 s on him, the shelter on Legolas, the 12 s debuff on a troll; the River Answers: two waves on a Mordor citadel 15
+frames apart (-988, -832); Stones III healing the target orc pit and one 80 away from 500 to full with the 30 s Stones' Ward on
+both. Not measured: the spellbook recharge, Stones' Ward on enemy buildings, a flood that did not reach two trolls 260 away (a line
+of soldiers was hit out to 250; not traced).
 
 ## 7. Engine work (OpenBFME, dj-dev)
 

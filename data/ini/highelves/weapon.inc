@@ -2494,16 +2494,35 @@ Weapon HEElvenElrondBowWarhead
 		AffectHordeMembers		= Yes
 		RequiredUpgradeNames	= Upgrade_ObjectLevel20
 	End
+
+	DamageNugget							; Wrath of the Noldor I: +40 siege (takes the flat bonus too)
+		Damage				= 40
+		Radius				= H_ARCHER_RADIUS
+		DelayTime			= 0
+		DamageType			= SIEGE
+		DamageFXType		= EARTH2
+		DeathType			= NORMAL
+		RequiredUpgradeNames	= Upgrade_HEElrondWrath1
+	End
+	DamageNugget							; Wrath of the Noldor II: +80 hero (takes the flat bonus too)
+		Damage				= 80
+		Radius				= H_ARCHER_RADIUS
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= EARTH2
+		DeathType			= NORMAL
+		RequiredUpgradeNames	= Upgrade_HEElrondWrath2
+	End
 End
 
 ; Light of the Eldar (level 3): allies within 150 (Elrond too) healed 300 over 5 s, fired at his own position
 Weapon HEElrondLightOfTheEldar
 	AttackRange				= 10
-	RadiusDamageAffects		= ALLIES SELF
+	RadiusDamageAffects		= ALLIES SELF ENEMIES ; the heal's filter keeps it to allies (the caster is one); Light of Elbereth burns enemies
 	DelayBetweenShots		= 0
 	PreAttackDelay			= 0
 	FiringDuration			= 0
-	DOTNugget								; a heal at once and one each second for 5 s: 6 x 50 = 300 (a healing DamageNugget heals at once, its DelayTime unused)
+	DOTNugget								; a heal at once and each second for 5 s: 6 x 50 = 300 (a healing DamageNugget heals at once, its DelayTime unused)
 		Damage				= H_RW_ELROND_LIGHT_TICK
 		AcceptDamageAdd		= No
 		Radius				= 150.0
@@ -2513,6 +2532,32 @@ Weapon HEElrondLightOfTheEldar
 		DeathType			= NORMAL
 		DamageInterval		= 1000
 		DamageDuration		= 5000
+		SpecialObjectFilter	= ALL ALLIES
+		ForbiddenUpgradeNames	= Upgrade_HEElrondHerald1
+	End
+	DOTNugget								; Herald of Gil-galad I: within 250
+		Damage				= H_RW_ELROND_LIGHT_TICK
+		AcceptDamageAdd		= No
+		Radius				= 250.0
+		DelayTime			= 0
+		DamageType			= HEALING
+		DamageFXType		= MAGIC
+		DeathType			= NORMAL
+		DamageInterval		= 1000
+		DamageDuration		= 5000
+		SpecialObjectFilter	= ALL ALLIES
+		RequiredUpgradeNames	= Upgrade_HEElrondHerald1
+	End
+	DamageNugget							; Wisdom of the Eldar III: Light of Elbereth burns enemies within 150
+		Damage				= 200
+		AcceptDamageAdd		= No
+		Radius				= 150.0
+		DelayTime			= 0
+		DamageType			= MAGIC
+		DamageFXType		= MAGIC
+		DeathType			= BURNED
+		SpecialObjectFilter	= ALL ENEMIES
+		RequiredUpgradeNames	= Upgrade_HEElrondWisdom3
 	End
 End
 
@@ -2527,12 +2572,35 @@ Weapon HEElrondBulwark
 		AttributeModifier		= HEElrondBulwark
 		Radius					= 5.0
 		SpecialObjectFilter		= NONE +HEElvenElrond
+		ForbiddenUpgradeNames	= Upgrade_HEElrondHerald2
 	End
 	AttributeModifierNugget
 		AttributeModifier		= HEElrondBulwarkAwe
 		Radius					= 150.0
 		AffectHordeMembers		= Yes
+		ForbiddenUpgradeNames	= Upgrade_HEElrondHerald2
 		SpecialObjectFilter		= ALL ENEMIES ; "ANY" with no kind listed matches nothing
+	End
+
+	AttributeModifierNugget					; Herald of Gil-galad II: 12 s
+		AttributeModifier		= HEElrondBulwark12
+		Radius					= 5.0
+		SpecialObjectFilter		= NONE +HEElvenElrond
+		RequiredUpgradeNames	= Upgrade_HEElrondHerald2
+	End
+	AttributeModifierNugget
+		AttributeModifier		= HEElrondBulwarkAwe12
+		Radius					= 150.0
+		AffectHordeMembers		= Yes
+		SpecialObjectFilter		= ALL ENEMIES
+		RequiredUpgradeNames	= Upgrade_HEElrondHerald2
+	End
+	AttributeModifierNugget					; Herald of Gil-galad II: allies within 150 take 30% less for 12 s
+		AttributeModifier		= HEElrondBulwarkShelter
+		Radius					= 150.0
+		AffectHordeMembers		= Yes
+		SpecialObjectFilter		= ALL ALLIES -HEElvenElrond
+		RequiredUpgradeNames	= Upgrade_HEElrondHerald2
 	End
 End
 
@@ -2549,7 +2617,7 @@ Weapon HEElrondWillOfImladris
 		Radius					= 0.0
 		SpecialObjectFilter		= ANY ALLIES +STRUCTURE
 	End
-	DOTNugget								; friendly: healed 100 at once and each second for 4 s (500)
+	DOTNugget								; friendly: 100 at once and each second for 4 s (500)
 		Damage				= H_RW_ELROND_WILL_TICK
 		AcceptDamageAdd		= No
 		Radius				= 0.0
@@ -2557,9 +2625,37 @@ Weapon HEElrondWillOfImladris
 		DamageType			= HEALING
 		DamageFXType		= MAGIC
 		DeathType			= NORMAL
-		SpecialObjectFilter	= ANY ALLIES +STRUCTURE
 		DamageInterval		= 1000
 		DamageDuration		= 4000
+		SpecialObjectFilter	= ANY ALLIES +STRUCTURE
+		ForbiddenUpgradeNames	= Upgrade_HEElrondStones1
+	End
+	DOTNugget								; Stones of Imladris I, friendly: 750
+		Damage				= 150
+		AcceptDamageAdd		= No
+		Radius				= 0.0
+		DelayTime			= 0
+		DamageType			= HEALING
+		DamageFXType		= MAGIC
+		DeathType			= NORMAL
+		DamageInterval		= 1000
+		DamageDuration		= 4000
+		SpecialObjectFilter	= ANY ALLIES +STRUCTURE
+		RequiredUpgradeNames	= Upgrade_HEElrondStones1
+		ForbiddenUpgradeNames	= Upgrade_HEElrondStones3
+	End
+	DOTNugget								; Stones of Imladris III (Heart of Imladris), friendly: 1000 to every building within 100
+		Damage				= 200
+		AcceptDamageAdd		= No
+		Radius				= 100.0
+		DelayTime			= 0
+		DamageType			= HEALING
+		DamageFXType		= MAGIC
+		DeathType			= NORMAL
+		DamageInterval		= 1000
+		DamageDuration		= 4000
+		SpecialObjectFilter	= ANY ALLIES +STRUCTURE
+		RequiredUpgradeNames	= Upgrade_HEElrondStones3
 	End
 	DOTNugget								; enemy: 100 at once and each second for 4 s (500)
 		Damage				= H_RW_ELROND_WILL_TICK
@@ -2569,14 +2665,55 @@ Weapon HEElrondWillOfImladris
 		DamageType			= UNRESISTABLE
 		DamageFXType		= MAGIC
 		DeathType			= NORMAL
-		SpecialObjectFilter	= ANY ENEMIES +STRUCTURE
 		DamageInterval		= 1000
 		DamageDuration		= 4000
+		SpecialObjectFilter	= ANY ENEMIES +STRUCTURE
+		ForbiddenUpgradeNames	= Upgrade_HEElrondStones1
+	End
+	DOTNugget								; Stones of Imladris I, enemy: 750
+		Damage				= 150
+		AcceptDamageAdd		= No
+		Radius				= 0.0
+		DelayTime			= 0
+		DamageType			= UNRESISTABLE
+		DamageFXType		= MAGIC
+		DeathType			= NORMAL
+		DamageInterval		= 1000
+		DamageDuration		= 4000
+		SpecialObjectFilter	= ANY ENEMIES +STRUCTURE
+		RequiredUpgradeNames	= Upgrade_HEElrondStones1
+		ForbiddenUpgradeNames	= Upgrade_HEElrondStones3
+	End
+	DOTNugget								; Stones of Imladris III (Heart of Imladris), enemy: 1000 to every building within 100
+		Damage				= 200
+		AcceptDamageAdd		= No
+		Radius				= 100.0
+		DelayTime			= 0
+		DamageType			= UNRESISTABLE
+		DamageFXType		= MAGIC
+		DeathType			= NORMAL
+		DamageInterval		= 1000
+		DamageDuration		= 4000
+		SpecialObjectFilter	= ANY ENEMIES +STRUCTURE
+		RequiredUpgradeNames	= Upgrade_HEElrondStones3
 	End
 	ParalyzeNugget							; enemy: disabled 5 s
 		Radius				= 0.0
 		Duration			= 5000
 		SpecialObjectFilter	= ANY ENEMIES +STRUCTURE
+	End
+
+	AttributeModifierNugget					; Stones of Imladris II (Stones' Ward): allied buildings within 300 +30% armor for 30 s
+		AttributeModifier		= HEElrondStonesWard
+		Radius					= 300.0
+		SpecialObjectFilter		= ANY ALLIES +STRUCTURE
+		RequiredUpgradeNames	= Upgrade_HEElrondStones2
+	End
+	AttributeModifierNugget					; enemy buildings within 300 -30% armor for 30 s
+		AttributeModifier		= HEElrondStonesBane
+		Radius					= 300.0
+		SpecialObjectFilter		= ANY ENEMIES +STRUCTURE
+		RequiredUpgradeNames	= Upgrade_HEElrondStones2
 	End
 End
 
@@ -2591,6 +2728,11 @@ Weapon HEElrondFloodOfTheBruinen
 	FireFX					= FX_ArwenFlood
 	WeaponOCLNugget
 		WeaponOCLName		= OCL_HEElrondFlood
+	End
+
+	WeaponOCLNugget							; Herald of Gil-galad III (the River Answers): a second wave 3 s later (HEElrondFloodEcho)
+		WeaponOCLName		= OCL_HEElrondFloodEcho
+		RequiredUpgradeNames	= Upgrade_HEElrondHerald3
 	End
 End
 
@@ -2649,5 +2791,26 @@ Weapon HEElrondFloodHorseWeapon
 		Radius			= ARWEN_FLOOD_DECREASEBURNRATE_RADIUS
 		Damage			= ARWEN_FLOOD_DECREASEBURNRATE_AMOUNT
 		DelayTime		= 200
+	End
+End
+
+; Vilya's Thorns (Wisdom of the Eldar II): fired at Elrond's own position each time he is hit, at most once a second
+Weapon HEElrondThorns
+	AttackRange				= 10
+	RadiusDamageAffects		= ENEMIES
+	DelayBetweenShots		= 0
+	PreAttackDelay			= 0
+	FiringDuration			= 0
+	ClipSize				= 1
+	AutoReloadsClip			= Yes
+	ClipReloadTime			= Min:1000 Max:1000
+	DamageNugget
+		Damage				= 40
+		AcceptDamageAdd		= No
+		Radius				= 50.0
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= MAGIC
+		DeathType			= NORMAL
 	End
 End

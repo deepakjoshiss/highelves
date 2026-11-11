@@ -791,3 +791,61 @@ ModifierList HEElrondLevelHP25 ; his own 20 a level on top of the shared 60
 	Modifier = HEALTH 20
 	Duration = 0
 End
+
+; ---- Elrond's Armory items (hero rework, pass 2): Mail uses Thranduil's lists (the same values)
+ModifierList HEElrondLife1
+	Category = LEVEL
+	Modifier = HEALTH 500
+	Duration = 0
+End
+ModifierList HEElrondLife2
+	Category = LEVEL
+	Modifier = HEALTH 700
+	Duration = 0
+End
+ModifierList HEElrondLife3
+	Category = LEVEL
+	Modifier = HEALTH 1200
+	Duration = 0
+End
+ModifierList HEElrondVilyaCounsel ; Vilya II: allied heroes near him recharge powers 20% faster (SPELL: stacks with leadership)
+	Category = SPELL
+	Modifier = RECHARGE_TIME 80%
+	Duration = 2200
+End
+ModifierList HEElrondVilyaSpellbook ; Vilya III: the spellbook's powers recharge 20% faster
+	Category = LEVEL
+	Modifier = RECHARGE_TIME 80%
+	Duration = 0
+End
+ModifierList HEElrondBulwark12 ; Herald II: Bulwark 12 s
+	Category = SPELL
+	Modifier = ARMOR 60%
+	Duration = 12000
+End
+ModifierList HEElrondBulwarkAwe12
+	Category = WEAPON
+	Modifier = DAMAGE_MULT 75%
+	Duration = 12000
+End
+ModifierList HEElrondBulwarkShelter ; Herald II: allies within 150 when Bulwark is cast take 30% less
+	Category = SPELL
+	Modifier = ARMOR 30%
+	Duration = 12000
+End
+ModifierList HEElrondStonesWard ; Stones II: allied buildings within 300, 30 s
+	Category = STRUCTURE
+	Modifier = ARMOR 30%
+	Duration = 30000
+End
+ModifierList HEElrondStonesBane ; Stones II: enemy buildings within 300, 30 s
+	Category = STRUCTURE
+	Modifier = ARMOR -30%
+	Duration = 30000
+End
+ModifierList HEElrondWrath3 ; Wrath III: +30% to all his damage
+	Category = LEVEL
+	Modifier = DAMAGE_MULT 130%
+	Modifier = SPELL_DAMAGE 130%
+	Duration = 0
+End
