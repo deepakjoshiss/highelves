@@ -233,6 +233,11 @@
 #define H_THRANDUIL_HUNTER3_COST	1000
 #define H_THRANDUIL_ITEM_TIME	10 ; seconds (placeholder)
 
+; Reworked heroes' targeted powers (Legolas, Thranduil; Deepak 2026-11-11): they start from here, times the hero's range bonus (openbfme.ini's
+; OpenBFMEAbilityRangeFollowsBonus), and their weapons reach the second, never short of the start (a shot beyond it is spent with no arrow)
+#define H_RW_HERO_POWER_START	450
+#define H_RW_HERO_POWER_REACH	475
+
 ; ---- Legolas (hero rework, openbfme/HERO-REWORK-PLAN.md): an infantry killer, bow only. HEElvenLegolas's own values: HERohanLegolas's
 ; (H_LEGOLAS_*) stay, ElvenElrohir is a copy of it
 #define H_RW_LEGOLAS_BUILDCOST		800
@@ -240,3 +245,26 @@
 #define H_RW_LEGOLAS_BOW_DAMAGE	90 ; takes the level's flat bonus (DAMAGE_ADD)
 #define H_RW_LEGOLAS_INFANTRY_SCALAR	125% ; his arrow against infantry
 #define H_RW_LEGOLAS_PIERCING_DAMAGE	250
+; Legolas's Armory (hero rework, pass 2; prices set by Deepak 2026-11-11)
+#define H_LEGOLAS_ITEM_TIME	10 ; seconds (placeholder)
+#define H_LEGOLAS_ARMOR1_COST	250
+#define H_LEGOLAS_ARMOR2_COST	700
+#define H_LEGOLAS_ARMOR3_COST	1500
+#define H_LEGOLAS_LIFE1_COST	250
+#define H_LEGOLAS_LIFE2_COST	700
+#define H_LEGOLAS_LIFE3_COST	1500
+#define H_LEGOLAS_MOBILITY1_COST	200
+#define H_LEGOLAS_MOBILITY2_COST	500
+#define H_LEGOLAS_MOBILITY3_COST	1200
+#define H_LEGOLAS_BOW1_COST	300
+#define H_LEGOLAS_BOW2_COST	1000
+#define H_LEGOLAS_BOW3_COST	2500
+#define H_LEGOLAS_ARROWHEADS1_COST	200
+#define H_LEGOLAS_ARROWHEADS2_COST	600
+#define H_LEGOLAS_ARROWHEADS3_COST	1500
+#define H_LEGOLAS_HAWK1_COST	300
+#define H_LEGOLAS_HAWK2_COST	800
+#define H_LEGOLAS_HAWK3_COST	2500
+#define H_LEGOLAS_HEARTSEEKER1_COST	300
+#define H_LEGOLAS_HEARTSEEKER2_COST	800
+#define H_LEGOLAS_HEARTSEEKER3_COST	2000

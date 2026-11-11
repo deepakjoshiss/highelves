@@ -42,6 +42,16 @@ Weapon HEElvenLegolasBow ; hero rework: one arrow, Twin Draw's second from level
 		WarheadTemplateName		= HEElvenLegolasBowWarhead
 		RequiredUpgradeNames	= Upgrade_ObjectLevel7
 	End
+	ProjectileNugget						; Bow of the Galadhrim II: one more arrow at another enemy (OpenBFMESplitShot)
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+		RequiredUpgradeNames	= Upgrade_HELegolasBow2
+	End
+	ProjectileNugget						; Bow of the Galadhrim III: another
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+		RequiredUpgradeNames	= Upgrade_HELegolasBow3
+	End
 End
 
 Weapon HEElvenLegolasBowWarhead
@@ -57,12 +67,56 @@ Weapon HEElvenLegolasBowWarhead
 		DamageFXType		= GOOD_ARROW_PIERCE
 		DeathType			= NORMAL
 	End
+	DamageNugget						; Arrowheads I: monsters and machines (items take the level percentage only)
+		Damage				= 40
+		AcceptDamageAdd		= No
+		Radius				= 0.0
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		SpecialObjectFilter	= ANY +MONSTER +MACHINE
+		RequiredUpgradeNames	= Upgrade_HELegolasArrowheads1
+	End
+	DamageNugget						; Arrowheads I: heroes
+		Damage				= 25
+		AcceptDamageAdd		= No
+		Radius				= 0.0
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		SpecialObjectFilter	= ANY +HERO
+		RequiredUpgradeNames	= Upgrade_HELegolasArrowheads1
+	End
+	DamageNugget						; Arrowheads II: monsters and heroes
+		Damage				= 25
+		AcceptDamageAdd		= No
+		Radius				= 0.0
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		SpecialObjectFilter	= ANY +MONSTER +HERO
+		RequiredUpgradeNames	= Upgrade_HELegolasArrowheads2
+	End
+	DamageNugget						; Arrowheads III: monsters, machines and heroes
+		Damage				= 30
+		AcceptDamageAdd		= No
+		Radius				= 0.0
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		SpecialObjectFilter	= ANY +MONSTER +MACHINE +HERO
+		RequiredUpgradeNames	= Upgrade_HELegolasArrowheads3
+	End
 End
 
 ; Fan of Arrows: 5 arrows, 10 from level 10, 15 from level 18, each at a different enemy within 100 of the target (OpenBFMESplitShot);
 ; full arrows (his bow's warhead)
 Weapon HEElvenLegolasFanOfArrows
-	AttackRange				= H_HERO_BOW_RANGE
+	AttackRange				= H_RW_HERO_POWER_REACH
 	LeechRangeWeapon		= Yes
 	WeaponSpeed				= H_FAST_WEAPON_SPEED
 	MinWeaponSpeed			= H_FAST_WEAPON_SPEED_MIN
@@ -155,7 +209,7 @@ End
 
 ; Piercing Arrow (level 9): a line ahead of him out to 500, 15 wide: an arrow at each of 17 points (LinearTarget, along his facing), radius 15, the circles touching
 Weapon HEElvenLegolasPiercingArrow
-	AttackRange				= H_HERO_BOW_RANGE
+	AttackRange				= H_RW_HERO_POWER_REACH
 	LeechRangeWeapon		= Yes
 	WeaponSpeed				= H_FAST_WEAPON_SPEED
 	MinWeaponSpeed			= H_FAST_WEAPON_SPEED_MIN
@@ -212,11 +266,56 @@ Weapon HEElvenLegolasPiercingArrowWarhead
 		ShockWaveTaperOff	= 1.0
 		OnlyWhenJustDied	= Yes
 	End
+	DamageNugget						; Heartseeker II: 450 in all
+		Damage				= 200
+		AcceptDamageAdd		= No
+		Radius				= 15.0
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		RequiredUpgradeNames	= Upgrade_HELegolasHeartseeker2
+	End
+	DamageNugget						; Heartseeker II: buildings
+		Damage				= 100
+		AcceptDamageAdd		= No
+		Radius				= 15.0
+		DelayTime			= 0
+		DamageType			= SIEGE
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		SpecialObjectFilter	= ANY +STRUCTURE
+		RequiredUpgradeNames	= Upgrade_HELegolasHeartseeker2
+	End
+	DamageNugget						; Heartseeker III: buildings, 200 in all
+		Damage				= 100
+		AcceptDamageAdd		= No
+		Radius				= 15.0
+		DelayTime			= 0
+		DamageType			= SIEGE
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		SpecialObjectFilter	= ANY +STRUCTURE
+		RequiredUpgradeNames	= Upgrade_HELegolasHeartseeker3
+	End
+	AttributeModifierNugget					; Heartseeker I: everything within 40 of the line slowed 30%, 10 s
+		AttributeModifier		= HELegolasHeartseekerSlow1
+		Radius					= 40.0
+		AffectHordeMembers		= Yes
+		RequiredUpgradeNames	= Upgrade_HELegolasHeartseeker1
+		ForbiddenUpgradeNames	= Upgrade_HELegolasHeartseeker3
+	End
+	AttributeModifierNugget					; Heartseeker III: the slow 50%
+		AttributeModifier		= HELegolasHeartseekerSlow3
+		Radius					= 40.0
+		AffectHordeMembers		= Yes
+		RequiredUpgradeNames	= Upgrade_HELegolasHeartseeker3
+	End
 End
 
 ; Piercing Arrow II (level 20): the line 30 wide (8 points, radius 30)
 Weapon HEElvenLegolasPiercingArrow2
-	AttackRange				= H_HERO_BOW_RANGE
+	AttackRange				= H_RW_HERO_POWER_REACH
 	LeechRangeWeapon		= Yes
 	WeaponSpeed				= H_FAST_WEAPON_SPEED
 	MinWeaponSpeed			= H_FAST_WEAPON_SPEED_MIN
@@ -263,6 +362,51 @@ Weapon HEElvenLegolasPiercingArrow2Warhead
 		ShockWaveRadius		= 30.0
 		ShockWaveTaperOff	= 1.0
 		OnlyWhenJustDied	= Yes
+	End
+	DamageNugget						; Heartseeker II: 450 in all
+		Damage				= 200
+		AcceptDamageAdd		= No
+		Radius				= 30.0
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		RequiredUpgradeNames	= Upgrade_HELegolasHeartseeker2
+	End
+	DamageNugget						; Heartseeker II: buildings
+		Damage				= 100
+		AcceptDamageAdd		= No
+		Radius				= 30.0
+		DelayTime			= 0
+		DamageType			= SIEGE
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		SpecialObjectFilter	= ANY +STRUCTURE
+		RequiredUpgradeNames	= Upgrade_HELegolasHeartseeker2
+	End
+	DamageNugget						; Heartseeker III: buildings, 200 in all
+		Damage				= 100
+		AcceptDamageAdd		= No
+		Radius				= 30.0
+		DelayTime			= 0
+		DamageType			= SIEGE
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		SpecialObjectFilter	= ANY +STRUCTURE
+		RequiredUpgradeNames	= Upgrade_HELegolasHeartseeker3
+	End
+	AttributeModifierNugget					; Heartseeker I: everything within 40 of the line slowed 30%, 10 s
+		AttributeModifier		= HELegolasHeartseekerSlow1
+		Radius					= 40.0
+		AffectHordeMembers		= Yes
+		RequiredUpgradeNames	= Upgrade_HELegolasHeartseeker1
+		ForbiddenUpgradeNames	= Upgrade_HELegolasHeartseeker3
+	End
+	AttributeModifierNugget					; Heartseeker III: the slow 50%
+		AttributeModifier		= HELegolasHeartseekerSlow3
+		Radius					= 40.0
+		AffectHordeMembers		= Yes
+		RequiredUpgradeNames	= Upgrade_HELegolasHeartseeker3
 	End
 End
 
@@ -387,7 +531,7 @@ End
 ; Legolas's Hawk Strike (hero rework): HELegolasHawkStrike at the fast arrow speed (ElvenElrohir keeps the slow one)
 Weapon HEElvenLegolasHawkStrike
     LeechRangeWeapon      	= Yes ;,;
-    AttackRange 	= LEGOLAS_HAWKSTRIKE_RANGE
+    AttackRange 	= H_RW_HERO_POWER_REACH ; hero rework ;,; LEGOLAS_HAWKSTRIKE_RANGE (485)
     WeaponSpeed 	= H_FAST_WEAPON_SPEED ;,;         					; dist/sec 
     MinWeaponSpeed 	= H_FAST_WEAPON_SPEED_MIN ;,;
     MaxWeaponSpeed 	= H_FAST_WEAPON_SPEED_MAX ;,;      					; dist/sec Upper limit on scaling, when attacking past nominal "max" range
@@ -413,11 +557,11 @@ Weapon HEElvenLegolasHawkStrike
 
 	ProjectileNugget                    				; A Nugget that creates an Object and sends it to the target with a Warhead
 		ProjectileTemplateName = LegolasSpecialArrow
-		WarheadTemplateName = HELegolasHawkStrikeWarhead
+		WarheadTemplateName = HEElvenLegolasHawkStrikeWarhead
 	End
 	ProjectileNugget                    				; A Nugget that creates an Object and sends it to the target with a Warhead
 		ProjectileTemplateName = LegolasSpecialArrow2ndArrow
-		WarheadTemplateName = HELegolasHawkStrikeWarhead
+		WarheadTemplateName = HEElvenLegolasHawkStrikeNoWarhead ; a visual only (2.02 gave it the full warhead: two hits)
 	End
 End
 
@@ -458,6 +602,116 @@ Weapon HELegolasHawkStrikeWarhead
 		ShockWaveZMult    = 1.0
 		OnlyWhenJustDied = Yes
 	End
+End
+
+Weapon HEElvenLegolasHawkStrikeWarhead ; hero rework: 2.02's with Hawk of Mirkwood's blocks
+	ProjectileCollidesWith 	= ALLIES ENEMIES NEUTRAL STRUCTURES WALLS 
+	RadiusDamageAffects 	= ENEMIES NEUTRALS NOT_SIMILAR
+	HitStoredTarget 	= Yes					; Always hits initial target.
+	DamageNugget                        				; A basic Nugget that just does damage
+    		;,; DamageScalar  	= 10% NONE +STRUCTURE +MordorCatapult +IsengardBallista +GondorTrebuchet +GondorTrebuchetWall 
+		Damage        	= LEGOLAS_HAWKSTRIKE_DAMAGE
+		Radius        	= 20
+		DelayTime     	= 0
+		DamageType    	= HERO_RANGED ;,; HERO
+		DamageFXType  	= GOOD_ARROW_PIERCE
+		DeathType     	= NORMAL
+;;,;;   		DamageScalar  	= 250% NONE +MordorFellBeast +MordorWitchKingOnFellBeast +GondorGwaihir +Drogoth
+		DamageScalar  	= 250% NONE +WildMountainGiant +WildMountainGiantSentry +WildMountainGiant_Summoned
+		DamageScalar  	= 200% NONE +MordorFellBeast +MordorWitchKingOnFellBeast +GondorGwaihir +Drogoth +KhamulFellBeast +GondorGwaihir_Summoned +ElvenFortressEagle ;,; 175% ;,; 250% ;;,;; added for 2.02e
+		DamageScalar	= 200% NONE +MONSTER ; hero rework: monsters (the first scalar that matches counts: giants 250%, fell beasts 200%)
+    	End
+
+	DamageNugget                        				; A basic Nugget that just does damage
+    		;,; DamageScalar  	= 10% NONE +STRUCTURE +MordorCatapult +IsengardBallista +GondorTrebuchet +GondorTrebuchetWall
+		Damage        	= 60
+		Radius        	= 60
+		DelayTime     	= 0
+		DamageType    	= HERO_RANGED ;,; HERO
+		DamageFXType  	= MAGIC
+		DeathType     	= NORMAL
+    	End
+		
+	MetaImpactNugget ;,;
+		SpecialObjectFilter = ANY +INFANTRY +CAVALRY
+		ShockWaveAmount   = 50.0
+		ShockWaveRadius   = 20.0
+		ShockWaveArc      = 90 ; in degrees to each side 180 is full circle
+		ShockWaveTaperOff = 1.0
+		ShockWaveSpeed    = 0.0
+		ShockWaveZMult    = 1.0
+		OnlyWhenJustDied = Yes
+	End
+	DamageNugget						; Hawk of Mirkwood I: 500 in all
+		Damage				= 200
+		AcceptDamageAdd		= No
+		Radius				= 20
+		DelayTime			= 0
+		DamageType			= HERO_RANGED
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		DamageScalar  	= 250% NONE +WildMountainGiant +WildMountainGiantSentry +WildMountainGiant_Summoned
+		DamageScalar  	= 200% NONE +MordorFellBeast +MordorWitchKingOnFellBeast +GondorGwaihir +Drogoth +KhamulFellBeast +GondorGwaihir_Summoned +ElvenFortressEagle ;,; 175% ;,; 250% ;;,;; added for 2.02e
+		DamageScalar	= 200% NONE +MONSTER ; hero rework: monsters (the first scalar that matches counts: giants 250%, fell beasts 200%)
+		RequiredUpgradeNames	= Upgrade_HELegolasHawk1
+	End
+	DamageNugget						; Hawk of Mirkwood II: 800 in all
+		Damage				= 300
+		AcceptDamageAdd		= No
+		Radius				= 20
+		DelayTime			= 0
+		DamageType			= HERO_RANGED
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		DamageScalar  	= 250% NONE +WildMountainGiant +WildMountainGiantSentry +WildMountainGiant_Summoned
+		DamageScalar  	= 200% NONE +MordorFellBeast +MordorWitchKingOnFellBeast +GondorGwaihir +Drogoth +KhamulFellBeast +GondorGwaihir_Summoned +ElvenFortressEagle ;,; 175% ;,; 250% ;;,;; added for 2.02e
+		DamageScalar	= 200% NONE +MONSTER ; hero rework: monsters (the first scalar that matches counts: giants 250%, fell beasts 200%)
+		RequiredUpgradeNames	= Upgrade_HELegolasHawk2
+	End
+	DamageNugget						; Hawk of Mirkwood II: machines (they take 5% of HERO_RANGED, 125-200% of HERO)
+		Damage				= 300
+		AcceptDamageAdd		= No
+		Radius				= 20
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		SpecialObjectFilter	= ANY +MACHINE
+		RequiredUpgradeNames	= Upgrade_HELegolasHawk2
+	End
+	DamageNugget						; Hawk of Mirkwood III: machines, 1100 in all
+		Damage				= 800
+		AcceptDamageAdd		= No
+		Radius				= 20
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		SpecialObjectFilter	= ANY +MACHINE
+		RequiredUpgradeNames	= Upgrade_HELegolasHawk3
+	End
+	DamageNugget						; Hawk of Mirkwood III: the burst
+		Damage				= 200
+		AcceptDamageAdd		= No
+		Radius				= 50
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+		RequiredUpgradeNames	= Upgrade_HELegolasHawk3
+	End
+	MetaImpactNugget						; Hawk of Mirkwood III: the soldiers it kills are thrown back
+		SpecialObjectFilter		= NONE +INFANTRY
+		ShockWaveAmount			= 30.0
+		ShockWaveRadius			= 50.0
+		ShockWaveTaperOff		= 1.0
+		OnlyWhenJustDied		= Yes
+		RequiredUpgradeNames	= Upgrade_HELegolasHawk3
+	End
+End
+
+Weapon HEElvenLegolasHawkStrikeNoWarhead ; Hawk Strike's second arrow: a visual
+	RadiusDamageAffects	= ENEMIES
 End
 
 Weapon HEMirkwoodArcherBow
@@ -885,7 +1139,7 @@ Weapon HEElvenThranduilBowWarhead
 End
 
 Weapon HEThranduilThornofVengeance
-	AttackRange				= H_HERO_BOW_RANGE ; hero rework: his bow's range ;,; FARAMIR_WOUNDING_ARROW_RANGE
+	AttackRange				= H_RW_HERO_POWER_REACH ; hero rework ;,; FARAMIR_WOUNDING_ARROW_RANGE
 	LeechRangeWeapon			= Yes
 	WeaponSpeed				= H_FAST_WEAPON_SPEED ; hero rework ;,; 321
 	MinWeaponSpeed			= H_FAST_WEAPON_SPEED_MIN ;,; 241
@@ -2102,7 +2356,7 @@ End
 
 ; Thranduil's Pinning Shot (hero rework, level 5): an arrow that pins a hero or monster (it cannot move or attack) and hurts it
 Weapon HEThranduilPinningShot
-	AttackRange				= H_HERO_BOW_RANGE
+	AttackRange				= H_RW_HERO_POWER_REACH
 	LeechRangeWeapon		= Yes
 	WeaponSpeed				= H_FAST_WEAPON_SPEED
 	MinWeaponSpeed			= H_FAST_WEAPON_SPEED_MIN

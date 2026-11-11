@@ -400,6 +400,27 @@ End
 
 ; ---- Hero Armory: each hero's items, the list the Armory overlay reads (openbfme.ini OpenBFMEArmory; no object shows these sets)
 CommandSet HEArmoryLegolasCommandSet
+	2	= HECommand_HELegolasArmor1
+	3	= HECommand_HELegolasArmor2
+	4	= HECommand_HELegolasArmor3
+	5	= HECommand_HELegolasLife1
+	6	= HECommand_HELegolasLife2
+	7	= HECommand_HELegolasLife3
+	8	= HECommand_HELegolasMobility1
+	9	= HECommand_HELegolasMobility2
+	10	= HECommand_HELegolasMobility3
+	11	= HECommand_HELegolasBow1
+	12	= HECommand_HELegolasBow2
+	13	= HECommand_HELegolasBow3
+	14	= HECommand_HELegolasArrowheads1
+	15	= HECommand_HELegolasArrowheads2
+	16	= HECommand_HELegolasArrowheads3
+	17	= HECommand_HELegolasHawk1
+	18	= HECommand_HELegolasHawk2
+	19	= HECommand_HELegolasHawk3
+	20	= HECommand_HELegolasHeartseeker1
+	21	= HECommand_HELegolasHeartseeker2
+	22	= HECommand_HELegolasHeartseeker3
 End
 CommandSet HEArmoryThranduilCommandSet
 	2	= HECommand_HEThranduilArmor1

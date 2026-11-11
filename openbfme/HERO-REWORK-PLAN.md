@@ -39,8 +39,7 @@ queued, refunded when cancelled, granted at the end of its research time (10 s);
 in parallel, usable from the game start; nothing waits behind the citadel's upgrades or recruits. The fortress ring is the
 original game's again (the prototype pages of 20a50a0 are removed).
 
-Pending for the Armory: final icons; the computer player does not use it; a real multiplayer check; Legolas's and
-Elrond's items.
+Pending for the Armory: final icons; the computer player does not use it; a real multiplayer check; Elrond's items.
 
 ## 4. Thranduil (decided)
 
@@ -115,6 +114,11 @@ of a battalion 230 away, and without it only the troll. Earlier values (HP, the 
 old numbers. Not built: Eyes of the Greenwood's stealth reveal (a disabled `StealthDetectorUpdate` has no switch in data),
 Hunter's Snare's -25% recharge (recharge modifiers reach every power).
 
+His targeted powers (Pinning Shot, Thorn of Vengeance I / 25) start 450 from the target and their weapons reach 475, as
+Legolas's (`H_RW_HERO_POWER_START` / `_REACH`; `OpenBFMEAbilityRangeFollowsBonus` grows the start with his range items).
+Measured on a battering ram: Thorn of Vengeance cast from 468 (centre to centre) without range items, 630 with Bow III and
+Swift Feet II (+35%: 608 plus the radii and one frame's walk).
+
 Kingship is dropped (replaced by the Damage line). Cooldown items may stay on his page (the earlier 50% level-25
 cooldown idea was dropped).
 
@@ -164,13 +168,42 @@ misses), and it fires `HEElvenLegolasArrowWindBow`, 2.02's weapon with range 700
 starts from plus the circle, so every target beyond 400 used a shot and got no arrow. Measured: trolls 150 / 190 / 230 /
 270 from the target: level 15 kills those at 150 and 190, level 25 also the one at 230, none reaches 270 (before: only
 the target); 135 Uruks around the target: about 64 killed by the 70 arrows, 129 by the 140 (before: 16 and 44).
-Fan of Arrows, Hawk Strike and Piercing Arrow aim 0.3 s and recover 0.15 s (halved, 2026-11-11); Hawk Strike flies at
+His powers start 450 from the target (edge to edge; Arrow Wind: its circle's centre) and their weapons reach 475 (Deepak
+2026-11-11; Arrow Wind's 700); `OpenBFMEAbilityRangeFollowsBonus` (dj-dev) grows the start with his range bonus as his
+weapons' reach grows, so the Bow and Swift Feet items lengthen his powers too (a power started beyond its weapon's reach
+spends the shot with no arrow). Measured on a battering ram: Hawk Strike cast from 468 (centre to centre) without range items,
+657 with Bow III and Swift Feet III (+40%: 630 plus the radii and one frame's walk). Fan of Arrows, Hawk Strike and Piercing Arrow aim 0.3 s and recover 0.15 s (halved, 2026-11-11); Hawk Strike flies at
 the fast arrow speed (`HEElvenLegolasHawkStrike`; 2.02's 321). Click to hit at level 9, about 330 away: Hawk Strike 2.0 ->
 1.6 s, Fan of Arrows ~1.7 -> ~1.6 s, Piercing Arrow ~1.7 -> ~1.5 s (0.2 s logic frames). Not measured: the casts' look, the AI's use of the powers. The demo's level cheat
 takes at most 10 levels a step.
 
-**Pass 2 (items):** the five shared lines (Mail, Life, Swift Feet, Bow, Arrowheads) plus his own infantry line (Orc-bane:
-I +30 against infantry and cavalry, II splash 15 against infantry, III kills thrown back); numbers to decide.
+**Armory** (pass 2, built 2026-11-11; prices and effects set by Deepak; placeholder icons, 10 s research; each tier requires the
+one before and adds to it; the values are the totals; the whole tree 19,600). Mail, Swift Feet I / II and Bow use Thranduil's
+modifier lists (the same values).
+
+| Line | Tier 1 | Tier 2 | Tier 3 |
+|---|---|---|---|
+| Prince's Mail | 250: +15% armor | 700: +25%, no knockback, cannot be trampled | 1500: +35% |
+| Life of the Greenwood | 250: +300 HP | 700: +800 HP, heals 20/s in battle too | 1500: +1600 HP, 40/s |
+| Swift Feet | 200: +15% speed | 500: +25% speed, +10% range | 1200: +35% speed, +15% range (no Leap: his six buttons are full) |
+| Bow of the Galadhrim | 300: +10% range | 1000: one more arrow at another enemy, +15% range | 2500: another (four with Twin Draw), +25% range |
+| Arrowheads | 200: +40 hero damage to monsters and machines, +25 to heroes, per arrow | 600: +25 more to monsters and heroes | 1500: +30 more to monsters, machines and heroes |
+| Hawk of Mirkwood | 300: Hawk Strike 500 | 800: 800, and +300 hero damage to machines | 2500: +800 more to machines (1100), a burst of 200 within 50, the soldiers it kills thrown back |
+| Heartseeker | 300: Piercing Arrow slows everything within 40 of its line 30% for 10 s | 800: 450 damage, +100 siege damage to buildings per point | 2000: the slow 50%; 200 siege per point |
+
+The damage items sit in his weapons: Arrowheads in his bow's warhead (Twin Draw, the Bow arrows and Fan of Arrows carry
+them), Hawk of Mirkwood in his own Hawk Strike warhead (`HEElvenLegolasHawkStrikeWarhead`), Heartseeker in both Piercing
+Arrow warheads. Hawk Strike's hit (300 / 500 / 800) is doubled against monsters (Deepak 2026-11-11; giants keep 2.02's 250%:
+the first matching DamageScalar counts). Hawk Strike hit twice before: 2.02's second arrow (`LegolasSpecialArrow2ndArrow`) carried the full warhead
+too (783 off a troll at level 3); it is a visual now, so the 300 (plus 2.02's 60 splash within 60) lands once.
+
+Measured in demo games (evendim, level cheat): all 21 research and show owned, the 12 modifier lists are on him; HP 2720 at
+level 3 with Life III (1120 + 1600); his arrow takes 220 off a troll with Arrowheads III (101 without); Hawk Strike with
+Hawk Strike at level 18 takes 2634 off a troll (Hawk III; before the machine cut), 2226 of a battering ram's 2500 (Hawk III), 824 of a
+Mordor catapult's 2000 with Hawk II and all of it with Hawk III (at level 3 too; a Men trebuchet has the same armor); Bow III at level 7: the
+first volley hits four Uruks (276 each). Piercing Arrow at level 9 through an Uruk battalion into a Mordor fortress (7500):
+701 without items, 2704 with Heartseeker III (7 points reach it); a Mordor orc pit (1500) dies to one arrow; the slow is on
+the battalion and the orc pit, not on him. Not measured: the battalion's walking speed under the slow, Heartseeker II alone.
 
 ## 6. Elrond
 

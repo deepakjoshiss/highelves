@@ -991,3 +991,248 @@ CommandButton HECommand_HEThranduilHunter3
   PurchasedLabel   = CONTROLBAR:ToolTipHEThranduilHunter3
   Radial           = Yes
 End
+CommandButton HECommand_HELegolasArmor1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HELegolasArmor1
+  TextLabel        = CONTROLBAR:HELegolasArmor1
+  ButtonImage      = BEEregionForge_ElvenArmor
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasArmor1
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasArmor1
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasArmor2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasArmor2
+  NeededUpgrade    = Upgrade_HELegolasArmor1
+  TextLabel        = CONTROLBAR:HELegolasArmor2
+  ButtonImage      = BEEregionForge_ElvenArmor
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasArmor2
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasArmor2
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasArmor3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasArmor3
+  NeededUpgrade    = Upgrade_HELegolasArmor2
+  TextLabel        = CONTROLBAR:HELegolasArmor3
+  ButtonImage      = BEEregionForge_ElvenArmor
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasArmor3
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasArmor3
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasLife1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HELegolasLife1
+  TextLabel        = CONTROLBAR:HELegolasLife1
+  ButtonImage      = BEEregionForge_BannerCarrier
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasLife1
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasLife1
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasLife2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasLife2
+  NeededUpgrade    = Upgrade_HELegolasLife1
+  TextLabel        = CONTROLBAR:HELegolasLife2
+  ButtonImage      = BEEregionForge_BannerCarrier
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasLife2
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasLife2
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasLife3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasLife3
+  NeededUpgrade    = Upgrade_HELegolasLife2
+  TextLabel        = CONTROLBAR:HELegolasLife3
+  ButtonImage      = BEEregionForge_BannerCarrier
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasLife3
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasLife3
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasMobility1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HELegolasMobility1
+  TextLabel        = CONTROLBAR:HELegolasMobility1
+  ButtonImage      = HSThranduilMoveUnseen
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasMobility1
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasMobility1
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasMobility2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasMobility2
+  NeededUpgrade    = Upgrade_HELegolasMobility1
+  TextLabel        = CONTROLBAR:HELegolasMobility2
+  ButtonImage      = HSThranduilMoveUnseen
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasMobility2
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasMobility2
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasMobility3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasMobility3
+  NeededUpgrade    = Upgrade_HELegolasMobility2
+  TextLabel        = CONTROLBAR:HELegolasMobility3
+  ButtonImage      = HSThranduilMoveUnseen
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasMobility3
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasMobility3
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasBow1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HELegolasBow1
+  TextLabel        = CONTROLBAR:HELegolasBow1
+  ButtonImage      = HSThranduilDeadeye
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasBow1
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasBow1
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasBow2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasBow2
+  NeededUpgrade    = Upgrade_HELegolasBow1
+  TextLabel        = CONTROLBAR:HELegolasBow2
+  ButtonImage      = HSThranduilDeadeye
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasBow2
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasBow2
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasBow3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasBow3
+  NeededUpgrade    = Upgrade_HELegolasBow2
+  TextLabel        = CONTROLBAR:HELegolasBow3
+  ButtonImage      = HSThranduilDeadeye
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasBow3
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasBow3
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasArrowheads1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HELegolasArrowheads1
+  TextLabel        = CONTROLBAR:HELegolasArrowheads1
+  ButtonImage      = BEEregionForge_SilverthornArrows
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasArrowheads1
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasArrowheads1
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasArrowheads2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasArrowheads2
+  NeededUpgrade    = Upgrade_HELegolasArrowheads1
+  TextLabel        = CONTROLBAR:HELegolasArrowheads2
+  ButtonImage      = BEEregionForge_SilverthornArrows
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasArrowheads2
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasArrowheads2
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasArrowheads3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasArrowheads3
+  NeededUpgrade    = Upgrade_HELegolasArrowheads2
+  TextLabel        = CONTROLBAR:HELegolasArrowheads3
+  ButtonImage      = BEEregionForge_SilverthornArrows
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasArrowheads3
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasArrowheads3
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasHawk1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HELegolasHawk1
+  TextLabel        = CONTROLBAR:HELegolasHawk1
+  ButtonImage      = HSLegolasHawkStrike
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasHawk1
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasHawk1
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasHawk2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasHawk2
+  NeededUpgrade    = Upgrade_HELegolasHawk1
+  TextLabel        = CONTROLBAR:HELegolasHawk2
+  ButtonImage      = HSLegolasHawkStrike
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasHawk2
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasHawk2
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasHawk3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasHawk3
+  NeededUpgrade    = Upgrade_HELegolasHawk2
+  TextLabel        = CONTROLBAR:HELegolasHawk3
+  ButtonImage      = HSLegolasHawkStrike
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasHawk3
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasHawk3
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasHeartseeker1
+  Command          = PLAYER_UPGRADE
+  Options          = CANCELABLE
+  Upgrade          = Upgrade_HELegolasHeartseeker1
+  TextLabel        = CONTROLBAR:HELegolasHeartseeker1
+  ButtonImage      = HSFaramirWoundingArrow
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasHeartseeker1
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasHeartseeker1
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasHeartseeker2
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasHeartseeker2
+  NeededUpgrade    = Upgrade_HELegolasHeartseeker1
+  TextLabel        = CONTROLBAR:HELegolasHeartseeker2
+  ButtonImage      = HSFaramirWoundingArrow
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasHeartseeker2
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasHeartseeker2
+  Radial           = Yes
+End
+CommandButton HECommand_HELegolasHeartseeker3
+  Command          = PLAYER_UPGRADE
+  Options          = NEED_UPGRADE CANCELABLE
+  Upgrade          = Upgrade_HELegolasHeartseeker3
+  NeededUpgrade    = Upgrade_HELegolasHeartseeker2
+  TextLabel        = CONTROLBAR:HELegolasHeartseeker3
+  ButtonImage      = HSFaramirWoundingArrow
+  ButtonBorderType = UPGRADE
+  DescriptLabel    = CONTROLBAR:ToolTipHELegolasHeartseeker3
+  PurchasedLabel   = CONTROLBAR:ToolTipHELegolasHeartseeker3
+  Radial           = Yes
+End

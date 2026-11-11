@@ -577,3 +577,41 @@ ModifierList HEThranduilHunter1
 	Duration = 0
 End
 
+; ---- Legolas's Armory items (hero rework, pass 2): Mail, Swift Feet I / II and Bow use Thranduil's lists (the same values); these differ
+ModifierList HELegolasLife1
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = HEALTH 300
+	Duration = 0
+End
+
+ModifierList HELegolasLife2
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = HEALTH 500
+	Duration = 0
+End
+
+ModifierList HELegolasLife3
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = HEALTH 800
+	Duration = 0
+End
+
+ModifierList HELegolasMobility3
+	Category = LEVEL ; permanent, like the level bonuses
+	Modifier = SPEED 108% ; 1.25 x 1.08 = +35% in all
+	Modifier = RANGE 5%
+	Duration = 0
+End
+
+; Heartseeker I / III: Piercing Arrow's slow (III's replaces I's)
+ModifierList HELegolasHeartseekerSlow1
+	Category = WEAPON
+	Modifier = SPEED 70%
+	Duration = 10000
+End
+
+ModifierList HELegolasHeartseekerSlow3
+	Category = WEAPON
+	Modifier = SPEED 50%
+	Duration = 10000
+End

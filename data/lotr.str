@@ -65097,3 +65097,255 @@ END
 CONTROLBAR:ToolTipHELegolasArrowWind25
 "Arrow Wind \n Two continuous volleys, up to 140 arrows, at the enemies in a 20% wider target area. \n Recharge: 120 s"
 END
+
+UPGRADE:HELegolasArmor1
+"Prince's Mail I"
+END
+
+CONTROLBAR:HELegolasArmor1
+"Prince's Mail I"
+END
+
+CONTROLBAR:ToolTipHELegolasArmor1
+"Prince's Mail I \n +15% armor. \n Cost: 250"
+END
+
+UPGRADE:HELegolasArmor2
+"Prince's Mail II"
+END
+
+CONTROLBAR:HELegolasArmor2
+"Prince's Mail II"
+END
+
+CONTROLBAR:ToolTipHELegolasArmor2
+"Prince's Mail II \n +10% more armor (25% in all); cannot be thrown back or trampled. \n Cost: 700"
+END
+
+UPGRADE:HELegolasArmor3
+"Prince's Mail III"
+END
+
+CONTROLBAR:HELegolasArmor3
+"Prince's Mail III"
+END
+
+CONTROLBAR:ToolTipHELegolasArmor3
+"Prince's Mail III \n +10% more armor (35% in all). \n Cost: 1500"
+END
+
+UPGRADE:HELegolasLife1
+"Life of the Greenwood I"
+END
+
+CONTROLBAR:HELegolasLife1
+"Life of the Greenwood I"
+END
+
+CONTROLBAR:ToolTipHELegolasLife1
+"Life of the Greenwood I \n +300 health. \n Cost: 250"
+END
+
+UPGRADE:HELegolasLife2
+"Life of the Greenwood II"
+END
+
+CONTROLBAR:HELegolasLife2
+"Life of the Greenwood II"
+END
+
+CONTROLBAR:ToolTipHELegolasLife2
+"Life of the Greenwood II \n +500 more health (800 in all); heals 20 a second, in battle too. \n Cost: 700"
+END
+
+UPGRADE:HELegolasLife3
+"Life of the Greenwood III"
+END
+
+CONTROLBAR:HELegolasLife3
+"Life of the Greenwood III"
+END
+
+CONTROLBAR:ToolTipHELegolasLife3
+"Life of the Greenwood III \n +800 more health (1600 in all); heals 40 a second. \n Cost: 1500"
+END
+
+UPGRADE:HELegolasMobility1
+"Swift Feet I"
+END
+
+CONTROLBAR:HELegolasMobility1
+"Swift Feet I"
+END
+
+CONTROLBAR:ToolTipHELegolasMobility1
+"Swift Feet I \n +15% speed. \n Cost: 200"
+END
+
+UPGRADE:HELegolasMobility2
+"Swift Feet II"
+END
+
+CONTROLBAR:HELegolasMobility2
+"Swift Feet II"
+END
+
+CONTROLBAR:ToolTipHELegolasMobility2
+"Swift Feet II \n +25% speed in all; +10% range. \n Cost: 500"
+END
+
+UPGRADE:HELegolasMobility3
+"Swift Feet III"
+END
+
+CONTROLBAR:HELegolasMobility3
+"Swift Feet III"
+END
+
+CONTROLBAR:ToolTipHELegolasMobility3
+"Swift Feet III \n +35% speed in all; +15% range in all. \n Cost: 1200"
+END
+
+UPGRADE:HELegolasBow1
+"Bow of the Galadhrim I"
+END
+
+CONTROLBAR:HELegolasBow1
+"Bow of the Galadhrim I"
+END
+
+CONTROLBAR:ToolTipHELegolasBow1
+"Bow of the Galadhrim I \n +10% range. \n Cost: 300"
+END
+
+UPGRADE:HELegolasBow2
+"Bow of the Galadhrim II"
+END
+
+CONTROLBAR:HELegolasBow2
+"Bow of the Galadhrim II"
+END
+
+CONTROLBAR:ToolTipHELegolasBow2
+"Bow of the Galadhrim II \n One more arrow on every shot, at another enemy near the target; +15% range in all. \n Cost: 1000"
+END
+
+UPGRADE:HELegolasBow3
+"Bow of the Galadhrim III"
+END
+
+CONTROLBAR:HELegolasBow3
+"Bow of the Galadhrim III"
+END
+
+CONTROLBAR:ToolTipHELegolasBow3
+"Bow of the Galadhrim III \n Another arrow on every shot (four with Twin Draw); +25% range in all. \n Cost: 2500"
+END
+
+UPGRADE:HELegolasArrowheads1
+"Arrowheads I"
+END
+
+CONTROLBAR:HELegolasArrowheads1
+"Arrowheads I"
+END
+
+CONTROLBAR:ToolTipHELegolasArrowheads1
+"Arrowheads I \n +40 hero damage to monsters and machines and +25 to heroes, per arrow. \n Cost: 200"
+END
+
+UPGRADE:HELegolasArrowheads2
+"Arrowheads II"
+END
+
+CONTROLBAR:HELegolasArrowheads2
+"Arrowheads II"
+END
+
+CONTROLBAR:ToolTipHELegolasArrowheads2
+"Arrowheads II \n +25 more to monsters and heroes, per arrow. \n Cost: 600"
+END
+
+UPGRADE:HELegolasArrowheads3
+"Arrowheads III"
+END
+
+CONTROLBAR:HELegolasArrowheads3
+"Arrowheads III"
+END
+
+CONTROLBAR:ToolTipHELegolasArrowheads3
+"Arrowheads III \n +30 more to monsters, machines and heroes, per arrow. \n Cost: 1500"
+END
+
+UPGRADE:HELegolasHawk1
+"Hawk of Mirkwood I"
+END
+
+CONTROLBAR:HELegolasHawk1
+"Hawk of Mirkwood I"
+END
+
+CONTROLBAR:ToolTipHELegolasHawk1
+"Hawk of Mirkwood I \n Hawk Strike deals 500 damage (300 before); double against monsters. \n Cost: 300"
+END
+
+UPGRADE:HELegolasHawk2
+"Hawk of Mirkwood II"
+END
+
+CONTROLBAR:HELegolasHawk2
+"Hawk of Mirkwood II"
+END
+
+CONTROLBAR:ToolTipHELegolasHawk2
+"Hawk of Mirkwood II \n Hawk Strike deals 800 damage (double against monsters) and +300 hero damage to machines. \n Cost: 800"
+END
+
+UPGRADE:HELegolasHawk3
+"Hawk of Mirkwood III"
+END
+
+CONTROLBAR:HELegolasHawk3
+"Hawk of Mirkwood III"
+END
+
+CONTROLBAR:ToolTipHELegolasHawk3
+"Hawk of Mirkwood III \n Hawk Strike deals +800 more hero damage to machines (1100 in all) and bursts where it hits: 200 damage to every enemy within 50; soldiers it kills are thrown back. \n Cost: 2500"
+END
+
+UPGRADE:HELegolasHeartseeker1
+"Heartseeker I"
+END
+
+CONTROLBAR:HELegolasHeartseeker1
+"Heartseeker I"
+END
+
+CONTROLBAR:ToolTipHELegolasHeartseeker1
+"Heartseeker I \n Piercing Arrow slows everything within 40 of its line by 30% for 10 seconds. \n Cost: 300"
+END
+
+UPGRADE:HELegolasHeartseeker2
+"Heartseeker II"
+END
+
+CONTROLBAR:HELegolasHeartseeker2
+"Heartseeker II"
+END
+
+CONTROLBAR:ToolTipHELegolasHeartseeker2
+"Heartseeker II \n Piercing Arrow deals 450 damage (250 before) and 100 siege damage to buildings, per point of its line. \n Cost: 800"
+END
+
+UPGRADE:HELegolasHeartseeker3
+"Heartseeker III"
+END
+
+CONTROLBAR:HELegolasHeartseeker3
+"Heartseeker III"
+END
+
+CONTROLBAR:ToolTipHELegolasHeartseeker3
+"Heartseeker III \n The slow is 50%; 200 siege damage to buildings, per point of its line. \n Cost: 2000"
+END

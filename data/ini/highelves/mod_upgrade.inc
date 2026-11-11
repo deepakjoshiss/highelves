@@ -251,3 +251,150 @@ Upgrade Upgrade_HEThranduilHunter3
 	BuildTime		= H_THRANDUIL_ITEM_TIME
 	ResearchSound	= UpgradeSilverThornArrows
 End
+Upgrade Upgrade_HELegolasArmor1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasArmor1
+	BuildCost		= H_LEGOLAS_ARMOR1_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasArmor2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasArmor2
+	BuildCost		= H_LEGOLAS_ARMOR2_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasArmor3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasArmor3
+	BuildCost		= H_LEGOLAS_ARMOR3_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasLife1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasLife1
+	BuildCost		= H_LEGOLAS_LIFE1_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasLife2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasLife2
+	BuildCost		= H_LEGOLAS_LIFE2_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasLife3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasLife3
+	BuildCost		= H_LEGOLAS_LIFE3_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasMobility1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasMobility1
+	BuildCost		= H_LEGOLAS_MOBILITY1_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasMobility2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasMobility2
+	BuildCost		= H_LEGOLAS_MOBILITY2_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasMobility3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasMobility3
+	BuildCost		= H_LEGOLAS_MOBILITY3_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasBow1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasBow1
+	BuildCost		= H_LEGOLAS_BOW1_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasBow2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasBow2
+	BuildCost		= H_LEGOLAS_BOW2_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasBow3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasBow3
+	BuildCost		= H_LEGOLAS_BOW3_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasArrowheads1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasArrowheads1
+	BuildCost		= H_LEGOLAS_ARROWHEADS1_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasArrowheads2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasArrowheads2
+	BuildCost		= H_LEGOLAS_ARROWHEADS2_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasArrowheads3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasArrowheads3
+	BuildCost		= H_LEGOLAS_ARROWHEADS3_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasHawk1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasHawk1
+	BuildCost		= H_LEGOLAS_HAWK1_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasHawk2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasHawk2
+	BuildCost		= H_LEGOLAS_HAWK2_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasHawk3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasHawk3
+	BuildCost		= H_LEGOLAS_HAWK3_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasHeartseeker1
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasHeartseeker1
+	BuildCost		= H_LEGOLAS_HEARTSEEKER1_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasHeartseeker2
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasHeartseeker2
+	BuildCost		= H_LEGOLAS_HEARTSEEKER2_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
+Upgrade Upgrade_HELegolasHeartseeker3
+	Type			= PLAYER
+	DisplayName		= UPGRADE:HELegolasHeartseeker3
+	BuildCost		= H_LEGOLAS_HEARTSEEKER3_COST
+	BuildTime		= H_LEGOLAS_ITEM_TIME
+	ResearchSound	= UpgradeSilverThornArrows
+End
