@@ -849,3 +849,10 @@ ModifierList HEElrondWrath3 ; Wrath III: +30% to all his damage
 	Modifier = SPELL_DAMAGE 130%
 	Duration = 0
 End
+
+; dj-dev (OpenBFMEAITeamUpgrades): a Hard or Brutal computer with allies gets 2.02's level-1 extra income from level 2 (object/includes/aibonuses.inc)
+ModifierList AITeamResourceBuildingBonus_Level2
+	Category = STRUCTURE
+	Modifier = PRODUCTION BRUTAL_AI_RESOURCE_BUILDING_BONUS_LEVEL1
+	Duration = 0
+End

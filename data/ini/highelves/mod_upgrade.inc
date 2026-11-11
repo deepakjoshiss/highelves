@@ -545,3 +545,11 @@ Upgrade Upgrade_HEElrondWrath3
 	BuildTime		= H_ELROND_ITEM_TIME
 	ResearchSound	= UpgradeSilverThornArrows
 End
+
+; dj-dev (OpenBFMEAITeamUpgrades in openbfme.ini): every object of a computer player gets one: alone on its team, or a team of 2 or more
+Upgrade Upgrade_AITeam1
+	Type			= OBJECT
+End
+Upgrade Upgrade_AITeam2
+	Type			= OBJECT
+End
