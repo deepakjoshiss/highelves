@@ -17,6 +17,50 @@ CommandSet HEElvenPorterCommandSet
 
 End
 
+; ---- Legolas (hero rework): his bar from level 1; levels 20 and 25 swap in Piercing Arrow II and the two-volley Arrow Wind
+CommandSet HEElvenLegolasCommandSet
+	1	= Command_ToggleStance
+	2	= HECommand_LegolasFanOfArrows
+	3	= HECommand_LegolasHawkStrikeRework
+	4	= HECommand_LegolasTwinDraw
+	5	= HECommand_LegolasPiercingArrow
+	6	= HECommand_LegolasArrowWind
+	12 	= Command_CaptureBuilding
+	13 	= Command_AttackMove
+	14 	= Command_Stop
+	16  	= Command_SetStanceBattle
+	17  	= Command_SetStanceAggressive
+	18  	= Command_SetStanceHoldGround
+End
+CommandSet HEElvenLegolasCommandSetL20
+	1	= Command_ToggleStance
+	2	= HECommand_LegolasFanOfArrows
+	3	= HECommand_LegolasHawkStrikeRework
+	4	= HECommand_LegolasTwinDraw
+	5	= HECommand_LegolasPiercingArrow2
+	6	= HECommand_LegolasArrowWind
+	12 	= Command_CaptureBuilding
+	13 	= Command_AttackMove
+	14 	= Command_Stop
+	16  	= Command_SetStanceBattle
+	17  	= Command_SetStanceAggressive
+	18  	= Command_SetStanceHoldGround
+End
+CommandSet HEElvenLegolasCommandSetL25
+	1	= Command_ToggleStance
+	2	= HECommand_LegolasFanOfArrows
+	3	= HECommand_LegolasHawkStrikeRework
+	4	= HECommand_LegolasTwinDraw
+	5	= HECommand_LegolasPiercingArrow2
+	6	= HECommand_LegolasArrowWind25
+	12 	= Command_CaptureBuilding
+	13 	= Command_AttackMove
+	14 	= Command_Stop
+	16  	= Command_SetStanceBattle
+	17  	= Command_SetStanceAggressive
+	18  	= Command_SetStanceHoldGround
+End
+
 CommandSet HERohanLegolasCommandSet
 	1	= Command_ToggleStance
 	2  	= HECommand_LegolasHawkStrike

@@ -1,5 +1,293 @@
 ; The High Elves faction (openbfme-godot docs/HIGHELVES.md)
 
+Weapon HEElvenLegolasBow ; hero rework: one arrow, Twin Draw's second from level 7 (OpenBFMESplitShot)
+	AttackRange		= H_HERO_BOW_RANGE
+	
+	RangeBonusMinHeight      = 30 ;	= 10
+	RangeBonus		= 1
+	RangeBonusPerFoot	= #MULTIPLY( H_HERO_BOW_RANGE H_ARCHER_RANGE_MULTI )
+	
+	LeechRangeWeapon	= Yes ;;,;; Added for 2.4				
+	WeaponSpeed		= H_FAST_WEAPON_SPEED         			; dist/sec
+	MinWeaponSpeed		= H_FAST_WEAPON_SPEED_MIN
+	MaxWeaponSpeed		= H_FAST_WEAPON_SPEED_MAX      			; dist/sec Upper limit on scaling, when attacking past nominal "max" range
+	FireFX			= FX_RohanArcherBowWeapon
+	ScaleWeaponSpeed	= Yes 				; Used for lob weapons, scales speed proportional to range
+	HitPercentage		= 100     			;When this weapon is used it will hit exactly 100% of the time.
+	ScatterRadius		= 5.0     			;When this weapon misses it can randomly miss by as much as this distance.
+
+	AcceptableAimDelta	= 20				; prevent twitchy reaiming in horde on horde
+	DelayBetweenShots	= H_LEGOLAS_DELAYBETWEENSHOTS 	; time between shots, msec
+	PreAttackDelay      	= H_LEGOLAS_PREATTACKDELAY 	; 1467 is the prep time for archer.
+	PreAttackType       	= PER_POSITION 			; Do the delay each time we attack a new target
+	FiringDuration      	= H_LEGOLAS_FIRINGDURATION 	; Duration of the archer firing shot is 500ms.
+
+    ClipSize			= 1
+    AutoReloadsClip		= Yes
+    AutoReloadWhenIdle		= 1	
+    ClipReloadTime		= Min:H_LEGOLAS_RELOADTIME_MIN Max:H_LEGOLAS_RELOADTIME_MAX
+    ContinuousFireOne		= 0
+    ContinuousFireCoast		= H_LEGOLAS_RELOADTIME_MAX
+
+    AntiAirborneVehicle		= Yes
+    AntiAirborneMonster		= Yes
+    CanFireWhileMoving		= Yes
+    
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+	End
+	ProjectileNugget						; Twin Draw (level 7): a second arrow at another enemy near the target
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+		RequiredUpgradeNames	= Upgrade_ObjectLevel7
+	End
+End
+
+Weapon HEElvenLegolasBowWarhead
+	ProjectileCollidesWith	= ENEMIES NEUTRAL STRUCTURES WALLS
+	RadiusDamageAffects		= ENEMIES NEUTRALS NOT_SIMILAR
+	HitStoredTarget			= Yes
+	DamageNugget
+		Damage				= H_RW_LEGOLAS_BOW_DAMAGE
+		DamageScalar		= H_RW_LEGOLAS_INFANTRY_SCALAR NONE +INFANTRY
+		Radius				= 0.0
+		DelayTime			= 0
+		DamageType			= HERO_RANGED
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+	End
+End
+
+; Fan of Arrows: 5 arrows, 10 from level 10, 15 from level 18, each at a different enemy within 100 of the target (OpenBFMESplitShot);
+; full arrows (his bow's warhead)
+Weapon HEElvenLegolasFanOfArrows
+	AttackRange				= H_HERO_BOW_RANGE
+	LeechRangeWeapon		= Yes
+	WeaponSpeed				= H_FAST_WEAPON_SPEED
+	MinWeaponSpeed			= H_FAST_WEAPON_SPEED_MIN
+	MaxWeaponSpeed			= H_FAST_WEAPON_SPEED_MAX
+	FireFX					= FX_RohanArcherBowWeapon
+	ScaleWeaponSpeed		= Yes
+	HitStoredTarget			= Yes
+	HitPercentage			= 100
+	DelayBetweenShots		= 5000
+	PreAttackDelay			= 1
+	PreAttackType			= PER_POSITION
+	FiringDuration			= 1
+	ClipSize				= 1
+	AutoReloadsClip			= Yes
+	AutoReloadWhenIdle		= 1
+	ClipReloadTime			= Min:1500 Max:1500
+	AntiAirborneVehicle		= Yes
+	AntiAirborneMonster		= Yes
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+		RequiredUpgradeNames	= Upgrade_ObjectLevel10
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+		RequiredUpgradeNames	= Upgrade_ObjectLevel10
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+		RequiredUpgradeNames	= Upgrade_ObjectLevel10
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+		RequiredUpgradeNames	= Upgrade_ObjectLevel10
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+		RequiredUpgradeNames	= Upgrade_ObjectLevel10
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+		RequiredUpgradeNames	= Upgrade_ObjectLevel18
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+		RequiredUpgradeNames	= Upgrade_ObjectLevel18
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+		RequiredUpgradeNames	= Upgrade_ObjectLevel18
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+		RequiredUpgradeNames	= Upgrade_ObjectLevel18
+	End
+	ProjectileNugget
+		ProjectileTemplateName	= OrangeFeatherArrow
+		WarheadTemplateName		= HEElvenLegolasBowWarhead
+		RequiredUpgradeNames	= Upgrade_ObjectLevel18
+	End
+End
+
+; Piercing Arrow (level 9): a line ahead of him out to 500, 15 wide: an arrow at each of 17 points (LinearTarget, along his facing), radius 15, the circles touching
+Weapon HEElvenLegolasPiercingArrow
+	AttackRange				= H_HERO_BOW_RANGE
+	LeechRangeWeapon		= Yes
+	WeaponSpeed				= H_FAST_WEAPON_SPEED
+	MinWeaponSpeed			= H_FAST_WEAPON_SPEED_MIN
+	MaxWeaponSpeed			= H_FAST_WEAPON_SPEED_MAX
+	FireFX					= FX_RohanArcherBowWeapon
+	ScaleWeaponSpeed		= Yes
+	HitPercentage			= 100
+	DelayBetweenShots		= 5000
+	PreAttackDelay			= 1
+	PreAttackType			= PER_POSITION
+	FiringDuration			= 1
+	ClipSize				= 1
+	AutoReloadsClip			= Yes
+	AutoReloadWhenIdle		= 1
+	ClipReloadTime			= Min:1500 Max:1500
+	LinearTarget			= X:15 Y:0 T:0
+	LinearTarget			= X:45 Y:0 T:0
+	LinearTarget			= X:75 Y:0 T:0
+	LinearTarget			= X:105 Y:0 T:0
+	LinearTarget			= X:135 Y:0 T:0
+	LinearTarget			= X:165 Y:0 T:0
+	LinearTarget			= X:195 Y:0 T:0
+	LinearTarget			= X:225 Y:0 T:0
+	LinearTarget			= X:255 Y:0 T:0
+	LinearTarget			= X:285 Y:0 T:0
+	LinearTarget			= X:315 Y:0 T:0
+	LinearTarget			= X:345 Y:0 T:0
+	LinearTarget			= X:375 Y:0 T:0
+	LinearTarget			= X:405 Y:0 T:0
+	LinearTarget			= X:435 Y:0 T:0
+	LinearTarget			= X:465 Y:0 T:0
+	LinearTarget			= X:495 Y:0 T:0
+	ProjectileNugget
+		ProjectileTemplateName	= HEElvenLegolasPiercingProjectile ; his arrow with a light trail
+		WarheadTemplateName		= HEElvenLegolasPiercingArrowWarhead
+	End
+End
+
+Weapon HEElvenLegolasPiercingArrowWarhead
+	RadiusDamageAffects		= ENEMIES NEUTRALS NOT_SIMILAR
+	DamageNugget
+		Damage				= H_RW_LEGOLAS_PIERCING_DAMAGE
+		AcceptDamageAdd		= No ; powers grow with the level's percentage only
+		Radius				= 15.0
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+	End
+	MetaImpactNugget						; the soldiers it kills are thrown back
+		SpecialObjectFilter	= NONE +INFANTRY
+		ShockWaveAmount		= 30.0
+		ShockWaveRadius		= 15.0
+		ShockWaveTaperOff	= 1.0
+		OnlyWhenJustDied	= Yes
+	End
+End
+
+; Piercing Arrow II (level 20): the line 30 wide (8 points, radius 30)
+Weapon HEElvenLegolasPiercingArrow2
+	AttackRange				= H_HERO_BOW_RANGE
+	LeechRangeWeapon		= Yes
+	WeaponSpeed				= H_FAST_WEAPON_SPEED
+	MinWeaponSpeed			= H_FAST_WEAPON_SPEED_MIN
+	MaxWeaponSpeed			= H_FAST_WEAPON_SPEED_MAX
+	FireFX					= FX_RohanArcherBowWeapon
+	ScaleWeaponSpeed		= Yes
+	HitPercentage			= 100
+	DelayBetweenShots		= 5000
+	PreAttackDelay			= 1
+	PreAttackType			= PER_POSITION
+	FiringDuration			= 1
+	ClipSize				= 1
+	AutoReloadsClip			= Yes
+	AutoReloadWhenIdle		= 1
+	ClipReloadTime			= Min:1500 Max:1500
+	LinearTarget			= X:30 Y:0 T:0
+	LinearTarget			= X:90 Y:0 T:0
+	LinearTarget			= X:150 Y:0 T:0
+	LinearTarget			= X:210 Y:0 T:0
+	LinearTarget			= X:270 Y:0 T:0
+	LinearTarget			= X:330 Y:0 T:0
+	LinearTarget			= X:390 Y:0 T:0
+	LinearTarget			= X:450 Y:0 T:0
+	ProjectileNugget
+		ProjectileTemplateName	= HEElvenLegolasPiercingProjectile ; his arrow with a light trail
+		WarheadTemplateName		= HEElvenLegolasPiercingArrow2Warhead
+	End
+End
+
+Weapon HEElvenLegolasPiercingArrow2Warhead
+	RadiusDamageAffects		= ENEMIES NEUTRALS NOT_SIMILAR
+	DamageNugget
+		Damage				= H_RW_LEGOLAS_PIERCING_DAMAGE
+		AcceptDamageAdd		= No ; powers grow with the level's percentage only
+		Radius				= 30.0
+		DelayTime			= 0
+		DamageType			= HERO
+		DamageFXType		= GOOD_ARROW_PIERCE
+		DeathType			= NORMAL
+	End
+	MetaImpactNugget						; the soldiers it kills are thrown back
+		SpecialObjectFilter	= NONE +INFANTRY
+		ShockWaveAmount		= 30.0
+		ShockWaveRadius		= 30.0
+		ShockWaveTaperOff	= 1.0
+		OnlyWhenJustDied	= Yes
+	End
+End
+
+; Legolas's Arrow Wind (hero rework): 2.02's LegolasBowArrowStorm reaching the whole circle. Its 400 range was shorter than the 450 he
+; starts the volley from plus the circle's radius, so every target beyond 400 used a shot and got no arrow
+Weapon HEElvenLegolasArrowWindBow
+  AttackRange = 700 ; ArrowStormUpdate StartAbilityRange 450 + the level-25 TargetRadius 240 ;,; LEGOLAS_ARROWSTORM_RANGE (400)
+  WeaponSpeed = 561         ; dist/sec 
+  MinWeaponSpeed = 481
+  MaxWeaponSpeed = 641      ; dist/sec Upper limit on scaling, when attacking past nominal "max" range
+  FireFX = FX_RohanArcherBowWeapon
+  HitPercentage     = 100     ;When this weapon is used it will hit exactly all of the time.
+
+  ProjectileNugget                    ; Default arrow
+    ProjectileTemplateName = LegolasBowArrowStormProjectile
+    WarheadTemplateName = LegolasBowArrowStormWarhead
+  End
+End
+
+
+
+
+
+
+
 Weapon HELegolasBow
 	AttackRange		= H_HERO_BOW_RANGE
 	
@@ -66,6 +354,43 @@ Weapon HELegolasHawkStrike
     WeaponSpeed 	= 321         					; dist/sec 
     MinWeaponSpeed 	= 241
     MaxWeaponSpeed 	= 481      					; dist/sec Upper limit on scaling, when attacking past nominal "max" range
+    FireFX 		= FX_RohanArcherBowWeapon
+    ScaleWeaponSpeed 	= Yes 						; Used for lob weapons, scales speed proportional to range
+    HitPercentage     	= 100     					;When this weapon is used it will hit exactly 75% of the time.
+
+	;All these delays are controlled by the special power. Basically the special power can
+	;launch whenever it's ready.
+    DelayBetweenShots		= 0					; time between shots, msec
+    PreAttackDelay		= 3000					; we want isntant
+    PreAttackType		= PER_POSITION
+    FiringDuration		= 1000					; Duration of the archer firing shot is 500ms.
+    ;,; ClipSize 			= 1
+    ;,; AutoReloadsClip 		= Yes
+    ;,; AutoReloadWhenIdle 		= 1	
+    ;,; ClipReloadTime 		= Min:1 Max:1
+
+    AntiAirborneVehicle		= Yes
+    AntiAirborneMonster		= Yes
+    
+	PreferredTargetBone = B_LLLID 					; Likes to shoot things in their left eye.
+
+	ProjectileNugget                    				; A Nugget that creates an Object and sends it to the target with a Warhead
+		ProjectileTemplateName = LegolasSpecialArrow
+		WarheadTemplateName = HELegolasHawkStrikeWarhead
+	End
+	ProjectileNugget                    				; A Nugget that creates an Object and sends it to the target with a Warhead
+		ProjectileTemplateName = LegolasSpecialArrow2ndArrow
+		WarheadTemplateName = HELegolasHawkStrikeWarhead
+	End
+End
+
+; Legolas's Hawk Strike (hero rework): HELegolasHawkStrike at the fast arrow speed (ElvenElrohir keeps the slow one)
+Weapon HEElvenLegolasHawkStrike
+    LeechRangeWeapon      	= Yes ;,;
+    AttackRange 	= LEGOLAS_HAWKSTRIKE_RANGE
+    WeaponSpeed 	= H_FAST_WEAPON_SPEED ;,;         					; dist/sec 
+    MinWeaponSpeed 	= H_FAST_WEAPON_SPEED_MIN ;,;
+    MaxWeaponSpeed 	= H_FAST_WEAPON_SPEED_MAX ;,;      					; dist/sec Upper limit on scaling, when attacking past nominal "max" range
     FireFX 		= FX_RohanArcherBowWeapon
     ScaleWeaponSpeed 	= Yes 						; Used for lob weapons, scales speed proportional to range
     HitPercentage     	= 100     					;When this weapon is used it will hit exactly 75% of the time.

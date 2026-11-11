@@ -65057,3 +65057,43 @@ END
 CONTROLBAR:ToolTipHEThranduilLeap
 "Swift Feet III \n Thranduil leaps to a place within 300. \n Recharge: 30 s \n Left click icon then left click on the ground"
 END
+
+CONTROLBAR:HELegolasFanOfArrows
+"&Fan of Arrows"
+END
+
+CONTROLBAR:ToolTipHELegolasFanOfArrows
+"Fan of Arrows \n Looses 5 arrows at 5 different enemies near the target (10 from level 10, 15 from level 18). \n Recharge: 45 s"
+END
+
+CONTROLBAR:ToolTipHELegolasHawkStrike
+"Hawk Strike \n A piercing arrow at a hero or monster: 300 damage. \n Recharge: 30 s"
+END
+
+CONTROLBAR:HELegolasTwinDraw
+"Twin Draw"
+END
+
+CONTROLBAR:ToolTipHELegolasTwinDraw
+"Twin Draw (from level 7) \n Every shot looses a second arrow at another enemy near the target."
+END
+
+CONTROLBAR:HELegolasPiercingArrow
+"&Piercing Arrow"
+END
+
+CONTROLBAR:ToolTipHELegolasPiercingArrow
+"Piercing Arrow \n 250 damage to everything in a line 15 wide out to 500; soldiers it kills are thrown back (30 wide from level 20). \n Recharge: 60 s"
+END
+
+CONTROLBAR:ToolTipHELegolasPiercingArrow2
+"Piercing Arrow \n 250 damage to everything in a line 30 wide out to 500; soldiers it kills are thrown back. \n Recharge: 30 s"
+END
+
+CONTROLBAR:ToolTipHELegolasArrowWind
+"Arrow Wind \n A continuous volley of up to 70 arrows at the enemies in the target area (from level 25: two volleys in a 20% wider area). \n Recharge: 120 s"
+END
+
+CONTROLBAR:ToolTipHELegolasArrowWind25
+"Arrow Wind \n Two continuous volleys, up to 140 arrows, at the enemies in a 20% wider target area. \n Recharge: 120 s"
+END

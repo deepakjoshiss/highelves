@@ -21,8 +21,8 @@ then Elrond.
 | HP per level | +60, flat |
 | Damage per level | The same each level (`HEReworkHeroLevelN`): **+1.7%** damage (`DAMAGE_MULT`, `SPELL_DAMAGE` for magic) and **+2 flat** (`DAMAGE_ADD`), which only the bow's arrows take: powers and item blocks say `AcceptDamageAdd = No`. Level 25: powers x1.50, Thranduil's arrow (120 + 48) x 1.499 = 252 (210%). The flat bonus is added before the percentage, so it grows with it. |
 | Weapon upgrades | split shot, splash, extra damage blocks come from **items only**, never from levels |
-| Item tiers | tier 1 ~500-2000, tier 2 ~2500-6000, tier 3 6000+; each higher item requires the one before; tiers add up |
-| XP curve | Each next level costs 40 more than the one before, from 125: level 10 at 2,565, 15 at 5,390, 20 at 9,215, 25 at 14,040 (`H_RW_HERO_LVLn_EXP_NEEDED`); the same for the three heroes. The table it replaces reached level 10 at 2,050 and 25 at 15,000. Killing the hero awards 2.02's factor continued (+10% a level). |
+| Item tiers | Thranduil's (Deepak, 2026-11-10): tier 1 200-300, tier 2 500-1000, tier 3 1000-2500; about 20,000 for a whole tree; each higher item requires the one before; tiers add up |
+| XP curve | `H_RW_HERO_LVLn_EXP_NEEDED`, the same for every reworked hero: 145 to level 2, each next level 25 more up to level 10, then 47 more a level: level 5 at 730, 10 at 2,205, 15 at 4,635, 20 at 8,240, 25 at 13,020. Killing the hero awards 2.02's factor continued (+10% a level). |
 | Items vs heroes | items are player upgrades, so they survive death and revival |
 
 ## 3. The Hero Armory (overlay)
@@ -136,18 +136,41 @@ Pending for Thranduil:
   player's use of the new powers.
 - Revive costs above level 10 fall back to level 1's (`RespawnEntry` stops at 10), for every High Elves hero.
 
-## 5. Legolas (partly decided)
+## 5. Legolas (pass 1 built 2026-11-11)
 
-**Today:** cost 2500, 2000 HP, bow 150 (+100 vs machines from level 3, splash from level 7), knives 200 on target / 150
-splash; Hawk Strike 1, Train Archers 3, Knife Fighter 4, Arrow Wind 7; a TEST split shot (2 arrows at level 3, 3 at
-level 7; mod commit dc758aa) that must become an item.
+An infantry killer, bow only (the knives and their toggle are gone). Everything is HEElvenLegolas's own: HERohanLegolas
+keeps its powers because ElvenElrohir is a copy of it. Before: 2500 cost (inherited from HERohanLegolas), 2000 HP, bow
+150, knives, Hawk Strike 1, Train Archers 3, Knife Fighter 4, Arrow Wind 7, Ram Baan and a splash / throw-back arrow at 7.
 
-**Decided:** start 1000 HP, arrow 90, knives 120; the shared growth; split and splash only from items.
+| | Built |
+|---|---|
+| Base | 800 cost, 1000 HP (+60 a level: 2440 at 25), arrow 90 with the shared growth, **+25% against infantry** (`HEElvenLegolasBowWarhead`) |
+| Level 1 | **Fan of Arrows**: 5 full arrows (his bow's warhead) at 5 different enemies within 100 of the target (`OpenBFMESplitShot = HEElvenLegolasFanOfArrows 100 100`), 45 s |
+| Level 3 | Hawk Strike (the HE weapon, 300), 30 s |
+| Level 7 | **Twin Draw** (passive): a second arrow on every shot (4 with Bow II / III in pass 2) |
+| Level 9 | **Piercing Arrow**: 250 hero damage in a line out to 500: 17 arrows (`LinearTarget` points along his facing, radius 15) at the fast arrow speed, each with a light silver-gold trail (`HEElvenLegolasPiercingTrail`, FaramirArrowTrail made light); soldiers it kills are thrown back; his shot plays Faramir's Wounding Arrow sound once (the power's InitiateSound); 60 s. Tried and left (2026-11-11): one visible arrow (Faramir's) plus a damage wave (`DamageSpeed` cone or strip) fired by an `ActivateModuleSpecialPower` chain; the waves work fired directly, but a chained power with a target position starts its own aim instead of firing (only target-less instant powers chain): it needs an engine opt-in |
+| Level 10 | Fan of Arrows: 10 arrows |
+| Level 15 | Arrow Wind: 70 arrows, 120 s (2.02: 210 s), circle 200 |
+| Level 18 | Fan of Arrows: 15 arrows |
+| Level 20 | Piercing Arrow II: 30 wide, 30 s (the command set swaps the button) |
+| Level 25 | Arrow Wind: two volleys (140 arrows), circle 240 (20% wider) |
 
-**Proposed, not confirmed:** level 1 Hawk Strike, 5 Knife Fighter, 8 Train Archers, 15 Arrow Wind; levels 10 and 20 power
-upgrades (Hawk Strike recharge, Arrow Wind arrows); level 25 signature (Arrow Wind fires a second volley).
+Checked in demo games (evendim, an Uruk battalion of 15 x 280 HP): the buttons unlock at their levels and swap at 20 / 25;
+the arrow takes 90 off a troll (no infantry bonus) and 225 off an Uruk; Fan of Arrows hits 5 Uruks at level 1, kills 10
+at level 10 and 15 at level 18; Twin Draw hits two Uruks a shot; Piercing Arrow kills 8 and 9 of two battalions in line
+(250 and 430 away), none of one off the line or one 650 away. Arrow Wind (both levels): it lists the enemies in its circle when it starts and gives each an arrow in turn; the
+volley now ends when they are dead (`CanShootEmptyGround = No`: 2.02's arrows into empty ground were the second volley's
+misses), and it fires `HEElvenLegolasArrowWindBow`, 2.02's weapon with range 700: its 400 was shorter than the 450 he
+starts from plus the circle, so every target beyond 400 used a shot and got no arrow. Measured: trolls 150 / 190 / 230 /
+270 from the target: level 15 kills those at 150 and 190, level 25 also the one at 230, none reaches 270 (before: only
+the target); 135 Uruks around the target: about 64 killed by the 70 arrows, 129 by the 140 (before: 16 and 44).
+Fan of Arrows, Hawk Strike and Piercing Arrow aim 0.3 s and recover 0.15 s (halved, 2026-11-11); Hawk Strike flies at
+the fast arrow speed (`HEElvenLegolasHawkStrike`; 2.02's 321). Click to hit at level 9, about 330 away: Hawk Strike 2.0 ->
+1.6 s, Fan of Arrows ~1.7 -> ~1.6 s, Piercing Arrow ~1.7 -> ~1.5 s (0.2 s logic frames). Not measured: the casts' look, the AI's use of the powers. The demo's level cheat
+takes at most 10 levels a step.
 
-**Pending:** his Armory page (the shared and archer lines plus his own lines); his level-25 signature.
+**Pass 2 (items):** the five shared lines (Mail, Life, Swift Feet, Bow, Arrowheads) plus his own infantry line (Orc-bane:
+I +30 against infantry and cavalry, II splash 15 against infantry, III kills thrown back); numbers to decide.
 
 ## 6. Elrond
 

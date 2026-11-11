@@ -18,7 +18,7 @@
 #define H_GENERIC_SPEED_BUFF_OBJECT_FILTER	    ANY +INFANTRY +ARCHER +CAVALRY +HERO +MACHINE +HORDE -MONSTER -STRUCTURE -BASE_FOUNDATION
 #define H_ALL_ELVEN_ARCHER_AURA_FILTER          NONE +HEElvenMirkwoodArcher +HEElvenMirkwoodArcherHorde +HEElvenMirkwoodArcherBanner +GaladhrimWarrior +GaladhrimWarriorHorde +NoldorArcher +NoldorArcherHorde
 #define H_HERO_FILTER_DAMAGE_BUFF               HEElvenElrond HEElvenHaldir HEElvenGlorfindel
-#define H_HERO_FILTER_RANGE_BUFF                HEElvenLegolas MirkwoodTauriel ; HEElvenThranduil has his own levels 2-25 (hero rework)
+#define H_HERO_FILTER_RANGE_BUFF                MirkwoodTauriel ; HEElvenThranduil has his own levels 2-25 (hero rework)
 #define H_ELVEN_ARCHER_DAMAGE_FILTER            HEElvenMirkwoodArcher HEElvenMirkwoodArcherHorde HEElvenMirkwoodArcherBanner GaladhrimWarrior GaladhrimWarriorHorde RivendellKnights RivendellKnightsHorde
 #define	H_HERO_BOW_RANGE				        	420
 #define	H_VISION_HERO_RANGED				    	450
@@ -232,3 +232,11 @@
 #define H_THRANDUIL_HUNTER2_COST	500
 #define H_THRANDUIL_HUNTER3_COST	1000
 #define H_THRANDUIL_ITEM_TIME	10 ; seconds (placeholder)
+
+; ---- Legolas (hero rework, openbfme/HERO-REWORK-PLAN.md): an infantry killer, bow only. HEElvenLegolas's own values: HERohanLegolas's
+; (H_LEGOLAS_*) stay, ElvenElrohir is a copy of it
+#define H_RW_LEGOLAS_BUILDCOST		800
+#define H_RW_LEGOLAS_HEALTH		1000
+#define H_RW_LEGOLAS_BOW_DAMAGE	90 ; takes the level's flat bonus (DAMAGE_ADD)
+#define H_RW_LEGOLAS_INFANTRY_SCALAR	125% ; his arrow against infantry
+#define H_RW_LEGOLAS_PIERCING_DAMAGE	250

@@ -922,3 +922,38 @@ FXParticleSystem HEThranduilPinningArrowRed ; hero rework: Pinning Shot's waves,
   Draw = DefaultDraw
   End
 End
+
+; hero rework: Legolas's Piercing Arrow trail, FaramirArrowTrail made light (17 arrows fly at once): one particle every other
+; update instead of two each, half the life, slower growth, a soft silver-gold
+FXParticleSystem HEElvenLegolasPiercingTrail
+  System
+    Priority = ALWAYS_RENDER
+    ParticleName = EXEclipseBlur.tga
+    Lifetime = 12 12
+    SortLevel = 1
+    BurstDelay = 2 2
+    BurstCount = 1 1
+    IsGroundAligned = Yes
+    IsParticleUpTowardsEmitter = Yes
+  End
+  Color = DefaultColor
+    Color1 = R:235 G:215 B:150 0
+    Color2 = R:0 G:0 B:0 12
+  End
+  Update = DefaultUpdate
+    SizeRate = 2 2.5
+    SizeRateDamping = 0.8 0.9
+    AngleZ = 1 2
+    AngularDamping = 1 1
+    AngularDampingXY = 1 1
+  End
+  Physics = DefaultPhysics
+    VelocityDamping = 1 1
+  End
+  EmissionVelocity = OrthoEmissionVelocity
+  End
+  EmissionVolume = PointEmissionVolume
+  End
+  Draw = DefaultDraw
+  End
+End

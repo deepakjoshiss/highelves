@@ -379,3 +379,112 @@ CommandButton HECommand_ThranduilLeap
 	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilLeap
 	InPalantir				= Yes
 End
+
+; ---- Legolas (hero rework); placeholder icons for Fan of Arrows, Twin Draw and Piercing Arrow
+
+CommandButton HECommand_LegolasFanOfArrows
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityLegolasFanOfArrows
+	Options					= NEED_TARGET_ENEMY_OBJECT
+	TextLabel				= CONTROLBAR:HELegolasFanOfArrows
+	ButtonImage				= HSThranduilDeadeye
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHELegolasFanOfArrows
+	InPalantir				= Yes
+	WeaponSlot				= SECONDARY
+	CursorName				= Bombard
+	InvalidCursorName		= GenericInvalid
+	DisableOnModelCondition = USER_67
+	AutoAbility				= Yes
+End
+
+CommandButton HECommand_LegolasHawkStrikeRework
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityLegolasHawkStrike
+	Options					= NEED_TARGET_ENEMY_OBJECT
+	TextLabel				= CONTROLBAR:HawkStrike
+	ButtonImage				= HSLegolasHawkStrike
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHELegolasHawkStrike
+	InPalantir				= Yes
+	WeaponSlot				= SECONDARY
+	CursorName				= Bombard
+	InvalidCursorName		= GenericInvalid
+	DisableOnModelCondition = USER_67
+	AutoAbility				= Yes
+End
+
+CommandButton HECommand_LegolasTwinDraw
+	Command					= SPECIAL_POWER
+	SpecialPower			= SpecialAbilityFakeLeadership
+	Options					= NONPRESSABLE
+	TextLabel				= CONTROLBAR:HELegolasTwinDraw
+	ButtonImage				= BEEregionForge_SilverthornArrows
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHELegolasTwinDraw
+	InPalantir				= Yes
+End
+
+CommandButton HECommand_LegolasPiercingArrow
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityLegolasPiercingArrow
+	Options					= NEED_TARGET_ENEMY_OBJECT
+	TextLabel				= CONTROLBAR:HELegolasPiercingArrow
+	ButtonImage				= HSFaramirWoundingArrow
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHELegolasPiercingArrow
+	InPalantir				= Yes
+	WeaponSlot				= SECONDARY
+	CursorName				= Bombard
+	InvalidCursorName		= GenericInvalid
+	DisableOnModelCondition = USER_67
+	AutoAbility				= Yes
+End
+
+CommandButton HECommand_LegolasPiercingArrow2
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityLegolasPiercingArrow2
+	Options					= NEED_TARGET_ENEMY_OBJECT
+	TextLabel				= CONTROLBAR:HELegolasPiercingArrow
+	ButtonImage				= HSFaramirWoundingArrow
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHELegolasPiercingArrow2
+	InPalantir				= Yes
+	WeaponSlot				= SECONDARY
+	CursorName				= Bombard
+	InvalidCursorName		= GenericInvalid
+	DisableOnModelCondition = USER_67
+	AutoAbility				= Yes
+End
+
+CommandButton HECommand_LegolasArrowWind
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityLegolasArrowWind
+	Options					= NEED_TARGET_POS CONTEXTMODE_COMMAND
+	TextLabel				= CONTROLBAR:ArrowWind
+	ButtonImage				= HSLegolasArrowWind
+	CursorName				= Bombard
+	RadiusCursorType		= ArrowStormRadiusCursor
+	InvalidCursorName		= GenericInvalid
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHELegolasArrowWind
+	InPalantir				= Yes
+	AutoAbility				= Yes
+	DisableOnModelCondition = USER_67
+End
+
+CommandButton HECommand_LegolasArrowWind25
+	Command					= SPECIAL_POWER
+	SpecialPower			= HESpecialAbilityLegolasArrowWind25
+	Options					= NEED_TARGET_POS CONTEXTMODE_COMMAND
+	TextLabel				= CONTROLBAR:ArrowWind
+	ButtonImage				= HSLegolasArrowWind
+	CursorName				= Bombard
+	RadiusCursorType		= ArrowStormRadiusCursor
+	InvalidCursorName		= GenericInvalid
+	ButtonBorderType		= ACTION
+	DescriptLabel			= CONTROLBAR:ToolTipHELegolasArrowWind25
+	InPalantir				= Yes
+	AutoAbility				= Yes
+	DisableOnModelCondition = USER_67
+End

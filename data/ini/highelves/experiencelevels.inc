@@ -889,18 +889,20 @@ ExperienceLevel HEElvenElrondLevel10
 	End
 END
 
+; ---- Legolas (hero rework): levels 2-25, Thranduil's frame (HEReworkHeroLevelN, the shared XP curve); level 1 stays 2.02's
 ExperienceLevel HEElvenLegolasLevel2
 	TargetNames = HEElvenLegolas
-	RequiredExperience			=	H_HERO_LVL2_EXP_NEEDED
+	RequiredExperience			=	H_RW_HERO_LVL2_EXP_NEEDED
 	ExperienceAward				=	ELVEN_LEGOLAS_AWARD_LEVEL_2
-	AttributeModifiers			=	ElvenLegolasBonusRank2 GenericHeroDamageBonusRank2
+	AttributeModifiers			=	HEReworkHeroLevel2
 	Rank						=	2
 	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel2
 	SelectionDecal
 		Texture					=	decal_hero_good
 		Style					=	SHADOW_ALPHA_DECAL
-		OpacityMin				=	50% 
-		OpacityMax				=	100% 
+		OpacityMin				=	50%
+		OpacityMax				=	100%
 		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
 		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
 		MaxSelectedUnits		=	40
@@ -909,17 +911,17 @@ END
 
 ExperienceLevel HEElvenLegolasLevel3
 	TargetNames = HEElvenLegolas
-	RequiredExperience			=	H_HERO_LVL3_EXP_NEEDED
+	RequiredExperience			=	H_RW_HERO_LVL3_EXP_NEEDED
 	ExperienceAward				=	ELVEN_LEGOLAS_AWARD_LEVEL_3
-	AttributeModifiers			=	ElvenLegolasBonusRank3 GenericHeroDamageBonusRank3
+	AttributeModifiers			=	HEReworkHeroLevel3
 	Rank						=	3
 	LevelUpFx					=	FX:GoodLevelUpFX
 	Upgrades					=	Upgrade_ObjectLevel3
 	SelectionDecal
 		Texture					=	decal_hero_good
 		Style					=	SHADOW_ALPHA_DECAL
-		OpacityMin				=	50% 
-		OpacityMax				=	100% 
+		OpacityMin				=	50%
+		OpacityMax				=	100%
 		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
 		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
 		MaxSelectedUnits		=	40
@@ -928,17 +930,17 @@ END
 
 ExperienceLevel HEElvenLegolasLevel4
 	TargetNames = HEElvenLegolas
-	RequiredExperience			=	H_HERO_LVL4_EXP_NEEDED
+	RequiredExperience			=	H_RW_HERO_LVL4_EXP_NEEDED
 	ExperienceAward				=	ELVEN_LEGOLAS_AWARD_LEVEL_4
-	AttributeModifiers			=	ElvenLegolasBonusRank4 GenericHeroDamageBonusRank4
+	AttributeModifiers			=	HEReworkHeroLevel4
 	Rank						=	4
 	LevelUpFx					=	FX:GoodLevelUpFX
 	Upgrades					=	Upgrade_ObjectLevel4
 	SelectionDecal
 		Texture					=	decal_hero_good
 		Style					=	SHADOW_ALPHA_DECAL
-		OpacityMin				=	50% 
-		OpacityMax				=	100% 
+		OpacityMin				=	50%
+		OpacityMax				=	100%
 		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
 		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
 		MaxSelectedUnits		=	40
@@ -947,16 +949,17 @@ END
 
 ExperienceLevel HEElvenLegolasLevel5
 	TargetNames = HEElvenLegolas
-	RequiredExperience			=	H_HERO_LVL5_EXP_NEEDED
+	RequiredExperience			=	H_RW_HERO_LVL5_EXP_NEEDED
 	ExperienceAward				=	ELVEN_LEGOLAS_AWARD_LEVEL_5
-	AttributeModifiers			=	ElvenLegolasBonusRank5 GenericHeroDamageBonusRank5
+	AttributeModifiers			=	HEReworkHeroLevel5
 	Rank						=	5
 	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel5
 	SelectionDecal
 		Texture					=	decal_hero_good
 		Style					=	SHADOW_ALPHA_DECAL
-		OpacityMin				=	50% 
-		OpacityMax				=	100% 
+		OpacityMin				=	50%
+		OpacityMax				=	100%
 		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
 		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
 		MaxSelectedUnits		=	40
@@ -965,16 +968,17 @@ END
 
 ExperienceLevel HEElvenLegolasLevel6
 	TargetNames = HEElvenLegolas
-	RequiredExperience			=	H_HERO_LVL6_EXP_NEEDED
+	RequiredExperience			=	H_RW_HERO_LVL6_EXP_NEEDED
 	ExperienceAward				=	ELVEN_LEGOLAS_AWARD_LEVEL_6
-	AttributeModifiers			=	ElvenLegolasBonusRank6 GenericHeroDamageBonusRank6
+	AttributeModifiers			=	HEReworkHeroLevel6
 	Rank						=	6
 	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel6
 	SelectionDecal
 		Texture					=	decal_hero_good
 		Style					=	SHADOW_ALPHA_DECAL
-		OpacityMin				=	50% 
-		OpacityMax				=	100% 
+		OpacityMin				=	50%
+		OpacityMax				=	100%
 		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
 		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
 		MaxSelectedUnits		=	40
@@ -983,17 +987,17 @@ END
 
 ExperienceLevel HEElvenLegolasLevel7
 	TargetNames = HEElvenLegolas
-	RequiredExperience			=	H_HERO_LVL7_EXP_NEEDED
+	RequiredExperience			=	H_RW_HERO_LVL7_EXP_NEEDED
 	ExperienceAward				=	ELVEN_LEGOLAS_AWARD_LEVEL_7
-	AttributeModifiers			=	ElvenLegolasBonusRank7 GenericHeroDamageBonusRank7
+	AttributeModifiers			=	HEReworkHeroLevel7
 	Rank						=	7
 	LevelUpFx					=	FX:GoodLevelUpFX
-	Upgrades				= Upgrade_ObjectLevel7 Upgrade_New1 ; 2.02 v9.8.0 scheme (+ the mod's Upgrade_New*)
+	Upgrades					=	Upgrade_ObjectLevel7
 	SelectionDecal
 		Texture					=	decal_hero_good
 		Style					=	SHADOW_ALPHA_DECAL
-		OpacityMin				=	50% 
-		OpacityMax				=	100% 
+		OpacityMin				=	50%
+		OpacityMax				=	100%
 		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
 		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
 		MaxSelectedUnits		=	40
@@ -1002,16 +1006,17 @@ END
 
 ExperienceLevel HEElvenLegolasLevel8
 	TargetNames = HEElvenLegolas
-	RequiredExperience			=	H_HERO_LVL8_EXP_NEEDED
+	RequiredExperience			=	H_RW_HERO_LVL8_EXP_NEEDED
 	ExperienceAward				=	ELVEN_LEGOLAS_AWARD_LEVEL_8
-	AttributeModifiers			=	ElvenLegolasBonusRank8 GenericHeroDamageBonusRank8
+	AttributeModifiers			=	HEReworkHeroLevel8
 	Rank						=	8
 	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel8
 	SelectionDecal
 		Texture					=	decal_hero_good
 		Style					=	SHADOW_ALPHA_DECAL
-		OpacityMin				=	50% 
-		OpacityMax				=	100% 
+		OpacityMin				=	50%
+		OpacityMax				=	100%
 		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
 		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
 		MaxSelectedUnits		=	40
@@ -1020,16 +1025,17 @@ END
 
 ExperienceLevel HEElvenLegolasLevel9
 	TargetNames = HEElvenLegolas
-	RequiredExperience			=	H_HERO_LVL9_EXP_NEEDED
+	RequiredExperience			=	H_RW_HERO_LVL9_EXP_NEEDED
 	ExperienceAward				=	ELVEN_LEGOLAS_AWARD_LEVEL_9
-	AttributeModifiers			=	ElvenLegolasBonusRank9 GenericHeroDamageBonusRank9
+	AttributeModifiers			=	HEReworkHeroLevel9
 	Rank						=	9
 	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel9
 	SelectionDecal
 		Texture					=	decal_hero_good
 		Style					=	SHADOW_ALPHA_DECAL
-		OpacityMin				=	50% 
-		OpacityMax				=	100% 
+		OpacityMin				=	50%
+		OpacityMax				=	100%
 		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
 		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
 		MaxSelectedUnits		=	40
@@ -1038,17 +1044,302 @@ END
 
 ExperienceLevel HEElvenLegolasLevel10
 	TargetNames = HEElvenLegolas
-	RequiredExperience			=	H_HERO_LVL10_EXP_NEEDED
+	RequiredExperience			=	H_RW_HERO_LVL10_EXP_NEEDED
 	ExperienceAward				=	ELVEN_LEGOLAS_AWARD_LEVEL_10
-	AttributeModifiers			=	ElvenLegolasBonusRank10 GenericHeroDamageBonusRank10
-	Upgrades				= Upgrade_New2 ; 2.02 v9.8.0 scheme (+ the mod's Upgrade_New*)
+	AttributeModifiers			=	HEReworkHeroLevel10
 	Rank						=	10
 	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel10
 	SelectionDecal
 		Texture					=	decal_hero_good
 		Style					=	SHADOW_ALPHA_DECAL
-		OpacityMin				=	50% 
-		OpacityMax				=	100% 
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel11
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL11_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_11 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel11
+	Rank						=	11
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel11
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel12
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL12_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_12 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel12
+	Rank						=	12
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel12
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel13
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL13_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_13 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel13
+	Rank						=	13
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel13
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel14
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL14_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_14 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel14
+	Rank						=	14
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel14
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel15
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL15_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_15 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel15
+	Rank						=	15
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel15
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel16
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL16_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_16 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel16
+	Rank						=	16
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel16
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel17
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL17_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_17 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel17
+	Rank						=	17
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel17
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel18
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL18_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_18 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel18
+	Rank						=	18
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel18
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel19
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL19_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_19 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel19
+	Rank						=	19
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel19
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel20
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL20_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_20 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel20
+	Rank						=	20
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel20
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel21
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL21_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_21 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel21
+	Rank						=	21
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel21
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel22
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL22_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_22 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel22
+	Rank						=	22
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel22
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel23
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL23_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_23 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel23
+	Rank						=	23
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel23
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel24
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL24_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_24 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel24
+	Rank						=	24
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel24
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
+		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
+		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
+		MaxSelectedUnits		=	40
+	End
+END
+
+ExperienceLevel HEElvenLegolasLevel25
+	TargetNames = HEElvenLegolas
+	RequiredExperience			=	H_RW_HERO_LVL25_EXP_NEEDED
+	ExperienceAward				=	#DIVIDE( #MULTIPLY( ELVEN_LEGOLAS_AWARD_LEVEL_1 H_RW_AWARD_FACTOR_LEVEL_25 ) AWARD_DIV_FACTOR )
+	AttributeModifiers			=	HEReworkHeroLevel25
+	Rank						=	25
+	LevelUpFx					=	FX:GoodLevelUpFX
+	Upgrades					=	Upgrade_ObjectLevel25
+	SelectionDecal
+		Texture					=	decal_hero_good
+		Style					=	SHADOW_ALPHA_DECAL
+		OpacityMin				=	50%
+		OpacityMax				=	100%
 		MinRadius				=	ELVEN_LEGOLAS_DECAL_MIN_RADIUS
 		MaxRadius				=	ELVEN_LEGOLAS_DECAL_MAX_RADIUS
 		MaxSelectedUnits		=	40
@@ -1057,7 +1348,6 @@ END
 
 ; Hero rework (openbfme/HERO-REWORK-PLAN.md): levels 2-25, the same bonus each level (HEReworkHeroLevelN), XP H_RW_HERO_LVLn_EXP_NEEDED.
 ; Level 1 is 2.02's ElvenThranduilLevel1 (experiencelevels.ini). Each level grants Upgrade_ObjectLevelN (11-25: mod_upgrade.inc).
-
 ExperienceLevel HEElvenThranduilLevel2
 	TargetNames = HEElvenThranduil
 	RequiredExperience			=	H_RW_HERO_LVL2_EXP_NEEDED

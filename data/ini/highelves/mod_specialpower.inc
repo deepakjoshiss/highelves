@@ -156,3 +156,43 @@ SpecialPower HESpecialAbilityThranduilLeap ; Swift Feet III (Armory)
 	MaxCastRange			= 300
 	InitiateAtLocationSound	= CaH_Invulnerability
 End
+
+; ---- Legolas (hero rework, openbfme/HERO-REWORK-PLAN.md); HERohanLegolas's powers stay for ElvenElrohir
+SpecialPower HESpecialAbilityLegolasFanOfArrows
+	Enum			= SPECIAL_AT_VISIBLE_OBJECT
+	ReloadTime		= 45000
+	ObjectFilter	= ALL -BASE_FOUNDATION -INERT -IGNORED_IN_GUI -WALK_ON_TOP_OF_WALL -BLOCKING_GATE -WALL_UPGRADE -UNATTACKABLE -MOVE_ONLY -STRUCTURE
+End
+SpecialPower HESpecialAbilityLegolasHawkStrike
+	Enum			= SPECIAL_AT_VISIBLE_OBJECT
+	ReloadTime		= 30000
+	InitiateSound	= LegolasHawkStrikeArrowShoot
+End
+SpecialPower HESpecialAbilityLegolasPiercingArrow
+	Enum			= SPECIAL_AT_VISIBLE_OBJECT
+	ReloadTime		= 60000
+	ObjectFilter	= ALL -BASE_FOUNDATION -INERT -IGNORED_IN_GUI -WALK_ON_TOP_OF_WALL -BLOCKING_GATE -WALL_UPGRADE -UNATTACKABLE -MOVE_ONLY
+	InitiateSound	= FaramirWoundingArrow ; once, as he fires (Faramir's Wounding Arrow shot); a weapon FireSound would play for all 17 arrows
+End
+SpecialPower HESpecialAbilityLegolasPiercingArrow2
+	Enum			= SPECIAL_AT_VISIBLE_OBJECT
+	ReloadTime		= 30000
+	ObjectFilter	= ALL -BASE_FOUNDATION -INERT -IGNORED_IN_GUI -WALK_ON_TOP_OF_WALL -BLOCKING_GATE -WALL_UPGRADE -UNATTACKABLE -MOVE_ONLY
+	InitiateSound	= FaramirWoundingArrow ; once, as he fires (Faramir's Wounding Arrow shot); a weapon FireSound would play for all 17 arrows
+End
+SpecialPower HESpecialAbilityLegolasArrowWind
+	Enum				= SPECIAL_ARROW_STORM
+	ReloadTime			= 120000
+	RadiusCursorRadius	= 200.0 ; ArrowStormUpdate's TargetRadius
+	ViewObjectDuration	= 5000
+	ViewObjectRange		= 120
+	Flags				= WATER_OK
+End
+SpecialPower HESpecialAbilityLegolasArrowWind25
+	Enum				= SPECIAL_ARROW_STORM
+	ReloadTime			= 120000
+	RadiusCursorRadius	= 240.0 ; ArrowStormUpdate's TargetRadius (level 25: 20% wider)
+	ViewObjectDuration	= 5000
+	ViewObjectRange		= 120
+	Flags				= WATER_OK
+End
