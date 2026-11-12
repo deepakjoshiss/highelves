@@ -65641,3 +65641,11 @@ END
 CONTROLBAR:ToolTipHEElrondWrath3
 "Wrath of the Noldor III \n +30% to all of his damage. \n Cost: 2500"
 END
+
+CONTROLBAR:HEArmory
+"Armory"
+END
+
+CONTROLBAR:ToolTipHEArmory
+"Open the Armory: buy items for your heroes. \n Each hero researches one item at a time. \n Left click an item to research it, right click to cancel."
+END

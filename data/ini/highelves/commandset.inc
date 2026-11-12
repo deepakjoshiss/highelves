@@ -347,29 +347,31 @@ CommandSet HEElvenFoundationCommandSet
 End
 
 CommandSet HEElvesSpellBookCommandSet
-    1 = HECommand_SpellBookFarsight
-    2 = HECommand_SpellBookRebuild
-    3 = HECommand_SpellBookElvenGifts
-    4 = HECommand_SpellBookRallyingCall
-    5 = HECommand_SpellBookHeal
+    1 = HECommand_SpellBookArmory ; the Armory (dj-dev): first, so its button is the power column's first slot
 
-    6 = HECommand_SpellBookEnshroudingMist
-    7 = HECommand_SpellBookArrowVolleyGood
-    8 = HECommand_SpellBookTomBombadil
-    9 = Command_SpellBookSpawnTreeFlet
-    10 = Command_SpellBookRingOfAdamant
-    11 = HECommand_SpellBookElvenWood
+    2 = HECommand_SpellBookFarsight
+    3 = HECommand_SpellBookRebuild
+    4 = HECommand_SpellBookElvenGifts
+    5 = HECommand_SpellBookRallyingCall
+    6 = HECommand_SpellBookHeal
 
-    12 = HECommand_SpellBookEagleAllies
-    13 = HECommand_SpellBookEntAllies
-    14 = Command_SpellBookElvenWaystone
-    15 = Command_SpellBookLightOfTrees
-    16 = HECommand_SpellBookCloudBreak
+    7 = HECommand_SpellBookEnshroudingMist
+    8 = HECommand_SpellBookArrowVolleyGood
+    9 = HECommand_SpellBookTomBombadil
+    10 = Command_SpellBookSpawnTreeFlet
+    11 = Command_SpellBookRingOfAdamant
+    12 = HECommand_SpellBookElvenWood
 
-    17 = HECommand_SpellBookEarthquake
-    18 = HECommand_SpellBookSunflare
-    19 = HECommand_SpellBookFlood
-    20 = HECommand_SpellBookCitadel
+    13 = HECommand_SpellBookEagleAllies
+    14 = HECommand_SpellBookEntAllies
+    15 = Command_SpellBookElvenWaystone
+    16 = Command_SpellBookLightOfTrees
+    17 = HECommand_SpellBookCloudBreak
+
+    18 = HECommand_SpellBookEarthquake
+    19 = HECommand_SpellBookSunflare
+    20 = HECommand_SpellBookFlood
+    21 = HECommand_SpellBookCitadel
 End
 
 CommandSet HEElvesSpellStoreCommandSet

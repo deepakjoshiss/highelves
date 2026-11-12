@@ -301,3 +301,11 @@ SpecialPower HESpecialAbilityGlorfindelStarlight
 	ReloadTime					= 180000;270000 ;;,;; 240000 ;;.;; 120000
 	InitiateAtLocationSound		= GlorfindelStarlight
 End
+
+; the Armory (dj-dev): never cast; a press of its button opens the Armory overlay (openbfme.ini OpenBFMEArmoryButton)
+SpecialPower HESpellBookArmory
+	Enum				= SPECIAL_GENERAL_TARGETLESS
+	ReloadTime			= 0
+	PublicTimer			= No
+	RequiredSciences	= HESCIENCE_Armory
+End

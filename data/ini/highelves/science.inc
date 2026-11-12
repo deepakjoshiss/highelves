@@ -209,3 +209,11 @@ Science HESCIENCE_ArmyoftheDead
   SciencePurchasePointCostMP = GOOD_RANK_4_COST
   IsGrantable = Yes
 End
+
+; the Armory (dj-dev): every High Elves player starts with it (PlayerTemplate IntrinsicSciencesMP), so its spell book button
+; (HECommand_SpellBookArmory) is the power column's first slot; cost 0: never bought in the store
+Science HESCIENCE_Armory
+  PrerequisiteSciences = None
+  SciencePurchasePointCost = 0
+  IsGrantable = Yes
+End

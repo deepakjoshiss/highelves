@@ -1481,3 +1481,13 @@ CommandButton HECommand_HEElrondWrath3
   PurchasedLabel   = CONTROLBAR:ToolTipHEElrondWrath3
   Radial           = Yes
 End
+
+; the Armory (dj-dev): the power column's first button; a press opens the Armory overlay instead of casting (openbfme.ini OpenBFMEArmoryButton)
+CommandButton HECommand_SpellBookArmory
+	Command				= SPELL_BOOK
+	SpecialPower		= HESpellBookArmory
+	ButtonImage			= BRArmory
+	ButtonBorderType	= ACTION
+	TextLabel			= CONTROLBAR:HEArmory
+	DescriptLabel		= CONTROLBAR:ToolTipHEArmory
+End
