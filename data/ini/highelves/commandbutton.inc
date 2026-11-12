@@ -1486,7 +1486,7 @@ End
 CommandButton HECommand_SpellBookArmory
 	Command				= SPELL_BOOK
 	SpecialPower		= HESpellBookArmory
-	ButtonImage			= BRArmory
+	ButtonImage			= HEArmoryIcon
 	ButtonBorderType	= ACTION
 	TextLabel			= CONTROLBAR:HEArmory
 	DescriptLabel		= CONTROLBAR:ToolTipHEArmory
