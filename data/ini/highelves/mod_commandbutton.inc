@@ -263,7 +263,7 @@ CommandButton HECommand_ThranduilRampage1
 	Command					= SPECIAL_POWER
 	SpecialPower			= HESpecialAbilityThranduilRampage1
 	TextLabel				= CONTROLBAR:HEThranduilRampage
-	ButtonImage				= HSThranduilDeadeye
+	ButtonImage				= HEThranduilRampage
 	ButtonBorderType		= ACTION
 	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilRampage1
 	InPalantir				= Yes
@@ -274,7 +274,7 @@ CommandButton HECommand_ThranduilRampage2
 	Command					= SPECIAL_POWER
 	SpecialPower			= HESpecialAbilityThranduilRampage2
 	TextLabel				= CONTROLBAR:HEThranduilRampage
-	ButtonImage				= HSThranduilDeadeye
+	ButtonImage				= HEThranduilRampage
 	ButtonBorderType		= ACTION
 	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilRampage2
 	InPalantir				= Yes
@@ -285,7 +285,7 @@ CommandButton HECommand_ThranduilRampage3
 	Command					= SPECIAL_POWER
 	SpecialPower			= HESpecialAbilityThranduilRampage3
 	TextLabel				= CONTROLBAR:HEThranduilRampage
-	ButtonImage				= HSThranduilDeadeye
+	ButtonImage				= HEThranduilRampage
 	ButtonBorderType		= ACTION
 	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilRampage3
 	InPalantir				= Yes
@@ -297,7 +297,7 @@ CommandButton HECommand_ThranduilRampagePassive
 	SpecialPower			= SpecialAbilityFakeLeadership2
 	Options					= NONPRESSABLE
 	TextLabel				= CONTROLBAR:HEThranduilRampage
-	ButtonImage				= HSThranduilDeadeye
+	ButtonImage				= HEThranduilRampage
 	ButtonBorderType		= ACTION
 	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilRampagePassive
 	InPalantir				= Yes
@@ -330,7 +330,7 @@ CommandButton HECommand_ThranduilPinningShot
 	SpecialPower			= HESpecialAbilityThranduilPinningShot
 	Options					= NEED_TARGET_ENEMY_OBJECT
 	TextLabel				= CONTROLBAR:HEThranduilPinningShot
-	ButtonImage				= HSFaramirWoundingArrow
+	ButtonImage				= HEThranduilPinningShot
 	ButtonBorderType		= ACTION
 	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilPinningShot
 	InPalantir				= Yes
@@ -346,7 +346,7 @@ CommandButton HECommand_ThranduilElvenkingsCommand
 	SpecialPower			= SpecialAbilityFakeLeadership
 	Options					= NONPRESSABLE
 	TextLabel				= CONTROLBAR:HEThranduilElvenkingsCommand
-	ButtonImage				= HSThranduilWildWalk
+	ButtonImage				= HEThranduilElvenkingsCommand
 	ButtonBorderType		= ACTION
 	DescriptLabel			= CONTROLBAR:ToolTipHEThranduilElvenkingsCommand
 	InPalantir				= Yes
@@ -387,7 +387,7 @@ CommandButton HECommand_LegolasFanOfArrows
 	SpecialPower			= HESpecialAbilityLegolasFanOfArrows
 	Options					= NEED_TARGET_ENEMY_OBJECT
 	TextLabel				= CONTROLBAR:HELegolasFanOfArrows
-	ButtonImage				= HSThranduilDeadeye
+	ButtonImage				= HELegolasFanOfArrows
 	ButtonBorderType		= ACTION
 	DescriptLabel			= CONTROLBAR:ToolTipHELegolasFanOfArrows
 	InPalantir				= Yes
@@ -419,7 +419,7 @@ CommandButton HECommand_LegolasTwinDraw
 	SpecialPower			= SpecialAbilityFakeLeadership
 	Options					= NONPRESSABLE
 	TextLabel				= CONTROLBAR:HELegolasTwinDraw
-	ButtonImage				= BEEregionForge_SilverthornArrows
+	ButtonImage				= HELegolasTwinDraw
 	ButtonBorderType		= ACTION
 	DescriptLabel			= CONTROLBAR:ToolTipHELegolasTwinDraw
 	InPalantir				= Yes
@@ -430,7 +430,7 @@ CommandButton HECommand_LegolasPiercingArrow
 	SpecialPower			= HESpecialAbilityLegolasPiercingArrow
 	Options					= NEED_TARGET_ENEMY_OBJECT
 	TextLabel				= CONTROLBAR:HELegolasPiercingArrow
-	ButtonImage				= HSFaramirWoundingArrow
+	ButtonImage				= HELegolasPiercingArrow
 	ButtonBorderType		= ACTION
 	DescriptLabel			= CONTROLBAR:ToolTipHELegolasPiercingArrow
 	InPalantir				= Yes
@@ -446,7 +446,7 @@ CommandButton HECommand_LegolasPiercingArrow2
 	SpecialPower			= HESpecialAbilityLegolasPiercingArrow2
 	Options					= NEED_TARGET_ENEMY_OBJECT
 	TextLabel				= CONTROLBAR:HELegolasPiercingArrow
-	ButtonImage				= HSFaramirWoundingArrow
+	ButtonImage				= HELegolasPiercingArrow
 	ButtonBorderType		= ACTION
 	DescriptLabel			= CONTROLBAR:ToolTipHELegolasPiercingArrow2
 	InPalantir				= Yes
@@ -495,7 +495,7 @@ CommandButton HECommand_ElrondVilyaCalm
 	SpecialPower			= SpecialAbilityFakeLeadership
 	Options					= NONPRESSABLE
 	TextLabel				= CONTROLBAR:HEElrondVilyaCalm
-	ButtonImage				= HSElrondLeadership
+	ButtonImage				= HEElrondVilyaCalm
 	ButtonBorderType		= ACTION
 	DescriptLabel			= CONTROLBAR:ToolTipHEElrondVilyaCalm
 	InPalantir				= Yes
@@ -525,7 +525,7 @@ CommandButton HECommand_ElrondWill
 	SpecialPower			= HESpecialAbilityElrondWill
 	Options					= NEED_TARGET_ENEMY_OBJECT NEED_TARGET_ALLY_OBJECT
 	TextLabel				= CONTROLBAR:HEElrondWill
-	ButtonImage				= HSElrondFarSight
+	ButtonImage				= HEElrondWill
 	ButtonBorderType		= ACTION
 	DescriptLabel			= CONTROLBAR:ToolTipHEElrondWill
 	InPalantir				= Yes
