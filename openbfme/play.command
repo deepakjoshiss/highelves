@@ -13,4 +13,11 @@ cmake --build "$game/engine/build" --target openbfme
 # whole INI tree and its OpenBFME rules in data/ini/openbfme.ini, bases/, the menus) goes over them as -mod (openbfme-godot/docs/MODS.md)
 modfolder="$("$mod/openbfme/modfolder.sh")"   # its own line: set -e stops here when the build fails
 export OPENBFME_MOD_INSTALL="$HOME/Games/BFME/Patch202" OPENBFME_MOD="$modfolder" ROTWK_INSTALL="$HOME/Games/BFME/RotWK" BFME2_INSTALL="$HOME/Games/BFME/BFME2"
-exec "$root/godot-4.7.2/Godot.app/Contents/MacOS/Godot" --path "$game/godot" -- --no-intro
+# arguments pass through, so a scripted run starts the game exactly as a double-click does: those before a "--" go to Godot (--screen 1), the
+# others to the game (--demo=<file>, --faction=..., --vsync=off); openbfme-godot/.claude/skills/demo-mode/run.sh starts its demos this way
+godot_args=() game_args=("$@")
+if (( ${@[(Ie)--]} )); then
+  godot_args=("${@[1,${@[(i)--]}-1]}")
+  game_args=("${@[${@[(i)--]}+1,-1]}")
+fi
+exec "$root/godot-4.7.2/Godot.app/Contents/MacOS/Godot" "${godot_args[@]}" --path "$game/godot" -- --no-intro "${game_args[@]}"
