@@ -545,6 +545,14 @@ Upgrade Upgrade_HEElrondWrath3
 	BuildTime		= H_ELROND_ITEM_TIME
 	ResearchSound	= UpgradeSilverThornArrows
 End
+; Vilya's Calm: Elrond holds these from birth; level 5 takes the tier 1 one away, level 10 the tier 2 one, which ends that tier's auras
+; (only one tier runs: tiers running together replace each other in the LEADERSHIP category on every refresh). Used by nothing else.
+Upgrade Upgrade_HEElrondVilyaCalmTier1Live
+	Type			= OBJECT
+End
+Upgrade Upgrade_HEElrondVilyaCalmTier2Live
+	Type			= OBJECT
+End
 
 ; dj-dev (OpenBFMEAITeamUpgrades in openbfme.ini): every object of a computer player gets one: alone on its team, or a team of 2 or more
 Upgrade Upgrade_AITeam1
