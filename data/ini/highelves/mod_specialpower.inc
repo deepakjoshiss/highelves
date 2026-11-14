@@ -204,7 +204,7 @@ SpecialPower HESpecialAbilityElrondLight
 End
 SpecialPower HESpecialAbilityElrondBulwark
 	Enum			= SPECIAL_GENERAL_TARGETLESS
-	ReloadTime		= 60000
+	ReloadTime		= 80000
 End
 SpecialPower HESpecialAbilityElrondWill
 	Enum			= SPECIAL_AT_VISIBLE_OBJECT

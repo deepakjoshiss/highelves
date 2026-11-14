@@ -644,17 +644,19 @@ End
 ModifierList HEElrondBulwark ; Bulwark of Imladris: Elrond takes 60% less
 	Category = SPELL
 	Modifier = ARMOR 60%
-	Duration = 8000
+	Duration = 25000
+	FX = FX_HEElrondBulwark
 End
 ModifierList HEElrondBulwarkAwe ; Bulwark of Imladris: enemies within 150 deal 25% less
 	Category = WEAPON
 	Modifier = DAMAGE_MULT 75%
-	Duration = 8000
+	Duration = 25000
 End
 ModifierList HEElrondWillWard ; Will of Imladris: a friendly building takes nothing for 5 s (unresistable damage still hits)
 	Category = SPELL
 	Modifier = INVULNERABLE CREATE_A_HERO_INVULNERABILITY_MODIFIER
 	Duration = 5000
+	FX = FX_HEElrondWillWard
 End
 ModifierList HEElrondFloodSlow ; Flood of the Bruinen: survivors slowed 30%
 	Category = WEAPON
@@ -818,20 +820,21 @@ ModifierList HEElrondVilyaSpellbook ; Vilya III: the spellbook's powers recharge
 	Modifier = RECHARGE_TIME 80%
 	Duration = 0
 End
-ModifierList HEElrondBulwark12 ; Herald II: Bulwark 12 s
+ModifierList HEElrondBulwark12 ; Herald II: Bulwark 40 s
 	Category = SPELL
 	Modifier = ARMOR 60%
-	Duration = 12000
+	Duration = 40000
+	FX = FX_HEElrondBulwark12
 End
 ModifierList HEElrondBulwarkAwe12
 	Category = WEAPON
 	Modifier = DAMAGE_MULT 75%
-	Duration = 12000
+	Duration = 40000
 End
 ModifierList HEElrondBulwarkShelter ; Herald II: allies within 150 when Bulwark is cast take 30% less
 	Category = SPELL
 	Modifier = ARMOR 30%
-	Duration = 12000
+	Duration = 40000
 End
 ModifierList HEElrondStonesWard ; Stones II: allied buildings within 300, 30 s
 	Category = STRUCTURE

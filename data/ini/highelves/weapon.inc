@@ -2561,7 +2561,7 @@ Weapon HEElrondLightOfTheEldar
 	End
 End
 
-; Bulwark of Imladris (level 5), fired at his own position: he takes 60% less for 8 s, enemies within 150 deal 25% less
+; Bulwark of Imladris (level 5), fired at his own position: he takes 60% less for 25 s, enemies within 150 deal 25% less
 Weapon HEElrondBulwark
 	AttackRange				= 10
 	RadiusDamageAffects		= SELF ALLIES ENEMIES ; the caster is an ally of itself; the parts' filters pick him and the enemies
@@ -2582,7 +2582,7 @@ Weapon HEElrondBulwark
 		SpecialObjectFilter		= ALL ENEMIES ; "ANY" with no kind listed matches nothing
 	End
 
-	AttributeModifierNugget					; Herald of Gil-galad II: 12 s
+	AttributeModifierNugget					; Herald of Gil-galad II: 40 s
 		AttributeModifier		= HEElrondBulwark12
 		Radius					= 5.0
 		SpecialObjectFilter		= NONE +HEElvenElrond
@@ -2595,7 +2595,7 @@ Weapon HEElrondBulwark
 		SpecialObjectFilter		= ALL ENEMIES
 		RequiredUpgradeNames	= Upgrade_HEElrondHerald2
 	End
-	AttributeModifierNugget					; Herald of Gil-galad II: allies within 150 take 30% less for 12 s
+	AttributeModifierNugget					; Herald of Gil-galad II: allies within 150 take 30% less for 40 s
 		AttributeModifier		= HEElrondBulwarkShelter
 		Radius					= 150.0
 		AffectHordeMembers		= Yes
@@ -2700,6 +2700,7 @@ Weapon HEElrondWillOfImladris
 	ParalyzeNugget							; enemy: disabled 5 s
 		Radius				= 0.0
 		Duration			= 5000
+		ParalyzeFX			= FX_HEElrondWillBane ; a white strike, then Vilya's blue while it lasts
 		SpecialObjectFilter	= ANY ENEMIES +STRUCTURE
 	End
 

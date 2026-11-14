@@ -224,7 +224,7 @@ Elven Grace, Farsight, Restoration, Tornado and leadership removed). Before: 250
 | Base | 900 cost, 1500 HP (+80 a level: the shared 60 and his own 20, `HEElrondLevelHPN`; 3420 at 25), his own bow (`HEElvenElrondBow`, 60 with the shared growth); taken off the old level 11-17 hero bonus (`H_HERO_FILTER_DAMAGE_BUFF`); his targeted powers start 450 and reach 475 (`OpenBFMEAbilityRangeFollowsBonus`) |
 | Level 1 / 5 / 10 | **Vilya's Calm** (passive LEADERSHIP, replaces): infantry and cavalry within 200 (`H_GENERIC_BUFF_RECIPIENT_OBJECT_FILTER`) +10 / +20 / +30% armor and damage; one tier runs at a time (level 5 removes tier 1's `Upgrade_HEElrondVilyaCalmTier1Live`, level 10 tier 2's, which stops that tier's auras; `ConflictsWith` keeps a lower tier off when he is made above its level): tiers running together replaced each other on every refresh, each aura on its own clock. The 3.1-3.3 s durations outlast other heroes' 3 s leadership |
 | Level 3 | **Light of the Eldar**: allies within 150 (him too) healed 50 at once and each second for 5 s (a healing `DOTNugget`: a healing `DamageNugget` heals at once whatever its DelayTime), 60 s |
-| Level 5 | **Bulwark of Imladris**: 8 s, he takes 60% less (ARMOR 60%, the 75% cap applies with Mail), enemies within 150 deal 25% less, 60 s |
+| Level 5 | **Bulwark of Imladris**: 25 s, he takes 60% less (ARMOR 60%, the 75% cap applies with Mail), enemies within 150 deal 25% less, 80 s |
 | Level 9 | **Will of Imladris** (a building): friendly invulnerable 5 s and healed 100 at once and each second for 4 s; enemy 100 unresistable at once and each second for 4 s and paralysed 5 s (a garrison would be thrown out); 90 s |
 | Level 15 | **Flood of the Bruinen**: aimed at the ground (NEED_TARGET_POS, the spellbook's FloodRadiusCursor at the wall's width, 100; cast from within 400), five of Arwen's water horses side by side (30 apart) ride 400 toward the spot in about 2 s (42 a logic frame; `HEElrondFlood`, a `WeaponOCLNugget` with `DamageDealtAtSelfPosition`); each hits within 40 every logic frame: 40 magic and 40 siege, and 100 siege more to structures, all at 40% on a COMMANDCENTER (Deepak 2026-11-11); kills thrown back, survivors slowed 30% for 5 s; 120 s |
 | Level 16 | **Wisdom of Ages**: his powers recharge 15% faster |
@@ -241,7 +241,7 @@ stopping under the paralysis, the AI's and auto-cast's use of the powers.
 
 **Armory (pass 2, built 2026-11-11; placeholder icons, 10 s research; about 22,500 for the tree):** Armor of the Last Alliance, Life of Imladris, Vilya (radius 300; heroes recharge 20% faster,
 SPELL; spellbook powers recharge 20% faster through the spellbook object, as 2.02's cooldown upgrade), Herald of Gil-galad (Light
-within 250; Bulwark 12 s and allies within 150 take 30% less; the River Answers: a second flood wave 3 s later), Wisdom of the Eldar
+within 250; Bulwark 40 s and allies within 150 take 30% less; the River Answers: a second flood wave 3 s later), Wisdom of the Eldar
 (Vilya's Grace aura: heroes 5 HP/s, infantry 3; Vilya's Thorns 1000: 40 within 50 when he is hit, once a second; Light of Elbereth:
 200 magic to enemies within 150), Stones of Imladris (750; Stones' Ward: buildings within 300, walls and gates included, allies +30% /
 enemies -30% armor for 30 s, STRUCTURE; Heart of Imladris 2500: 1000 to every building within 100), Wrath of the Noldor (400: +40 siege,

@@ -193,3 +193,44 @@ FXList FX_LorienStunEffect
 	BuffLifeTime = 5500
   End
 End
+
+; ---- Elrond's powers ----
+FXList FX_HEElrondWillWard ; Will of Imladris on a friendly building (the ward list's FX): gold, rising
+  ParticleSystem
+    Name = HEElrondWillWardGlow
+    Offset = X:0.0 Y:0.0 Z:5.0
+    AttachToObject = Yes
+  End
+  ParticleSystem
+    Name = HEElrondWillWardMotes
+    AttachToObject = Yes
+  End
+End
+
+FXList FX_HEElrondWillBane ; Will of Imladris on an enemy building (the disable's ParalyzeFX): a white strike, then blue for the 5 s
+  ParticleSystem
+    Name = IstariLightBurst
+    Offset = X:0.0 Y:0.0 Z:10.0
+  End
+  ParticleSystem
+    Name = HEElrondWillBaneGlow
+    Offset = X:0.0 Y:0.0 Z:5.0
+    AttachToObject = Yes
+  End
+End
+
+FXList FX_HEElrondBulwark ; Bulwark of Imladris on Elrond (the armour list's FX), 25 s
+  ParticleSystem
+    Name = HEElrondBulwarkWard
+    Offset = X:0.0 Y:0.0 Z:15.0
+    AttachToObject = Yes
+  End
+End
+
+FXList FX_HEElrondBulwark12 ; Herald of Gil-galad II: 40 s
+  ParticleSystem
+    Name = HEElrondBulwarkWard12
+    Offset = X:0.0 Y:0.0 Z:15.0
+    AttachToObject = Yes
+  End
+End

@@ -65371,7 +65371,7 @@ CONTROLBAR:HEElrondBulwark
 END
 
 CONTROLBAR:ToolTipHEElrondBulwark
-"Bulwark of Imladris \n For 8 seconds Elrond takes 60% less damage and enemies within 150 deal 25% less. \n Recharge: 60 s"
+"Bulwark of Imladris \n For 25 seconds Elrond takes 60% less damage and enemies within 150 deal 25% less. \n Recharge: 80 s"
 END
 
 CONTROLBAR:HEElrondWill
@@ -65519,7 +65519,7 @@ CONTROLBAR:HEElrondHerald2
 END
 
 CONTROLBAR:ToolTipHEElrondHerald2
-"Herald of Gil-galad II \n Bulwark of Imladris lasts 12 seconds, and allies within 150 when it is cast take 30% less damage. \n Cost: 1000"
+"Herald of Gil-galad II \n Bulwark of Imladris lasts 40 seconds, and allies within 150 when it is cast take 30% less damage. \n Cost: 1000"
 END
 
 UPGRADE:HEElrondHerald3

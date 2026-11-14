@@ -957,3 +957,209 @@ FXParticleSystem HEElvenLegolasPiercingTrail
   Draw = DefaultDraw
   End
 End
+
+; ---- Elrond's powers: copies of retail systems, recoloured and timed (particle counters run at 30 a second) ----
+
+; Will of Imladris, friendly building (5 s): gold motes rising around it (CAHInvulnerable, wider and longer)
+FXParticleSystem HEElrondWillWardMotes
+  System
+    Priority = ALWAYS_RENDER
+    ParticleName = EXLnzFlar4.tga
+    Lifetime = 30 40
+    SystemLifetime = 150
+    SortLevel = 1
+    Size = 6 10
+    BurstDelay = 2 2
+    BurstCount = 3 3
+  End
+  Color = DefaultColor
+    Color1 = R:255 G:240 B:190 0
+    Color2 = R:221 G:181 B:87 20
+    Color3 = R:0 G:0 B:0 40
+  End
+  Alpha = DefaultAlpha
+  End
+  Update = DefaultUpdate
+    SizeRate = 0.2 0.2
+    SizeRateDamping = 1 1
+    AngleZ = -7 7
+    AngularDamping = 1 1
+    AngularDampingXY = 1 1
+  End
+  Physics = DefaultPhysics
+    Gravity = 0.06
+  End
+  EmissionVelocity = OrthoEmissionVelocity
+    X = -0.05 0.05
+    Y = -0.05 0.05
+  End
+  EmissionVolume = CylinderEmissionVolume
+    IsHollow = Yes
+    Radius = 45
+    Length = 30
+  End
+  Draw = DefaultDraw
+  End
+End
+
+; Will of Imladris, friendly building (5 s): a gold glow rising through it (ShakeFoundationParalyze's discs in gold)
+FXParticleSystem HEElrondWillWardGlow
+  System
+    Priority = ALWAYS_RENDER
+    ParticleName = EXEclipseBlur.tga
+    Lifetime = 40 40
+    SystemLifetime = 150
+    SortLevel = 1
+    Size = 2 2
+    BurstDelay = 2 2
+    BurstCount = 1 1
+    IsGroundAligned = Yes
+  End
+  Color = DefaultColor
+    Color2 = R:200 G:160 B:70 20
+    Color3 = R:0 G:0 B:0 40
+  End
+  Alpha = DefaultAlpha
+  End
+  Update = DefaultUpdate
+    SizeRate = 4 4
+    SizeRateDamping = 0.99 0.99
+    AngleZ = -7 7
+    AngularRateZ = -0.05 0.05
+    AngularDamping = 1 1
+    AngularDampingXY = 1 1
+  End
+  Physics = DefaultPhysics
+    VelocityDamping = 1 1
+  End
+  EmissionVelocity = OrthoEmissionVelocity
+  End
+  EmissionVolume = LineEmissionVolume
+    EndPoint = X:0 Y:0 Z:40
+  End
+  Draw = DefaultDraw
+  End
+End
+
+; Will of Imladris, enemy building (5 s, the disable): retail's paralysed-building discs in Vilya's blue
+FXParticleSystem HEElrondWillBaneGlow
+  System
+    Priority = ALWAYS_RENDER
+    ParticleName = EXEclipseBlur.tga
+    Lifetime = 40 40
+    SystemLifetime = 150
+    SortLevel = 1
+    Size = 2 2
+    BurstDelay = 2 2
+    BurstCount = 1 1
+    IsGroundAligned = Yes
+  End
+  Color = DefaultColor
+    Color2 = R:50 G:100 B:220 20
+    Color3 = R:0 G:0 B:0 40
+  End
+  Alpha = DefaultAlpha
+  End
+  Update = DefaultUpdate
+    SizeRate = 4 4
+    SizeRateDamping = 0.99 0.99
+    AngleZ = -7 7
+    AngularRateZ = -0.05 0.05
+    AngularDamping = 1 1
+    AngularDampingXY = 1 1
+  End
+  Physics = DefaultPhysics
+    VelocityDamping = 1 1
+  End
+  EmissionVelocity = OrthoEmissionVelocity
+  End
+  EmissionVolume = LineEmissionVolume
+    EndPoint = X:0 Y:0 Z:40
+  End
+  Draw = DefaultDraw
+  End
+End
+
+; Bulwark of Imladris (25 s; 40 s with Herald of Gil-galad II): a sheath of sapphire light wrapping Elrond: the level-up light rings
+; (LevelUpRing, EXLightRing.W3D) rising around him, one every 8 frames
+FXParticleSystem HEElrondBulwarkWard
+  System
+    Priority = ALWAYS_RENDER
+    Shader = W3D_EMISSIVE
+    Type = DRAWABLE
+    ParticleName = EXLightRing.W3D
+    Lifetime = 30 30
+    SystemLifetime = 750
+    SortLevel = 1
+    Size = 0.1 0.1
+    BurstDelay = 8 8
+    BurstCount = 1 1
+  End
+  Color = DefaultColor
+    Color1 = R:110 G:160 B:255 0
+  End
+  Alpha = DefaultAlpha
+    Alpha1 = 0 0 0
+    Alpha2 = 0.55 0.55 8
+    Alpha3 = 0 0 30
+  End
+  Update = RenderObjectUpdate
+    SizeRateX = 0.3 0.3
+    SizeRateY = 0.3 0.3
+    SizeRateZ = 0.3 0.3
+    SizeDampingX = 0.85 0.85
+    SizeDampingY = 0.85 0.85
+    SizeDampingZ = 0.85 0.85
+  End
+  Physics = DefaultPhysics
+    VelocityDamping = 1 1
+  End
+  EmissionVelocity = OrthoEmissionVelocity
+    Z = 0.6 0.6
+  End
+  EmissionVolume = PointEmissionVolume
+  End
+  Draw = RenderObjectDraw
+  End
+End
+
+FXParticleSystem HEElrondBulwarkWard12
+  System
+    Priority = ALWAYS_RENDER
+    Shader = W3D_EMISSIVE
+    Type = DRAWABLE
+    ParticleName = EXLightRing.W3D
+    Lifetime = 30 30
+    SystemLifetime = 1200
+    SortLevel = 1
+    Size = 0.1 0.1
+    BurstDelay = 8 8
+    BurstCount = 1 1
+  End
+  Color = DefaultColor
+    Color1 = R:110 G:160 B:255 0
+  End
+  Alpha = DefaultAlpha
+    Alpha1 = 0 0 0
+    Alpha2 = 0.55 0.55 8
+    Alpha3 = 0 0 30
+  End
+  Update = RenderObjectUpdate
+    SizeRateX = 0.3 0.3
+    SizeRateY = 0.3 0.3
+    SizeRateZ = 0.3 0.3
+    SizeDampingX = 0.85 0.85
+    SizeDampingY = 0.85 0.85
+    SizeDampingZ = 0.85 0.85
+  End
+  Physics = DefaultPhysics
+    VelocityDamping = 1 1
+  End
+  EmissionVelocity = OrthoEmissionVelocity
+    Z = 0.6 0.6
+  End
+  EmissionVolume = PointEmissionVolume
+  End
+  Draw = RenderObjectDraw
+  End
+End
